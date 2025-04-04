@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 4.0.0
+ * @version 4.0.1
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -1016,6 +1016,11 @@
 .live_a7acae {
     padding-left: 5px;
     padding-right: 5px;
+}
+
+/* Voice channel, voice channel member options button */
+.optionsButtonContainer__07f91 {
+    margin-left: -12px;
 }
 
 /* Threads, thread members list */
