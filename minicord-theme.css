@@ -1,19 +1,19 @@
 /**
- * @name Minicord-3.0
+ * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
  * @version 4.0.0
  * @invite 
  * @website 
- * @source 
+ * @source https://github.com/NewBranFlakes/minicord
  * @authorId 
  * @authorLink 
 */
 
 :root {
-	--transition-speed: 0.2s;
-	--transition-style: ease;
-	--transition-delay-enter: 0s;
+    --transition-speed: 0.2s;
+    --transition-style: ease;
+    --transition-delay-enter: 0s;
     --transition-delay-exit: 0s;
 
     --element-gap: 0px;
