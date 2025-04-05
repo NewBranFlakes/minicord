@@ -65,7 +65,7 @@
 /* Window top bar, divider */
 .winButtons_c38106.winButtonsWithDivider_c38106::before {
     margin: 0;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 .winButtons_c38106.winButtonsWithDivider_c38106 {
     gap: 0px;
@@ -85,7 +85,7 @@
 
 /* Server banner inner div */
 .headerContent_f37cb1.primaryInfo_f37cb1 {
-    margin-left: 5px;
+    margin-left: 6px;
 }
 
 /* Servers list */
@@ -248,7 +248,7 @@
 	padding: 0;
 }
 .containerDefault_c69b6d.wrapper__2ea32 {
-    margin-left: 15px;
+    margin-left: 16px;
     margin-top: 5px;
     margin-bottom: 5px;
     top: -2px;
@@ -681,7 +681,10 @@
     /* margin-right: 10px !important; */
 }
 .buttonContainer__74017 {
-    margin-left: 10px !important;
+    margin-left: 0px !important;
+}
+.buttonContainer_aa63ab {
+    margin-left: -2px !important;
 }
 .button__201d5[aria-label='Send a gift'],
 .buttonContainer__74017:has(.button__201d5[aria-label='Open GIF picker']),
@@ -884,8 +887,8 @@
 
 /* Server members list, server member role category icon */
 .roleIcon__1e6f1.roleIcon_c8ffbb {
-    margin-right: 10px;
-	margin-left: 6px;
+    margin-right: 18px;
+	margin-left: 8px;
 }
 
 /* Server members list, server member details */
