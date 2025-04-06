@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 4.0.1
+ * @version 4.1.0
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -50,6 +50,8 @@
     --modview-left-shrunk: 80px;
     --modview-left-expanded: 480px;
     --modview-left-diff: calc(var(--modview-left-expanded) - var(--modview-left-shrunk));
+
+    --emoticon-panel-width: 500px;
 }
 
 /* Window top bar, "help" button */
@@ -1173,4 +1175,62 @@
 .guildSidebar_f75fb0:hover {
     left: calc(100% - var(--modview-left-expanded) + 14px);
     transition-delay: var(--transition-delay-enter);
+}
+
+/* "Emoticon" panel */
+.positionLayer__08434.expressionPickerPositionLayer__74017.layer_da8173 {
+    display: flex !important;
+    position: fixed !important;
+    max-width: none !important;
+    max-height: none !important;
+    min-width: 0px !important;
+    min-height: 0px !important;
+    width: var(--emoticon-panel-width) !important;
+    height: calc(100% - 166px - 10px) !important;
+    left: calc(100% - var(--emoticon-panel-width) - var(--server-members-left-shrunk) - 9px) !important;
+    top: calc(80px + 10px) !important;
+}
+
+.drawerSizingWrapper__08434 {
+    max-width: none !important;
+    max-height: none !important;
+    min-width: 0px !important;
+    min-height: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    left: 0px !important;
+    top: 0px !important;
+}
+
+.positionContainer__08434 {
+    max-width: none !important;
+    max-height: none !important;
+    min-width: 0px !important;
+    min-height: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    left: 0px !important;
+    top: 0px !important;
+}
+
+/* "Emoticon" reaction panel popup */
+.animatorRight_faf9c0.fade_faf9c0.didRender_faf9c0:has(.wrapper_c0e32c) .wrapper_c0e32c {
+    position: fixed !important;
+    max-width: none !important;
+    max-height: none !important;
+    min-width: 0px !important;
+    min-height: 0px !important;
+    width: var(--emoticon-panel-width) !important;
+    height: calc(100% - 166px - 10px - 70px) !important;
+    left: calc(100% - var(--emoticon-panel-width) - var(--server-members-left-shrunk) - 9px) !important;
+    top: calc(80px + 10px) !important;
+}
+
+.animatorRight_faf9c0.fade_faf9c0.didRender_faf9c0:has(.wrapper_c0e32c) .emojiPicker_c0e32c {
+    width: 100%;
+    height: 100%;
+}
+
+.animatorRight_faf9c0.fade_faf9c0.didRender_faf9c0:has(.wrapper_c0e32c) .wrapper__4e6ce.categoryList_c0e32c {
+    height: 100%;
 }
