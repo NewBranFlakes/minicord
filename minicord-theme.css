@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 4.3.0
+ * @version 4.3.1
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -510,15 +510,21 @@
 
 /* User panel, profile popout (personal user) */
 .outer_c0bea0.biteSize_c0bea0.themeContainer_af7fb7 {
-    position: fixed;
-    left: calc(88px + 7px);
-    bottom: calc(78px + 10px);
+    /* position: sticky; */
+    /* left: calc(88px + 7px) !important; */
+    /* bottom: calc(78px + 10px) !important; */
+}
+.notAppAsidePanel_a3002d:has(.container__133bf) .outer_c0bea0.biteSize_c0bea0.themeContainer_af7fb7,
+.notAppAsidePanel_a3002d:has(.chat_f75fb0.container_f391e3) .outer_c0bea0.biteSize_c0bea0.themeContainer_af7fb7,
+.notAppAsidePanel_a3002d:has(.applicationStore_f07d62) .outer_c0bea0.biteSize_c0bea0.themeContainer_af7fb7,
+.notAppAsidePanel_a3002d:has(.shop__6db1d) .outer_c0bea0.biteSize_c0bea0.themeContainer_af7fb7 {
+
 }
 
 /* User panel, profile popout */
 .outer_c0bea0.biteSize_c0bea0 {
-    position: sticky;
-    left: calc(100% - var(--user-panel-popout-width) - 10px);
+    /* position: sticky; */
+    /* left: calc(100% - var(--user-panel-popout-width) - 10px); */
 }
 
 /* Main page area */
