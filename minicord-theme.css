@@ -508,25 +508,6 @@
     transition-delay: var(--transition-delay-enter);
 }
 
-/* User panel, profile popout (personal user) */
-.outer_c0bea0.biteSize_c0bea0.themeContainer_af7fb7 {
-    /* position: sticky; */
-    /* left: calc(88px + 7px) !important; */
-    /* bottom: calc(78px + 10px) !important; */
-}
-.notAppAsidePanel_a3002d:has(.container__133bf) .outer_c0bea0.biteSize_c0bea0.themeContainer_af7fb7,
-.notAppAsidePanel_a3002d:has(.chat_f75fb0.container_f391e3) .outer_c0bea0.biteSize_c0bea0.themeContainer_af7fb7,
-.notAppAsidePanel_a3002d:has(.applicationStore_f07d62) .outer_c0bea0.biteSize_c0bea0.themeContainer_af7fb7,
-.notAppAsidePanel_a3002d:has(.shop__6db1d) .outer_c0bea0.biteSize_c0bea0.themeContainer_af7fb7 {
-
-}
-
-/* User panel, profile popout */
-.outer_c0bea0.biteSize_c0bea0 {
-    /* position: sticky; */
-    /* left: calc(100% - var(--user-panel-popout-width) - 10px); */
-}
-
 /* Main page area */
 .page_c48ade {
     position: fixed;
@@ -1329,4 +1310,9 @@
 /* "Emoticon" reaction panel popup, servers list */
 .animatorRight_faf9c0.fade_faf9c0.didRender_faf9c0:has(.wrapper_c0e32c) .wrapper__4e6ce.categoryList_c0e32c {
     height: 100%;
+}
+
+/* Allows events from main app to pass through the "no click" filter layer */
+.clickTrapContainer_da8173.trapClicks_da8173 {
+    pointer-events: none;
 }
