@@ -566,6 +566,7 @@
 /* Subtitle bar search */
 .search__49676 {
     margin-right: 6px !important;
+    order: 1;
 }
 
 /* Subtitle bar search "bar" component */
