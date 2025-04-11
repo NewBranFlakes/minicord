@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 5.1.0
+ * @version 5.2.0
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -229,6 +229,22 @@
 	padding-left: 10px;
 }
 
+/* Server channel divider */
+.sectionDivider__629e4, .sectionDivider__35e86 {
+    margin: 0 !important;
+    width: 25px !important;
+    margin-left: 16px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    transition: width var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .sectionDivider__629e4,
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .sectionDivider__35e86 {
+    width: calc(100% - 16px - 10px) !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
 /* Server channel name */
 .name__2ea32 {
     opacity: 0;
@@ -254,6 +270,10 @@
     top: -2px;
 }
 
+div[style='height: 8px;'] {
+    display: none !important;
+}
+
 /* Special server channel div */
 .content__65844 {
     padding: 2px !important;
@@ -276,8 +296,13 @@
 }
 .containerDefault__29444 {
     margin-left: 16px;
-    margin-top: 10px;
-    padding: 0;
+    margin-top: 0px;
+
+    /* padding-top: 4px; */
+    /* border-top-width: 1px; */
+    /* border-bottom: 2px; */
+    /* border-style: solid; */
+    /* border-color: var(--background-modifier-accent); */
 }
 
 /* Server channel category name */
@@ -285,9 +310,10 @@
     order: 1;
     opacity: 0;
     margin-left: -2px;
+    font-size: 16px;
+
     transition: opacity var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
-    font-size: 16px;
 }
 .content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .name__29444 {
     opacity: 1;
@@ -797,14 +823,12 @@
     transition: max-width var(--transition-speed) var(--transition-style),
     max-height var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
+    cursor: pointer;
 }
-.searchResultGroup_c68065 .container__02a39:hover {
+.searchResultGroup_c68065 .container__02a39:focus {
     max-height: 600px !important;
     transition-delay: var(--transition-delay-enter);
-}
-.searchResultsWrap_a9e706:hover .container__02a39 {
-    /* max-width: calc(340px - 8px) !important; */
-    transition-delay: var(--transition-delay-enter);
+    cursor: default;
 }
 
 /* Search results, gradient fade */
@@ -825,7 +849,7 @@
     transition: opacity var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
-.searchResultGroup_c68065 .container__02a39:hover .searchResult__02a39::after {
+.searchResultGroup_c68065 .container__02a39:focus .searchResult__02a39::after {
     opacity: 0;
     transition-delay: var(--transition-delay-enter);
 }
@@ -848,12 +872,14 @@
     transition-delay: var(--transition-delay-enter);
 }
 
-/* Search results, button change (only embeds) */
+/* Disable "jump to" behavior when clicking entire search result */
 .searchResultGroup_c68065 .searchResult__02a39 {
-    pointer-events: none;
+    pointer-events: none !important;
 }
-.searchResultGroup_c68065 .container_b7e1cb {
-    pointer-events: initial;
+
+/* Disable content clicking until the search result is focused/maximized */
+.searchResultGroup_c68065 .container__02a39:focus-within .container_b7e1cb {
+    pointer-events: all !important;
 }
 
 /* Search result width fix */
@@ -930,17 +956,47 @@
 }
 .membersGroup_c8ffbb.container__13cf1 {
     margin-left: 10px;
-    margin-top: 20px;
-    max-width: calc(var(--server-members-left-shrunk) - 3ch);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: calc(var(--server-members-left-shrunk) - 3ch + 3px);
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+    text-align: center;
     transition: max-width var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
 .content_c48ade:has(.container_c8ffbb:hover) .membersGroup_c8ffbb.container__13cf1,
-.membersWrap_c8ffbb.hiddenMembers_c8ffbb.container__7641b:hover .membersGroup_c8ffbb.container__13cf1 {
-    max-width: 100%;
+.membersWrap_c8ffbb.hiddenMembers_c8ffbb.container__7641b:hover .membersGroup_c8ffbb.container__13cf1 { 
+    max-width: calc(100% - 18px);
+    transition-delay: var(--transition-delay-enter);
+}
+.membersGroup_c8ffbb.container__13cf1 span {
+    font-weight: 700;
+}
+
+/* Divider between role categories */
+.membersGroup_c8ffbb.container__13cf1::before {
+    content: "";
+    display: block;
+    position: relative;
+    overflow: visible;
+    top: 0px;
+    left: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    height: 0px;
+    width: 100%;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: var(--background-modifier-accent);
+    transition: margin-left var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.container_c8ffbb:hover) .membersGroup_c8ffbb.container__13cf1::before,
+.membersWrap_c8ffbb.hiddenMembers_c8ffbb.container__7641b:hover .membersGroup_c8ffbb.container__13cf1::before { 
+    margin-left: 5px;
     transition-delay: var(--transition-delay-enter);
 }
 
