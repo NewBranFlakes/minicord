@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 5.0.1
+ * @version 5.1.0
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -1378,30 +1378,33 @@
 .layer__960e4.stop-animations:has(.standardSidebarView__23e6b),
 .layer__960e4.animating__960e4.stop-animations:has(.standardSidebarView__23e6b),
 .layer__960e4.animating__960e4:has(.standardSidebarView__23e6b) {
-    padding: 6px !important;
-    /* transform: unset !important; */
+    padding: 10px !important;
     z-index: 5;
-    /* opacity: 1 !important; */
     transition: transform var(--transition-speed) var(--transition-style), opacity var(--transition-speed) var(--transition-style);
     transition-duration: var(--transition-delay-exit);
     display: block;
     position: fixed;
     top: 0px;
-    left: calc(0px - 6px);
+    left: calc(0px - 10px);
     width: 100%;
     height: 100%;
-    background: rgba(1, 1, 1, 0.5) !important;
+    background: rgba(0, 0, 0, 0.7) !important;
 }
 
 /* Settings menu, inner div */
 .standardSidebarView__23e6b {
     display: flex;
     position: fixed;
-    top: 150px !important;
-    left: calc(50% - 400px) !important; /* 150px */ /* calc(50% - 400px) */
-    width: 800px !important; /* calc(100% - 300px) */ /* 800px */
-    height: calc(100% - 300px - (6px * 2.0)) !important;
+    top: calc(80px + 10px) !important;
+    left: calc(50% - 480px) !important;
+    width: 960px !important;
+    height: calc(100% - 160px - 20px - (10px * 2.0)) !important;
     background: transparent !important;
+    border-radius: 8px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: var(--border-normal) !important;
+    overflow: hidden;
 }
 
 /* Settings tabs menu */
@@ -1414,13 +1417,8 @@
     left: 0px;
     width: 200px;
     height: 100%;
-    border-left: 8px;
-    border-top: 8px;
-    border-bottom: 8px;
-    border-color: var(--background-base-lowest);
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-style: solid;
+    padding-left: 8px;
+    background-color: var(--background-base-lowest);
 }
 
 /* Settings tabs menu scroller */
@@ -1439,8 +1437,8 @@
 
 /* Settings search bar */
 .searchBar_c7e907.container_fea832.medium_fea832 {
-    width: calc(100% - 16px);
-    margin-left: 8px;
+    width: calc(100%);
+    margin-left: 0px;
     margin-top: 8px;
     margin-bottom: 0px;
 }
@@ -1453,11 +1451,6 @@
     left: 200px;
     width: calc(100% - 200px);
     height: 100%;
-    padding-right: 8px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
 }
 
 /* Remove padding stuff on settings tab section content */
