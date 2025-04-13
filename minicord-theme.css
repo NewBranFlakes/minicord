@@ -956,11 +956,10 @@ div[style='height: 8px;'] {
 }
 .membersGroup_c8ffbb.container__13cf1 {
     margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     max-width: calc(var(--server-members-left-shrunk) - 3ch + 3px);
 	white-space: nowrap;
-	overflow: hidden;
 	text-overflow: ellipsis;
     text-align: center;
     transition: max-width var(--transition-speed) var(--transition-style);
@@ -980,12 +979,11 @@ div[style='height: 8px;'] {
     content: "";
     display: block;
     position: relative;
-    overflow: visible;
     top: 0px;
     left: 0px;
     margin-left: 0px;
-    margin-top: 0px;
-    margin-bottom: 5px;
+    margin-top: calc(0px + 8px);
+    margin-bottom: calc(-2px + 8px);
     height: 0px;
     width: 100%;
     border-top-width: 1px;
@@ -1030,8 +1028,8 @@ div[style='height: 8px;'] {
 }
 .member__5d473 {
     margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 /* Server members list, server member div */
