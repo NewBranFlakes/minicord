@@ -959,6 +959,7 @@ div[style='height: 8px;'] {
     margin-top: 0px;
     margin-bottom: 0px;
     max-width: calc(var(--server-members-left-shrunk) - 3ch + 3px);
+    overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
     text-align: center;
