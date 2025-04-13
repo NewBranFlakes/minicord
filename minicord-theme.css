@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 5.2.0
+ * @version 5.3.0
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -936,7 +936,7 @@ div[style='height: 8px;'] {
 
 /* Server members count (plugin) */
 .vc-membercount-widget.vc-membercount-member-list {
-	margin-top: calc(20px - 36px);
+	margin-top: calc(-25px);
 	padding: 0;
 
 	opacity: 0;
@@ -944,7 +944,7 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit);
 }
 .content_c48ade:has(.container_c8ffbb:hover) .vc-membercount-widget.vc-membercount-member-list {
-    margin-top: 20px;
+    margin-top: 9px;
 	opacity: 1;
     transition-delay: var(--transition-delay-enter);
 }
@@ -1001,7 +1001,7 @@ div[style='height: 8px;'] {
 
 /* Server members list, server member role category icon */
 .roleIcon__1e6f1.roleIcon_c8ffbb {
-    margin-right: 18px;
+    margin-right: 5px;
 	margin-left: 8px;
 }
 
