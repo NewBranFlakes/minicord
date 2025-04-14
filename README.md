@@ -16,12 +16,10 @@ Compatible with *most* themes (see the list below for specifics):
   * Any theme that does **NOT** alter element margins or spacing for major sections
     * (Major section examples: server members list, server channels list, etc.)
 ## Prerequisites
-1. **Maximize the server channels list** (click and drag on the divider between the main text area and the server channels list) so that the server banner doesn't become distorted  
-    > Might change this behavior to simply set the size of all of the server channels' elements to their maximum possible size
-2. **Recommended:** Use "Compact" UI density (the theme was mostly designed around this setting)
+1. **Recommended:** Use "Compact" UI density (the theme was mostly designed around this setting)
     > **Navigation:** Settings -> Appearance -> UI Density -> "Compact" option  
     > You *can* use a different "UI Density" setting, but it may not look as pretty
-3. That's all!
+2. That's all!
 ## Installation
 Note: It is recommended to use hyperlinks as client mods (Vencord, BetterDiscord, etc.) will automatically pull from the latest version via GitHub Pages.
 
