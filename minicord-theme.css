@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 6.0.1
+ * @version 6.0.2
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -49,6 +49,10 @@
 
     --background-quaternary: color-mix(in srgb, var(--background-tertiary) 100%, rgba(0, 0, 0, 1) 25%);
     --background-primary-lighter: color-mix(in srgb, var(--background-primary) 100%, rgba(calc(128*0.5), calc(128*0.5), calc(128*0.5 + 4), 1) 25%);
+    /* --border-subtle: transparent !important; */
+    /* --border-normal: transparent !important; */
+    /* --border-faint: transparent !important; */
+    /* --app-mount-border: transparent !important; */
 }
 
 /* Window top bar */
@@ -83,7 +87,7 @@
 /* Server banner inner div */
 .container_f37cb1 {
     height: 46px;
-    border: none;
+    border: none !important;
     width: 100%;
 }
 
@@ -156,6 +160,11 @@
 /* Servers list, servers list scroller */
 .scroller_ef3116 {
     z-index: 1 !important;
+}
+
+/* Server list, expanded server folder */
+.expandedFolderBackground__48112 {
+    border: none !important;
 }
 
 /* Servers list filtering */
@@ -407,7 +416,7 @@ div[style='height: 8px;'] {
     bottom: 24px;
     z-index: 3;
     background-color: var(--background-primary-lighter); /* var(--chat-background-default); */
-    border: none;
+    border: none !important;
 
     max-width: var(--user-panel-left-shrunk);
     transition: bottom var(--transition-speed) var(--transition-style), left var(--transition-speed) var(--transition-style), max-width var(--transition-speed) var(--transition-style);
@@ -661,9 +670,14 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-enter);
 }
 
+/* Main chat, top div */
+.content_f75fb0 {
+    border: none !important;
+}
+
 /* Main chat, wrapper */
 .chatContent_f75fb0 {
-    border: none;
+    border: none !important;
     background-color: var(--background-secondary) !important;
     max-width: 100%;
 }
@@ -702,7 +716,7 @@ div[style='height: 8px;'] {
 .subtitleContainer_f75fb0 {
     padding-left: 0px;
     padding-right: 0px;
-    border: none;
+    border: none !important;
     background-color: var(--background-tertiary);
     z-index: 3;
 }
@@ -749,11 +763,10 @@ div[style='height: 8px;'] {
     order: 1;
 }
 
-/* Subtitle bar search "bar" component */
+/* Subtitle bar search bar component */
 .searchBar__97492 { /* .focused__97492 */
-    background-color: var(--background-secondary) !important;
+    background-color: var(--background-primary-lighter) !important;
     border: none !important;
-    border-width: 1px !important;
     width: 29px !important;
     transition: width var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
@@ -862,7 +875,7 @@ div[style='height: 8px;'] {
 
 /* Main chat textbox, inner div */
 .channelTextArea_f75fb0.channelTextArea__74017 {
-    border: none;
+    border: none !important;
 }
 
 /* Main chat textbox, inner-inner div */
@@ -917,7 +930,7 @@ div[style='height: 8px;'] {
 .newMessagesBar__0f481.barBase__0f481 {
     padding: 0;
     left: 0;
-    width: calc(100% - var(--server-members-left-shrunk) - 21px);
+    width: calc(100% - var(--server-members-left-shrunk) - 2px - 20px);
     margin-left: 10px;
 }
 
@@ -927,6 +940,7 @@ div[style='height: 8px;'] {
     height: calc(100% - 81px);
     z-index: 3;
     width: var(--search-results-width);
+    border: none !important;
 
     left: calc(100% - var(--search-results-left));
     transition: left var(--transition-speed) var(--transition-style);
@@ -1014,6 +1028,7 @@ div[style='height: 8px;'] {
 
 /* Search results list header */
 .searchHeader_f3b986 {
+    border: none !important;
     padding: 10px !important;
 }
 
@@ -1047,7 +1062,7 @@ div[style='height: 8px;'] {
 /* Server members list */
 .container_c8ffbb {
     position: fixed;
-    height: calc(100% - 81px);
+    height: calc(100% - 80px);
     width: 256px !important;
     z-index: 3;
     border: none !important;
@@ -1068,7 +1083,7 @@ div[style='height: 8px;'] {
 
 /* Server members count (plugin) */
 .vc-membercount-widget.vc-membercount-member-list {
-	margin-top: calc(-25px);
+    margin-top: calc(-25px);
 	padding: 0;
 
 	opacity: 0;
@@ -1076,7 +1091,7 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit);
 }
 .content_c48ade:has(.container_c8ffbb:hover) .vc-membercount-widget.vc-membercount-member-list {
-    margin-top: 9px;
+    margin-top: 8px;
 	opacity: 1;
     transition-delay: var(--transition-delay-enter);
 }
@@ -1350,6 +1365,11 @@ div[style='height: 8px;'] {
 	margin-bottom: 0px !important;
 }
 
+/* DMs, "find a convo" button */
+.button__201d5 {
+    border: none !important;
+}
+
 /* DMs, tab search bar */
 .searchBar__35e86 {
     border: none !important;
@@ -1357,7 +1377,8 @@ div[style='height: 8px;'] {
 
 /* DMs, friends big search bar */
 .searchBar__5ec2f {
-    border: none;
+    background-color: var(--background-primary-lighter) !important;
+    border: none !important;
 }
 
 /* DMs, "Active Now" section */
@@ -1433,6 +1454,11 @@ div[style='height: 8px;'] {
 /* DMs, tab buttons icon */
 .avatar__20a53 {
 	margin-right: 10px;
+}
+
+/* DMs, main friend area */
+.tabBody__133bf {
+    border: none !important;
 }
 
 /* DMs, DM friends list scroller */
