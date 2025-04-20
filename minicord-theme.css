@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 6.0.2
+ * @version 6.1.0
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -723,6 +723,7 @@ div[style='height: 8px;'] {
 
 /* Subtitle bar, inner div */
 .title_f75fb0 {
+    background: var(--bg-overlay-4, var(--background-base-lowest)) !important;
     background-color: var(--background-tertiary) !important;
 }
 
@@ -765,6 +766,7 @@ div[style='height: 8px;'] {
 
 /* Subtitle bar search bar component */
 .searchBar__97492 { /* .focused__97492 */
+    background: var(--bg-overlay-floating, var(--background-base-low)) !important;
     background-color: var(--background-primary-lighter) !important;
     border: none !important;
     width: 29px !important;
@@ -1078,7 +1080,8 @@ div[style='height: 8px;'] {
 
 /* Server members list, inner-inner div */
 .members_c8ffbb {
-    background-color: var(--background-tertiary) !important; /* var(--background-base-lowest) */
+    background: var(--bg-overlay-4, var(--background-base-lowest)) !important;
+    background-color: var(--background-tertiary) !important;
 }
 
 /* Server members count (plugin) */
@@ -1198,6 +1201,7 @@ div[style='height: 8px;'] {
     padding: 0px;
 }
 .member__5d473 {
+    background: transparent !important;
     background-color: transparent !important;
     margin-left: 11px;
     margin-top: 5px;
