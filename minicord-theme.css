@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 7.0.0
+ * @version 7.1.0
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -1794,7 +1794,7 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit);
 }
 .channelAttachmentArea_b77158:hover {
-    height: calc(218px) !important;
+    height: calc(150px + 8px) !important;
     transition-delay: var(--transition-delay-enter);
 }
 .base_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .channelAttachmentArea_b77158 {
@@ -1830,22 +1830,24 @@ div[style='height: 8px;'] {
 }
 
 /* Channel attachments, attachment icon */
-.icon__41ea0 {
-    order: 1 !important;
+.icon__41ea0, .mediaContainer__41ea0 {
     opacity: 0 !important;
 
     transition: opacity var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
-.channelAttachmentArea_b77158:hover .icon__41ea0 {
+.channelAttachmentArea_b77158:hover .icon__41ea0,
+.channelAttachmentArea_b77158:hover .mediaContainer__41ea0 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter);
 }
 
 /* Channel attachments, attachment icon space area */
 .upload_aa605f {
+    min-width: 150px !important;
+    max-width: 150px !important;
     min-height: 0px !important;
-    max-height: 18px !important;
+    /* max-height: 18px !important; */
     background-color: var(--background-primary) !important;
 
     transition: max-height var(--transition-speed) var(--transition-style);
@@ -1855,13 +1857,17 @@ div[style='height: 8px;'] {
     max-height: 200px !important;
     transition-delay: var(--transition-delay-enter);
 }
+.upload_aa605f * {
+    margin: 0px !important;
+}
 
 /* Channel attachments, attachment name */
 .filenameContainer__41ea0, .filename__41ea0 {
     margin: 0px !important;
 }
 .filenameContainer__41ea0 {
-    order: 0 !important;
+    margin-bottom: calc(-2px + 8px) !important;
+    order: -1 !important;
 }
 
 /* Channel attachments, actual attachment buttons */
