@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 6.1.0
+ * @version 7.0.0
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -803,8 +803,10 @@ div[style='height: 8px;'] {
 /* Main chat div */
 .scroller__36d07 {
     max-width: calc(100% - var(--server-members-left-shrunk));
+    height: 100% !important;
     max-height: calc(100% - 4px);
-    transition: max-width var(--transition-speed) var(--transition-style);
+    transition: max-width var(--transition-speed) var(--transition-style),
+    height var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
 .content_c48ade:has(.privateChannels__35e86) .scroller__36d07,
@@ -823,6 +825,9 @@ div[style='height: 8px;'] {
 .content_c48ade:has(.guildSidebar_f75fb0) .scroller__36d07 {
     max-width: calc(100% - var(--modview-left-shrunk) + 7px);
     transition-delay: var(--transition-delay-enter);
+}
+.content_c48ade:has(.channelAttachmentArea_b77158) .scroller__36d07 {
+    height: calc(100% - 64px) !important;
 }
 
 /* Main chat textbox */
@@ -881,8 +886,21 @@ div[style='height: 8px;'] {
 }
 
 /* Main chat textbox, inner-inner div */
+.inner__74017 {
+    padding: 0px !important;
+    margin: 0px !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+}
+
+/* Main chat textbox, inner-inner-inner div */
 .scrollableContainer__74017 {
     background-color: var(--background-primary-lighter) !important;
+}
+
+/* Why is there space for a scrollbar if it never actually shows??? */
+.scrollableContainer__74017::-webkit-scrollbar {
+    display: none !important;
 }
 
 /* Main chat textbox, stacked bars */
@@ -1742,4 +1760,117 @@ div[style='height: 8px;'] {
     flex-basis: 0px;
     width: 20px;
     height: 20px;
+}
+
+/* Voice channel members section */
+.callContainer_cb9592 {
+    border: none !important;
+}
+
+/* "Stacked" contexts (ex. replying) */
+.stackedBars__74017 {
+    border: none !important;
+}
+
+/* Channel attachments, main area */
+.channelAttachmentArea_b77158 {
+    background: var(--bg-overlay-floating, var(--background-base-low)) !important;
+    background-color: var(--background-primary-lighter) !important;
+    position: absolute !important;
+    bottom: 58px;
+    left: -58px !important;
+    width: calc(100% + 58px - 16px) !important;
+    height: 36px !important;
+    border-radius: 8px !important;
+    padding: 8px !important;
+    gap: 8px !important;
+
+    overflow-y: hidden !important;
+    overflow-x: scroll !important;
+
+    transition: height var(--transition-speed) var(--transition-style),
+    width var(--transition-speed) var(--transition-style),
+    left var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.channelAttachmentArea_b77158:hover {
+    height: calc(218px) !important;
+    transition-delay: var(--transition-delay-enter);
+}
+.base_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .channelAttachmentArea_b77158 {
+    width: calc(100% - 15px) !important;
+    left: -1px !important;
+}
+
+/* Channel attachments, main area, scrollbar */
+.channelAttachmentArea_b77158::-webkit-scrollbar {
+    display: none !important;
+}
+.channelAttachmentArea_b77158::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-auto-thumb) !important;
+}
+.channelAttachmentArea_b77158::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-auto-track) !important;
+}
+
+/* Channel attachments, action buttons for attachments (the main container) */
+.actionBarContainer_aa605f {
+    opacity: 0 !important;
+    pointer-events: none !important;
+
+    top: calc(100% - 16px) !important;
+
+    transition: opacity var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.channelAttachmentArea_b77158:hover .actionBarContainer_aa605f {
+    opacity: 1 !important;
+    pointer-events: all !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Channel attachments, attachment icon */
+.icon__41ea0 {
+    order: 1 !important;
+    opacity: 0 !important;
+
+    transition: opacity var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.channelAttachmentArea_b77158:hover .icon__41ea0 {
+    opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Channel attachments, attachment icon space area */
+.upload_aa605f {
+    min-height: 0px !important;
+    max-height: 18px !important;
+    background-color: var(--background-primary) !important;
+
+    transition: max-height var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.channelAttachmentArea_b77158:hover .upload_aa605f {
+    max-height: 200px !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Channel attachments, attachment name */
+.filenameContainer__41ea0, .filename__41ea0 {
+    margin: 0px !important;
+}
+.filenameContainer__41ea0 {
+    order: 0 !important;
+}
+
+/* Channel attachments, actual attachment buttons */
+.actionBar_aa605f {
+    top: 0px !important;
+    right: 16px !important;
+}
+
+/* Channel attachments, actual attachment buttons space area */
+.wrapper_f7ecac {
+    border-radius: 8px !important;
 }
