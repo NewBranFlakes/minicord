@@ -16,10 +16,14 @@ Compatible with *most* themes (see the list below for specifics):
   * Any theme that does **NOT** alter element margins or spacing for major sections
     * (Major section examples: server members list, server channels list, etc.)
 ## Prerequisites
-1. **Recommended:** Use "Compact" UI density (the theme was mostly designed around this setting)
-    > **Navigation:** Settings -> Appearance -> UI Density -> "Compact" option  
-    > You *can* use a different "UI Density" setting, but it may not look as pretty
-2. That's all!
+1. Make sure the members list is visible (otherwise there will be wasted space on the right side)
+    > **Navigation:** Subtitle Bar -> Show Member List
+2. **Recommended:** Use "Compact" UI density (the theme was mostly designed around this setting)
+    > **Navigation:** Settings -> Appearance -> UI Density -> "Compact" option
+
+&ensp;&ensp;*You **can** use a different "UI Density" setting, but it may not look as pretty*  
+
+3. That's all!
 ## Installation
 Note: It is recommended to use hyperlinks as client mods (Vencord, BetterDiscord, etc.) will automatically pull from the latest version via GitHub Pages.
 
