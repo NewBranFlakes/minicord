@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 7.2.0
+ * @version 7.4.0
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -524,7 +524,7 @@ div[style='height: 8px;'] {
 .avatarWrapper__37e49 {
     z-index: 1;
     gap: 0px !important;
-    margin-left: -1px !important;
+    margin-left: 0px !important;
 }
 
 /* User panel, voice connection, no borders */
@@ -831,8 +831,17 @@ div[style='height: 8px;'] {
     max-width: calc(100% - var(--modview-left-shrunk) + 7px);
     transition-delay: var(--transition-delay-enter);
 }
+.content_c48ade:has(.stackedBars__74017) .scroller__36d07 {
+    height: calc(100% - 4px) !important;
+    transition-delay: var(--transition-delay-enter);
+}
 .content_c48ade:has(.channelAttachmentArea_b77158) .scroller__36d07 {
-    height: calc(100% - 64px) !important;
+    height: calc(100% - 4px) !important;
+    transition-delay: var(--transition-delay-enter);
+}
+.content_c48ade:has(.stackedBars__74017):has(.channelAttachmentArea_b77158) .scroller__36d07 {
+    height: calc(100% - 4px) !important;
+    transition-delay: var(--transition-delay-enter);
 }
 
 /* Main chat textbox */
@@ -887,6 +896,8 @@ div[style='height: 8px;'] {
 
 /* Main chat textbox, inner div */
 .channelTextArea_f75fb0.channelTextArea__74017 {
+    /* max-height: 50px !important; */
+    background: none !important;
     border: none !important;
 }
 
@@ -894,13 +905,19 @@ div[style='height: 8px;'] {
 .inner__74017 {
     padding: 0px !important;
     margin: 0px !important;
-    margin-left: 16px !important;
-    margin-right: 16px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    border-radius: 8px !important;
+    background-color: var(--background-primary-lighter) !important;
 }
 
 /* Main chat textbox, inner-inner-inner div */
 .scrollableContainer__74017 {
+    overflow: visible !important;
     background-color: var(--background-primary-lighter) !important;
+    background: none !important;
 }
 
 /* Why is there space for a scrollbar if it never actually shows??? */
@@ -910,7 +927,25 @@ div[style='height: 8px;'] {
 
 /* Main chat textbox, stacked bars */
 .stackedBars__74017 {
+    border: none !important;
+    border-radius: 8px !important;
+    margin-bottom: 7px !important;
     background-color: var(--background-primary-lighter) !important;
+    margin-left: -58px !important;
+
+    transition: margin-left var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .stackedBars__74017,
+.content_c48ade:has(.panels_c48ade[aria-label='User area']:hover):has(.panel__5dec7.activityPanel_c48ade):has(.channelAttachmentArea_b77158) .stackedBars__74017 {
+    margin-left: calc(-58px - var(--user-panel-left-diff)) !important;
+    transition-delay: var(--transition-delay-enter);
+}
+.content_c48ade:has(.container_e131a9):has(.panels_c48ade[aria-label='User area']:hover) .stackedBars__74017,
+.content_c48ade:has(.panel__5dec7.activityPanel_c48ade):has(.panels_c48ade[aria-label='User area']:hover) .stackedBars__74017,
+.content_c48ade:has(.container_e131a9):has(.panel__5dec7.activityPanel_c48ade):has(.panels_c48ade[aria-label='User area']:hover) .stackedBars__74017 {
+    margin-left: calc(0px) !important;
+    transition-delay: var(--transition-delay-enter);
 }
 
 /* Main chat textbox buttons */
@@ -1772,17 +1807,13 @@ div[style='height: 8px;'] {
     border: none !important;
 }
 
-/* "Stacked" contexts (ex. replying) */
-.stackedBars__74017 {
-    border: none !important;
-}
-
 /* Channel attachments, main area */
 .channelAttachmentArea_b77158 {
     background: var(--bg-overlay-floating, var(--background-base-low)) !important;
     background-color: var(--background-primary-lighter) !important;
-    position: absolute !important;
-    bottom: 58px;
+    position: relative !important;
+    margin-bottom: 7px !important;
+    bottom: 0px;
     left: -58px !important;
     width: calc(100% + 58px - 16px) !important;
     height: 36px !important;
@@ -1810,7 +1841,7 @@ div[style='height: 8px;'] {
 .content_c48ade:has(.panel__5dec7.activityPanel_c48ade):has(.panels_c48ade[aria-label='User area']:hover) .channelAttachmentArea_b77158,
 .content_c48ade:has(.container_e131a9):has(.panel__5dec7.activityPanel_c48ade):has(.panels_c48ade[aria-label='User area']:hover) .channelAttachmentArea_b77158 {
     width: calc(100% - 15px) !important;
-    left: -1px !important;
+    left: 0px !important;
 }
 
 /* Channel attachments, main area, scrollbar */
