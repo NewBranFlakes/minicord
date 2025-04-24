@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 7.4.0
+ * @version 7.4.1
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -896,7 +896,6 @@ div[style='height: 8px;'] {
 
 /* Main chat textbox, inner div */
 .channelTextArea_f75fb0.channelTextArea__74017 {
-    /* max-height: 50px !important; */
     background: none !important;
     border: none !important;
 }
@@ -910,6 +909,7 @@ div[style='height: 8px;'] {
     padding-left: 16px !important;
     padding-right: 16px !important;
     border-radius: 8px !important;
+    background: var(--bg-overlay-floating, var(--background-base-low)) !important;
     background-color: var(--background-primary-lighter) !important;
 }
 
