@@ -1237,6 +1237,11 @@ div[style='height: 8px;'] {
     margin-bottom: 2px !important;
 }
 
+/* Server members list, server member name div */
+.name__91a9d {
+	width: auto !important;
+}
+
 /* Server members list, server member subtext */
 .subText__91a9d, .subText__91a9d * {
     line-height: 11px;
