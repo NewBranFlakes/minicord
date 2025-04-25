@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 7.5.0
+ * @version 7.6.0
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -49,6 +49,7 @@
 
     --background-quaternary: color-mix(in srgb, var(--background-tertiary) 100%, rgba(0, 0, 0, 1) 25%);
     --background-primary-lighter: color-mix(in srgb, var(--background-primary) 100%, rgba(calc(128*0.5), calc(128*0.5), calc(128*0.5 + 4), 1) 25%);
+    --background-overlay-floating-lighter: color-mix(in srgb, var(--bg-overlay-floating) 100%, rgba(calc(128*0.5), calc(128*0.5), calc(128*0.5), 1) 25%);
     /* --border-subtle: transparent !important; */
     /* --border-normal: transparent !important; */
     /* --border-faint: transparent !important; */
@@ -77,6 +78,11 @@
 }
 .winButtons_c38106.winButtonsWithDivider_c38106 {
     gap: 0px;
+}
+
+/* No borders in shop menus (nitro, profile customization) */
+.homeWrapper__0920e, .shop__6db1d {
+    border: none !important;
 }
 
 /* Sidebar region margin thing? Not used anymore so just get rid of it lol */
@@ -144,9 +150,9 @@
     transition-delay: var(--transition-delay-enter);
 }
 
-/* Darkens the top window bar and the servers list bar (matches theme colors) */
+/* Darkens the top window bar and the servers list bar (adheres to theme colors) */
 .wrapper_ef3116.guilds_c48ade::after {
-    background-color: var(--background-quaternary) !important;
+    background-color: rgba(0, 0, 0, 0.25) !important;
     display: block !important;
     content: "" !important;
     position: fixed !important;
@@ -155,6 +161,26 @@
     height: 100% !important;
     width: 100% !important;
     z-index: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Server folder background adjustment */
+.folder__48112 {
+    background: var(--background-primary) !important;
+    /* background: rgb(var(--bg-overlay-color) / var(--bg-overlay-opacity-3)) !important; */
+    /* background: rgb(var(--bg-overlay-color-inverse) / var(--bg-overlay-opacity-6)) !important; */
+}
+
+/* App background */
+.bg__960e4 {
+    background: var(--bg-overlay-1) !important;
+    background-color: var(--background-tertiary) !important;
+}
+
+/* Servers list inner div */
+.itemsContainer_ef3116 {
+    background: var(--bg-overlay-1) !important;
+    background-color: var(--background-tertiary) !important;
 }
 
 /* Servers list, servers list scroller */
@@ -256,6 +282,7 @@
 
 /* Server channels sidebar padding fix */
 .container__2637a {
+    background: var(--bg-overlay-2) !important;
     background-color: var(--background-tertiary) !important;
     padding-bottom: 0px !important;
 }
@@ -535,6 +562,8 @@ div[style='height: 8px;'] {
 
 /* User panel, activity sub-section */
 .panel__5dec7.activityPanel_c48ade {
+    background: var(--bg-overlay-floating) !important;
+    background-color: var(--background-primary-lighter) !important;
     height: 44px !important;
 }
 
@@ -683,6 +712,7 @@ div[style='height: 8px;'] {
 /* Main chat, wrapper */
 .chatContent_f75fb0 {
     border: none !important;
+    background: var(--bg-overlay-4) !important;
     background-color: var(--background-secondary) !important;
     max-width: 100%;
 }
@@ -728,7 +758,7 @@ div[style='height: 8px;'] {
 
 /* Subtitle bar, inner div */
 .title_f75fb0 {
-    background: var(--bg-overlay-4, var(--background-base-lowest)) !important;
+    background: var(--bg-overlay-2) !important;
     background-color: var(--background-tertiary) !important;
 }
 
@@ -771,7 +801,7 @@ div[style='height: 8px;'] {
 
 /* Subtitle bar search bar component */
 .searchBar__97492 { /* .focused__97492 */
-    background: var(--bg-overlay-floating, var(--background-base-low)) !important;
+    background: var(--bg-overlay-floating) !important;
     background-color: var(--background-primary-lighter) !important;
     border: none !important;
     width: 29px !important;
@@ -909,7 +939,7 @@ div[style='height: 8px;'] {
     padding-left: 16px !important;
     padding-right: 16px !important;
     border-radius: 8px !important;
-    background: var(--bg-overlay-floating, var(--background-base-low)) !important;
+    background: var(--bg-overlay-floating) !important;
     background-color: var(--background-primary-lighter) !important;
 }
 
@@ -930,6 +960,7 @@ div[style='height: 8px;'] {
     border: none !important;
     border-radius: 8px !important;
     margin-bottom: 7px !important;
+    background: var(--bg-overlay-floating) !important;
     background-color: var(--background-primary-lighter) !important;
     margin-left: -58px !important;
 
@@ -946,6 +977,17 @@ div[style='height: 8px;'] {
 .content_c48ade:has(.container_e131a9):has(.panel__5dec7.activityPanel_c48ade):has(.panels_c48ade[aria-label='User area']:hover) .stackedBars__74017 {
     margin-left: calc(0px) !important;
     transition-delay: var(--transition-delay-enter);
+}
+
+/* Stacked bars, inner div */
+.clipContainer__841c8 {
+    padding: 0px !important;
+    height: 100% !important;
+}
+
+/* Reply bar */
+.replyBar__841c8 {
+    background: none !important;
 }
 
 /* Main chat textbox buttons */
@@ -1138,7 +1180,7 @@ div[style='height: 8px;'] {
 
 /* Server members list, inner-inner div */
 .members_c8ffbb {
-    background: var(--bg-overlay-4, var(--background-base-lowest)) !important;
+    background: var(--bg-overlay-2) !important;
     background-color: var(--background-tertiary) !important;
 }
 
@@ -1352,13 +1394,13 @@ div[style='height: 8px;'] {
 }
 
 /* Voice channel, voice channel member name text */
-.container__91e7c {
+.container__394db, .icons__07f91 {
     opacity: 0;
     transition: opacity var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .container__91e7c
-/* .base_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .container__91e7c */ {
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .container__394db,
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .icons__07f91 {
     opacity: 1;
     transition-delay: var(--transition-delay-enter);
 }
@@ -1822,7 +1864,7 @@ div[style='height: 8px;'] {
 
 /* Channel attachments, main area */
 .channelAttachmentArea_b77158 {
-    background: var(--bg-overlay-floating, var(--background-base-low)) !important;
+    background: var(--bg-overlay-floating) !important;
     background-color: var(--background-primary-lighter) !important;
     position: relative !important;
     margin-bottom: 7px !important;
