@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 7.6.0
+ * @version 7.7.0
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -191,10 +191,16 @@
 /* Server list, expanded server folder */
 .expandedFolderBackground__48112 {
     border: none !important;
+    background: var(--background-secondary) !important;
+}
+
+/* Hide certain servers list buttons */
+.listItem__650eb:has(.circleIconButton__5bc7e.discoveryIcon_ef3116[role='treeitem'][aria-label='Discover']) {
+    display: none !important;
 }
 
 /* Servers list filtering */
-.wrapper__6e9f8[role='treeitem'][aria-label='Direct Messages'],
+.wrapper__6e9f8[role='treeitem'][data-list-item-id='guildsnav___home'],
 .circleIconButton__5bc7e.discoveryIcon_ef3116[role='treeitem'][aria-label='Discover'],
 .circleIconButton__5bc7e[role='treeitem'][data-list-item-id='guildsnav___create-join-button'],
 .blobContainer_e5445c,
@@ -210,7 +216,7 @@
     opacity: 1;
     transition-delay: var(--transition-delay-enter);
 }
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .wrapper__6e9f8[role='treeitem'][aria-label='Direct Messages'],
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .wrapper__6e9f8[role='treeitem'][data-list-item-id='guildsnav___home'],
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .circleIconButton__5bc7e.discoveryIcon_ef3116[role='treeitem'][aria-label='Discover'],
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .circleIconButton__5bc7e[role='treeitem'][data-list-item-id='guildsnav___create-join-button'],
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .blobContainer_e5445c,
