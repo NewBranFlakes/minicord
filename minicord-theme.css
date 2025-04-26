@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 7.6.2
+ * @version 7.6.3
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -139,8 +139,8 @@
 .wrapper_ef3116.guilds_c48ade {
     position: relative;
     left: 0px;
-    top: 0px;
-    height: 100%;
+    top: 1px;
+    height: calc(100% - 1px);
     margin-bottom: 0px;
     z-index: 0;
     transition-delay: var(--transition-delay-exit);
@@ -203,29 +203,26 @@
 }
 
 /* Servers list filtering */
-.wrapper__6e9f8[role='treeitem'][data-list-item-id='guildsnav___home'],
-.circleIconButton__5bc7e.discoveryIcon_ef3116[role='treeitem'][aria-label='Discover'],
-.circleIconButton__5bc7e[role='treeitem'][data-list-item-id='guildsnav___create-join-button'],
 .blobContainer_e5445c,
 .folderIcon__48112,
-.expandedFolderBackground__48112 {
-    opacity: 0.25;
+.expandedFolderBackground__48112,
+.listItemWrapper__91816 {
+    opacity: 0.25 !important;
     transition: opacity var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
-.blobContainer_e5445c.selected_e5445c,
-.pill_e5445c.wrapper__58105:has(.item__58105) + .folderIcon__48112,
-.listItem__650eb:has(.item__58105) .blobContainer_e5445c {
-    opacity: 1;
+.listItem__650eb:has(.item__58105) .blobContainer_e5445c,
+.listItem__650eb:has(.item__58105) .folderIcon__48112,
+.listItem__650eb:has(.item__58105) .expandedFolderBackground__48112,
+.listItem__650eb:has(.item__58105) .listItemWrapper__91816 {
+    opacity: 1 !important;
     transition-delay: var(--transition-delay-enter);
 }
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .wrapper__6e9f8[role='treeitem'][data-list-item-id='guildsnav___home'],
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .circleIconButton__5bc7e.discoveryIcon_ef3116[role='treeitem'][aria-label='Discover'],
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .circleIconButton__5bc7e[role='treeitem'][data-list-item-id='guildsnav___create-join-button'],
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .blobContainer_e5445c,
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .folderIcon__48112,
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .expandedFolderBackground__48112 {
-    opacity: 1;
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .expandedFolderBackground__48112,
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .listItemWrapper__91816 {
+    opacity: 1 !important;
     transition-delay: var(--transition-delay-enter);
 }
 
