@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 7.7.0
+ * @version 7.6.2
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -164,11 +164,13 @@
     pointer-events: none !important;
 }
 
-/* Server folder background adjustment */
+/* Server icons, buttons, folders, and folder background adjustment */
+.wrapper__6e9f8[role='treeitem'][data-list-item-id='guildsnav___home'],
+.circleIconButton__5bc7e.discoveryIcon_ef3116[role='treeitem'][aria-label='Discover'],
+.circleIconButton__5bc7e[role='treeitem'][data-list-item-id='guildsnav___create-join-button'],
 .folder__48112 {
-    background: var(--background-primary) !important;
-    /* background: rgb(var(--bg-overlay-color) / var(--bg-overlay-opacity-3)) !important; */
-    /* background: rgb(var(--bg-overlay-color-inverse) / var(--bg-overlay-opacity-6)) !important; */
+    background: var(--bg-overlay-floating) !important;
+    background-color: var(--background-primary) !important;
 }
 
 /* App background */
@@ -191,7 +193,8 @@
 /* Server list, expanded server folder */
 .expandedFolderBackground__48112 {
     border: none !important;
-    background: var(--background-secondary) !important;
+    background: var(--bg-overlay-4) !important;
+    background-color: var(--background-secondary) !important;
 }
 
 /* Hide certain servers list buttons */
