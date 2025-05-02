@@ -1983,3 +1983,8 @@ div[style='height: 8px;'] {
 .wrapper_f7ecac {
     border-radius: 8px !important;
 }
+
+/* Hide user panel when in "add friends" tab */
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .panels_c48ade {
+    display: none !important;
+}
