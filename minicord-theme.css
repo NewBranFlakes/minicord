@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 7.7.0
+ * @version 7.7.1
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -168,9 +168,14 @@
 .wrapper__6e9f8[role='treeitem'][data-list-item-id='guildsnav___home'],
 .circleIconButton__5bc7e.discoveryIcon_ef3116[role='treeitem'][aria-label='Discover'],
 .circleIconButton__5bc7e[role='treeitem'][data-list-item-id='guildsnav___create-join-button'],
-.folder__48112 {
+.folderButton__48112 {
     background: var(--bg-overlay-floating) !important;
     background-color: var(--background-primary) !important;
+}
+
+.folderButton__48112,
+.folderGroupBackground__48112 {
+    border-radius: 14px !important;
 }
 
 /* App background */
@@ -191,10 +196,15 @@
 }
 
 /* Server list, expanded server folder */
-.expandedFolderBackground__48112 {
+.folderGroupBackground__48112 {
     border: none !important;
     background: var(--bg-overlay-4) !important;
     background-color: var(--background-secondary) !important;
+}
+
+/* Some inner rounded background for server folders I guess? */
+.folderPreviewWrapper__48112 {
+    background: transparent !important;
 }
 
 /* Server list, ping notification badge (server folder) */
@@ -253,7 +263,7 @@
 /* Servers list filtering */
 .blobContainer_e5445c,
 .folderHeader__48112,
-.expandedFolderBackground__48112,
+.folderGroupBackground__48112,
 .listItemWrapper__91816 {
     opacity: 0.25 !important;
     transition: opacity var(--transition-speed) var(--transition-style);
@@ -261,14 +271,14 @@
 }
 .listItem__650eb:has(.item__58105) .blobContainer_e5445c,
 .listItem__650eb:has(.item__58105) .folderHeader__48112,
-.listItem__650eb:has(.item__58105) .expandedFolderBackground__48112,
+.listItem__650eb:has(.item__58105) .folderGroupBackground__48112,
 .listItem__650eb:has(.item__58105) .listItemWrapper__91816 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter);
 }
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .blobContainer_e5445c,
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .folderHeader__48112,
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .expandedFolderBackground__48112,
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .folderGroupBackground__48112,
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .listItemWrapper__91816 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter);
