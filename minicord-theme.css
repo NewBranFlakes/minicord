@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 7.6.3
+ * @version 7.7.0
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -197,6 +197,54 @@
     background-color: var(--background-secondary) !important;
 }
 
+/* Server list, ping notification badge (server folder) */
+.folderHeader__48112 .lowerBadge_cc5dd2 {
+    left: 2px !important;
+    top: 30px !important;
+    transition: left var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .folderHeader__48112 .lowerBadge_cc5dd2 {
+    left: 30px !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Server list, ping notification badge container (server folder) */
+.folderHeader__48112:has(.lowerBadge_cc5dd2) .badgeStroke_cc5dd2 {
+    x: 0px !important;
+    y: 28px !important;
+    transition: x var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .folderHeader__48112:has(.lowerBadge_cc5dd2) .badgeStroke_cc5dd2 {
+    x: 28px !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Server list, ping notification badge (individual server) */
+.blobContainer_e5445c .lowerBadge_cc5dd2 {
+    left: 2px !important;
+    top: 22px !important;
+    transition: left var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .blobContainer_e5445c .lowerBadge_cc5dd2 {
+    left: 22px !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Server list, ping notification badge container (individual server) */
+.blobContainer_e5445c:has(.lowerBadge_cc5dd2) .badgeStroke_cc5dd2 {
+    x: 0px !important;
+    y: 20px !important;
+    transition: x var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .blobContainer_e5445c:has(.lowerBadge_cc5dd2) .badgeStroke_cc5dd2 {
+    x: 20px !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
 /* Hide certain servers list buttons */
 .listItem__650eb:has(.circleIconButton__5bc7e.discoveryIcon_ef3116[role='treeitem'][aria-label='Discover']) {
     display: none !important;
@@ -204,7 +252,7 @@
 
 /* Servers list filtering */
 .blobContainer_e5445c,
-.folderIcon__48112,
+.folderHeader__48112,
 .expandedFolderBackground__48112,
 .listItemWrapper__91816 {
     opacity: 0.25 !important;
@@ -212,14 +260,14 @@
     transition-delay: var(--transition-delay-exit);
 }
 .listItem__650eb:has(.item__58105) .blobContainer_e5445c,
-.listItem__650eb:has(.item__58105) .folderIcon__48112,
+.listItem__650eb:has(.item__58105) .folderHeader__48112,
 .listItem__650eb:has(.item__58105) .expandedFolderBackground__48112,
 .listItem__650eb:has(.item__58105) .listItemWrapper__91816 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter);
 }
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .blobContainer_e5445c,
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .folderIcon__48112,
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .folderHeader__48112,
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .expandedFolderBackground__48112,
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .listItemWrapper__91816 {
     opacity: 1 !important;
@@ -341,6 +389,35 @@
 .content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .sectionDivider__629e4,
 .content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .sectionDivider__35e86 {
     width: var(--server-channels-width) !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Server channel ping indicator */
+.iconContainer__2ea32::before {
+    z-index: -1 !important;
+    content: "" !important;
+    background-color: var(--status-danger) !important;
+    position: absolute !important;
+    display: block !important;
+    top: -5px !important;
+    left: -5px !important;
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 15px !important;
+    border-width: 2px !important;
+    border-color: var(--background-primary-lighter) !important;
+    border-style: solid !important;
+
+    opacity: 0 !important;
+    transition: opacity var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.containerDefault_c69b6d:has(.mentionsBadge__933a1) .iconContainer__2ea32::before {
+    opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter);
+}
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .iconContainer__2ea32::before {
+    opacity: 0 !important;
     transition-delay: var(--transition-delay-enter);
 }
 
