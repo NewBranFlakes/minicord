@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 7.7.2
+ * @version 7.7.3
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -272,7 +272,9 @@
 .listItem__650eb:has(.item__58105) .blobContainer_e5445c,
 .listItem__650eb:has(.item__58105) .folderHeader__48112,
 .listItem__650eb:has(.item__58105) .folderGroupBackground__48112,
-.listItem__650eb:has(.item__58105) .listItemWrapper__91816 {
+.listItem__650eb:has(.item__58105) .listItemWrapper__91816,
+.listItem__650eb:has(.lowerBadge_cc5dd2) .folderHeader__48112,
+.listItem__650eb:has(.lowerBadge_cc5dd2) .blobContainer_e5445c {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter);
 }
