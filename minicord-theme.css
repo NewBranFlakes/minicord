@@ -1275,8 +1275,14 @@ div[style='height: 8px;'] {
 
 /* Server members list, inner-inner div */
 .members_c8ffbb {
+    padding: 0px !important;
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-tertiary) !important;
+}
+
+/* Server members list, innermost div */
+.members_c8ffbb .content__99f8c {
+    height: calc(100% - 24px) !important;
 }
 
 /* Server members count (plugin) */
