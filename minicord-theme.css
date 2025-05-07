@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 7.7.3
+ * @version 7.8.0
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -419,18 +419,57 @@
     border-width: 2px !important;
     border-color: var(--background-primary-lighter) !important;
     border-style: solid !important;
+    pointer-events: none !important;
 
     opacity: 0 !important;
-    transition: opacity var(--transition-speed) var(--transition-style);
+    transition: opacity var(--transition-speed) var(--transition-style),
+    width var(--transition-speed) var(--transition-style),
+    height var(--transition-speed) var(--transition-style),
+    left var(--transition-speed) var(--transition-style),
+    top var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
 .containerDefault_c69b6d:has(.mentionsBadge__933a1) .iconContainer__2ea32::before {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter);
 }
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .iconContainer__2ea32::before {
-    opacity: 0 !important;
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .containerDefault_c69b6d:has(.mentionsBadge__933a1) .iconContainer__2ea32::before {
+    width: 16px !important;
+    height: 16px !important;
+    left: 192px !important;
+    top: 0px !important;
+    opacity: 1;
     transition-delay: var(--transition-delay-enter);
+}
+.containerDefault_c69b6d:hover .containerDefault_c69b6d:has(.mentionsBadge__933a1) .iconContainer__2ea32::before,
+.containerDefault_c69b6d:hover .containerDefault_c69b6d:has(.mentionsBadge__933a1) .channelInfo_c69b6d {
+    opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Transparent background for ping badge */
+.containerDefault_c69b6d .numberBadge__2b1f5 {
+    background-color: transparent !important;
+}
+
+/* Ping notification badge */
+.mentionsBadge__933a1 {
+    opacity: 1 !important;
+    left: -192px !important;
+    transition: left var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .mentionsBadge__933a1 {
+    left: 0px !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Channel info content */
+.channelInfo_c69b6d {
+    order: 1 !important;
+    display: block !important;
+    transition: opacity var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
 }
 
 /* Server channel name */
@@ -440,7 +479,6 @@
     transition-delay: var(--transition-delay-exit);
 }
 .content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .name__2ea32,
-/* .base_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .name__2ea32, */
 .containerDefault_c69b6d.selected_c69b6d:has(.spine__5b40b) .name__2ea32 {
     opacity: 1;
     transition-delay: var(--transition-delay-enter);
@@ -521,14 +559,40 @@ div[style='height: 8px;'] {
     margin-bottom: 5px;
 }
 
+/* Server channel upper div */
+.link__2ea32 {
+    z-index: 0 !important;
+}
+
 /* Server channel inner div */
 .linkTop__2ea32 {
     padding: 2px;
 }
 
-/* Server channel buttons */
-.iconItem_c69b6d.iconBase_c69b6d.iconNoChannelInfo_c69b6d {
-	margin-left: 5px;
+/* Server channel side icons */
+.children__2ea32 {
+    z-index: 0 !important;
+    opacity: 0 !important;
+    
+    transition: opacity var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .children__2ea32 {
+    opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Server channel side icons (children) */
+.children__2ea32 > *:not(.channelInfo_c69b6d) {
+    display: block !important;
+    opacity: 0 !important;
+
+    transition: opacity var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.containerDefault_c69b6d:hover .children__2ea32 > * {
+    opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter);
 }
 
 /* User panel */
