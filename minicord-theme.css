@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 7.8.0
+ * @version 7.9.0
  * @invite 
  * @website 
  * @source https://github.com/NewBranFlakes/minicord
@@ -11,8 +11,8 @@
 */
 
 :root {
-    --transition-speed: 0.2s;
-    --transition-style: ease;
+    --transition-speed: 0.3s;
+    --transition-style: cubic-bezier(0.5, 0, 0.5, 1);
     --transition-delay-enter: 0s;
     --transition-delay-exit: 0s;
 
@@ -133,6 +133,17 @@
 /* Server banner inner div */
 .headerContent_f37cb1.primaryInfo_f37cb1 {
     margin: 0px;
+}
+
+/* Server banner, header content (the tab button) */
+.headerChildren_f37cb1 {
+    opacity: 0 !important;
+    transition: opacity var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .headerChildren_f37cb1 {
+    opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter);
 }
 
 /* Servers list */
@@ -372,14 +383,39 @@
 }
 
 /* Server level progress bar */
-.bar_eff079 {
-    width: calc(var(--server-channels-left-shrunk) - 35px);
+.progressBarContainer_eff079.bar_eff079 {
+    width: 20px !important;
     transition: width var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .bar_eff079
-/* .base_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .bar_eff079 */ {
-	width: calc(100% - 18px);
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .progressBarContainer_eff079.bar_eff079 {
+    width: 100% !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Server level progress bar text */
+.goalTextContainer_eff079, .goalTextContainer_eff079 * {
+    text-overflow: clip !important;
+}
+.goalTextContainer_eff079 {
+    margin-left: -5px !important;
+    width: 28px !important;
+    transition: width var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .goalTextContainer_eff079 {
+    width: 100% !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Server level progress fraction */
+.progressFraction_eff079 {
+    opacity: 0 !important;
+    transition: opacity var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .progressFraction_eff079 {
+    opacity: 1 !important;
     transition-delay: var(--transition-delay-enter);
 }
 
