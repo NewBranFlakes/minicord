@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.0.0
+ * @version 8.0.1
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -881,7 +881,7 @@ div[style='height: 8px;'] {
 }
 
 /* User panel, voice connection, inner div */
-.body__5dec7 {
+.panels_c48ade[aria-label='User area'] .body__5dec7 {
     margin: 0px !important;
     padding: 0px !important;
     width: 100% !important;
@@ -890,19 +890,19 @@ div[style='height: 8px;'] {
 }
 
 /* User panel, voice connection, stream source wrapper */
-.gameWrapper__5dec7, .gameWrapper__8c6c2 {
+.panels_c48ade[aria-label='User area'] .gameWrapper__5dec7, .panels_c48ade[aria-label='User area'] .gameWrapper__8c6c2 {
     width: 100% !important;
     height: 100% !important;
 }
 
 /* User panel, voice connection, stream source icon */
-.svg__2338f, .gameIcon__8c6c2 {
+.panels_c48ade[aria-label='User area'] .svg__2338f, .panels_c48ade[aria-label='User area'] .gameIcon__8c6c2 {
     width: 40px !important;
     height: 40px !important;
 }
 
 /* User panel, voice connection, stream source icon wrapper */
-.wrapper_a629d4, .gameIconWrapper__8c6c2 {
+.panels_c48ade[aria-label='User area'] .wrapper_a629d4, .panels_c48ade[aria-label='User area'] .gameIconWrapper__8c6c2 {
     width: 50px !important;
     height: 50px !important;
     margin-left: 5px !important;
@@ -910,7 +910,7 @@ div[style='height: 8px;'] {
 }
 
 /* User panel, voice connection, stream source "camera" icon */
-.badge_a629d4 {
+.panels_c48ade[aria-label='User area'] .badge_a629d4 {
     top: 24px !important;
     left: 22px !important;
     width: 18px !important;
