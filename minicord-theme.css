@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.0.2
+ * @version 8.0.3
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -657,6 +657,8 @@ div[style='height: 8px;'] {
 /* Server channel upper div */
 .link__2ea32 {
     z-index: 0 !important;
+    transition: background-color var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
 }
 
 /* Server channel inner div */
@@ -1403,6 +1405,12 @@ div[style='height: 8px;'] {
     margin-left: 10px;
 }
 
+/* Main chat message */
+.message__5126c {
+    transition: background-color var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+
 /* Search results list */
 .searchResultsWrap_a9e706 {
     position: fixed;
@@ -1640,14 +1648,14 @@ div[style='height: 8px;'] {
 .nameAndDecorators__91a9d, .nameAndDecorators__91a9d * {
     height: 14px !important;
     margin-right: 1px !important;
-    line-height: 13px;
+    line-height: 14px;
     font-size: 14px;
 }
 .nameAndDecorators__91a9d {
     margin-top: 8px !important;
     margin-bottom: 0px !important;
 }
-.content__91a9d:has(.subText__91a9d) .nameAndDecorators__91a9d {
+.content__91a9d:has(.container_c9d15c) .nameAndDecorators__91a9d {
     margin-top: 2px !important;
     margin-bottom: 2px !important;
 }
@@ -1659,7 +1667,7 @@ div[style='height: 8px;'] {
 
 /* Server members list, server member subtext */
 .subText__91a9d, .subText__91a9d * {
-    line-height: 11px;
+    line-height: 12px;
     height: 12px !important;
     font-size: 12px !important;
 }
@@ -1703,6 +1711,12 @@ div[style='height: 8px;'] {
 .childContainer__91a9d,
 .nameplated__91a9d {
     padding: 0px !important;
+}
+
+/* Server members list, server member selection hightlight */
+.childContainer__91a9d {
+    transition: background-color var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
 }
 
 /* Server members list, server member inner div */
@@ -1778,6 +1792,12 @@ div[style='height: 8px;'] {
 }
 .draggable__55bab {
 	margin-top: 5px;
+}
+
+/* Voice channel, voice channel member selection highlight */
+.content__07f91 {
+    transition: background-color var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
 }
 
 /* Voice channel, voice channel member name text */
@@ -1937,6 +1957,12 @@ div[style='height: 8px;'] {
 /* DMs, user DM */
 .channel__972a0.dm__972a0 {
     margin-left: 3px;
+}
+
+/* DMs, user DM selection highlight */
+.interactive__972a0 {
+    transition: background-color var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
 }
 
 /* DMs, user DM name */
