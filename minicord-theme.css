@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.1.0
+ * @version 8.1.2
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1292,6 +1292,19 @@ div[style='height: 8px;'] {
     max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - var(--modview-left-shrunk) - var(--user-panel-left-diff));
     transition-delay: var(--transition-delay-enter);
 }
+.content_c48ade:has(.chatLayerWrapper__01ae2) .content_f75fb0 .form_f75fb0 {
+    left: calc(1px + var(--user-panel-left-shrunk) + 9px);
+    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - 7px);
+}
+.content_c48ade:has(.container_c8ffbb) .chatLayerWrapper__01ae2 .form_f75fb0 {
+    left: 1px;
+    max-width: calc(100% - 11px - var(--user-panel-left-shrunk) - 7px);
+}
+.content_c48ade:has(.chatLayerWrapper__01ae2):has(.panels_c48ade[aria-label='User area']:hover) .content_f75fb0 .form_f75fb0 {
+    left: calc(1px + var(--user-panel-left-shrunk) + 9px + var(--user-panel-left-diff));
+    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - 7px - var(--user-panel-left-diff));
+    transition-delay: var(--transition-delay-enter);
+}
 
 /* Main chat textbox, inner div */
 .channelTextArea_f75fb0.channelTextArea__74017 {
@@ -2505,13 +2518,23 @@ div[style='height: 8px;'] {
     margin-bottom: 7px !important;
     height: 1px !important;
     line-height: 1px !important;
+    width: calc(100% - 8px - 7px) !important;
+    left: 0px !important;
+    top: 0px !important;
 }
 
 /* Tab button */
 .vc-channeltabs-button {
     margin: 0px !important;
     padding: 0px !important;
-    margin-right: 22px !important;
+}
+
+/* Bookmark button */
+.vc-channeltabs-bookmark-container .vc-channeltabs-button {
+    margin: 0px !important;
+    padding: 0px !important;
+    margin-top: calc(-8px + 7px) !important;
+    margin-right: calc(14px + 7px) !important;
 }
 
 /* Sidebar outline */
