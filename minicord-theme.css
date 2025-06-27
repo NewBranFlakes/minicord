@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.0.5
+ * @version 8.0.6
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -52,7 +52,7 @@
     --background-tertiary: var(--background-base-lowest);
 
     --background-quaternary: color-mix(in srgb, var(--background-tertiary) 100%, rgba(0, 0, 0, 1) 25%);
-    --background-primary-lighter: color-mix(in srgb, var(--background-primary) 100%, rgba(calc(128*0.75), calc(128*0.75), calc(128*0.75), 1) 25%);
+    --background-primary-lighter: color-mix(in srgb, var(--background-primary) 100%, rgba(calc(128*0.75), calc(128*0.75), calc(128*0.75 + 10), 1) 25%);
     --background-overlay-floating-lighter: color-mix(in srgb, var(--bg-overlay-floating) 100%, rgba(calc(128*0.5), calc(128*0.5), calc(128*0.5), 1) 25%);
 }
 
