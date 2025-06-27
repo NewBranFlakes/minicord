@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.0.6
+ * @version 8.1.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -58,7 +58,7 @@
 
 /* Window top bar */
 .bar_c38106 {
-    z-index: 1;
+    z-index: 1 !important;
 }
 
 /* Window top bar, "help" button */
@@ -1620,7 +1620,7 @@ div[style='height: 8px;'] {
     width: 100%;
     border-top-width: 1px;
     border-top-style: solid;
-    border-top-color: var(--background-modifier-accent);
+    border-top-color: var(--border-subtle);
     transition: margin-left var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
@@ -2450,4 +2450,78 @@ div[style='height: 8px;'] {
 /* Hide user panel when in "add friends" tab */
 .content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .panels_c48ade {
     display: none !important;
+}
+
+/* Temp fix for bad text */
+.messageContent_c19a55 {
+    color: var(--text-default) !important;
+}
+
+/* (Equicord) Bookmarks section */
+.vc-channeltabs-container {
+    display: block !important;
+    position: relative !important;
+    order: 1 !important;
+    z-index: 6 !important;
+    width: 100% !important;
+    height: 33px !important;
+    top: 0px !important;
+    left: 0px !important;
+    padding: 7px !important;
+    background: var(--bg-overlay-1) !important;
+    background-color: var(--background-tertiary) !important;
+    overflow: hidden !important;
+    transition: height var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.vc-channeltabs-tab-container::before {
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    display: block !important;
+    content: "" !important;
+    position: absolute !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    height: 100% !important;
+    width: 100% !important;
+    z-index: -1 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    transition: height var(--transition-speed) var(--transition-style),
+    top var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.layer__960e4:has(.vc-channeltabs-bookmark) .vc-channeltabs-container,
+.layer__960e4:has(.vc-channeltabs-container:hover):has(.vc-channeltabs-bookmark-container) .vc-channeltabs-container {
+    height: 78px !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Separation between tabs and bookmarks */
+.vc-channeltabs-separator {
+    display: block !important;
+    position: relative !important;
+    margin: 0px !important;
+    margin-top: 7px !important;
+    margin-bottom: 7px !important;
+    height: 1px !important;
+    line-height: 1px !important;
+}
+
+/* Tab button */
+.vc-channeltabs-button {
+    margin: 0px !important;
+    padding: 0px !important;
+    margin-right: 22px !important;
+}
+
+/* Sidebar outline */
+.container__01ae2 {
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+/* New tab button */
+.vc-channeltabs-new-button, .vc-channeltabs-new-button svg[role='img'] {
+    height: 32px !important;
+    width: 32px !important;
 }
