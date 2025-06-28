@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.1.4
+ * @version 8.1.5
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1436,8 +1436,17 @@ div[style='height: 8px;'] {
     border: none !important;
 
     left: calc(100% - var(--search-results-left));
-    transition: left var(--transition-speed) var(--transition-style);
+    transition: left var(--transition-speed) var(--transition-style),
+    height var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
+}
+.layer__960e4:has(.vc-channeltabs-container) .searchResultsWrap_a9e706 {
+    height: calc(100% - 81px - 43px);
+    transition-delay: var(--transition-delay-enter);
+}
+.layer__960e4:has(.vc-channeltabs-bookmark) .searchResultsWrap_a9e706 {
+    height: calc(100% - 81px - 43px - 41px);
+    transition-delay: var(--transition-delay-enter);
 }
 .searchResultsWrap_a9e706:hover {
     left: calc(100% - var(--search-results-width));
@@ -1561,14 +1570,17 @@ div[style='height: 8px;'] {
     border: none !important;
 
     left: calc(100% - var(--server-members-left-shrunk));
-    transition: left var(--transition-speed) var(--transition-style);
+    transition: left var(--transition-speed) var(--transition-style),
+    height var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
 .layer__960e4:has(.vc-channeltabs-container) .container_c8ffbb {
     height: calc(100% - 78px - 46px);
+    transition-delay: var(--transition-delay-enter);
 }
 .layer__960e4:has(.vc-channeltabs-bookmark) .container_c8ffbb {
     height: calc(100% - 78px - 46px - 41px);
+    transition-delay: var(--transition-delay-enter);
 }
 .container_c8ffbb:hover {
     left: calc(100% - var(--server-members-left-expanded));
@@ -2103,12 +2115,26 @@ div[style='height: 8px;'] {
     z-index: 4;
 
     left: calc(100% - var(--modview-left-shrunk));
-    transition: left var(--transition-speed) var(--transition-style);
+    transition: left var(--transition-speed) var(--transition-style),
+    height var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
-.guildSidebar_f75fb0:hover {
-    left: calc(100% - var(--modview-left-expanded) + 14px);
+.layer__960e4:has(.vc-channeltabs-container) .guildSidebar_f75fb0 {
+    height: calc(100% - 47px);
     transition-delay: var(--transition-delay-enter);
+}
+.layer__960e4:has(.vc-channeltabs-bookmark) .guildSidebar_f75fb0 {
+    height: calc(100% - 47px - 41px);
+    transition-delay: var(--transition-delay-enter);
+}
+.guildSidebar_f75fb0:hover {
+    left: calc(100% - var(--modview-left-expanded));
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* User mod view, inner div */
+.inner_c0bea0 {
+    border-radius: 0px !important;
 }
 
 /* "Emoticon" panel */
