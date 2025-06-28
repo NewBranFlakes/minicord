@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.1.5
+ * @version 8.1.6
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2498,11 +2498,6 @@ div[style='height: 8px;'] {
 /* Hide user panel when in "add friends" tab */
 .content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .panels_c48ade {
     display: none !important;
-}
-
-/* Temp fix for bad text */
-.messageContent_c19a55 {
-    color: var(--text-default) !important;
 }
 
 /* (Equicord) Bookmarks section */
