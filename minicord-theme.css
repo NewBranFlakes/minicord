@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.1.8
+ * @version 8.1.9
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2629,7 +2629,7 @@ div[style='height: 8px;'] {
     pointer-events: none !important;
     opacity: 1 !important;
 }
-.content_c48ade:not(:has(.placeholder__1b31f)) .textArea__74017::after {
+.chatContent_f75fb0:not(:has(.placeholder__1b31f)) .textArea__74017::after {
     opacity: 0 !important;
 }
 
