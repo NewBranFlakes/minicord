@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.2.3
+ * @version 8.2.4
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2651,7 +2651,7 @@ div[style='height: 8px;'] {
     justify-content: center !important;
     text-align: left !important;
     line-height: 16px !important;
-    margin-left: 10px !important;
+    margin-left: 0px !important;
     width: 100% !important;
     height: 16px !important;
     color: var(--channel-text-area-placeholder) !important;
@@ -2698,4 +2698,15 @@ div[style='height: 8px;'] {
 .vc-channeltabs-bookmark:not(:has(.vc-channeltabs-bookmark-icon)) {
     row-gap: 4px !important;
     column-gap: 4px !important;
+}
+
+/* Wrapper for the attachment button */
+.attachWrapper__0923f {
+    width: 34px !important;
+}
+
+/* Actual attachment button */
+.attachButton__0923f {
+    padding: 0px !important;
+    margin: 0px !important;
 }
