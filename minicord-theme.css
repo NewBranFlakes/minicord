@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.1.7
+ * @version 8.1.8
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1258,11 +1258,15 @@ div[style='height: 8px;'] {
     height: calc(100% - 4px) !important;
     transition-delay: var(--transition-delay-enter);
 }
-.content_c48ade:has(.chatLayerWrapper__01ae2) .scroller__36d07 {
+.content_c48ade:has(.chatLayerWrapper__01ae2) .scroller__36d07,
+.content_c48ade:not(:has(.membersWrap_c8ffbb)) .scroller__36d07,
+.content_c48ade:not(:has(.membersWrap_c8ffbb)) .chatLayerWrapper__01ae2 .scroller__36d07 {
     max-width: 100% !important;
+    transition-delay: var(--transition-delay-enter);
 }
-.content_c48ade:has(.chatLayerWrapper__01ae2):not(:has(.privateChannels__35e86)):not(:has(.callContainer_cb9592)) .chatLayerWrapper__01ae2 .scroller__36d07 {
+.content_c48ade:has(.chatLayerWrapper__01ae2):not(:has(.privateChannels__35e86)):not(:has(.callContainer_cb9592)):has(.membersWrap_c8ffbb) .chatLayerWrapper__01ae2 .scroller__36d07 {
     max-width: calc(100% - var(--server-members-left-shrunk)) !important;
+    transition-delay: var(--transition-delay-enter);
 }
 
 /* Main chat textbox */
@@ -1323,6 +1327,16 @@ div[style='height: 8px;'] {
     max-width: calc(100% - 11px - var(--user-panel-left-shrunk) - 7px);
 }
 .content_c48ade:has(.chatLayerWrapper__01ae2):has(.panels_c48ade[aria-label='User area']:hover) .content_f75fb0 .form_f75fb0 {
+    left: calc(1px + var(--user-panel-left-shrunk) + 9px + var(--user-panel-left-diff));
+    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - 7px - var(--user-panel-left-diff));
+    transition-delay: var(--transition-delay-enter);
+}
+.content_c48ade:not(:has(.membersWrap_c8ffbb)) .content_f75fb0 .form_f75fb0 {
+    left: calc(1px + var(--user-panel-left-shrunk) + 9px);
+    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - 7px);
+    transition-delay: var(--transition-delay-enter);
+}
+.content_c48ade:has(.panels_c48ade[aria-label='User area']:hover):not(:has(.membersWrap_c8ffbb)) .content_f75fb0 .form_f75fb0 {
     left: calc(1px + var(--user-panel-left-shrunk) + 9px + var(--user-panel-left-diff));
     max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - 7px - var(--user-panel-left-diff));
     transition-delay: var(--transition-delay-enter);
@@ -2596,4 +2610,30 @@ div[style='height: 8px;'] {
 .vc-channeltabs-new-button, .vc-channeltabs-new-button svg[role='img'] {
     height: 32px !important;
     width: 32px !important;
+}
+
+/* Apparently something about this textbox element causes major performance issues; this is an attempt to bandage it */
+.textArea__74017::after {
+    display: block !important;
+    position: absolute !important;
+    content: "Message" !important;
+    top: calc(50% - 8px) !important;
+    left: 0px !important;
+    justify-content: center !important;
+    text-align: left !important;
+    line-height: 16px !important;
+    margin-left: 10px !important;
+    width: 100% !important;
+    height: 16px !important;
+    color: var(--channel-text-area-placeholder) !important;
+    pointer-events: none !important;
+    opacity: 1 !important;
+}
+.content_c48ade:not(:has(.placeholder__1b31f)) .textArea__74017::after {
+    opacity: 0 !important;
+}
+
+/* Placeholder message box text */
+.placeholder__1b31f {
+    display: none !important;
 }
