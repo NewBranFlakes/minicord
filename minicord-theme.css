@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.1.9
+ * @version 8.2.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1385,6 +1385,9 @@ div[style='height: 8px;'] {
     transition: margin-left var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
+.chatLayerWrapper__01ae2 .stackedBars__74017 {
+    margin-left: 0px !important;
+}
 .content_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .stackedBars__74017,
 .content_c48ade:has(.panels_c48ade[aria-label='User area']:hover):has(.panel__5dec7.activityPanel_c48ade):has(.channelAttachmentArea_b77158) .stackedBars__74017 {
     margin-left: calc(-58px - var(--user-panel-left-diff)) !important;
@@ -2434,6 +2437,10 @@ div[style='height: 8px;'] {
     left var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
+.chatLayerWrapper__01ae2 .channelAttachmentArea_b77158 {
+    left: 0px !important;
+    width: calc(100% - 16px) !important;
+}
 .channelAttachmentArea_b77158:hover {
     height: calc(150px + 8px) !important;
     transition-delay: var(--transition-delay-enter);
@@ -2612,11 +2619,11 @@ div[style='height: 8px;'] {
     width: 32px !important;
 }
 
-/* Apparently something about this textbox element causes major performance issues; this is an attempt to bandage it */
-.textArea__74017::after {
+/* Apparently something about the textbox placeholder text element causes major performance issues; this is an attempt to bandage it */
+.channelBottomBarArea_f75fb0 .textArea__74017::after {
     display: block !important;
     position: absolute !important;
-    content: "Message" !important;
+    content: 'Message' !important;
     top: calc(50% - 8px) !important;
     left: 0px !important;
     justify-content: center !important;
@@ -2633,7 +2640,9 @@ div[style='height: 8px;'] {
     opacity: 0 !important;
 }
 
-/* Placeholder message box text */
+/* Placeholder message box text (removed from document flow as it causes a lot of strange performance issues) */
 .placeholder__1b31f {
+    position: fixed !important;
     display: none !important;
+    content: '' !important;
 }
