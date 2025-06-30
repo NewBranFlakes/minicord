@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.2.1
+ * @version 8.2.2
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -387,6 +387,28 @@
 }
 .wrapper_ef3116.guilds_c48ade:hover + .sidebarList_c48ade.sidebarListRounded_c48ade {
     left: var(--servers-list-left-expanded);
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Gradient fade for servers list */
+.sidebarList_c48ade::before {
+    position: fixed !important;
+    display: block !important;
+    content: '' !important;
+    width: calc(24px * 2.0) !important;
+    height: calc(100% - 32px) !important;
+    top: 32px !important;
+    left: calc(32px - 24px + 1px) !important;
+    background-image: linear-gradient(to left, var(--background-quaternary) 50%, transparent 100%);
+    pointer-events: none !important;
+    transition: opacity var(--transition-speed) var(--transition-style),
+    left var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+    opacity: 1 !important;
+}
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .sidebarList_c48ade::before {
+    left: calc(32px - 23px + var(--servers-list-left-diff)) !important;
+    opacity: 0 !important;
     transition-delay: var(--transition-delay-enter);
 }
 
