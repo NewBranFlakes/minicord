@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.2.4
+ * @version 8.2.5
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1477,6 +1477,9 @@ div[style='height: 8px;'] {
     left: 0;
     width: calc(100% - var(--server-members-left-shrunk) - 2px - 20px);
     margin-left: 10px;
+}
+.content_c48ade:not(:has(.membersWrap_c8ffbb)) .newMessagesBar__0f481.barBase__0f481 {
+    width: calc(100% - 2px - 20px);
 }
 
 /* Main chat message */
