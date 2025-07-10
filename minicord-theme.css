@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.2.10
+ * @version 8.2.11
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2157,6 +2157,8 @@ div[style='height: 8px;'] {
 
 /* DMs, search bar */
 .searchBar__5ec2f.container_a45028.medium_a45028 {
+    background: var(--bg-overlay-floating) !important;
+    background-color: var(--background-primary-lighter) !important;
     width: calc(100% - 63px - 9px);
     margin-left: calc(56px + 9px);
     transition: width var(--transition-speed) var(--transition-style), margin-left var(--transition-speed) var(--transition-style);
@@ -2636,9 +2638,32 @@ div[style='height: 8px;'] {
 
 /* Tab div */
 .vc-channeltabs-tab {
-    background: var(--bg-overlay-4) !important;
+    background: var(--bg-overlay-2) !important;
     background-color: var(--background-secondary) !important;
     margin: 0px !important;
+    transition: background var(--transition-speed) var(--transition-style),
+    background-color var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.vc-channeltabs-tab:hover {
+    background: var(--bg-overlay-4) !important;
+    background-color: var(--background-primary-lighter) !important;
+    transition-delay: var(--transition-delay-enter);
+}
+
+/* Tab div (selected) */
+.vc-channeltabs-tab-selected {
+    background: var(--bg-overlay-4) !important;
+    background-color: var(--background-primary-lighter) !important;
+    margin: 0px !important;
+    transition: background var(--transition-speed) var(--transition-style),
+    background-color var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+
+/* Tab close button */
+.vc-channeltabs-close-button {
+    margin-right: 7px !important;
 }
 
 /* Bookmark button */
@@ -2651,9 +2676,18 @@ div[style='height: 8px;'] {
 
 /* Bookmark div */
 .vc-channeltabs-bookmark {
-    background: var(--bg-overlay-4) !important;
+    background: var(--bg-overlay-2) !important;
     background-color: var(--background-secondary) !important;
     column-gap: 7px !important;
+    cursor: pointer !important;
+    transition: background var(--transition-speed) var(--transition-style),
+    background-color var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.vc-channeltabs-bookmark:hover {
+    background: var(--bg-overlay-4) !important;
+    background-color: var(--background-primary-lighter) !important;
+    transition-delay: var(--transition-delay-enter);
 }
 
 /* Sidebar outline */
