@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.2.9
+ * @version 8.2.10
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2587,6 +2587,11 @@ div[style='height: 8px;'] {
     transition: height var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
+
+/* Bookmarks tab container */
+.vc-channeltabs-tab-container {
+    column-gap: 7px !important;
+}
 .vc-channeltabs-tab-container::before {
     background-color: rgba(0, 0, 0, 0.25) !important;
     display: block !important;
@@ -2633,6 +2638,7 @@ div[style='height: 8px;'] {
 .vc-channeltabs-tab {
     background: var(--bg-overlay-4) !important;
     background-color: var(--background-secondary) !important;
+    margin: 0px !important;
 }
 
 /* Bookmark button */
@@ -2647,6 +2653,7 @@ div[style='height: 8px;'] {
 .vc-channeltabs-bookmark {
     background: var(--bg-overlay-4) !important;
     background-color: var(--background-secondary) !important;
+    column-gap: 7px !important;
 }
 
 /* Sidebar outline */
@@ -2704,8 +2711,14 @@ div[style='height: 8px;'] {
 }
 
 /* Channel name (bookmark) */
-.vc-channeltabs-bookmark-icon {
-    margin-right: 5px !important;
+.vc-channeltabs-bookmark-icon,
+.vc-channeltabs-bookmark svg {
+    margin-right: 0px !important;
+    width: 18px !important;
+    height: 18px !important;
+    line-height: 18px !important;
+    align-items: center !important;
+    vertical-align: middle !important;
 }
 
 /* Gap between tab channel icon and tab name */
@@ -2746,4 +2759,8 @@ div[style='height: 8px;'] {
 /* Typing dots indicator (EXTREMELY unoptimized holy moly) */
 .dots__5ad89 {
     display: none !important;
+}
+
+.vc-channeltabs-scroller {
+    column-gap: 7px !important;
 }
