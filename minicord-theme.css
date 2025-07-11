@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.2.12
+ * @version 8.2.13
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2800,6 +2800,45 @@ div[style='height: 8px;'] {
     display: none !important;
 }
 
+/* Bookmarks spacing */
 .vc-channeltabs-scroller {
     column-gap: 7px !important;
+}
+
+/* Bookmark folder popup div */
+.scroller_c1e9c4 {
+    padding: 0px !important;
+}
+.scroller_c1e9c4 div[aria-hidden='true'], .scroller_c1e9c4::-webkit-scrollbar {
+    display: none !important;
+}
+
+/* More comfortable spacing for bookmark folder contents */
+.item_c1e9c4 {
+    padding: 7px !important;
+    column-gap: 7px !important;
+}
+
+/* Bookmark folder content text */
+.label_c1e9c4 {
+    line-height: 14px !important;
+}
+
+/* Move bookmark folder content's server icon to the front */
+.iconContainer_c1e9c4 {
+    margin: 0px !important;
+}
+.iconContainer_c1e9c4:has(.vc-channeltabs-bookmark-icon) {
+    order: -1 !important;
+}
+
+/* More responsive submenu for bookmark folder content options */
+.layer_da8173:has(> .submenuPaddingContainer_c1e9c4) {
+    margin-left: calc(-3px - 7px) !important;
+    padding-left: 14px !important;
+}
+
+/* Bookmark folder content options submenu div */
+.submenuPaddingContainer_c1e9c4 {
+    padding: 0px !important;
 }
