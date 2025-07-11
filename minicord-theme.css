@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.2.17
+ * @version 8.2.18
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2761,14 +2761,14 @@ div[style='height: 8px;'] {
 
 /* Gap between tab channel icon and tab name */
 .vc-channeltabs-tab-inner {
-    row-gap: 2px !important;
-    column-gap: 2px !important;
+    row-gap: 7px !important;
+    column-gap: 7px !important;
 }
 
 /* Bookmark folder */
 .vc-channeltabs-bookmark:not(:has(.vc-channeltabs-bookmark-icon)) {
-    row-gap: 4px !important;
-    column-gap: 4px !important;
+    row-gap: 7px !important;
+    column-gap: 7px !important;
 }
 
 /* Wrapper for the attachment button */
@@ -2827,8 +2827,16 @@ div[style='height: 8px;'] {
 .iconContainer_c1e9c4 {
     margin: 0px !important;
 }
-.iconContainer_c1e9c4:has(.vc-channeltabs-bookmark-icon) {
+.iconContainer_c1e9c4:has(.vc-channeltabs-bookmark-icon),
+.iconContainer_c1e9c4:has(.wrapper__44b0c) {
     order: -1 !important;
+}
+
+.iconContainer_c1e9c4:has(.wrapper__44b0c),
+.iconContainer_c1e9c4 .wrapper__44b0c,
+.iconContainer_c1e9c4 .mask__44b0c {
+    width: 18px !important;
+    height: 18px !important;
 }
 
 /* More responsive submenu for bookmark folder content options */
