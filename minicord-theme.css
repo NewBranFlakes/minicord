@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.2.11
+ * @version 8.2.12
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -46,6 +46,11 @@
     --modview-left-diff: calc(var(--modview-left-expanded) - var(--modview-left-shrunk));
 
     --emoticon-panel-width: 502px;
+    
+    --bg-overlay-1: var(--background-gradient-lowest);
+    --bg-overlay-2: var(--background-gradient-lower);
+    --bg-overlay-4: var(--background-gradient-low);
+    --bg-overlay-floating: var(--background-gradient-highest);
 
     --background-primary: var(--background-base-low);
     --background-secondary: var(--background-base-lower);
