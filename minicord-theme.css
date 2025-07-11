@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.2.15
+ * @version 8.2.16
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1198,12 +1198,12 @@ div[style='height: 8px;'] {
     transition: max-width var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .upperContainer__9293f
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover):not(:has(.chatLayerWrapper__01ae2)) .upperContainer__9293f
 /* .base_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .upperContainer__9293f */ {
     max-width: calc(100% - var(--server-channels-left-diff));
     transition-delay: var(--transition-delay-enter);
 }
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .upperContainer__9293f {
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover):not(:has(.chatLayerWrapper__01ae2)) .upperContainer__9293f {
     max-width: calc(100% - var(--servers-list-left-diff));
     transition-delay: var(--transition-delay-enter);
 }
@@ -1312,74 +1312,63 @@ div[style='height: 8px;'] {
 /* Main chat textbox */
 .content_f75fb0 .form_f75fb0 {
     left: calc(1px + var(--user-panel-left-shrunk) + 9px);
-    max-width: calc(100% - 16px - var(--server-members-left-shrunk) - var(--user-panel-left-shrunk) - 7px);
+    max-width: calc(100% - 67px - 7px);
     transition: left var(--transition-speed) var(--transition-style), max-width var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
-.content_c48ade:has(.privateChannels__35e86) .content_f75fb0 .form_f75fb0 {
-    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - 7px);
-    transition-delay: var(--transition-delay-enter);
-}
-.content_c48ade:has(.privateChannels__35e86):has(.outer_c0bea0.panel_c0bea0) .content_f75fb0 .form_f75fb0 {
-    max-width: calc(100% - 16px - var(--dm-user-panel-width) - var(--user-panel-left-shrunk) - 7px);
-    transition-delay: var(--transition-delay-enter);
-}
-.content_c48ade:has(.searchResultsWrap_a9e706) .content_f75fb0 .form_f75fb0 {
-    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - var(--search-results-left) - 7px);
-    transition-delay: var(--transition-delay-enter);
-}
-.content_c48ade:has(.guildSidebar_f75fb0) .content_f75fb0 .form_f75fb0 {
-    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - var(--modview-left-shrunk));
-    transition-delay: var(--transition-delay-enter);
-}
 .content_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .content_f75fb0 .form_f75fb0 {
     left: calc(1px + var(--user-panel-left-shrunk) + 9px + var(--user-panel-left-diff));
-    max-width: calc(100% - 16px - var(--server-members-left-shrunk) - var(--user-panel-left-shrunk) - 7px - var(--user-panel-left-diff));
+    max-width: calc(100% - 67px - 7px - var(--user-panel-left-diff));
     transition-delay: var(--transition-delay-enter);
 }
-.content_c48ade:has(.panels_c48ade[aria-label='User area']:hover):has(.privateChannels__35e86) .content_f75fb0 .form_f75fb0,
-.content_c48ade:has(.panels_c48ade[aria-label='User area']:hover):has(.searchResultsWrap_a9e706) .content_f75fb0 .form_f75fb0 {
-    left: calc(1px + var(--user-panel-left-shrunk) + 9px + var(--user-panel-left-diff));
-    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - 7px - var(--user-panel-left-diff));
-    transition-delay: var(--transition-delay-enter);
-}
-.content_c48ade:has(.panels_c48ade[aria-label='User area']:hover):has(.privateChannels__35e86):has(.outer_c0bea0.panel_c0bea0) .content_f75fb0 .form_f75fb0 {
-    left: calc(1px + var(--user-panel-left-shrunk) + 9px + var(--user-panel-left-diff));
-    max-width: calc(100% - 16px - var(--dm-user-panel-width) - var(--user-panel-left-shrunk) - 7px - var(--user-panel-left-diff));
-    transition-delay: var(--transition-delay-enter);
-}
-.content_c48ade:has(.panels_c48ade[aria-label='User area']:hover):has(.searchResultsWrap_a9e706) .content_f75fb0 .form_f75fb0 {
-    left: calc(1px + var(--user-panel-left-shrunk) + 9px + var(--user-panel-left-diff));
-    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - var(--search-results-left) - 7px - var(--user-panel-left-diff));
-    transition-delay: var(--transition-delay-enter);
-}
-.content_c48ade:has(.panels_c48ade[aria-label='User area']:hover):has(.guildSidebar_f75fb0) .content_f75fb0 .form_f75fb0 {
-    left: calc(1px + var(--user-panel-left-shrunk) + 9px + var(--user-panel-left-diff));
-    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - var(--modview-left-shrunk) - var(--user-panel-left-diff));
-    transition-delay: var(--transition-delay-enter);
-}
-.content_c48ade:has(.chatLayerWrapper__01ae2) .content_f75fb0 .form_f75fb0 {
+.content_c48ade:has(.membersWrap_c8ffbb):not(:has(.chatLayerWrapper__01ae2)) .content_f75fb0 .form_f75fb0 {
     left: calc(1px + var(--user-panel-left-shrunk) + 9px);
-    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - 7px);
+    max-width: calc(100% - 67px - 7px - 54px);
+    transition-delay: var(--transition-delay-exit);
 }
-.content_c48ade:has(.container_c8ffbb) .chatLayerWrapper__01ae2 .form_f75fb0 {
-    left: 1px;
-    max-width: calc(100% - 11px - var(--user-panel-left-shrunk) - 7px);
-}
-.content_c48ade:has(.chatLayerWrapper__01ae2):has(.panels_c48ade[aria-label='User area']:hover) .content_f75fb0 .form_f75fb0 {
+.content_c48ade:has(.membersWrap_c8ffbb):has(.panels_c48ade[aria-label='User area']:hover):not(:has(.chatLayerWrapper__01ae2)) .content_f75fb0 .form_f75fb0 {
     left: calc(1px + var(--user-panel-left-shrunk) + 9px + var(--user-panel-left-diff));
-    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - 7px - var(--user-panel-left-diff));
+    max-width: calc(100% - 67px - 7px - 54px - var(--user-panel-left-diff));
     transition-delay: var(--transition-delay-enter);
 }
-.content_c48ade:not(:has(.membersWrap_c8ffbb)) .content_f75fb0 .form_f75fb0 {
+.content_c48ade:has(.searchResultsWrap_a9e706):not(:has(.chatLayerWrapper__01ae2)) .content_f75fb0 .form_f75fb0 {
     left: calc(1px + var(--user-panel-left-shrunk) + 9px);
-    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - 7px);
+    max-width: calc(100% - 67px - 7px - var(--search-results-left));
+    transition: left var(--transition-speed) var(--transition-style), max-width var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.searchResultsWrap_a9e706):has(.panels_c48ade[aria-label='User area']:hover):not(:has(.chatLayerWrapper__01ae2)) .content_f75fb0 .form_f75fb0 {
+    left: calc(1px + var(--user-panel-left-shrunk) + 9px + var(--user-panel-left-diff));
+    max-width: calc(100% - 67px - 7px - var(--search-results-left) - var(--user-panel-left-diff));
     transition-delay: var(--transition-delay-enter);
 }
-.content_c48ade:has(.panels_c48ade[aria-label='User area']:hover):not(:has(.membersWrap_c8ffbb)) .content_f75fb0 .form_f75fb0 {
+.content_c48ade:has(.guildSidebar_f75fb0):not(:has(.chatLayerWrapper__01ae2)) .content_f75fb0 .form_f75fb0 {
+    left: calc(1px + var(--user-panel-left-shrunk) + 9px);
+    max-width: calc(100% - 67px - 7px - var(--modview-left-shrunk) + 9px);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.guildSidebar_f75fb0):has(.panels_c48ade[aria-label='User area']:hover):not(:has(.chatLayerWrapper__01ae2)) .content_f75fb0 .form_f75fb0 {
     left: calc(1px + var(--user-panel-left-shrunk) + 9px + var(--user-panel-left-diff));
-    max-width: calc(100% - 16px - var(--user-panel-left-shrunk) - 7px - var(--user-panel-left-diff));
+    max-width: calc(100% - 67px - 7px - var(--modview-left-shrunk) + 9px - var(--user-panel-left-diff));
     transition-delay: var(--transition-delay-enter);
+}
+
+/* Side chat textbox */
+.chatLayerWrapper__01ae2 .form_f75fb0 {
+    left: calc(2px);
+    max-width: calc(100% - 9px - 7px);
+    transition: left var(--transition-speed) var(--transition-style), max-width var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.membersWrap_c8ffbb) .chatLayerWrapper__01ae2 .form_f75fb0 {
+    left: calc(2px);
+    max-width: calc(100% - 9px - 7px - 54px);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:has(.searchResultsWrap_a9e706) .chatLayerWrapper__01ae2 .form_f75fb0 {
+    left: calc(2px);
+    max-width: calc(100% - 9px - 7px - var(--search-results-left));
+    transition-delay: var(--transition-delay-exit);
 }
 
 /* Main chat textbox, inner div */
