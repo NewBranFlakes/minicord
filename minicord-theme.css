@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.2.13
+ * @version 8.2.14
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1869,8 +1869,9 @@ div[style='height: 8px;'] {
 
 /* Voice channel, voice channel members div (hidden names) */
 .list_c3cd7d.collapsed_c3cd7d.list__07f91.listCollapse__07f91 {
-    padding-left: 0;
-    margin-top: -8px;
+    padding-left: 0px;
+    margin-top: -4px;
+    margin-bottom: calc(5px + 4px);
     margin-left: -4px;
     transition: margin-left var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
@@ -1917,6 +1918,12 @@ div[style='height: 8px;'] {
 }
 .draggable__55bab {
 	margin-top: 5px;
+    transition: height var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.content_c48ade:not(:has(.list_c3cd7d.collapsed_c3cd7d.list__07f91.listCollapse__07f91)) .draggable__55bab:hover {
+	height: 36px !important;
+    transition-delay: var(--transition-delay-enter);
 }
 
 /* Voice channel, voice channel member selection highlight */
@@ -2720,7 +2727,7 @@ div[style='height: 8px;'] {
     margin-left: 0px !important;
     width: 100% !important;
     height: 16px !important;
-    color: var(--channel-text-area-placeholder) !important;
+    color: var(--text-default) !important;
     pointer-events: none !important;
     opacity: 1 !important;
 }
@@ -2841,4 +2848,21 @@ div[style='height: 8px;'] {
 /* Bookmark folder content options submenu div */
 .submenuPaddingContainer_c1e9c4 {
     padding: 0px !important;
+}
+
+/* Equicord user voice channel timer plugin */
+.timeCounter {
+    font-family: var(--font-code) !important;
+    font-size: 11px !important;
+    opacity: 0 !important;
+    line-height: 0px !important;
+    margin-top: 0px !important;
+    transition: opacity var(--transition-speed) var(--transition-style),
+    line-height var(--transition-speed) var(--transition-style);
+    transition-delay: var(--transition-delay-exit);
+}
+.draggable__55bab:hover .timeCounter {
+    opacity: 1 !important;
+    line-height: 11px !important;
+    transition-delay: var(--transition-delay-enter);
 }
