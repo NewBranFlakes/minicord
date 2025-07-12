@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.2.18
+ * @version 8.2.19
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1644,7 +1644,7 @@ div[style='height: 8px;'] {
 /* Server members list */
 .container_c8ffbb {
     position: fixed;
-    height: calc(100% - 78px);
+    height: calc(100% - 77px);
     width: 256px !important;
     z-index: 3;
     border: none !important;
@@ -1655,11 +1655,11 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit);
 }
 .layer__960e4:has(.vc-channeltabs-container) .container_c8ffbb {
-    height: calc(100% - 78px - 46px);
+    height: calc(100% - 77px - 47px);
     transition-delay: var(--transition-delay-enter);
 }
 .layer__960e4:has(.vc-channeltabs-bookmark) .container_c8ffbb {
-    height: calc(100% - 78px - 46px - 41px);
+    height: calc(100% - 77px - 47px - 41px);
     transition-delay: var(--transition-delay-enter);
 }
 .container_c8ffbb:hover {
@@ -2573,21 +2573,28 @@ div[style='height: 8px;'] {
     display: none !important;
 }
 
+/* Bandaid fix for bad feature interaction. Devs PLEASE use this property responsibly, this is a pain in the ass to debug */
+.vc-channeltabs-container, .vc-channeltabs-container * {
+    app-region: no-drag !important;
+}
+
 /* (Equicord) Bookmarks section */
 .vc-channeltabs-container {
     display: block !important;
     position: relative !important;
     order: 1 !important;
     z-index: 6 !important;
-    width: 100% !important;
-    height: 33px !important;
+    width: calc(100% - 14px) !important;
+    min-height: 32px !important;
+    height: 32px !important;
     top: 0px !important;
     left: 0px !important;
     padding: 7px !important;
     background: var(--bg-overlay-1) !important;
     background-color: var(--background-tertiary) !important;
     overflow: hidden !important;
-    transition: height var(--transition-speed) var(--transition-style);
+    transition: height var(--transition-speed) var(--transition-style),
+    min-height var(--transition-speed) var(--transition-style);
     transition-delay: var(--transition-delay-exit);
 }
 
@@ -2613,7 +2620,8 @@ div[style='height: 8px;'] {
 }
 .layer__960e4:has(.vc-channeltabs-bookmark) .vc-channeltabs-container,
 .layer__960e4:has(.vc-channeltabs-container:hover):has(.vc-channeltabs-bookmark-container) .vc-channeltabs-container {
-    height: 78px !important;
+    height: 73px !important;
+    min-height: 73px !important;
     transition-delay: var(--transition-delay-enter);
 }
 
@@ -2626,7 +2634,7 @@ div[style='height: 8px;'] {
     margin-bottom: 7px !important;
     height: 1px !important;
     line-height: 1px !important;
-    width: calc(100% - 8px - 7px) !important;
+    width: calc(100%) !important;
     left: 0px !important;
     top: 0px !important;
 }
@@ -2667,12 +2675,12 @@ div[style='height: 8px;'] {
     margin-right: 7px !important;
 }
 
-/* Bookmark button */
+/* Favorite bookmark button */
 .vc-channeltabs-bookmark-container .vc-channeltabs-button {
     margin: 0px !important;
     padding: 0px !important;
-    margin-top: calc(-8px + 7px) !important;
-    margin-right: calc(14px + 7px) !important;
+    margin-top: 0px !important;
+    margin-right: 0px !important;
 }
 
 /* Bookmark div */
@@ -2722,6 +2730,11 @@ div[style='height: 8px;'] {
 }
 .chatContent_f75fb0:not(:has(.placeholder__1b31f)) .textArea__74017::after {
     opacity: 0 !important;
+}
+
+/* Bandaid fix for weird message textbox placement. Why????? */
+.channelBottomBarArea_f75fb0 {
+    margin-bottom: 24px !important;
 }
 
 /* Placeholder message box text (removed from document flow as it causes a lot of strange performance issues) */
