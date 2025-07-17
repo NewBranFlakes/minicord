@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.3.0
+ * @version 8.3.2
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -13,6 +13,8 @@
 :root {
     --transition-speed: 0.3s;
     --transition-style: cubic-bezier(0.5, 0, 0.5, 1);
+    --settings-leave: cubic-bezier(0.5, 0, 1, 0.5);
+    --settings-enter: cubic-bezier(0.5, 0, 1, 0.5);
     --transition-delay-enter: 0.15s;
     --transition-delay-exit: 0.15s;
 
@@ -1511,7 +1513,6 @@ div[style='height: 8px;'] {
 /* Main chat message options section */
 .button_f7ecac:has(.icon_f84418.buttonContent_f84418),
 .separator_f84418,
-.button_f7ecac[aria-label='Add Reaction'],
 .button_f7ecac[aria-label='Edit'],
 .button_f7ecac[aria-label='Reply'],
 .button_f7ecac[aria-label='Forward'] {
@@ -2249,95 +2250,22 @@ div[style='height: 8px;'] {
 }
 
 /* "Emoticon" panel */
-.positionLayer__08434.expressionPickerPositionLayer__74017.layer_da8173 {
-    position: fixed !important;
-    max-width: none !important;
-    max-height: none !important;
-    min-width: 0px !important;
-    min-height: 0px !important;
-    width: var(--emoticon-panel-width) !important;
-    height: calc(100% - 166px - 10px) !important;
-    left: calc(100% - var(--emoticon-panel-width) - var(--server-members-left-shrunk) - 10px) !important;
-    top: calc(80px + 10px) !important;
-}
-.notAppAsidePanel_a3002d:has(.privateChannels__35e86) .positionLayer__08434.expressionPickerPositionLayer__74017.layer_da8173 {
-    left: calc(100% - var(--emoticon-panel-widt) - 10px) !important;
-}
-.notAppAsidePanel_a3002d:has(.privateChannels__35e86):has(.outer_c0bea0.panel_c0bea0) .positionLayer__08434.expressionPickerPositionLayer__74017.layer_da8173 {
-    left: calc(100% - var(--emoticon-panel-width) - var(--dm-user-panel-width) - 10px) !important;
-}
-.notAppAsidePanel_a3002d:has(.searchResultsWrap_a9e706) .positionLayer__08434.expressionPickerPositionLayer__74017.layer_da8173 {
-    left: calc(100% - var(--emoticon-panel-width) - var(--search-results-left) - 10px) !important;
-}
-.notAppAsidePanel_a3002d:has(.guildSidebar_f75fb0) .positionLayer__08434.expressionPickerPositionLayer__74017.layer_da8173 {
-    left: calc(100% - var(--emoticon-panel-width) - var(--modview-left-shrunk) - 4px) !important;
-}
-.notAppAsidePanel_a3002d:has(.video_cb9592) .positionLayer__08434.expressionPickerPositionLayer__74017.layer_da8173 {
-    left: calc(100% - var(--emoticon-panel-width) + 0px - 7px) !important;
-}
-
-
-/* "Emoticon" panel, inner div */
-.drawerSizingWrapper__08434 {
-    max-width: none !important;
-    max-height: none !important;
-    min-width: 0px !important;
-    min-height: 0px !important;
+.expressionPickerPositionLayer__74017, .drawerSizingWrapper__08434 {
+    position: absolute !important;
+    display: block !important;
+    top: 0px !important;
+    left: 0px !important;
     width: 100% !important;
     height: 100% !important;
-    left: 0px !important;
-    top: 0px !important;
 }
-
-/* "Emoticon" panel, innermost div */
-.positionContainer__08434 {
-    max-width: none !important;
-    max-height: none !important;
-    min-width: 0px !important;
-    min-height: 0px !important;
-    width: 100% !important;
-    height: 100% !important;
-    left: 0px !important;
-    top: 0px !important;
+.expressionPickerPositionLayer__74017 .resizeHandle__08434 {
+    display: none !important;
 }
-
-/* "Emoticon" reaction panel popup */
-.animatorRight_faf9c0.fade_faf9c0.didRender_faf9c0:has(.wrapper_c0e32c) .wrapper_c0e32c {
-    position: fixed !important;
-    max-width: none !important;
-    max-height: none !important;
-    min-width: 0px !important;
-    min-height: 0px !important;
-    width: var(--emoticon-panel-width) !important;
-    height: calc(100% - 70px - 166px - 10px) !important;
-    left: calc(100% - var(--emoticon-panel-width) - var(--server-members-left-shrunk) - 10px) !important;
-    top: calc(80px + 10px) !important;
-}
-.notAppAsidePanel_a3002d:has(.privateChannels__35e86) .animatorRight_faf9c0.fade_faf9c0.didRender_faf9c0:has(.wrapper_c0e32c) .wrapper_c0e32c {
-    left: calc(100% - var(--emoticon-panel-width) - 10px) !important;
-}
-.notAppAsidePanel_a3002d:has(.privateChannels__35e86):has(.outer_c0bea0.panel_c0bea0) .animatorRight_faf9c0.fade_faf9c0.didRender_faf9c0:has(.wrapper_c0e32c) .wrapper_c0e32c {
-    left: calc(100% - var(--emoticon-panel-width) - var(--dm-user-panel-width) - 10px) !important;
-}
-.notAppAsidePanel_a3002d:has(.searchResultsWrap_a9e706) .animatorRight_faf9c0.fade_faf9c0.didRender_faf9c0:has(.wrapper_c0e32c) .wrapper_c0e32c {
-    left: calc(100% - var(--emoticon-panel-width) - var(--search-results-left) - 10px) !important;
-}
-.notAppAsidePanel_a3002d:has(.guildSidebar_f75fb0) .animatorRight_faf9c0.fade_faf9c0.didRender_faf9c0:has(.wrapper_c0e32c) .wrapper_c0e32c {
-    left: calc(100% - var(--emoticon-panel-width) - var(--modview-left-shrunk) - 4px) !important;
-}
-.notAppAsidePanel_a3002d:has(.video_cb9592) .animatorRight_faf9c0.fade_faf9c0.didRender_faf9c0:has(.wrapper_c0e32c) .wrapper_c0e32c {
-    left: calc(100% - var(--emoticon-panel-width) - 7px) !important;
-}
-
-/* "Emoticon" reaction panel popup, inner div */
-.animatorRight_faf9c0.fade_faf9c0.didRender_faf9c0:has(.wrapper_c0e32c) .emojiPicker_c0e32c {
-    width: 100%;
-    height: 100%;
-}
-
-/* "Emoticon" reaction panel popup, servers list */
-.animatorRight_faf9c0.fade_faf9c0.didRender_faf9c0:has(.wrapper_c0e32c) .wrapper__4e6ce.categoryList_c0e32c {
-    height: 100%;
+.expressionPickerPositionLayer__74017 {
+    left: calc(50% + 100px - 62px) !important;
+    width: calc(50% - 100px) !important;
+    top: calc(111px) !important;
+    height: calc(100% - (111px * 2.0)) !important;
 }
 
 /* Allows events from main app to pass through the "no click" filter layer */
@@ -2355,23 +2283,10 @@ div[style='height: 8px;'] {
 .layer__960e4.baseLayer__960e4.stop-animations,
 .layer__960e4.baseLayer__960e4.animating__960e4.stop-animations,
 .layer__960e4.baseLayer__960e4.animating__960e4 {
-    transform: none !important;
+    /* transform: none !important; */
     z-index: 0 !important;
     opacity: 1 !important;
-    transition: transform var(--transition-speed) var(--transition-style),
-    opacity var(--transition-speed) var(--transition-style),
-    filter var(--transition-speed) var(--transition-style) !important;
-    transition-delay: 0s !important;
-}
-
-/* Disable all pointer events to prevent accidental misclicks when in settings */
-.layer__960e4.stop-animations,
-.layer__960e4.animating__960e4.stop-animations,
-.layer__960e4.animating__960e4,
-.layers__960e4.layers__160d8:has(.layer__960e4.baseLayer__960e4.stop-animations) .avatar_c19a55.clickable_c19a55,
-.layers__960e4.layers__160d8:has(.layer__960e4.baseLayer__960e4.stop-animations) .timestamp_c19a55 {
-    pointer-events: none !important;
-    transition: transform var(--transition-speed) var(--transition-style),
+    transition: transform var(--transition-speed) var(--settings-enter),
     opacity var(--transition-speed) var(--transition-style),
     filter var(--transition-speed) var(--transition-style) !important;
     transition-delay: 0s !important;
@@ -2382,9 +2297,10 @@ div[style='height: 8px;'] {
 .layer__960e4.stop-animations:has(.standardSidebarView__23e6b),
 .layer__960e4.animating__960e4.stop-animations:has(.standardSidebarView__23e6b),
 .layer__960e4.animating__960e4:has(.standardSidebarView__23e6b) {
+    /* transform: none !important; */
     padding: 10px !important;
     z-index: 5;
-    transition: transform var(--transition-speed) var(--transition-style),
+    transition: transform var(--transition-speed) var(--settings-leave),
     opacity var(--transition-speed) var(--transition-style),
     filter var(--transition-speed) var(--transition-style) !important;
     transition-delay: 0s !important;
@@ -2935,4 +2851,14 @@ div[style='height: 8px;'] {
 /* Unread message indicator */
 .unreadBottom__629e4 {
     bottom: 0px !important;
+}
+
+/* Remove thread suggestion bar */
+.threadSuggestionBar__841c8 {
+    display: none !important;
+}
+
+/* Reaction pfps */
+.reactionInner__23977 div:has(.container__183c2) {
+    display: none !important;
 }
