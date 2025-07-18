@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.3.2
+ * @version 8.3.3
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2859,6 +2859,34 @@ div[style='height: 8px;'] {
 }
 
 /* Reaction pfps */
-.reactionInner__23977 div:has(.container__183c2) {
-    display: none !important;
+.reaction__23977 {
+    max-width: 34px !important;
+    overflow: hidden !important;
+    transition: max-width var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.reaction__23977:hover {
+    max-width: 200px !important;
+    overflow: hidden !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+
+/* Viewing older messages popup */
+.jumpToPresentBar__0f481 {
+    top: calc(34px + 10px) !important;
+    left: calc(50% - (350px * 0.5)) !important;
+    min-width: 0px !important;
+    min-height: 0px !important;
+    height: 44px !important;
+    margin: 0px !important;
+    padding: 9px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    width: 350px !important;
+}
+
+/* (Equicord) Side chat split handle */
+.resizeHandle__01ae2 {
+    background: var(--bg-overlay-2) !important;
+    background-color: var(--background-tertiary) !important;
 }
