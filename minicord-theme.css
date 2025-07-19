@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.4.0
+ * @version 8.4.1
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1142,6 +1142,15 @@ div[style='height: 8px;'] {
 .content_c48ade:has(.membersWrap_c8ffbb) .chatLayerWrapper__01ae2 .chatContent_f75fb0 {
     max-width: calc(100% - var(--server-members-left-shrunk)) !important;
 }
+.content_c48ade:has(.searchResultsWrap_a9e706) .chatContent_f75fb0 {
+    max-width: calc(100% - var(--search-results-left)) !important;
+}
+.content_c48ade:has(.searchResultsWrap_a9e706):has(.chatLayerWrapper__01ae2) .chatContent_f75fb0 {
+    max-width: calc(100%) !important;
+}
+.content_c48ade:has(.searchResultsWrap_a9e706):has(.chatLayerWrapper__01ae2) .chatLayerWrapper__01ae2 .chatContent_f75fb0 {
+    max-width: calc(100% - var(--search-results-left)) !important;
+}
 
 /* Main chat, inner div */
 .chat_f75fb0 {
@@ -1713,11 +1722,11 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit) !important;
 }
 .layer__960e4:has(.vc-channeltabs-container) .searchResultsWrap_a9e706 {
-    height: calc(100% - 81px - 43px);
+    height: calc(100% - 81px - 43px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .layer__960e4:has(.vc-channeltabs-bookmark) .searchResultsWrap_a9e706 {
-    height: calc(100% - 81px - 43px - 41px);
+    height: calc(100% - 81px - 43px - 41px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .searchResultsWrap_a9e706:hover {
@@ -2714,7 +2723,7 @@ div[style='height: 8px;'] {
     justify-content: center !important;
     text-align: left !important;
     line-height: 16px !important;
-    margin-left: 8px !important;
+    margin-left: 0px !important;
     width: 100% !important;
     height: 16px !important;
     color: var(--channels-default) !important;
