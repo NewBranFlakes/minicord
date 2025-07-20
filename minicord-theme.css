@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.4.1
+ * @version 8.4.2
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1267,9 +1267,9 @@ div[style='height: 8px;'] {
 }
 
 /* Search bar "search" icon */
-.icon__97492.iconLayout_fea832.small_fea832 {
+.iconContainer_a45028 {
     margin-top: 0px;
-    margin-right: 2px;
+    margin-right: 4px;
 }
 
 /* Main chat */
@@ -2681,7 +2681,7 @@ div[style='height: 8px;'] {
     margin: 0px !important;
     padding: 0px !important;
     margin-top: 0px !important;
-    margin-right: 0px !important;
+    margin-right: 8px !important;
 }
 
 /* Bookmark div */
@@ -2924,4 +2924,15 @@ div[style='height: 8px;'] {
 .resizeHandle__01ae2 {
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-tertiary) !important;
+}
+
+/* Image accessory section */
+.imageAccessory_af017a {
+    opacity: 0.25 !important;
+    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.imageAccessory_af017a:hover {
+    opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
