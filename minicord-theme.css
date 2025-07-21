@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.4.2
+ * @version 8.4.3
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1177,6 +1177,8 @@ div[style='height: 8px;'] {
     border: none !important;
     padding-right: 13px !important;
     padding-left: 6px !important;
+    transition: width var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
 }
 .container__9293f {
     width: 100% !important;
@@ -1186,6 +1188,14 @@ div[style='height: 8px;'] {
     padding-right: 7px !important;
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-tertiary) !important;
+}
+.content_c48ade:has(.chatLayerWrapper__01ae2):has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .chatLayerWrapper__01ae2 .container__9293f {
+    width: calc(100% - var(--server-channels-left-diff)) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.chatLayerWrapper__01ae2):has(.wrapper_ef3116.guilds_c48ade:hover) .chatLayerWrapper__01ae2 .container__9293f {
+    width: calc(100% - var(--servers-list-left-diff)) !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Subtitle bar (not DMs) */
@@ -2161,7 +2171,7 @@ div[style='height: 8px;'] {
 
 /* Threads, thread members list */
 .membersWrap_c8ffbb.hiddenMembers_c8ffbb.container__7641b {
-    position: fixed;
+    position: fixed !important;
 	left: calc(100% - var(--server-members-left-shrunk));
 	transition: left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
@@ -2273,8 +2283,8 @@ div[style='height: 8px;'] {
 
 /* DMs, user profile panel */
 .outer_c0bea0.panel_c0bea0 {
-    position: fixed;
-    left: calc(100% - var(--dm-user-panel-width));
+    position: fixed !important;
+    left: calc(100% - var(--dm-user-panel-width)) !important;
 }
 
 /* DMs, user DM */
@@ -2378,12 +2388,12 @@ div[style='height: 8px;'] {
 
 /* User mod view */
 .guildSidebar_f75fb0 {
-    position: fixed;
-    height: 100%;
-    top: 0px;
-    z-index: 4;
+    position: fixed !important;
+    height: 100% !important;
+    top: 0px !important;
+    z-index: 4 !important;
 
-    left: calc(100% - var(--modview-left-shrunk));
+    left: calc(100% - var(--modview-left-shrunk)) !important;
     transition: left var(--transition-speed) var(--transition-style),
     height var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
@@ -2461,19 +2471,19 @@ div[style='height: 8px;'] {
     opacity var(--transition-speed) var(--transition-style),
     filter var(--transition-speed) var(--transition-style) !important;
     transition-delay: 0s !important;
-    display: block;
-    position: fixed;
-    top: calc(0px - 10px);
-    left: calc(0px - 10px);
-    width: 100%;
-    height: 100%;
+    display: block !important;
+    position: fixed !important;
+    top: calc(0px - 10px) !important;
+    left: calc(0px - 10px) !important;
+    width: 100% !important;
+    height: 100% !important;
     background: rgba(0, 0, 0, 0.7) !important;
 }
 
 /* Settings menu, inner div */
 .standardSidebarView__23e6b {
-    display: flex;
-    position: fixed;
+    display: flex !important;
+    position: fixed !important;
     top: calc(10px + 81px + 10px) !important;
     left: calc(50% - (960px / 2.0)) !important;
     width: 960px !important;
@@ -2484,7 +2494,7 @@ div[style='height: 8px;'] {
     border-width: 1px !important;
     border-style: solid !important;
     border-color: var(--border-normal) !important;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 /* Change settings menu to be more mobile-friendly after reaching a certain size */
