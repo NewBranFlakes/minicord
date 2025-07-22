@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.4.3
+ * @version 8.4.4
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2407,7 +2407,7 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-enter) !important;
 }
 .guildSidebar_f75fb0:hover {
-    left: calc(100% - var(--modview-left-expanded));
+    left: calc(100% - var(--modview-left-expanded)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -2450,6 +2450,8 @@ div[style='height: 8px;'] {
 .layer__960e4.baseLayer__960e4.stop-animations,
 .layer__960e4.baseLayer__960e4.animating__960e4.stop-animations,
 .layer__960e4.baseLayer__960e4.animating__960e4 {
+    width: 100% !important;
+    height: 100% !important;
     /* transform: none !important; */
     z-index: 0 !important;
     opacity: 1 !important;
@@ -2465,7 +2467,7 @@ div[style='height: 8px;'] {
 .layer__960e4.animating__960e4.stop-animations:has(.standardSidebarView__23e6b),
 .layer__960e4.animating__960e4:has(.standardSidebarView__23e6b) {
     /* transform: none !important; */
-    padding: 10px !important;
+    padding: 0px !important;
     z-index: 5;
     transition: transform var(--transition-speed) var(--settings-leave),
     opacity var(--transition-speed) var(--transition-style),
@@ -2473,8 +2475,8 @@ div[style='height: 8px;'] {
     transition-delay: 0s !important;
     display: block !important;
     position: fixed !important;
-    top: calc(0px - 10px) !important;
-    left: calc(0px - 10px) !important;
+    top: 0px !important;
+    left: 0px !important;
     width: 100% !important;
     height: 100% !important;
     background: rgba(0, 0, 0, 0.7) !important;
