@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.4.4
+ * @version 8.4.5
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -13,8 +13,8 @@
 :root {
     --transition-speed: 0.3s;
     --transition-style: cubic-bezier(0.5, 0, 0.5, 1);
-    --settings-leave: cubic-bezier(0.5, 0, 1, 0.5);
-    --settings-enter: cubic-bezier(0.5, 0, 1, 0.5);
+    --settings-leave: cubic-bezier(0.5, 0, 0.5, 0);
+    --settings-enter: cubic-bezier(0, 0.5, 0.5, 1);
     --transition-delay-enter: 0.15s;
     --transition-delay-exit: 0.15s;
 
@@ -2450,15 +2450,17 @@ div[style='height: 8px;'] {
 .layer__960e4.baseLayer__960e4.stop-animations,
 .layer__960e4.baseLayer__960e4.animating__960e4.stop-animations,
 .layer__960e4.baseLayer__960e4.animating__960e4 {
+    transform: none !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    top: 0px !important;
+    left: 0px !important;
     width: 100% !important;
     height: 100% !important;
-    /* transform: none !important; */
-    z-index: 0 !important;
     opacity: 1 !important;
-    transition: transform var(--transition-speed) var(--settings-enter),
-    opacity var(--transition-speed) var(--transition-style),
-    filter var(--transition-speed) var(--transition-style) !important;
+    transition: opacity var(--transition-speed) var(--transition-enter) !important;
     transition-delay: 0s !important;
+    z-index: 0 !important;
 }
 
 /* Settings space layer */
@@ -2466,20 +2468,17 @@ div[style='height: 8px;'] {
 .layer__960e4.stop-animations:has(.standardSidebarView__23e6b),
 .layer__960e4.animating__960e4.stop-animations:has(.standardSidebarView__23e6b),
 .layer__960e4.animating__960e4:has(.standardSidebarView__23e6b) {
-    /* transform: none !important; */
+    transform: none !important;
     padding: 0px !important;
-    z-index: 5;
-    transition: transform var(--transition-speed) var(--settings-leave),
-    opacity var(--transition-speed) var(--transition-style),
-    filter var(--transition-speed) var(--transition-style) !important;
-    transition-delay: 0s !important;
-    display: block !important;
-    position: fixed !important;
+    margin: 0px !important;
     top: 0px !important;
     left: 0px !important;
     width: 100% !important;
     height: 100% !important;
-    background: rgba(0, 0, 0, 0.7) !important;
+    background: rgba(0, 0, 0, 0.75) !important;
+    z-index: 1 !important;
+    transition: opacity var(--transition-speed) var(--settings-enter) !important;
+    transition-delay: 0s !important;
 }
 
 /* Settings menu, inner div */
