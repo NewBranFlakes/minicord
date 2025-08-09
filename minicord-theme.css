@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.4.5
+ * @version 8.4.10
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -543,33 +543,7 @@
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .containerDefault_c69b6d:has(.mentionsBadge__933a1) .iconContainer__2ea32::before {
-    width: 16px !important;
-    height: 16px !important;
-    left: 192px !important;
-    top: 0px !important;
-    opacity: 1;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-.containerDefault_c69b6d:hover .containerDefault_c69b6d:has(.mentionsBadge__933a1) .iconContainer__2ea32::before,
-.containerDefault_c69b6d:hover .containerDefault_c69b6d:has(.mentionsBadge__933a1) .channelInfo_c69b6d {
-    opacity: 1 !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-
-/* Transparent background for ping badge */
-.containerDefault_c69b6d .numberBadge__2b1f5 {
-    background-color: transparent !important;
-}
-
-/* Ping notification badge */
-.mentionsBadge__933a1 {
-    opacity: 1 !important;
-    left: -192px !important;
-    transition: left var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
-}
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .mentionsBadge__933a1 {
-    left: 0px !important;
+    opacity: 0 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -1099,8 +1073,7 @@ div[style='height: 8px;'] {
     z-index: 2 !important;
     
     width: calc(100% + var(--servers-list-left-diff) + var(--server-channels-left-diff) - 2px) !important;
-    transition: left var(--transition-speed) var(--transition-style),
-    width var(--transition-speed) var(--transition-style) !important;
+    transition: left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .page_c48ade {
@@ -1116,6 +1089,11 @@ div[style='height: 8px;'] {
     left: 0px !important;
 }
 
+/* Hide the transparent div that appears after the main chat and before the sidebar chat */
+.page_c48ade > div:nth-last-child(2):not(:has(.chat_f75fb0)) {
+    display: none !important;
+}
+
 /* Main chat, top div */
 .content_f75fb0 {
     border: none !important;
@@ -1127,8 +1105,6 @@ div[style='height: 8px;'] {
     background: var(--bg-overlay-4) !important;
     background-color: var(--background-secondary) !important;
     max-width: 100% !important;
-    transition: max-width var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
 }
 .content_c48ade:has(.container_c8ffbb) .chatContent_f75fb0,
 .content_c48ade:has(.membersWrap_c8ffbb) .chatContent_f75fb0 {
@@ -1157,6 +1133,10 @@ div[style='height: 8px;'] {
     border: none !important;
     background: var(--bg-overlay-4) !important;
     background-color: var(--background-secondary) !important;
+    max-width: 100% !important;
+}
+.page_c48ade:has(> .chatLayerWrapper__01ae2) .chat_f75fb0 {
+    max-width: calc(50% - 8px) !important;
 }
 
 /* Main chat, innermost div */
@@ -1277,9 +1257,9 @@ div[style='height: 8px;'] {
 }
 
 /* Search bar "search" icon */
-.iconContainer_a45028 {
-    margin-top: 0px;
-    margin-right: 4px;
+.iconContainer__0c4c4 {
+    margin-top: 0px !important;
+    margin-right: 4px !important;
 }
 
 /* Main chat */
@@ -1352,7 +1332,7 @@ div[style='height: 8px;'] {
     width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.content_c48ade:has(.channelAttachmentArea_b77158) .stackedBars__74017 {
+.chatContent_f75fb0:has(.channelAttachmentArea_b77158) .stackedBars__74017 {
     top: calc(-89px - 6px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -1580,23 +1560,15 @@ div[style='height: 8px;'] {
 /* Main chat scrolling list */
 .scroller__36d07 {
     height: calc(100% - 4px) !important;
-    transition: height var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
 }
-.content_c48ade:has(.channelAttachmentArea_b77158) .scroller__36d07 {
-    height: calc(100% - 4px - 41px) !important;
-    transition: height var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
+.chatContent_f75fb0:has(.channelAttachmentArea_b77158) .scroller__36d07 {
+    height: calc(100% - 4px - 57px) !important;
 }
-.content_c48ade:has(.stackedBars__74017) .scroller__36d07 {
-    height: calc(100% - 4px - 22px) !important;
-    transition: height var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
+.chatContent_f75fb0:has(.stackedBars__74017) .scroller__36d07 {
+    height: calc(100% - 4px - 21px) !important;
 }
-.content_c48ade:has(.channelAttachmentArea_b77158):has(.stackedBars__74017) .scroller__36d07 {
-    height: calc(100% - 4px - 41px - 22px - 16px) !important;
-    transition: height var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
+.chatContent_f75fb0:has(.channelAttachmentArea_b77158):has(.stackedBars__74017) .scroller__36d07 {
+    height: calc(100% - 4px - 57px - 21px - 17px) !important;
 }
 
 /* Typing indicator */
@@ -1607,9 +1579,6 @@ div[style='height: 8px;'] {
 }
 .typing_b88801 .typingDots_b88801 {
     height: 100% !important;
-}
-.typingDots_b88801 .text_b88801 {
-    margin: 0px !important;
 }
 
 /* Remove main chat size limits */
@@ -1696,9 +1665,9 @@ div[style='height: 8px;'] {
 .buttonContainer_aa63ab {
     margin-left: -2px !important;
 }
-.button__201d5[aria-label='Send a gift'],
-.buttonContainer__74017:has(.button__201d5[aria-label='Open GIF picker']),
-.buttonContainer__74017:has(.button__201d5[aria-label='Open sticker picker']),
+.button__74017[aria-label='Send a gift'],
+.buttonContainer__74017:has(.button__74017[aria-label='Open GIF picker']),
+.buttonContainer__74017:has(.button__74017[aria-label='Open sticker picker']),
 .channelAppLauncher_e6e74f {
     display: none !important;
 }
@@ -1853,22 +1822,21 @@ div[style='height: 8px;'] {
 /* Server members list */
 .container_c8ffbb {
     position: fixed !important;
-    height: calc(100% - 77px) !important;
+    height: calc(100% - 78px) !important;
     width: 256px !important;
     z-index: 3 !important;
     border: none !important;
 
     left: calc(100% - var(--server-members-left-shrunk)) !important;
-    transition: left var(--transition-speed) var(--transition-style),
-    height var(--transition-speed) var(--transition-style) !important;
+    transition: left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .layer__960e4:has(.vc-channeltabs-container) .container_c8ffbb {
-    height: calc(100% - 77px - 47px) !important;
+    height: calc(100% - 78px - 47px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .layer__960e4:has(.vc-channeltabs-bookmark) .container_c8ffbb {
-    height: calc(100% - 77px - 47px - 41px) !important;
+    height: calc(100% - 78px - 47px - 35px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .container_c8ffbb:hover {
@@ -2366,7 +2334,7 @@ div[style='height: 8px;'] {
 }
 
 /* DMs, search bar */
-.searchBar__5ec2f.container_a45028.medium_a45028 {
+.searchBar__5ec2f.container_a45028 {
     background: var(--bg-overlay-floating) !important;
     background-color: var(--background-primary-lighter) !important;
     width: calc(100% - 62px - 6px);
@@ -2375,7 +2343,7 @@ div[style='height: 8px;'] {
     margin-left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.base_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .searchBar__5ec2f.container_a45028.medium_a45028 {
+.base_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .searchBar__5ec2f.container_a45028 {
     width: calc(100% - 62px - 6px - var(--user-panel-left-diff));
     margin-left: calc(56px + 6px + var(--user-panel-left-diff));
     transition-delay: var(--transition-delay-enter) !important;
@@ -2580,8 +2548,9 @@ div[style='height: 8px;'] {
     border: none !important;
 }
 
-/* Hide user panel when in "add friends" tab */
-.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .panels_c48ade {
+/* Hide user panel and "active now" when in "add friends" tab */
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .panels_c48ade,
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .nowPlayingColumn__133bf {
     display: none !important;
 }
 
@@ -2592,27 +2561,29 @@ div[style='height: 8px;'] {
 
 /* (Equicord) Bookmarks section */
 .vc-channeltabs-container {
-    display: block !important;
+    display: flex !important;
     position: relative !important;
     order: 1 !important;
     z-index: 6 !important;
-    width: calc(100% - 14px) !important;
-    min-height: 32px !important;
-    height: 32px !important;
+    width: 100% !important;
+    height: auto !important;
     top: 0px !important;
     left: 0px !important;
     padding: 7px !important;
+    margin-bottom: -1px !important;
+    border: none !important;
     background: var(--bg-overlay-1) !important;
     background-color: var(--background-tertiary) !important;
-    overflow: hidden !important;
-    transition: height var(--transition-speed) var(--transition-style),
-    min-height var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
+    gap: 0px !important;
+    row-gap: 7px !important;
 }
 
 /* Bookmarks tab container */
 .vc-channeltabs-tab-container {
+    gap: 0px !important;
+    padding: 0px !important;
     column-gap: 7px !important;
+    order: -1 !important;
 }
 .vc-channeltabs-tab-container::before {
     background-color: rgba(0, 0, 0, 0.25) !important;
@@ -2626,35 +2597,27 @@ div[style='height: 8px;'] {
     z-index: -1 !important;
     overflow: hidden !important;
     pointer-events: none !important;
-    transition: height var(--transition-speed) var(--transition-style),
-    top var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
-}
-.layer__960e4:has(.vc-channeltabs-bookmark) .vc-channeltabs-container,
-.layer__960e4:has(.vc-channeltabs-container:hover):has(.vc-channeltabs-bookmark-container) .vc-channeltabs-container {
-    height: 73px !important;
-    min-height: 73px !important;
-    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Separation between tabs and bookmarks */
 .vc-channeltabs-separator {
-    display: block !important;
-    position: relative !important;
-    margin: 0px !important;
-    margin-top: 7px !important;
-    margin-bottom: 7px !important;
-    height: 1px !important;
-    line-height: 1px !important;
-    width: calc(100%) !important;
-    left: 0px !important;
-    top: 0px !important;
+    display: none !important;
 }
 
 /* Tab button */
-.vc-channeltabs-button {
+.vc-channeltabs-new-button {
     margin: 0px !important;
     padding: 0px !important;
+    background: var(--bg-overlay-2) !important;
+    background-color: var(--background-secondary) !important;
+    transition: background var(--transition-speed) var(--transition-style),
+    background-color var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.vc-channeltabs-new-button:hover {
+    background: var(--bg-overlay-4) !important;
+    background-color: var(--background-primary-lighter) !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Tab div */
@@ -2687,12 +2650,17 @@ div[style='height: 8px;'] {
     margin-right: 7px !important;
 }
 
+/* Bookmarks container */
+.vc-channeltabs-bookmark-container {
+    padding: 0px !important;
+    width: calc(100% - 7px * 2.0 - 8px) !important;
+}
+
 /* Favorite bookmark button */
 .vc-channeltabs-bookmark-container .vc-channeltabs-button {
     margin: 0px !important;
     padding: 0px !important;
-    margin-top: 0px !important;
-    margin-right: 8px !important;
+    margin-left: 7px !important;
 }
 
 /* Bookmark div */
@@ -2716,6 +2684,27 @@ div[style='height: 8px;'] {
     /* background: transparent !important; */
     border: none !important;
     border-radius: 0px !important;
+}
+
+/* Sidebar chat (when screen isn't big enough) */
+.chatLayerWrapper__01ae2 .container__01ae2 {
+    z-index: 2 !important;
+    filter: none !important;
+}
+
+/* Resize sidebar chat to be roughly 50% of the main chat area */
+.page_c48ade > .chatLayerWrapper__01ae2 {
+    width: 50% !important;
+    left: 50% !important;
+    top: 0px !important;
+    max-width: none !important;
+    min-width: 0px !important;
+    position: absolute !important;
+}
+.page_c48ade > .chatLayerWrapper__01ae2 .chatContent_f75fb0,
+.page_c48ade > .chatLayerWrapper__01ae2 .container__01ae2 {
+    width: 100% !important;
+    max-width: none !important;
 }
 
 /* New tab button */
@@ -2765,11 +2754,13 @@ div[style='height: 8px;'] {
 
 /* Tab padding and margin adjustments */
 .vc-channeltabs-container .iconContainer__2ea32,
-.vc-channeltabs-container .vc-channeltabs-name-text {
+.vc-channeltabs-container .vc-channeltabs-name-text,
+.vc-channeltabs-container .icon__2ea32 {
     margin: 0px !important;
     padding: 0px !important;
     height: 18px !important;
     line-height: 18px !important;
+    color: var(--text-default) !important;
 }
 
 /* Channel name (bookmark) */
@@ -2821,14 +2812,13 @@ div[style='height: 8px;'] {
     background-color: var(--background-tertiary) !important;
 }
 
-/* Typing dots indicator (EXTREMELY unoptimized holy moly) */
-.dots__5ad89 {
-    display: none !important;
-}
-
 /* Bookmarks spacing */
 .vc-channeltabs-scroller {
+    gap: 0px !important;
+    padding: 0px !important;
     column-gap: 7px !important;
+    height: 100% !important;
+    width: 100% !important;
 }
 
 /* Bookmark folder popup div */
@@ -2946,4 +2936,11 @@ div[style='height: 8px;'] {
 .imageAccessory_af017a:hover {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
+}
+
+/* New message header */
+.newMessagesBar__0f481 {
+    left: 0px !important;
+    margin-left: 7px !important;
+    width: calc(100% - 34px - (7px * 2.0)) !important;
 }
