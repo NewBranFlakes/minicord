@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.4.11
+ * @version 8.4.12
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2893,6 +2893,8 @@ div[style='height: 8px;'] {
 /* Bookmark folder content text */
 .label_c1e9c4 {
     line-height: 14px !important;
+    font-size: 14px !important;
+    height: 14px !important;
 }
 
 /* Move bookmark folder content's server icon to the front */
@@ -2906,9 +2908,19 @@ div[style='height: 8px;'] {
 
 .iconContainer_c1e9c4:has(.wrapper__44b0c),
 .iconContainer_c1e9c4 .wrapper__44b0c,
-.iconContainer_c1e9c4 .mask__44b0c {
-    width: 18px !important;
-    height: 18px !important;
+.iconContainer_c1e9c4 .mask__44b0c,
+.iconContainer_c1e9c4 .vc-channeltabs-bookmark-icon,
+.iconContainer_c1e9c4 .label_c1e9c4,
+.iconContainer_c1e9c4 .label_c1e9c4 div,
+.iconContainer_c1e9c4 .label_c1e9c4 div span {
+    width: 14px !important;
+    height: 14px !important;
+    font-size: 14px !important;
+    line-height: 14px !important;
+}
+.iconContainer_c1e9c4 .vc-channeltabs-bookmark-icon {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 /* More responsive submenu for bookmark folder content options */
