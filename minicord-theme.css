@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.4.13
+ * @version 8.4.14
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2890,13 +2890,6 @@ div[style='height: 8px;'] {
     column-gap: 7px !important;
 }
 
-/* Bookmark folder content text */
-.label_c1e9c4 {
-    line-height: 14px !important;
-    font-size: 14px !important;
-    height: 14px !important;
-}
-
 /* Move bookmark folder content's server icon to the front */
 .iconContainer_c1e9c4 {
     margin: 0px !important;
@@ -2905,19 +2898,6 @@ div[style='height: 8px;'] {
 .iconContainer_c1e9c4:has(.vc-channeltabs-bookmark-icon),
 .iconContainer_c1e9c4:has(.wrapper__44b0c) {
     order: -1 !important;
-}
-
-.iconContainer_c1e9c4:has(.wrapper__44b0c),
-.iconContainer_c1e9c4 .wrapper__44b0c,
-.iconContainer_c1e9c4 .mask__44b0c,
-.iconContainer_c1e9c4 .vc-channeltabs-bookmark-icon,
-.iconContainer_c1e9c4 .label_c1e9c4,
-.iconContainer_c1e9c4 .label_c1e9c4 div,
-.iconContainer_c1e9c4 .label_c1e9c4 div span {
-    width: 14px !important;
-    height: 14px !important;
-    font-size: 14px !important;
-    line-height: 14px !important;
 }
 .iconContainer_c1e9c4 .vc-channeltabs-bookmark-icon,
 .iconContainer_c1e9c4 .wrapper__44b0c,
