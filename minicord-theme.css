@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.4.15
+ * @version 8.4.16
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1129,6 +1129,15 @@ div[style='height: 8px;'] {
 }
 .content_c48ade:has(.searchResultsWrap_a9e706):has(.chatLayerWrapper__01ae2) .chatLayerWrapper__01ae2 .chatContent_f75fb0 {
     max-width: calc(100% - var(--search-results-left)) !important;
+}
+.content_c48ade:has(.user-profile-sidebar) .chatContent_f75fb0 {
+    max-width: calc(100% - 112px) !important;
+}
+.content_c48ade:has(.user-profile-sidebar):has(.chatLayerWrapper__01ae2) .chatContent_f75fb0 {
+    max-width: 100% !important;
+}
+.content_c48ade:has(.chatLayerWrapper__01ae2):has(.user-profile-sidebar) .chatLayerWrapper__01ae2 .chatContent_f75fb0 {
+    max-width: calc(100% - 112px) !important;
 }
 
 /* Main chat, inner div */
@@ -2557,7 +2566,7 @@ div[style='height: 8px;'] {
     display: none !important;
 }
 
-/* Bandaid fix for bad feature interaction. Devs PLEASE use this property responsibly, this is a pain in the ass to debug */
+/* Bandaid fix for strange feature behavior */
 .vc-channeltabs-container, .vc-channeltabs-container * {
     app-region: no-drag !important;
 }
@@ -3015,4 +3024,28 @@ div[style='height: 8px;'] {
     left: 0px !important;
     margin-left: 7px !important;
     width: calc(100% - 34px - (7px * 2.0)) !important;
+}
+
+/* DMs, user panel popout */
+.user-profile-sidebar {
+    z-index: 3 !important;
+    position: fixed !important;
+    display: flex !important;
+    height: calc(100% - 78px) !important;
+    width: 112px !important;
+    left: calc(100% - 112px) !important;
+    transition: width var(--transition-speed) var(--transition-style),
+    left var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.layer__960e4:has(.vc-channeltabs-container) .user-profile-sidebar {
+    height: calc(100% - 78px - 48px) !important;
+}
+.layer__960e4:has(.vc-channeltabs-bookmark) .user-profile-sidebar {
+    height: calc(100% - 78px - 48px - 43px) !important;
+}
+.user-profile-sidebar:hover {
+    width: 340px !important;
+    left: calc(100% - 340px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
