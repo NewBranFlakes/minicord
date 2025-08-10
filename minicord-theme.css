@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.4.10
+ * @version 8.4.11
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1832,11 +1832,11 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit) !important;
 }
 .layer__960e4:has(.vc-channeltabs-container) .container_c8ffbb {
-    height: calc(100% - 78px - 47px) !important;
+    height: calc(100% - 78px - 48px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .layer__960e4:has(.vc-channeltabs-bookmark) .container_c8ffbb {
-    height: calc(100% - 78px - 47px - 35px) !important;
+    height: calc(100% - 78px - 48px - 35px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .container_c8ffbb:hover {
@@ -2622,9 +2622,12 @@ div[style='height: 8px;'] {
 
 /* Tab div */
 .vc-channeltabs-tab {
+    padding: 7px !important;
+    height: 21px !important;
+    margin: 0px !important;
+    gap: 0px !important;
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-secondary) !important;
-    margin: 0px !important;
     transition: background var(--transition-speed) var(--transition-style),
     background-color var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
@@ -2645,9 +2648,25 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit) !important;
 }
 
+/* Tab inner div */
+.vc-channeltabs-button {
+    margin: 0px !important;
+    padding: 0px !important;
+    gap: 0px !important;
+}
+
 /* Tab close button */
-.vc-channeltabs-close-button {
-    margin-right: 7px !important;
+.vc-channeltabs-close-button,
+.vc-channeltabs-close-button svg {
+    line-height: 21px !important;
+    font-size: 21px !important;
+    height: 21px !important;
+    width: 21px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.vc-channeltabs-close-button svg {
+    color: var(--text-default) !important;
 }
 
 /* Bookmarks container */
@@ -2660,6 +2679,7 @@ div[style='height: 8px;'] {
 .vc-channeltabs-bookmark-container .vc-channeltabs-button {
     margin: 0px !important;
     padding: 0px !important;
+    gap: 0px !important;
     margin-left: 7px !important;
 }
 
@@ -2667,7 +2687,11 @@ div[style='height: 8px;'] {
 .vc-channeltabs-bookmark {
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-secondary) !important;
+    gap: 0px !important;
     column-gap: 7px !important;
+    padding: 7px !important;
+    height: 14px !important;
+    max-width: none !important;
     cursor: pointer !important;
     transition: background var(--transition-speed) var(--transition-style),
     background-color var(--transition-speed) var(--transition-style) !important;
@@ -2709,8 +2733,14 @@ div[style='height: 8px;'] {
 
 /* New tab button */
 .vc-channeltabs-new-button, .vc-channeltabs-new-button svg[role='img'] {
-    height: 32px !important;
-    width: 32px !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    height: 35px !important;
+    width: 35px !important;
+    margin-right: calc(7px * 2.0) !important;
+}
+.vc-channeltabs-new-button svg[role='img'] {
+    color: var(--text-default) !important;
 }
 
 /* Apparently something about the textbox placeholder text element causes major performance issues; this is an attempt to bandage it */
@@ -2747,31 +2777,53 @@ div[style='height: 8px;'] {
     content: '' !important;
 }
 
-/* Compact tab */
-.vc-channeltabs-tab.vc-channeltabs-tab-compact {
-    width: 53px !important;
-}
-
 /* Tab padding and margin adjustments */
-.vc-channeltabs-container .iconContainer__2ea32,
-.vc-channeltabs-container .vc-channeltabs-name-text,
-.vc-channeltabs-container .icon__2ea32 {
+.vc-channeltabs-name-text,
+.vc-channeltabs-bookmark-container .vc-channeltabs-name-text {
     margin: 0px !important;
     padding: 0px !important;
-    height: 18px !important;
-    line-height: 18px !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 16px !important;
+    height: 16px !important;
     color: var(--text-default) !important;
 }
-
-/* Channel name (bookmark) */
-.vc-channeltabs-bookmark-icon,
-.vc-channeltabs-bookmark svg {
-    margin-right: 0px !important;
-    width: 18px !important;
-    height: 18px !important;
+.vc-channeltabs-name-text {
+    margin: 0px !important;
+    padding: 0px !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
     line-height: 18px !important;
-    align-items: center !important;
-    vertical-align: middle !important;
+    height: 18px !important;
+}
+.vc-channeltabs-icon,
+.vc-channeltabs-bookmark-icon,
+.vc-channeltabs-bookmark svg,
+.vc-channeltabs-bookmark svg path,
+.vc-channeltabs-bookmark svg circle,
+.vc-channeltabs-container .iconContainer__2ea32,
+.vc-channeltabs-container .iconContainer__2ea32 path {
+    line-height: 14px !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    height: 14px !important;
+    width: 14px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    color: var(--text-default) !important;
+}
+.vc-channeltabs-container .iconContainer__2ea32 {
+    line-height: 21px !important;
+    font-size: 21px !important;
+    height: 21px !important;
+    width: 21px !important;
+    margin-right: -2px !important;
+}
+.vc-channeltabs-icon {
+    line-height: 21px !important;
+    font-size: 21px !important;
+    height: 21px !important;
+    width: 21px !important;
 }
 .vc-channeltabs-bookmark svg path[fill='var(--channeltabs-blue)'] {
     fill: var(--bg-brand) !important;
@@ -2779,7 +2831,9 @@ div[style='height: 8px;'] {
 
 /* Gap between tab channel icon and tab name */
 .vc-channeltabs-tab-inner {
-    row-gap: 7px !important;
+    gap: 0px !important;
+    padding: 0px !important;
+    margin: 0px !important;
     column-gap: 7px !important;
 }
 
@@ -2832,6 +2886,7 @@ div[style='height: 8px;'] {
 /* More comfortable spacing for bookmark folder contents */
 .item_c1e9c4 {
     padding: 7px !important;
+    gap: 0px !important;
     column-gap: 7px !important;
 }
 
