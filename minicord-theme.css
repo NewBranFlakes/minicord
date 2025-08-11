@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.4.20
+ * @version 8.4.21
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2298,18 +2298,39 @@ div[style='height: 8px;'] {
     margin-left: 4px !important;
 }
 
-/* DMs, DMs list title text */
-.headerText__99e7c {
+/* DMs, DMs list title text (and categories) */
+.headerText__99e7c, .vc-pindms-section-container {
+    padding: 0px !important;
+    margin: 0px !important;
     white-space: nowrap !important;
 	overflow: hidden !important;
 	text-overflow: ellipsis !important;
-    max-width: 4ch !important;
-    transition: max-width var(--transition-speed) var(--transition-style) !important;
+    max-width: 32px !important;
+    min-width: 32px !important;
+    transition: max-width var(--transition-speed) var(--transition-style),
+    color var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
+    justify-content: left !important;
+    text-transform: none !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
 }
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .headerText__99e7c {
+.vc-pindms-section-container {
+    margin-left: 4px !important;
+}
+.vc-pindms-section-container:hover .headerText__99e7c {
+    color: var(--interactive-hover) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .headerText__99e7c,
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .vc-pindms-section-container {
     max-width: var(--server-channels-width) !important;
     transition-delay: var(--transition-delay-enter) !important;
+}
+
+/* Categorized DMs, collapse icon */
+.vc-pindms-collapse-icon {
+    margin-left: 4px !important;
 }
 
 /* DMs, tabs buttons */
