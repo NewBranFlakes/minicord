@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.4.21
+ * @version 8.4.22
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1270,7 +1270,15 @@ div[style='height: 8px;'] {
 /* Search bar "search" icon */
 .iconContainer__0c4c4 {
     margin-top: 0px !important;
-    margin-right: 4px !important;
+    margin-left: -3px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Search bar "search" actual icon */
+.icon__0c4c4, .icon__0c4c4 path {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 /* Main chat */
