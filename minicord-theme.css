@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.4.22
+ * @version 8.4.23
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -98,9 +98,18 @@
     overflow: visible !important;
 }
 
-/* Sidebar region margin thing? Not used anymore so just get rid of it lol */
+/* Darkens the top window bar and the servers list bar (adheres to theme colors) */
 .sidebar_c48ade::after {
-    display: none !important;
+    background-color: rgba(0, 0, 0, 0.25) !important;
+    display: block !important;
+    content: "" !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0px !important;
+    height: 100% !important;
+    width: 100% !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
 }
 
 /* Server banner inner div */
@@ -178,20 +187,6 @@
     transition-delay: var(--transition-delay-enter) !important;
 }
 
-/* Darkens the top window bar and the servers list bar (adheres to theme colors) */
-.wrapper_ef3116.guilds_c48ade::after {
-    background-color: rgba(0, 0, 0, 0.25) !important;
-    display: block !important;
-    content: "" !important;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0px !important;
-    height: 100% !important;
-    width: 100% !important;
-    z-index: 0 !important;
-    pointer-events: none !important;
-}
-
 /* Server icons, buttons, folders, and folder background adjustment */
 .wrapper__6e9f8[role='treeitem'][data-list-item-id='guildsnav___home'],
 .circleIconButton__5bc7e.discoveryIcon_ef3116[role='treeitem'][aria-label='Discover'],
@@ -214,8 +209,10 @@
 
 /* Servers list inner div */
 .itemsContainer_ef3116 {
-    background: var(--bg-overlay-1) !important;
-    background-color: var(--background-tertiary) !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    /* background: var(--bg-overlay-1) !important;
+    background-color: var(--background-tertiary) !important; */
 }
 
 /* Servers list, servers list scroller */
@@ -408,8 +405,13 @@
     width: calc(24px * 2.0) !important;
     height: calc(100% - 32px) !important;
     top: 32px !important;
-    left: calc(32px - 24px + 1px - 0px) !important;
-    background: linear-gradient(to left, var(--background-quaternary) 50%, transparent 100%);
+    left: calc(32px - 24px - 1px) !important;
+    background: var(--background-quaternary) !important;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 0.5%, rgba(0, 0, 0, 1) 100%),
+    linear-gradient(to left, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%) !important;
+    mask-composite: intersect !important;
+    mask-repeat: no-repeat !important;
+    mask-size: 100% 100% !important;
     pointer-events: none !important;
     transition: opacity var(--transition-speed) var(--transition-style),
     left var(--transition-speed) var(--transition-style) !important;
@@ -417,7 +419,7 @@
     opacity: 1 !important;
 }
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .sidebarList_c48ade::before {
-    left: calc(32px - 23px + var(--servers-list-left-diff)) !important;
+    left: calc(32px - 24px - 1px + var(--servers-list-left-diff)) !important;
     opacity: 0 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -2590,8 +2592,13 @@ div[style='height: 8px;'] {
 
 /* Hide user panel and "active now" when in "add friends" tab */
 .content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .panels_c48ade,
-.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .nowPlayingColumn__133bf {
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .nowPlayingColumn__133bf,
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .wrapper_ef3116.guilds_c48ade,
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .sidebarList_c48ade::before {
     display: none !important;
+}
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) {
+    margin-left: 32px !important;
 }
 
 /* Bandaid fix for strange feature behavior */
