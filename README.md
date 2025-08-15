@@ -1,10 +1,11 @@
-# Minicord - A minimized discord theme for **Desktop Refresh**
-A Discord theme intended to **streamline the discord client** by minimizing, shrinking, or otherwise adjusting various elements to **improve the user experience on multiple platforms.**
+# Minicord - A minimized discord theme for Discord **Visual Refresh**
+A Discord theme intended to **streamline the discord client** by minimizing, shrinking, or otherwise adjusting various elements to **improve the user experience.**
 
 Compatible clients:
 * Discord desktop application (Vencord, BetterDiscord, Equicord, etc.)
 * Discord web (Must install extension provided by one of the aforementioned modded clients)
 * Vendroid
+* Anything that allows you to inject custom CSS
 
 Compatible with *most* themes (see the list below for specifics):
 * Official themes:
@@ -19,13 +20,13 @@ Compatible with *most* themes (see the list below for specifics):
 1. Use "Compact" UI density (as the theme was mostly designed around this setting)
     > **Navigation:** Settings -> Appearance -> UI Density -> "Compact" option
 
-&ensp;&ensp;*You **can** use a different "UI Density" setting, but I did not account for this and thus it may not look pretty*  
+*You **can** use a different "UI Density" setting, but I did not account for this and thus it may not look pretty*  
 
-3. That's all!
+2. That's all!
 ## Installation
 Note: It is recommended to use hyperlinks as client mods (Vencord, BetterDiscord, etc.) will automatically fetch the latest version via GitHub Pages.
 
-### Vencord (Recommended method: Hyperlink)
+### Vencord/Equicord (Recommended method: Hyperlink)
 1. **Navigation:** Settings -> Themes -> Online Themes
 2. Paste the following link into the textbox: `https://newbranflakes.github.io/minicord/minicord-theme.css`
 3. Done!
