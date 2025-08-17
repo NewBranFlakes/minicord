@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.5.1
+ * @version 8.5.2
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -230,75 +230,59 @@
     background: transparent !important;
 }
 
-/* Server list, ping notification badge (User DM) */
-.stack_dbd263[aria-label='Direct Messages'] .listItemWrapper__91816 .lowerBadge_cc5dd2 {
+/* Server list, ping notification badge */
+.lowerBadge_cc5dd2 {
+    border: none !important;
+    min-width: 0px !important;
+    min-height: 0px !important;
+    width: 16px !important;
+    height: 16px !important;
     left: 2px !important;
     top: 22px !important;
     transition: left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .stack_dbd263[aria-label='Direct Messages'] .listItemWrapper__91816 .lowerBadge_cc5dd2 {
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .lowerBadge_cc5dd2 {
     left: 22px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-
-/* Server list, ping notification badge container (User DM) */
-.stack_dbd263[aria-label='Direct Messages'] .listItemWrapper__91816:has(.lowerBadge_cc5dd2) .badgeStroke_cc5dd2 {
-    x: 0px !important;
-    y: 20px !important;
-    transition: x var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
+.lowerBadge_cc5dd2 > * {
+    min-width: 0px !important;
+    min-height: 0px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    left: 0px !important;
+    top: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
 }
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .stack_dbd263[aria-label='Direct Messages'] .listItemWrapper__91816:has(.lowerBadge_cc5dd2) .badgeStroke_cc5dd2 {
-    x: 20px !important;
-    transition-delay: var(--transition-delay-enter) !important;
+.lowerBadge_cc5dd2::before {
+    left: -2px !important;
+    top: -2px !important;
+    position: absolute !important;
+    display: block !important;
+    background: var(--bg-overlay-2) !important;
+    background-color: var(--background-base-lowest) !important;
+    color: var(--background-base-lowest) !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: -1 !important;
+    content: '' !important;
+    border-radius: 10px !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+}
+.badgeStroke_cc5dd2 {
+    display: none !important;
 }
 
-/* Server list, ping notification badge (server folder) */
-.stack_dbd263[aria-label='Servers'] .folderHeader__48112 .lowerBadge_cc5dd2 {
-    left: 2px !important;
+.folderButton__48112 .lowerBadge_cc5dd2 {
     top: 30px !important;
-    transition: left var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
 }
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .stack_dbd263[aria-label='Servers'] .folderHeader__48112 .lowerBadge_cc5dd2 {
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .folderButton__48112 .lowerBadge_cc5dd2 {
     left: 30px !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-
-/* Server list, ping notification badge container (server folder) */
-.stack_dbd263[aria-label='Servers'] .folderHeader__48112:has(.lowerBadge_cc5dd2) .badgeStroke_cc5dd2 {
-    x: 0px !important;
-    y: 28px !important;
-    transition: x var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
-}
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .stack_dbd263[aria-label='Servers'] .folderHeader__48112:has(.lowerBadge_cc5dd2) .badgeStroke_cc5dd2 {
-    x: 28px !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-
-/* Server list, ping notification badge (individual server) */
-.stack_dbd263[aria-label='Servers'] .blobContainer_e5445c .lowerBadge_cc5dd2 {
-    left: 2px !important;
-    top: 22px !important;
-    transition: left var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
-}
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .stack_dbd263[aria-label='Servers'] .blobContainer_e5445c .lowerBadge_cc5dd2 {
-    left: 22px !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-
-/* Server list, ping notification badge container (individual server) */
-.stack_dbd263[aria-label='Servers'] .blobContainer_e5445c:has(.lowerBadge_cc5dd2) .badgeStroke_cc5dd2 {
-    x: 0px !important;
-    y: 20px !important;
-    transition: x var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
-}
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .stack_dbd263[aria-label='Servers'] .blobContainer_e5445c:has(.lowerBadge_cc5dd2) .badgeStroke_cc5dd2 {
-    x: 20px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -510,6 +494,7 @@
 
 /* Channel info content */
 .channelInfo_c69b6d {
+    margin: 0px !important;
     order: 1 !important;
     display: block !important;
     transition: opacity var(--transition-speed) var(--transition-style) !important;
@@ -2085,20 +2070,29 @@ div[style='height: 8px;'] {
 .optionsButtonContainer__07f91 {
     display: flex !important;
     width: 0px !important;
-    margin-left: -12px !important;
+    margin-left: -8px !important;
     opacity: 0 !important;
     transition: opacity var(--transition-speed) var(--transition-style),
-    width var(--transition-speed) var(--transition-style) !important;
+    width var(--transition-speed) var(--transition-style),
+    margin-left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .draggable__55bab:hover .optionsButtonContainer__07f91 {
     opacity: 1 !important;
     width: 24px !important;
+    margin-left: -4px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
-.optionsButton__07f91 {
-    width: 24px !important;
+/* Voice channel, voice channel member guild badge */
+.chipletParent__394db {
+    top: 0px !important;
+    transition: top var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.draggable__55bab:hover .chipletParent__394db {
+    top: -11px !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Threads, thread members list */
@@ -2764,6 +2758,9 @@ div[style='height: 8px;'] {
 }
 .chatContent_f75fb0:not(:has(.placeholder__1b31f)) .textArea__74017::after {
     opacity: 0 !important;
+}
+.chatContent_f75fb0:has(.innerDisabled__74017) .textArea__74017::after {
+    content: 'You do not have permission to send messages in this channel.' !important;
 }
 
 /* Bandaid fix for weird message textbox placement. Why????? */
