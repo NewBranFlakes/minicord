@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.6.0
+ * @version 8.6.1
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3069,7 +3069,13 @@ div[style='height: 8px;'] {
 .navItem__551b0 {
     gap: 0px !important;
     padding: 0px !important;
+    column-gap: 11px !important;
+    transition: column-gap var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .navItem__551b0 {
     column-gap: 7px !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Discord quests page, icon */
@@ -3086,16 +3092,5 @@ div[style='height: 8px;'] {
 }
 .content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .header__551b0 {
     max-width: var(--server-channels-width) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-
-/* Discord quests page, side panel tab text */
-.navItem__551b0 div:nth-child(2) {
-    opacity: 0 !important;
-    transition: opacity var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
-}
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .navItem__551b0 div:nth-child(2) {
-    opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
