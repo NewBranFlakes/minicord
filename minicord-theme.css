@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.6.1
+ * @version 8.6.2
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -187,12 +187,14 @@
     transition-delay: var(--transition-delay-enter) !important;
 }
 
-/* Server icons, buttons, folders, and folder background adjustment */
-.wrapper__6e9f8[role='treeitem'][data-list-item-id='guildsnav___home'],
-.circleIconButton__5bc7e.discoveryIcon_ef3116[role='treeitem'][aria-label='Discover'],
-.circleIconButton__5bc7e[role='treeitem'][data-list-item-id='guildsnav___create-join-button'],
-.folderButton__48112 {
+/* Background for servers list items */
+.wrapper__6e9f8, .circleIconButton__5bc7e, .childWrapper__6e9f8, .folderButtonContent__48112, .folderGroupBackground__48112 {
+    border: none !important;
     background: var(--bg-overlay-floating) !important;
+    background-color: var(--background-primary-lighter) !important;
+}
+.folderGroupBackground__48112 {
+    background: var(--bg-overlay-4) !important;
     background-color: var(--background-primary) !important;
 }
 
@@ -213,18 +215,6 @@
     background-color: transparent !important;
 }
 
-/* Servers list, servers list scroller */
-.scroller_ef3116 {
-    z-index: 1 !important;
-}
-
-/* Server list, expanded server folder */
-.folderGroupBackground__48112 {
-    border: none !important;
-    background: var(--bg-overlay-4) !important;
-    background-color: var(--background-secondary) !important;
-}
-
 /* Some inner rounded background for server folders I guess? */
 .folderPreviewWrapper__48112 {
     background: transparent !important;
@@ -237,13 +227,13 @@
     min-height: 0px !important;
     width: 16px !important;
     height: 16px !important;
-    left: 2px !important;
+    left: calc(-6px + 4px) !important;
     top: 22px !important;
     transition: left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .lowerBadge_cc5dd2 {
-    left: 22px !important;
+    left: calc(-6px + 4px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .lowerBadge_cc5dd2 > * {
@@ -280,9 +270,10 @@
 
 .folderButton__48112 .lowerBadge_cc5dd2 {
     top: 30px !important;
+    left: calc(-2px + 4px) !important;
 }
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .folderButton__48112 .lowerBadge_cc5dd2 {
-    left: 30px !important;
+    left: calc(-2px + 4px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -296,7 +287,7 @@
 .folderHeader__48112,
 .folderGroupBackground__48112,
 .listItemWrapper__91816 {
-    opacity: 0.25 !important;
+    opacity: 0.2 !important;
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
@@ -381,8 +372,8 @@
 }
 
 /* Gradient fade for servers list */
-.sidebarList_c48ade::before {
-    z-index: -1 !important;
+.wrapper_ef3116.guilds_c48ade::before {
+    z-index: 1 !important;
     position: fixed !important;
     display: block !important;
     content: '' !important;
@@ -390,7 +381,8 @@
     height: calc(100% - 32px) !important;
     top: 32px !important;
     left: calc(32px - 24px - 1px) !important;
-    background: var(--background-quaternary) !important;
+    background: var(--bg-overlay-1) !important;
+    background-color: var(--background-quaternary) !important;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 0.5%, rgba(0, 0, 0, 1) 100%),
     linear-gradient(to left, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%) !important;
     mask-composite: intersect !important;
@@ -402,7 +394,7 @@
     transition-delay: var(--transition-delay-exit) !important;
     opacity: 1 !important;
 }
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .sidebarList_c48ade::before {
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .wrapper_ef3116.guilds_c48ade::before {
     left: calc(32px - 24px - 1px + var(--servers-list-left-diff)) !important;
     opacity: 0 !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -544,13 +536,13 @@
     column-gap: 7px !important;
 }
 .iconContainer__2ea32 {
-    margin-left: 11px !important;
+    margin-left: 12px !important;
 }
 .icon__29444 {
-    margin-left: 9px !important;
+    margin-left: 10px !important;
 }
 .mainContent__29444 {
-    column-gap: 4px !important;
+    column-gap: 5px !important;
 }
 .containerDefault_c69b6d, .containerDefault__29444 {
     width: 100% !important;
@@ -1947,7 +1939,7 @@ div[style='height: 8px;'] {
 
 /* Server members list, server member (offline) */
 .offline__5d473 {
-    opacity: 0.25 !important;
+    opacity: 0.2 !important;
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
@@ -3008,7 +3000,7 @@ div[style='height: 8px;'] {
 
 /* Image accessory section */
 .imageAccessory_af017a {
-    opacity: 0.25 !important;
+    opacity: 0.2 !important;
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
@@ -3093,4 +3085,10 @@ div[style='height: 8px;'] {
 .content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .header__551b0 {
     max-width: var(--server-channels-width) !important;
     transition-delay: var(--transition-delay-enter) !important;
+}
+
+/* Servers list lower badge mask */
+.svg_cc5dd2 defs rect,
+.svg_cc5dd2 mask:has(rect) {
+    display: none !important;
 }
