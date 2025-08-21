@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.6.3
+ * @version 8.6.4
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -377,7 +377,7 @@
 .wrapper_ef3116.guilds_c48ade::before {
     z-index: 1 !important;
     position: fixed !important;
-    display: block !important;
+    display: flex !important;
     content: '' !important;
     width: calc(24px * 2.0) !important;
     height: calc(100% - 32px) !important;
@@ -1976,7 +1976,7 @@ div[style='height: 8px;'] {
 .list_c3cd7d {
     margin: 0px !important;
     padding: 0px !important;
-    margin-left: 3px !important;
+    margin-left: 4px !important;
     margin-top: 2px !important;
     transition: margin-left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
@@ -1990,15 +1990,32 @@ div[style='height: 8px;'] {
 .list_c3cd7d.collapsed_c3cd7d {
     margin: 0px !important;
     padding: 0px !important;
-    margin-left: 13px !important;
+    margin-left: 7px !important;
     margin-top: 3px !important;
+    margin-bottom: 18px !important;
+    width: 40px !important;
     transition: margin-left var(--transition-speed) var(--transition-style) !important;
-    width: 20px !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .list_c3cd7d.collapsed_c3cd7d {
     margin-left: 43px !important;
+    margin-bottom: 0px !important;
     width: auto !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+
+.list_c3cd7d.collapsed_c3cd7d .draggable__55bab {
+    width: 14px !important;
+    height: 12px !important;
+    transition: width var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .draggable__55bab {
+    height: 24px !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.list_c3cd7d.collapsed_c3cd7d:hover .draggable__55bab {
+    width: 28px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -2009,7 +2026,7 @@ div[style='height: 8px;'] {
 
 /* Voice channel, voice channel status inner div */
 .subtitle__2ea32 {
-    margin-bottom: -16px !important;
+    margin-bottom: -17px !important;
     transition: margin-bottom var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
@@ -2237,14 +2254,13 @@ div[style='height: 8px;'] {
 }
 
 /* DMs, DMs list title text (and categories) */
-.headerText__99e7c, .vc-pindms-section-container {
+.privateChannelsHeaderContainer__99e7c {
     padding: 0px !important;
     margin: 0px !important;
     white-space: nowrap !important;
 	overflow: hidden !important;
 	text-overflow: ellipsis !important;
-    max-width: 32px !important;
-    min-width: 32px !important;
+    max-width: 59px !important;
     transition: max-width var(--transition-speed) var(--transition-style),
     color var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
@@ -2252,16 +2268,13 @@ div[style='height: 8px;'] {
     text-transform: none !important;
     font-size: 14px !important;
     font-weight: 500 !important;
-}
-.vc-pindms-section-container {
     margin-left: 4px !important;
 }
-.vc-pindms-section-container:hover .headerText__99e7c {
+.privateChannelsHeaderContainer__99e7c:hover {
     color: var(--interactive-hover) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .headerText__99e7c,
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .vc-pindms-section-container {
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .privateChannelsHeaderContainer__99e7c {
     max-width: var(--server-channels-width) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
