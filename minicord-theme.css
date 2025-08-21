@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.6.2
+ * @version 8.6.3
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -221,7 +221,8 @@
 }
 
 /* Server list, ping notification badge */
-.lowerBadge_cc5dd2 {
+.lowerBadge_cc5dd2, .upperBadge_cc5dd2 {
+    z-index: 1 !important;
     border: none !important;
     min-width: 0px !important;
     min-height: 0px !important;
@@ -232,11 +233,8 @@
     transition: left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .lowerBadge_cc5dd2 {
-    left: calc(-6px + 4px) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-.lowerBadge_cc5dd2 > * {
+.lowerBadge_cc5dd2 > *,
+.upperBadge_cc5dd2 > * {
     min-width: 0px !important;
     min-height: 0px !important;
     margin: 0px !important;
@@ -248,7 +246,8 @@
     width: 100% !important;
     height: 100% !important;
 }
-.lowerBadge_cc5dd2::before {
+.lowerBadge_cc5dd2::before,
+.upperBadge_cc5dd2::before {
     left: -2px !important;
     top: -2px !important;
     position: absolute !important;
@@ -272,9 +271,9 @@
     top: 30px !important;
     left: calc(-2px + 4px) !important;
 }
-.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .folderButton__48112 .lowerBadge_cc5dd2 {
-    left: calc(-2px + 4px) !important;
-    transition-delay: var(--transition-delay-enter) !important;
+
+.upperBadge_cc5dd2 {
+    top: 0px !important;
 }
 
 /* Hide certain servers list buttons */
@@ -297,7 +296,10 @@
 .listItem__650eb:has(.item__58105) .listItemWrapper__91816,
 .listItem__650eb:has(.lowerBadge_cc5dd2) .folderHeader__48112,
 .listItem__650eb:has(.lowerBadge_cc5dd2) .blobContainer_e5445c,
-.listItem__650eb:has(.lowerBadge_cc5dd2) .listItemWrapper__91816 {
+.listItem__650eb:has(.lowerBadge_cc5dd2) .listItemWrapper__91816,
+.listItem__650eb:has(.upperBadge_cc5dd2) .folderHeader__48112,
+.listItem__650eb:has(.upperBadge_cc5dd2) .blobContainer_e5445c,
+.listItem__650eb:has(.upperBadge_cc5dd2) .listItemWrapper__91816 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -1975,7 +1977,7 @@ div[style='height: 8px;'] {
     margin: 0px !important;
     padding: 0px !important;
     margin-left: 3px !important;
-    margin-top: 0px !important;
+    margin-top: 2px !important;
     transition: margin-left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
@@ -1989,7 +1991,7 @@ div[style='height: 8px;'] {
     margin: 0px !important;
     padding: 0px !important;
     margin-left: 13px !important;
-    margin-top: 4px !important;
+    margin-top: 3px !important;
     transition: margin-left var(--transition-speed) var(--transition-style) !important;
     width: 20px !important;
     transition-delay: var(--transition-delay-exit) !important;
