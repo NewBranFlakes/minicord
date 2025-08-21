@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.6.8
+ * @version 8.6.9
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1112,7 +1112,7 @@ div[style='height: 8px;'] {
     margin-left: 0px !important;
     border: none !important;
     padding-left: 0px !important;
-    padding-right: 7px !important;
+    padding-right: 11px !important;
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-tertiary) !important;
 }
@@ -1165,6 +1165,10 @@ div[style='height: 8px;'] {
 .iconWrapper__9293f.clickable__9293f[aria-label='Start Voice Call'],
 .iconWrapper__9293f.clickable__9293f[aria-label='Start Video Call'] {
     display: none !important;
+}
+.iconWrapper__9293f.clickable__9293f[aria-label='Close Sidebar Chat'] .icon__9293f {
+    width: 28px !important;
+    height: 28px !important;
 }
 
 /* Subtitle bar search */
