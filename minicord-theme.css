@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.6.6
+ * @version 8.6.7
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1602,8 +1602,7 @@ div[style='height: 8px;'] {
 /* Main chat textbox buttons */
 .button__74017[aria-label='Send a gift'],
 .buttonContainer__74017:has(.button__74017[aria-label='Open GIF picker']),
-.buttonContainer__74017:has(.button__74017[aria-label='Open sticker picker']),
-.channelAppLauncher_e6e74f {
+.buttonContainer__74017:has(.button__74017[aria-label='Open sticker picker']) {
     display: none !important;
 }
 .buttons__74017, .button__74017, .container_aa63ab, .buttonContainer_aa63ab, .button_aa63ab {
@@ -1611,11 +1610,14 @@ div[style='height: 8px;'] {
     margin: 0px !important;
     gap: 0px !important;
 }
-.container_aa63ab, .buttonContainer_aa63ab, .button_aa63ab, .button__74017 {
+.container_aa63ab, .buttonContainer_aa63ab, .button_aa63ab, .button__74017, .channelAppLauncher_e6e74f {
     min-width: 20px !important;
     min-height: 20px !important;
     width: 20px !important;
     height: 20px !important;
+}
+.buttonWrapper__24af7 svg {
+    scale: 1.0 !important;
 }
 
 .buttons__74017 {
@@ -1643,12 +1645,15 @@ div[style='height: 8px;'] {
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.content_c48ade:has(.buttons__74017:hover) .buttons__74017::before {
+.chatContent_f75fb0:has(.buttons__74017:hover) .buttons__74017::before {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
-.buttonContainer__74017:not(:has(.emojiButton__74017)) {
+.buttonContainer__74017:has(.channelAppLauncher_e6e74f) {
+    z-index: 1 !important;
+}
+.buttonContainer__74017:not(:has(.channelAppLauncher_e6e74f)) {
     margin-right: -27px !important;
     pointer-events: none !important;
     opacity: 0 !important;
@@ -1656,7 +1661,7 @@ div[style='height: 8px;'] {
     opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.buttons__74017:hover .buttonContainer__74017:not(:has(.emojiButton__74017)) {
+.buttons__74017:hover .buttonContainer__74017:not(:has(.channelAppLauncher_e6e74f)) {
     pointer-events: all !important;
     opacity: 1 !important;
     margin-right: 0px !important;
