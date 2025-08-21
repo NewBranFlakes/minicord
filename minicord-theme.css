@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.6.5
+ * @version 8.6.6
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1617,9 +1617,54 @@ div[style='height: 8px;'] {
     width: 20px !important;
     height: 20px !important;
 }
+
 .buttons__74017 {
+    z-index: 1 !important;
+    position: absolute !important;
+    right: 0px !important;
     column-gap: 7px !important;
-    margin-right: calc(-8px + 7px + 8px) !important;
+    margin-right: 15px !important;
+}
+.buttons__74017::before {
+    z-index: -1 !important;
+    left: -7px !important;
+    top: 10px !important;
+    position: absolute !important;
+    display: block !important;
+    content: '' !important;
+    background: var(--bg-overlay-4) !important;
+    background-color: var(--background-secondary) !important;
+    border-radius: 8px !important;
+    mask-size: 100% 100% !important;
+    opacity: 0 !important;
+    width: calc(100% - 28px + 7px) !important;
+    padding-right: 0px !important;
+    height: 30px !important;
+    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.content_c48ade:has(.buttons__74017:hover) .buttons__74017::before {
+    opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+
+.buttonContainer__74017:not(:has(.emojiButton__74017)) {
+    margin-right: -27px !important;
+    pointer-events: none !important;
+    opacity: 0 !important;
+    transition: margin-right var(--transition-speed) var(--transition-style),
+    opacity var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.buttons__74017:hover .buttonContainer__74017:not(:has(.emojiButton__74017)) {
+    pointer-events: all !important;
+    opacity: 1 !important;
+    margin-right: 0px !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+
+.textArea__74017 {
+    margin-right: calc(60px + 7px) !important;
 }
 
 /* Main chat message options section */
