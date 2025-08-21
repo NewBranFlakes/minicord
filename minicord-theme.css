@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.6.4
+ * @version 8.6.5
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2450,7 +2450,7 @@ div[style='height: 8px;'] {
 }
 
 /* Change settings menu to be more mobile-friendly after reaching a certain size */
-@media (max-width: 1000px) { /* 960px */
+@media (max-width: 1020px) { /* 960px */
     .standardSidebarView__23e6b {
         left: calc(10px + 20px) !important;
         width: calc(100% - 20px - 40px) !important;
