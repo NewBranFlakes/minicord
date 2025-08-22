@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.6.9
+ * @version 8.7.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -734,6 +734,7 @@ div[style='height: 8px;'] {
     background: var(--bg-overlay-floating) !important;
     background-color: var(--background-primary-lighter) !important;
     height: 50px !important;
+    width: 100% !important;
     transition: top var(--transition-speed) var(--transition-style),
     height var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
@@ -750,9 +751,12 @@ div[style='height: 8px;'] {
 
 /* User panel, profile section */
 .panels_c48ade .container__37e49 {
+    left: 1px !important;
     min-height: 0px !important;
+    width: calc(100%) !important;
     height: calc(52px - 2px) !important;
     gap: 0px !important;
+    border-radius: 8px !important;
 }
 
 /* User panel, username and status */
@@ -769,13 +773,37 @@ div[style='height: 8px;'] {
 
 /* User panel, main buttons */
 .buttons__37e49 {
+    gap: 0px !important;
+    column-gap: 7px !important;
     overflow: hidden !important;
     opacity: 0 !important;
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
-    margin-left: 5px !important;
+    margin-left: 14px !important;
+    margin-right: 8px !important;
 }
 .panels_c48ade[aria-label='User area']:hover .buttons__37e49 {
+    opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+
+/* Hover shadow for user panel buttons */
+.buttons__37e49::before {
+    z-index: 0 !important;
+    opacity: 0 !important;
+    display: flex !important;
+    content: '' !important;
+    background-color: var(--custom-nameplate, var(--background-mod-normal)) !important;
+    position: absolute !important;
+    left: calc(100% - 124px - 7px) !important;
+    top: calc(5px - 0px) !important;
+    width: calc(110px + 14px) !important;
+    height: calc(40px + 0px) !important;
+    border-radius: 8px !important;
+    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.panels_c48ade[aria-label='User area']:has(.buttons__37e49:hover) .buttons__37e49::before {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -3160,4 +3188,32 @@ div[style='height: 8px;'] {
 .svg_cc5dd2 defs rect,
 .svg_cc5dd2 mask:has(rect) {
     display: none !important;
+}
+
+/* Nameplate */
+.img__4bbc6, .videoContainer__4bbc6 {
+    opacity: 1 !important;
+    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.panels_c48ade[aria-label='User area']:has(.buttons__37e49:hover) .img__4bbc6 {
+    opacity: calc(1 - 0.16) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+
+/* Better contrast for profile status */
+.avatar__37e49::before {
+    z-index: 0 !important;
+    opacity: 1 !important;
+    display: flex !important;
+    content: '' !important;
+    background: var(--bg-overlay-2) !important;
+    background-color: var(--background-secondary) !important;
+    position: absolute !important;
+    left: calc(100% - 12px - 2px) !important;
+    top: calc(100% - 12px - 2px) !important;
+    width: 12px !important;
+    height: 12px !important;
+    padding: 2px !important;
+    border-radius: 8px !important;
 }
