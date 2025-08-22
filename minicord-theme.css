@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.7.0
+ * @version 8.7.1
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1677,7 +1677,7 @@ div[style='height: 8px;'] {
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.chatContent_f75fb0:has(.buttons__74017:hover) .buttons__74017::before {
+.form_f75fb0:has(.buttons__74017:hover) .buttons__74017::before {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -1700,9 +1700,29 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-enter) !important;
 }
 
+.contents_c19a55 .buttonContainer__74017,
+.user-profile-popout .buttonContainer__74017 {
+    opacity: 1 !important;
+    margin-right: 0px !important;
+    pointer-events: all !important;
+}
+.contents_c19a55 .channelTextArea__5126c,
+.user-profile-popout .channelTextArea__5126c {
+    border: none !important;
+    margin: 0px !important;
+}
+
 .textArea__74017 {
     margin-right: calc(60px + 7px) !important;
 }
+.contents_c19a55 .textArea__74017,
+.user-profile-popout .textArea__74017 {
+    margin-right: calc(25px + 7px) !important;
+}
+
+/* .user-profile-popout .textArea__74017 {
+    margin: 0px !important;
+} */
 
 /* Main chat message options section */
 .button_f7ecac:has(.icon_f84418.buttonContent_f84418),
@@ -1965,6 +1985,7 @@ div[style='height: 8px;'] {
 .content_c48ade:has(.container_c8ffbb:hover) .content__91a9d,
 .membersWrap_c8ffbb.hiddenMembers_c8ffbb.container__7641b:hover .content__91a9d {
     opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Server members list, server member name and decorators */
@@ -1974,22 +1995,19 @@ div[style='height: 8px;'] {
     line-height: 16px !important;
     font-size: 14px !important;
     gap: 0px !important;
-}
-.nameAndDecorators__91a9d {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
-}
-.content__91a9d:has(.container_c9d15c) .nameAndDecorators__91a9d {
-    margin-top: 2px !important;
-    margin-bottom: 2px !important;
 }
 .content__91a9d:not(:has(.container_c9d15c)) .nameAndDecorators__91a9d {
     height: 32px !important;
 }
 
 /* Server members list, server member name div */
-.name__91a9d {
+.name__91a9d, .name__5d473 {
 	width: auto !important;
+    height: 16px !important;
+    line-height: 16px !important;
+    font-size: 14px !important;
 }
 
 /* Server members list, server member subtext */
@@ -2017,19 +2035,17 @@ div[style='height: 8px;'] {
     margin-left: 11px !important;
     margin-top: 7px !important;
     margin-bottom: 0px !important;
-    transition: color var(--transition-speed) var(--transition-style) !important;
+    transition: color var(--transition-speed) var(--transition-style),
+    opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 
 /* Server members list, server member (offline) */
 .offline__5d473 {
     opacity: 0.2 !important;
-    transition: opacity var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
 }
 .offline__5d473:hover {
     opacity: 1 !important;
-    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Server members list, server member div */
