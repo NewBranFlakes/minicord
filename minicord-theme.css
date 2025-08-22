@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.7.2
+ * @version 8.7.3
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1582,7 +1582,7 @@ div[style='height: 8px;'] {
 }
 
 /* Main chat textbox, inner-inner div */
-.inner__74017 {
+.page_c48ade .inner__74017 {
     padding: 0px !important;
     margin: 0px !important;
     margin-left: 0px !important;
@@ -1721,10 +1721,6 @@ div[style='height: 8px;'] {
 .user-profile-popout .textArea__74017 {
     margin-right: calc(25px + 7px) !important;
 }
-
-/* .user-profile-popout .textArea__74017 {
-    margin: 0px !important;
-} */
 
 /* Main chat message options section */
 .button_f7ecac:has(.icon_f84418.buttonContent_f84418),
@@ -2855,7 +2851,8 @@ div[style='height: 8px;'] {
 }
 
 /* Apparently something about the textbox placeholder text element causes major performance issues; this is an attempt to bandage it */
-.channelBottomBarArea_f75fb0 .textArea__74017::after {
+.textArea__74017::after {
+    z-index: 1 !important;
     display: block !important;
     position: absolute !important;
     content: 'Message' !important;
@@ -2871,10 +2868,10 @@ div[style='height: 8px;'] {
     pointer-events: none !important;
     opacity: 1 !important;
 }
-.chatContent_f75fb0:not(:has(.placeholder__1b31f)) .textArea__74017::after {
+.scrollableContainer__74017:not(:has(.emptyText__1464f)) .textArea__74017::after {
     opacity: 0 !important;
 }
-.chatContent_f75fb0:has(.innerDisabled__74017) .textArea__74017::after {
+.scrollableContainer__74017:has(.innerDisabled__74017) .textArea__74017::after {
     content: 'You do not have permission to send messages in this channel.' !important;
 }
 
