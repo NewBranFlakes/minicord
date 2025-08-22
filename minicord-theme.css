@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.7.1
+ * @version 8.7.2
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -789,6 +789,7 @@ div[style='height: 8px;'] {
 
 /* Hover shadow for user panel buttons */
 .buttons__37e49::before {
+    pointer-events: none !important;
     z-index: 0 !important;
     opacity: 0 !important;
     display: flex !important;
@@ -1660,6 +1661,7 @@ div[style='height: 8px;'] {
     margin-right: 15px !important;
 }
 .buttons__74017::before {
+    pointer-events: none !important;
     z-index: -1 !important;
     left: -7px !important;
     top: 10px !important;
@@ -3219,6 +3221,7 @@ div[style='height: 8px;'] {
 
 /* Better contrast for profile status */
 .avatar__37e49::before {
+    pointer-events: none !important;
     z-index: 0 !important;
     opacity: 1 !important;
     display: flex !important;
