@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.7.5
+ * @version 8.7.6
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2871,10 +2871,10 @@ div[style='height: 8px;'] {
     height: 16px !important;
     color: var(--channels-default) !important;
     pointer-events: none !important;
-    opacity: 1 !important;
-}
-.scrollableContainer__74017:not(:has(.emptyText__1464f)) .textArea__74017::after {
     opacity: 0 !important;
+}
+.scrollableContainer__74017:has(.placeholder__1b31f) .textArea__74017::after {
+    opacity: 1 !important;
 }
 .scrollableContainer__74017:has(.innerDisabled__74017) .textArea__74017::after {
     content: 'You do not have permission to send messages in this channel.' !important;
