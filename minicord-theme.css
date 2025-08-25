@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.7.12
+ * @version 8.7.13
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3153,16 +3153,38 @@ div[style='height: 8px;'] {
     display: none !important;
 }
 
-/* Reaction pfps */
+/* Message reactions */
 .reaction__23977 {
     max-width: 34px !important;
-    overflow: hidden !important;
     transition: max-width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .reaction__23977:hover {
     max-width: 200px !important;
-    overflow: hidden !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.reactionInner__23977 {
+    pointer-events: none !important;
+}
+.reaction__23977:hover .reactionInner__23977 {
+    pointer-events: all !important;
+}
+.reactionCount__23977 {
+    opacity: 0 !important;
+    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.reaction__23977:hover .reactionCount__23977 {
+    opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.reactionInner__23977 div:has(.container__183c2) {
+    opacity: 0 !important;
+    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.reaction__23977:hover .reactionInner__23977 div:has(.container__183c2) {
+    opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -3317,4 +3339,9 @@ div[style='height: 8px;'] {
     border: none !important;
     margin: 0px !important;
     height: 18px !important;
+}
+
+/* Custom client theme menu */
+.container__5a2df {
+    z-index: 0 !important;
 }
