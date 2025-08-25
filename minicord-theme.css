@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.7.13
+ * @version 8.7.14
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3015,6 +3015,13 @@ div[style='height: 8px;'] {
 .vc-channeltabs-bookmark svg path[fill='var(--channeltabs-blue)'] {
     fill: var(--bg-brand) !important;
 }
+.vc-channeltabs-bookmark svg path[fill='var(--channeltabs-white)'] {
+    fill: var(--background-primary-lighter) !important;
+    filter: invert(100%) !important;
+}
+.vc-channeltabs-bookmark svg path[fill='var(--channeltabs-black)'] {
+    fill: var(--background-primary-lighter) !important;
+}
 
 /* Gap between tab channel icon and tab name */
 .vc-channeltabs-tab-inner {
@@ -3344,4 +3351,10 @@ div[style='height: 8px;'] {
 /* Custom client theme menu */
 .container__5a2df {
     z-index: 0 !important;
+}
+
+/* Home page "add friend" button */
+.addFriend__133bf {
+    background-color: var(--background-primary-lighter) !important;
+    color: var(--text-default) !important;
 }
