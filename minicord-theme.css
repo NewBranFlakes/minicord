@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.7.10
+ * @version 8.7.11
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2131,6 +2131,11 @@ div[style='height: 8px;'] {
 /* Server members list, server member icon */
 .avatar__91a9d {
     margin: 0px !important;
+}
+
+/* Voice channel page icon */
+.channelIcon__9293f {
+    margin-left: 7px !important;
 }
 
 /* Voice channel, voice channel members div */
