@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.7.7
+ * @version 8.7.8
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1665,6 +1665,9 @@ div[style='height: 8px;'] {
     background: transparent !important;
     background-color: transparent !important;
 }
+.container__53cea .scrollableContainer__74017 {
+    padding-right: 5px !important;
+}
 
 /* Textbox scrollbar (for the ENTIRE section) */
 .scrollableContainer__74017::-webkit-scrollbar {
@@ -2179,28 +2182,18 @@ div[style='height: 8px;'] {
 
 /* Voice channel, voice channel status div */
 .linkBottom__2ea32 {
-    margin-left: 38px !important;
-}
-
-/* Voice channel, voice channel status inner div */
-.subtitle__2ea32 {
+    margin-top: 0px !important;
     margin-bottom: -17px !important;
-    transition: margin-bottom var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
-}
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .subtitle__2ea32 {
-    margin-bottom: 0px !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-
-/* Voice channel, voice channel status text */
-.statusText__5cda9 {
-    margin-right: 10px !important;
+    margin-left: 40px !important;
     opacity: 0 !important;
-    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition: opacity var(--transition-speed) var(--transition-style),
+    margin-bottom var(--transition-speed) var(--transition-style),
+    margin-top var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .statusText__5cda9 {
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .linkBottom__2ea32 {
+    margin-top: 7px !important;
+    margin-bottom: 0px !important;
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
