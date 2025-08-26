@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.7.14
+ * @version 8.7.15
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3357,4 +3357,9 @@ div[style='height: 8px;'] {
 .addFriend__133bf {
     background-color: var(--background-primary-lighter) !important;
     color: var(--text-default) !important;
+}
+
+/* Discord quests (user panel); will get around to properly stylizing this but for now just hide it */
+.mask__0d616 {
+    display: none !important;
 }
