@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.7.15
+ * @version 8.7.16
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3362,4 +3362,16 @@ div[style='height: 8px;'] {
 /* Discord quests (user panel); will get around to properly stylizing this but for now just hide it */
 .mask__0d616 {
     display: none !important;
+}
+
+/* DMs, user profile activity section */
+.activityContainer__84832 {
+    overflow: hidden !important;
+}
+.actions__39ec2 .primaryButton__39ec2 {
+    width: 100% !important;
+}
+.actions__39ec2 .primaryButton__39ec2 .button_fb7f94 {
+    width: 100% !important;
+    min-width: 0px !important;
 }
