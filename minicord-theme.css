@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.7.16
+ * @version 8.7.17
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3374,4 +3374,23 @@ div[style='height: 8px;'] {
 .actions__39ec2 .primaryButton__39ec2 .button_fb7f94 {
     width: 100% !important;
     min-width: 0px !important;
+}
+
+/* Equicord, user timezone plugin */
+.timezone-profile-item {
+    z-index: 99 !important;
+    margin: 0px !important;
+    margin-bottom: 7px !important;
+    margin-right: 7px !important;
+    background: var(--background-surface-highest) !important;
+    box-shadow: var(--shadow-low) !important;
+    color: var(--text-default) !important;
+    border-color: var(--border-strong) !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-radius: var(--radius-sm) !important;
+}
+.outer_c0bea0:has(.container_ab8609) .timezone-profile-item {
+    margin-bottom: calc(10px + 7px) !important;
+    margin-right: 17px !important;
 }
