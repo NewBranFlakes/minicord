@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.7.17
+ * @version 8.7.18
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2780,9 +2780,12 @@ div[style='height: 8px;'] {
 
 /* Tab div */
 .vc-channeltabs-tab {
-    padding: 7px !important;
-    height: 21px !important;
-    width: auto !important;
+    padding: 0px !important;
+    height: 35px !important;
+    width: 175px !important;
+    min-width: 36px !important;
+    container-type: inline-size !important;
+    container-name: vc-channel-tab !important;
     margin: 0px !important;
     gap: 0px !important;
     background: var(--bg-overlay-2) !important;
@@ -2795,6 +2798,17 @@ div[style='height: 8px;'] {
     background: var(--bg-overlay-4) !important;
     background-color: var(--background-primary-lighter) !important;
     transition-delay: var(--transition-delay-enter) !important;
+}
+.vc-channeltabs-tab-compact {
+    container-type: normal !important;
+    width: auto !important;
+    min-width: 36px !important;
+    max-width: none !important;
+}
+@container vc-channel-tab (width < 63px) {
+    .vc-channeltabs-close-button {
+        display: none !important;
+    }
 }
 
 /* Tab div (selected) */
@@ -2810,7 +2824,9 @@ div[style='height: 8px;'] {
 /* Tab inner div */
 .vc-channeltabs-button {
     margin: 0px !important;
-    padding: 0px !important;
+    padding: 7px !important;
+    height: 100% !important;
+    /* padding-right: 35px !important; */
     gap: 0px !important;
 }
 
@@ -2819,24 +2835,29 @@ div[style='height: 8px;'] {
 .vc-channeltabs-close-button svg {
     line-height: 21px !important;
     font-size: 21px !important;
-    height: 21px !important;
-    width: 21px !important;
+    height: 100% !important;
+    width: 100% !important;
     margin: 0px !important;
     padding: 0px !important;
 }
 .vc-channeltabs-close-button {
-    margin-left: 7px !important;
+    margin-right: 7px !important;
+    height: calc(35px - 14px) !important;
+    width: calc(35px - 14px) !important;
+    border-radius: 4px !important;
     transition: background-color var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .vc-channeltabs-close-button svg {
+    height: calc(35px - 14px) !important;
+    width: calc(35px - 14px) !important;
     color: var(--text-default) !important;
 }
 .vc-channeltabs-tab-compact .vc-channeltabs-close-button {
     display: none !important;
 }
 .vc-channeltabs-close-button:hover {
-    background-color: var(--background-modifier-hover) !important;
+    background-color: var(--background-modifier-active) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -2854,6 +2875,7 @@ div[style='height: 8px;'] {
     gap: 0px !important;
     margin-left: 7px !important;
     z-index: 99 !important;
+    height: 24px !important;
 }
 .vc-channeltabs-bookmark-star {
     fill: none !important;
@@ -3007,6 +3029,7 @@ div[style='height: 8px;'] {
     margin-right: -2px !important;
 }
 .vc-channeltabs-icon {
+    order: -3 !important;
     line-height: 21px !important;
     font-size: 21px !important;
     height: 21px !important;
@@ -3029,6 +3052,11 @@ div[style='height: 8px;'] {
     padding: 0px !important;
     margin: 0px !important;
     column-gap: 7px !important;
+}
+
+/* Typing indicator for tabs */
+.vc-channeltabs-typing-indicator {
+    overflow: visible !important;
 }
 
 /* Bookmark folder */
@@ -3120,6 +3148,17 @@ div[style='height: 8px;'] {
     height: 28px !important;
     margin-bottom: -4px !important;
     margin-right: -4px !important;
+    min-width: 28px !important;
+    min-height: 28px !important;
+}
+.vc-channeltabs-tab-inner .wrapper__44b0c svg {
+    width: 28px !important;
+    height: 28px !important;
+}
+.vc-channeltabs-tab-inner > svg:not(.vc-channeltabs-typing-indicator) {
+    overflow: visible !important;
+    width: 21px !important;
+    height: 21px !important;
 }
 
 /* More responsive submenu for bookmark folder content options */
