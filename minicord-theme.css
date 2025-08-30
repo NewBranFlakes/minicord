@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.8.0
+ * @version 8.8.1
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2234,12 +2234,13 @@ div[style='height: 8px;'] {
     padding-left: 7px !important;
     padding-right: 7px !important;
 }
-.statusDiv__5cda9 {
+.subtitle__2ea32 > .overflow__82b15, .linkBottom__2ea32 .statusDiv__5cda9 {
     margin-top: -16px !important;
     transition: margin-top var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .statusDiv__5cda9 {
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .subtitle__2ea32 > .overflow__82b15,
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .linkBottom__2ea32 .statusDiv__5cda9 {
     margin-top: 7px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -2266,6 +2267,7 @@ div[style='height: 8px;'] {
 }
 .content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .list_c3cd7d.collapsed_c3cd7d {
     margin-left: 1px !important;
+    margin-bottom: 0px;
     width: calc(100% - 32px + 31px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -2286,23 +2288,44 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-enter) !important;
 }
 .moreContainer__55bab {
-    border-color: var(--background-primary-lighter) !important;
+    background-color: transparent !important;
+    border: none !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    width: calc(28px - 14px) !important;
+    height: calc(28px - 14px) !important;
+    overflow: visible !important;
+}
+.moreContainer__55bab > * {
     background-color: var(--background-primary-lighter) !important;
+    border-color: var(--background-primary-lighter) !important;
     border-style: solid !important;
     border-radius: 24px !important;
     border-width: 2px !important;
     margin: 0px !important;
-    margin-top: 3.5px !important;
-    margin-left: 7px !important;
+    margin-top: calc(-11px + 14px) !important;
+    margin-left: calc(21px - 14px) !important;
     padding: 0px !important;
-    width: calc(28px - 4px) !important;
-    height: calc(28px - 4px) !important;
+    padding-top: 2px !important;
+    padding-left: 6px !important;
+    width: auto !important;
+    min-width: 18px !important;
+    height: 22px !important;
 }
-.moreContainer__55bab > * {
-    text-align: center !important;
-    line-height: 24px !important;
-    width: 100% !important;
-    height: 100% !important;
+.voiceUserSummary__629e4 {
+    padding: 0px !important;
+    margin: 0px !important;
+    height: 20px !important;
+}
+.voiceUserSummary__629e4 .icon__183c2 {
+    margin: 0px !important;
+    margin-left: 12px !important;
+    margin-right: 7px !important;
+}
+.voiceUserSummary__629e4 .moreUsers__183c2 {
+    padding: 0px !important;
+    border-color: var(--background-primary-lighter) !important;
+    background-color: var(--background-primary-lighter) !important;
 }
 
 /* Threads, thread members list */
