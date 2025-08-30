@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.7.18
+ * @version 8.8.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -22,9 +22,9 @@
     --servers-list-left-expanded: 2px;
     --servers-list-left-diff: calc(var(--servers-list-left-expanded) - var(--servers-list-left-shrunk));
 
-    --server-channels-width: 232px;
+    --server-channels-width: 368px;
     --server-channels-left-offset: calc(var(--servers-list-left-shrunk));
-    --server-channels-left-shrunk: -220px;
+    --server-channels-left-shrunk: -356px;
     --server-channels-left-expanded: -32px;
     --server-channels-left-diff: calc(var(--server-channels-left-expanded) - var(--server-channels-left-shrunk));
 
@@ -386,14 +386,10 @@
     height: calc(100% - 0px) !important;
     z-index: 1 !important;
     border-top-left-radius: 8px !important;
-
     width: var(--server-channels-width) !important;
     max-width: none !important;
     transition: left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
-}
-.sidebarList_c48ade.sidebarListRounded_c48ade:hover {
-    transition-delay: var(--transition-delay-enter) !important;
 }
 .wrapper_ef3116.guilds_c48ade:hover + .sidebarList_c48ade.sidebarListRounded_c48ade {
     left: var(--servers-list-left-expanded) !important;
@@ -461,8 +457,8 @@
 /* Unread server channel indicator */
 .unread__2ea32.unreadImportant__2ea32 {
     padding-bottom: 10px !important;
-    top: 3px !important;
-    left: -9px !important;
+    top: 5px !important;
+    left: 1px !important;
 }
 
 /* Server channel divider */
@@ -2139,140 +2135,174 @@ div[style='height: 8px;'] {
 }
 
 /* Voice channel, voice channel members div */
-.list_c3cd7d {
+.list_c3cd7d, .content__07f91, .linkBottom__2ea32, .timeCounter, .usernameContainer__394db {
     margin: 0px !important;
     padding: 0px !important;
-    margin-left: 4px !important;
-    margin-top: 2px !important;
-    transition: margin-left var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
+    gap: 0px !important;
 }
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .list_c3cd7d {
-    margin-left: 33px !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-
-/* Voice channel, voice channel members div (hidden names) */
-.list_c3cd7d.collapsed_c3cd7d {
+.draggable__55bab, .voiceUser__07f91 {
+    height: 100% !important;
+    width: 100% !important;
     margin: 0px !important;
     padding: 0px !important;
-    margin-left: 7px !important;
-    margin-top: 3px !important;
-    margin-bottom: 18px !important;
-    width: 40px !important;
-    transition: margin-left var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
-}
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .list_c3cd7d.collapsed_c3cd7d {
-    margin-left: 43px !important;
-    margin-bottom: 0px !important;
-    width: auto !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-
-.list_c3cd7d.collapsed_c3cd7d .draggable__55bab {
-    width: 14px !important;
-    height: 12px !important;
-    transition: width var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
-}
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .draggable__55bab {
-    height: 24px !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-.list_c3cd7d.collapsed_c3cd7d:hover .draggable__55bab {
-    width: 28px !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-
-/* Voice channel, voice channel status div */
-.linkBottom__2ea32 {
-    margin-top: 0px !important;
-    margin-bottom: -17px !important;
-    margin-left: 40px !important;
-    opacity: 0 !important;
-    transition: opacity var(--transition-speed) var(--transition-style),
-    margin-bottom var(--transition-speed) var(--transition-style),
-    margin-top var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
-}
-.linkBottom__2ea32:has(.subtitle__2ea32):not(:has(.overflow__82b15)):not(:has(.statusDiv__5cda9)) {
-    margin-bottom: 0px !important;
-    transition-delay: var(--transition-delay-exit) !important;
-}
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .linkBottom__2ea32:has(.overflow__82b15),
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .linkBottom__2ea32:has(.statusDiv__5cda9) {
-    opacity: 1 !important;
-    margin-top: 7px !important;
-    margin-bottom: 0px !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-
-/* Voice channel, voice channel individual member divs */
-.draggable__55bab, .voiceUser__07f91.userSmall__07f91 {
-	height: 24px !important;
 }
 .draggable__55bab {
-	margin-bottom: 5px !important;
-    transition: height var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
+    margin-left: 0px !important;
 }
-.content_c48ade:not(:has(.list_c3cd7d.collapsed_c3cd7d)) .draggable__55bab:hover {
-	height: 36px !important;
-    transition-delay: var(--transition-delay-enter) !important;
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .draggable__55bab {
+    margin-left: 0px !important;
 }
-
-/* Voice channel, voice channel member selection highlight */
 .content__07f91 {
+    padding: 7px !important;
+    padding-top: 3.5px !important;
+    padding-bottom: 3.5px !important;
+    gap: 7px !important;
     transition: background-color var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-
-/* Voice channel, voice channel member name text */
-.container__394db, .icons__07f91 {
+.container__394db, .icons__07f91, .linkBottom__2ea32 {
     opacity: 0 !important;
-    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition: height var(--transition-speed) var(--transition-style),
+    opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
+}
+.container__394db {
+    height: 28px !important;
+}
+.draggable__55bab:hover .container__394db {
+    height: calc(28px + 12px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 .content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .container__394db,
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .icons__07f91 {
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .icons__07f91,
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .linkBottom__2ea32 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-
-/* Voice channel, voice channel member live decorator */
-.live_a7acae {
-    padding-left: 5px !important;
-    padding-right: 5px !important;
+.linkBottom__2ea32 {
+    margin-left: 39px !important;
 }
-
-/* Voice channel, voice channel member options button */
-.optionsButtonContainer__07f91 {
-    display: flex !important;
-    width: 0px !important;
-    margin-left: -8px !important;
+.timeCounter {
+    font-family: var(--font-code) !important;
+    font-size: 10px !important;
+    line-height: 0px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    height: 0px !important;
     opacity: 0 !important;
     transition: opacity var(--transition-speed) var(--transition-style),
-    width var(--transition-speed) var(--transition-style),
-    margin-left var(--transition-speed) var(--transition-style) !important;
+    height var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.draggable__55bab:hover .optionsButtonContainer__07f91 {
+.draggable__55bab:hover .timeCounter {
+    height: calc(12px) !important;
     opacity: 1 !important;
-    width: 24px !important;
-    margin-left: -4px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-
-/* Voice channel, voice channel member guild badge */
+.avatar__07f91 {
+    border-color: var(--background-primary-lighter) !important;
+    background-color: var(--background-primary-lighter) !important;
+    border-style: solid !important;
+    border-radius: 24px !important;
+    border-width: 2px !important;
+}
 .chipletParent__394db {
-    top: 0px !important;
+    margin: 0px !important;
+    margin-left: 7px !important;
+    padding: 0px !important;
+    top: -6px !important;
     transition: top var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .draggable__55bab:hover .chipletParent__394db {
-    top: -11px !important;
+    top: calc(-6px - 6px) !important;
     transition-delay: var(--transition-delay-enter) !important;
+}
+.usernameContainer__394db {
+    display: inline-block !important;
+    height: 100% !important;
+}
+.username__07f91 {
+    font-size: 16px !important;
+    line-height: 28px !important;
+    height: 100% !important;
+}
+.iconSpacing__07f91 {
+    margin-left: 7px !important;
+}
+.live_a7acae {
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+}
+.statusDiv__5cda9 {
+    margin-top: -16px !important;
+    transition: margin-top var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .statusDiv__5cda9 {
+    margin-top: 7px !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.list_c3cd7d {
+    margin-left: 1px !important;
+    margin-top: 7px !important;
+    margin-bottom: 0px !important;
+    width: calc(100% - 1px) !important;
+    transition: margin-left var(--transition-speed) var(--transition-style),
+    width var(--transition-speed) var(--transition-style),
+    margin-bottom var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .list_c3cd7d {
+    margin-left: calc(39px - 7px) !important;
+    width: calc(100% - 32px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.list_c3cd7d.collapsed_c3cd7d {
+    margin-left: -5px !important;
+    margin-bottom: 28px !important;
+    width: calc(44px - 8px) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .list_c3cd7d.collapsed_c3cd7d {
+    margin-left: 1px !important;
+    width: calc(100% - 32px + 31px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.containerDefault_c69b6d:hover .list_c3cd7d.collapsed_c3cd7d {
+    margin-bottom: 0px !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.list_c3cd7d.collapsed_c3cd7d .draggable__55bab {
+    width: calc(28px - 14px) !important;
+    height: calc(28px - 14px) !important;
+    transition: height var(--transition-speed) var(--transition-style),
+    width var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.containerDefault_c69b6d:hover .list_c3cd7d.collapsed_c3cd7d .draggable__55bab {
+    width: calc(28px + 7px) !important;
+    height: calc(28px + 7px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.moreContainer__55bab {
+    border-color: var(--background-primary-lighter) !important;
+    background-color: var(--background-primary-lighter) !important;
+    border-style: solid !important;
+    border-radius: 24px !important;
+    border-width: 2px !important;
+    margin: 0px !important;
+    margin-top: 3.5px !important;
+    margin-left: 7px !important;
+    padding: 0px !important;
+    width: calc(28px - 4px) !important;
+    height: calc(28px - 4px) !important;
+}
+.moreContainer__55bab > * {
+    text-align: center !important;
+    line-height: 24px !important;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 /* Threads, thread members list */
@@ -3170,23 +3200,6 @@ div[style='height: 8px;'] {
 /* Bookmark folder content options submenu div */
 .submenuPaddingContainer_c1e9c4 {
     padding: 0px !important;
-}
-
-/* Equicord user voice channel timer plugin */
-.timeCounter {
-    font-family: var(--font-code) !important;
-    font-size: 11px !important;
-    opacity: 0 !important;
-    line-height: 0px !important;
-    margin-top: 0px !important;
-    transition: opacity var(--transition-speed) var(--transition-style),
-    line-height var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
-}
-.draggable__55bab:hover .timeCounter {
-    opacity: 1 !important;
-    line-height: 11px !important;
-    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Unread message indicator */
