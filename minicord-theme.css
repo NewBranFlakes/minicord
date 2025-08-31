@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.8.2
+ * @version 8.8.3
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1640,6 +1640,12 @@ div[style='height: 8px;'] {
 }
 
 /* Main chat textbox, inner-inner div */
+.inner__74017 {
+    padding-left: 20px !important;
+}
+.user-profile-popout .inner__74017 {
+    padding-left: calc(20px - 2px) !important;
+}
 .page_c48ade .inner__74017 {
     padding: 0px !important;
     margin: 0px !important;
@@ -1661,7 +1667,8 @@ div[style='height: 8px;'] {
     background: transparent !important;
     background-color: transparent !important;
 }
-.container__53cea .scrollableContainer__74017 {
+.container__53cea .scrollableContainer__74017,
+.footerButtons__62280 .scrollableContainer__74017 {
     padding-right: 5px !important;
 }
 
@@ -1764,13 +1771,15 @@ div[style='height: 8px;'] {
 }
 
 .contents_c19a55 .buttonContainer__74017,
-.user-profile-popout .buttonContainer__74017 {
+.user-profile-popout .buttonContainer__74017,
+.focusLock__49fc1 .buttonContainer__74017 {
     opacity: 1 !important;
     margin-right: 0px !important;
     pointer-events: all !important;
 }
 .contents_c19a55 .channelTextArea__5126c,
-.user-profile-popout .channelTextArea__5126c {
+.user-profile-popout .channelTextArea__5126c,
+.focusLock__49fc1 .channelTextArea__5126c {
     border: none !important;
     margin: 0px !important;
 }
@@ -1779,7 +1788,8 @@ div[style='height: 8px;'] {
     margin-right: calc(60px + 7px) !important;
 }
 .contents_c19a55 .textArea__74017,
-.user-profile-popout .textArea__74017 {
+.user-profile-popout .textArea__74017,
+.focusLock__49fc1 .textArea__74017 {
     margin-right: calc(25px + 7px) !important;
 }
 
