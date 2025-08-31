@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.8.1
+ * @version 8.8.2
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2167,6 +2167,7 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit) !important;
 }
 .container__394db {
+
     height: 28px !important;
 }
 .draggable__55bab:hover .container__394db {
@@ -2184,12 +2185,13 @@ div[style='height: 8px;'] {
 }
 .timeCounter {
     font-family: var(--font-code) !important;
-    font-size: 10px !important;
+    font-size: 12px !important;
     line-height: 0px !important;
     font-style: normal !important;
     font-weight: 600 !important;
     height: 0px !important;
     opacity: 0 !important;
+    margin-top: 2px !important;
     transition: opacity var(--transition-speed) var(--transition-style),
     height var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
