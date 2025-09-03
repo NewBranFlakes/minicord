@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.8.3
+ * @version 8.8.4
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2355,39 +2355,8 @@ div[style='height: 8px;'] {
 }
 
 /* Threads, thread server channel */
-.container__5b40b {
-    margin: 0px !important;
-    padding: 0px !important;
-}
-.container__5b40b {
-    margin-top: calc(-7px + 3px) !important;
-    margin-left: -10px !important;
-}
-.container__5b40b:not(:has(.iconContainer__2ea32)) .wrapper__2ea32 {
-    margin-left: 42px !important;
-}
-
-/* Threads, thread server channel icon (spine) */
-.spine__5b40b {
-    width: 20px !important;
-    height: 20px !important;
-    margin-left: calc(7px - 2px) !important;
-}
-
-/* Threads, thread server channel name div */
-.iconVisibility_c69b6d.wrapper__2ea32.typeThread__2ea32.modeSelected__2ea32 {
-    margin-left: calc(37px + 5px) !important;
-    margin-top: calc(-5px + 12px) !important;
-}
-
-/* Threads, thread server channel inner div (also the thread's name text) */
-.container__5b40b:has(.name__2ea32.overflow__82b15) .name__2ea32.overflow__82b15 {
-    opacity: 0 !important;
-    padding: 2px !important;
-}
-.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .container__5b40b:has(.name__2ea32.overflow__82b15) .name__2ea32.overflow__82b15 {
-    opacity: 1 !important;
-    transition-delay: var(--transition-delay-enter) !important;
+.container__5b40b .wrapper__2ea32 {
+    margin-left: 39px !important;
 }
 
 /* DMs sidebar padding fix */
