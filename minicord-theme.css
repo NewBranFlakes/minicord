@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.8.4
+ * @version 8.9.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -18,14 +18,14 @@
     --transition-delay-enter: 0.1s;
     --transition-delay-exit: 0.1s;
 
-    --servers-list-left-shrunk: -32px;
+    --servers-list-left-shrunk: calc(-32px - 32px);
     --servers-list-left-expanded: 2px;
     --servers-list-left-diff: calc(var(--servers-list-left-expanded) - var(--servers-list-left-shrunk));
 
     --server-channels-width: 368px;
     --server-channels-left-offset: calc(var(--servers-list-left-shrunk));
-    --server-channels-left-shrunk: -356px;
-    --server-channels-left-expanded: -32px;
+    --server-channels-left-shrunk: calc(-356px - 32px);
+    --server-channels-left-expanded: calc(-32px - 32px);
     --server-channels-left-diff: calc(var(--server-channels-left-expanded) - var(--server-channels-left-shrunk));
 
     --user-panel-left-shrunk: 50px;
@@ -391,8 +391,20 @@
     transition: left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.wrapper_ef3116.guilds_c48ade:hover + .sidebarList_c48ade.sidebarListRounded_c48ade {
-    left: var(--servers-list-left-expanded) !important;
+.content_c48ade:not(:has(.chat_f75fb0)) .sidebarList_c48ade.sidebarListRounded_c48ade {
+    left: calc(var(--server-channels-left-offset) + 32px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .sidebarList_c48ade.sidebarListRounded_c48ade {
+    left: calc(var(--server-channels-left-offset)) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.sidebarList_c48ade.sidebarListRounded_c48ade:hover {
+    left: calc(var(--server-channels-left-offset) + 32px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .sidebarList_c48ade.sidebarListRounded_c48ade {
+    left: calc(var(--servers-list-left-expanded)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -405,7 +417,7 @@
     width: calc(24px * 2.0) !important;
     height: calc(100% - 32px) !important;
     top: 32px !important;
-    left: calc(32px - 24px - 1px) !important;
+    left: calc(32px - 24px - 1px - 32px) !important;
     background: var(--bg-overlay-1) !important;
     background-color: var(--background-quaternary) !important;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 0.5%, rgba(0, 0, 0, 1) 100%),
@@ -418,6 +430,15 @@
     left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
     opacity: 1 !important;
+}
+.content_c48ade:not(:has(.chat_f75fb0)) .wrapper_ef3116.guilds_c48ade::before,
+.content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .wrapper_ef3116.guilds_c48ade::before {
+    left: calc(32px - 24px - 1px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .wrapper_ef3116.guilds_c48ade::before {
+    left: calc(32px - 24px - 1px - 32px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .wrapper_ef3116.guilds_c48ade::before {
     left: calc(32px - 24px - 1px + var(--servers-list-left-diff)) !important;
@@ -654,7 +675,7 @@ div[style='height: 8px;'] {
     display: block !important;
     position: absolute !important;
     z-index: 3 !important;
-    left: calc(76px + 6px) !important;
+    left: calc(76px + 6px - 32px) !important;
     background-color: var(--background-primary-lighter) !important;
     border: none !important;
     bottom: 24px !important;
@@ -667,6 +688,14 @@ div[style='height: 8px;'] {
     left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
+.content_c48ade:not(:has(.chat_f75fb0)) .panels_c48ade[aria-label='User area'] {
+    left: calc(76px + 6px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .panels_c48ade[aria-label='User area'] {
+    left: calc(76px + 6px - 32px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
 .panels_c48ade[aria-label='User area']:hover {
     bottom: 24px !important;
     width: var(--user-panel-left-expanded) !important;
@@ -677,7 +706,7 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .panels_c48ade[aria-label='User area'] {
-    left: calc(76px + 6px + var(--servers-list-left-diff)) !important;
+    left: calc(76px + 6px + var(--servers-list-left-diff) - 32px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content_c48ade:has(.video_cb9592) .panels_c48ade[aria-label='User area'],
@@ -1093,11 +1122,26 @@ div[style='height: 8px;'] {
     z-index: 2 !important;
     
     width: calc(100% + var(--servers-list-left-diff) + var(--server-channels-left-diff) - 2px) !important;
-    transition: left var(--transition-speed) var(--transition-style) !important;
+    transition: left var(--transition-speed) var(--transition-style),
+    width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
+.content_c48ade:not(:has(.chat_f75fb0)) .page_c48ade {
+    left: calc(var(--server-channels-left-shrunk) + 32px) !important;
+    width: calc(100% + var(--servers-list-left-diff) + var(--server-channels-left-diff) - 2px - 32px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .page_c48ade {
+    left: calc(var(--server-channels-left-shrunk)) !important;
+    width: calc(100% + var(--servers-list-left-diff) + var(--server-channels-left-diff) - 2px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']):has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .page_c48ade {
+    left: calc(var(--server-channels-left-expanded)) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
 .content_c48ade:has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .page_c48ade {
-    left: var(--server-channels-left-expanded) !important;
+    left: calc(var(--server-channels-left-expanded) + 32px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content_c48ade:has(.wrapper_ef3116.guilds_c48ade:hover) .page_c48ade {
@@ -1181,7 +1225,7 @@ div[style='height: 8px;'] {
     padding: 0px !important;
     margin: 0px !important;
     margin-left: 0px !important;
-    width: calc(100% - 0px) !important;
+    width: 100% !important;
     background-color: transparent !important;
     border: none !important;
     padding-right: 13px !important;
@@ -1198,12 +1242,33 @@ div[style='height: 8px;'] {
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-tertiary) !important;
 }
-.content_c48ade:has(.chatLayerWrapper__01ae2):has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .chatLayerWrapper__01ae2 .container__9293f {
-    width: calc(100% - var(--server-channels-left-diff)) !important;
+.content_c48ade:not(:has(.chat_f75fb0)):has(.wrapper_ef3116.guilds_c48ade:hover) .container__9293f {
+    width: calc(100% + 32px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.chat_f75fb0):has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .container__9293f {
+    width: calc(100% - 32px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .container__9293f {
+    width: calc(100%) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.chatLayerWrapper__01ae2):has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .container__9293f {
+    width: calc(100%) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content_c48ade:has(.chatLayerWrapper__01ae2):has(.wrapper_ef3116.guilds_c48ade:hover) .chatLayerWrapper__01ae2 .container__9293f {
     width: calc(100% - var(--servers-list-left-diff)) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.chatLayerWrapper__01ae2):has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .chatLayerWrapper__01ae2 .container__9293f {
+    width: calc(100% - var(--server-channels-left-diff) - 32px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.page_c48ade > .chatLayerWrapper__01ae2):has(.layerContainer_da8173 .chatLayerWrapper__01ae2):has(.wrapper_ef3116.guilds_c48ade:hover) .layerContainer_da8173 .chatLayerWrapper__01ae2 .container__9293f,
+.content_c48ade:has(.page_c48ade > .chatLayerWrapper__01ae2):has(.layerContainer_da8173 .chatLayerWrapper__01ae2):has(.sidebarList_c48ade.sidebarListRounded_c48ade:hover) .layerContainer_da8173 .chatLayerWrapper__01ae2 .container__9293f {
+    width: calc(100%) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -2727,14 +2792,12 @@ div[style='height: 8px;'] {
 }
 
 /* Hide user panel and "active now" when in "add friends" tab */
-.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .panels_c48ade,
-.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .nowPlayingColumn__133bf,
-.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .wrapper_ef3116.guilds_c48ade,
-.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .sidebarList_c48ade::before {
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .nowPlayingColumn__133bf {
     display: none !important;
 }
-.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) {
-    margin-left: 32px !important;
+.content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .panels_c48ade {
+    pointer-events: none !important;
+    opacity: 0 !important;
 }
 
 /* Bandaid fix for strange feature behavior */
