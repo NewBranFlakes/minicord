@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.10.1
+ * @version 8.11.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1567,27 +1567,77 @@ div[style='height: 8px;'] {
 
 /* Main chat scrolling list */
 .scroller__36d07 {
-    height: calc(100% - 4px) !important;
+    height: calc(100% - 16px) !important;
+    mask-image: linear-gradient(to bottom,
+        rgba(0, 0, 0, 1) calc(100% - 18px),
+        rgba(0, 0, 0, 0) calc(100% - 1px)
+    );
+    mask-repeat: no-repeat !important;
+    mask-size: 100% 100%;
 }
 .chatContent_f75fb0:has(.channelAttachmentArea_b77158) .scroller__36d07 {
-    height: calc(100% - 4px - 57px) !important;
+    height: calc(100% - 16px - 57px) !important;
 }
 .chatContent_f75fb0:has(.stackedBars__74017) .scroller__36d07 {
-    height: calc(100% - 4px - 21px) !important;
+    height: calc(100% - 16px - 38px) !important;
 }
 .chatContent_f75fb0:has(.channelAttachmentArea_b77158):has(.stackedBars__74017) .scroller__36d07 {
-    height: calc(100% - 4px - 57px - 21px - 17px) !important;
+    height: calc(100% - 16px - 57px - 38px - 0px) !important;
+}
+.scrollerSpacer__36d07 {
+    height: 44px !important;
+    width: 100% !important;
+}
+.scrollerSpacer__36d07::after {
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    position: relative !important;
+    justify-content: center !important;
+    align-items: center !important;
+    content: 'This is the end of this channel.';
+    color: var(--text-muted) !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 16px !important;
+    opacity: 1 !important;
+    padding-top: 0px !important;
 }
 
-/* Typing indicator */
-.typing_b88801 {
-    height: 23px !important;
-    margin-bottom: -24px !important;
-    margin-left: -9px !important;
+/* Alternative style that looks like a date timestamp */
+/* .scrollerSpacer__36d07 {
+    height: 16px !important;
+    width: calc(100% - 16px - 14px) !important;
+    border-top-width: 1px !important;
+    border-top-style: solid !important;
+    border-top-color: var(--border-strong) !important;
+    margin-top: 24px !important;
+    margin-bottom: 20px !important;
+    margin-left: 16px !important;
 }
-.typing_b88801 .typingDots_b88801 {
+.scrollerSpacer__36d07::after {
+    top: 0px !important;
+    left: calc(50% - (157px / 2.0)) !important;
+    width: calc(157px + 7px) !important;
     height: 100% !important;
-}
+    display: flex !important;
+    position: relative !important;
+    justify-content: center !important;
+    align-items: center !important;
+    content: 'This is the end of this channel.';
+    color: var(--text-muted) !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    line-height: 16px !important;
+    opacity: 1 !important;
+    padding-top: 0px !important;
+    background: var(--bg-overlay-4) !important;
+    background-color: var(--background-secondary) !important;
+    margin-top: -8px !important;
+} */
+
 
 /* Remove main chat size limits */
 .scrollerContent__36d07 {
@@ -3430,4 +3480,23 @@ div[style='height: 8px;'] {
 .outer_c0bea0:has(.container_ab8609) .timezone-profile-item {
     margin-bottom: calc(10px + 7px) !important;
     margin-right: 17px !important;
+}
+
+/* Textbox typing hints */
+.base_b88801 {
+    padding: 0px !important;
+    margin: 0px !important;
+    top: 56px !important;
+    left: 6px !important;
+    width: calc(100% - 15px) !important;
+    height: 24px !important;
+}
+.base_b88801 .typingDots_b88801,
+.base_b88801 .cooldownWrapper_b21699,
+.base_b88801 .text_b88801 {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.base_b88801 .typingDots_b88801 .dots__5ad89 {
+    margin-right: 7px !important;
 }
