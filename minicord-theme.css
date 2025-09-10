@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.10.0
+ * @version 8.10.1
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2527,21 +2527,37 @@ div[style='height: 8px;'] {
 
 /* "Emoticon" panel */
 .expressionPickerPositionLayer__74017, .drawerSizingWrapper__08434 {
+    /* pointer-events: none !important; */
     position: absolute !important;
     display: block !important;
     top: 0px !important;
     left: 0px !important;
     width: 100% !important;
     height: 100% !important;
+    overflow: hidden !important;
 }
 .expressionPickerPositionLayer__74017 .resizeHandle__08434 {
     display: none !important;
 }
 .expressionPickerPositionLayer__74017 {
-    left: calc(50% + 100px - 62px) !important;
-    width: calc(50% - 100px) !important;
-    top: calc(111px) !important;
-    height: calc(100% - (111px * 2.0)) !important;
+    left: calc(50% + 22px + 20px) !important;
+    width: calc(50% - 22px - 40px) !important;
+    top: calc(78px + 20px) !important;
+    height: calc(100% - 169px - 40px) !important;
+    max-height: calc(100% - 169px - 40px) !important;
+    transition: left var(--transition-speed) var(--transition-style),
+    width var(--transition-speed) var(--transition-style),
+    max-height var(--transition-speed) var(--transition-style),
+    top var(--transition-speed) var(--transition-style) !important;
+    transition-delay: 1e6s !important;
+}
+.container_fed6d3 {
+    border-radius: 8px !important;
+}
+.notAppAsidePanel_a3002d:has(.page_c48ade > .chatLayerWrapper__01ae2:hover) .expressionPickerPositionLayer__74017 {
+    left: calc(0px + 20px) !important;
+    width: calc(50% - 6px - 20px) !important;
+    transition-delay: 1e6s !important;
 }
 
 /* Allows events from main app to pass through the "no click" filter layer */
@@ -2650,7 +2666,8 @@ div[style='height: 8px;'] {
     margin-top: 8px !important;
     margin-bottom: 0px !important;
 }
-.searchBar_c7e907 .wrapper__3412a {
+.searchBar_c7e907 .wrapper__3412a,
+.container__3412a .wrapper__3412a {
     background-color: var(--background-primary-lighter) !important;
 }
 
