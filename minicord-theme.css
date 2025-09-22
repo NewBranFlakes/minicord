@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.11.3
+ * @version 8.11.4
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3488,9 +3488,10 @@ div[style='height: 8px;'] {
 
 /* Textbox typing hints */
 .base_b88801 {
+    position: absolute !important;
     padding: 0px !important;
     margin: 0px !important;
-    top: 56px !important;
+    top: 100% !important;
     left: 6px !important;
     width: calc(100% - 15px) !important;
     height: 24px !important;
@@ -3503,4 +3504,36 @@ div[style='height: 8px;'] {
 }
 .base_b88801 .typingDots_b88801 .dots__5ad89 {
     margin-right: 7px !important;
+}
+
+/* Gif collections plugin menu */
+.layer__59d0d:has(> .submenuPaddingContainer_c1e9c4) {
+    margin-left: -4px !important;
+    margin-right: -4px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+
+/* Server notice */
+.notice__6e2b9 {
+    position: absolute !important;
+    border-radius: 8px !important;
+    border: none !important;
+    margin: 0px !important;
+    padding: 8px !important;
+    width: auto !important;
+    height: 36px !important;
+    top: 7px !important;
+    left: calc(-21px + 50% - (564px * 0.5)) !important;
+    justify-content: center !important;
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+/* Server notice, close button */
+.closeButton__6e2b9 {
+    order: 1 !important;
+    position: relative !important;
+    width: auto !important;
+    margin-left: 7px !important;
 }
