@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.11.5
+ * @version 8.11.6
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -327,7 +327,9 @@
 .listItem__650eb:has(.lowerBadge_cc5dd2) .listItemWrapper__91816,
 .listItem__650eb:has(.upperBadge_cc5dd2) .folderHeader__48112,
 .listItem__650eb:has(.upperBadge_cc5dd2) .blobContainer_e5445c,
-.listItem__650eb:has(.upperBadge_cc5dd2) .listItemWrapper__91816 {
+.listItem__650eb:has(.upperBadge_cc5dd2) .listItemWrapper__91816,
+.questify-quest-button-container:has(.lowerBadge_cc5dd2) .listItemWrapper__91816,
+.questify-quest-button-container:has(.item__58105) .listItemWrapper__91816 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -3539,4 +3541,30 @@ div[style='height: 8px;'] {
     position: relative !important;
     width: auto !important;
     margin-left: 7px !important;
+}
+
+/* Equicord voice user buttons plugin */
+.voice-user-buttons {
+    order: 1 !important;
+    width: 0px !important;
+    overflow: hidden !important;
+    gap: 0px !important;
+    column-gap: 7px !important;
+    opacity: 0 !important;
+    transition: opacity var(--transition-speed) var(--transition-style),
+    width var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.draggable__55bab:hover .voice-user-buttons {
+    width: calc(68px + 7px) !important;
+    opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.voice-user-button-container {
+    margin-top: -1px !important;
+    height: 17px !important;
+}
+.voice-user-button-container > button {
+    padding: 0px !important;
+    height: 100% !important;
 }
