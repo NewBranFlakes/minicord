@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.11.8
+ * @version 8.11.9
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3549,6 +3549,7 @@ div[style='height: 8px;'] {
 .voice-user-buttons {
     order: 1 !important;
     width: 0px !important;
+    height: 16px !important;
     overflow: hidden !important;
     gap: 0px !important;
     column-gap: 7px !important;
@@ -3558,15 +3559,28 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit) !important;
 }
 .draggable__55bab:hover .voice-user-buttons {
-    width: calc(68px + 7px) !important;
+    width: calc(70px + 8px) !important;
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.voice-user-button-container {
-    margin-top: -1px !important;
-    height: 17px !important;
-}
-.voice-user-button-container > button {
-    padding: 0px !important;
+.voice-user-buttons::before {
+    display: flex !important;
+    position: relative !important;
     height: 100% !important;
+    width: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    content: '' !important;
+    color: var(--background-base-low) !important;
+    border-left-width: 1px !important;
+    border-left-style: solid !important;
+}
+.voice-user-button-container,
+.voice-user-button-container > button,
+.voice-user-button-container .button__201d5,
+.voice-user-button-container .contents__201d5,
+.voice-user-button-container .contents__201d5 svg {
+    padding: 0px !important;
+    height: 16px !important;
+    width: 16px !important;
 }
