@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.11.9
+ * @version 8.11.10
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1857,16 +1857,18 @@ div[style='height: 8px;'] {
 
 /* Search results, individual result */
 .searchResultGroup_c68065 .container__02a39 {
+    border-radius: 8px !important;
     display: flex !important;
     overflow: hidden !important;
-    width: calc(340px - 8px) !important;
-    max-height: 92px !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 62px !important;
     transition: max-width var(--transition-speed) var(--transition-style),
     max-height var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
     cursor: pointer !important;
 }
-.searchResultGroup_c68065 .container__02a39:focus {
+.searchResultGroup_c68065 .container__02a39:focus-within {
     max-height: 600px !important;
     transition-delay: var(--transition-delay-enter) !important;
     cursor: default !important;
@@ -1876,22 +1878,21 @@ div[style='height: 8px;'] {
 .searchResultGroup_c68065 .searchResult__02a39::after {
     content: "" !important;
     position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: calc(100% - 2px) !important;
-    height: calc(100% - 2px - 8px) !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
     border-radius: 8px !important;
     z-index: 1 !important;
-    margin-left: 1px !important;
-    margin-top: 1px !important;
-    background: linear-gradient(to top, var(--background-secondary) 0%, transparent 30px) !important;
+    pointer-events: none !important;
+    background: linear-gradient(to top, var(--background-quaternary) 1px, transparent 50%) !important;
 
-    opacity: 1 !important;
+    opacity: 1;
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.searchResultGroup_c68065 .container__02a39:focus .searchResult__02a39::after {
-    opacity: 0 !important;
+.searchResultGroup_c68065 .container__02a39:focus-within .searchResult__02a39::after {
+    opacity: 0;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -1913,19 +1914,24 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-enter) !important;
 }
 
-/* Disable "jump to" behavior when clicking entire search result */
-.searchResultGroup_c68065 .searchResult__02a39 {
-    pointer-events: none !important;
-}
-
-/* Disable content clicking until the search result is focused/maximized */
-.searchResultGroup_c68065 .container__02a39:focus-within .container_b7e1cb {
-    pointer-events: all !important;
-}
-
-/* Search result width fix */
+/* Disable "jump to" behavior when clicking entire search result the first time */
 .searchResultGroup_c68065 .searchResult__02a39 {
     width: 100% !important;
+    margin: 0px !important;
+    pointer-events: none !important;
+    background-color: var(--background-secondary) !important;
+    transition: background-color var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.searchResultGroup_c68065 .container__02a39:focus-within .searchResult__02a39 {
+    pointer-events: all !important;
+    background-color: var(--background-primary-lighter) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+
+/* Re-enable content clicking when the search result is focused/maximized */
+.searchResultGroup_c68065 .container__02a39:focus-within .message__02a39 {
+    pointer-events: all !important;
 }
 
 /* Search results list header */
@@ -1942,6 +1948,10 @@ div[style='height: 8px;'] {
 
 /* Search results scrolling padding fix */
 .searchResultGroup_c68065 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0px !important;
+    row-gap: 7px !important;
     margin: 0px !important;
 }
 
