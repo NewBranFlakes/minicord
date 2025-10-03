@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.11.10
+ * @version 8.11.11
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2873,10 +2873,13 @@ div[style='height: 8px;'] {
     container-name: vc-channel-tab !important;
     margin: 0px !important;
     gap: 0px !important;
+    border-color: var(--text-default) !important;
+    border-radius: 8px !important;
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-secondary) !important;
     transition: background var(--transition-speed) var(--transition-style),
-    background-color var(--transition-speed) var(--transition-style) !important;
+    background-color var(--transition-speed) var(--transition-style),
+    transform var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .vc-channeltabs-tab:hover {
@@ -2903,7 +2906,8 @@ div[style='height: 8px;'] {
     background-color: var(--background-primary-lighter) !important;
     margin: 0px !important;
     transition: background var(--transition-speed) var(--transition-style),
-    background-color var(--transition-speed) var(--transition-style) !important;
+    background-color var(--transition-speed) var(--transition-style),
+    filter var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 
@@ -2912,7 +2916,7 @@ div[style='height: 8px;'] {
     margin: 0px !important;
     padding: 7px !important;
     height: 100% !important;
-    /* padding-right: 35px !important; */
+    border-radius: 8px !important;
     gap: 0px !important;
 }
 
@@ -2931,7 +2935,8 @@ div[style='height: 8px;'] {
     height: calc(35px - 14px) !important;
     width: calc(35px - 14px) !important;
     border-radius: 4px !important;
-    transition: background-color var(--transition-speed) var(--transition-style) !important;
+    transition: background-color var(--transition-speed) var(--transition-style),
+    transform var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .vc-channeltabs-close-button svg {
@@ -2980,13 +2985,15 @@ div[style='height: 8px;'] {
     background-color: var(--background-secondary) !important;
     gap: 0px !important;
     column-gap: 7px !important;
+    border-radius: 8px !important;
     padding: 7px !important;
     height: 14px !important;
     width: auto !important;
     max-width: none !important;
     cursor: pointer !important;
     transition: background var(--transition-speed) var(--transition-style),
-    background-color var(--transition-speed) var(--transition-style) !important;
+    background-color var(--transition-speed) var(--transition-style),
+    transform var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .vc-channeltabs-bookmark:hover {
@@ -3090,6 +3097,20 @@ div[style='height: 8px;'] {
     font-weight: 400 !important;
     line-height: 18px !important;
     height: 18px !important;
+    transition: margin-left var(--transition-speed) var(--transition-style),
+    max-width var(--transition-speed) var(--transition-style),
+    opacity var(--transition-speed) var(--transition-style),
+    transform var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.vc-channeltabs-tab-compact .vc-channeltabs-name-text {
+    margin-left: -7px !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.vc-channeltabs-tab-compact.vc-channeltabs-tab-selected .vc-channeltabs-name-text,
+.vc-channeltabs-tab-compact:hover .vc-channeltabs-name-text {
+    margin-left: 0px !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 .vc-channeltabs-icon,
 .vc-channeltabs-bookmark-icon,
