@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.11.11
+ * @version 8.11.12
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1351,8 +1351,8 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .stackedBars__74017 {
-    margin-left: calc(-56px - var(--user-panel-left-diff)) !important;
-    width: calc(100% + 53px + var(--user-panel-left-diff)) !important;
+    margin-left: calc(-63px - var(--user-panel-left-diff)) !important;
+    width: calc(100% + 60px + var(--user-panel-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .chatLayerWrapper__01ae2 .stackedBars__74017 {
@@ -1418,8 +1418,8 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .channelAttachmentArea_b77158 {
-    margin-left: calc(-56px - var(--user-panel-left-diff)) !important;
-    width: calc(100% + 53px + var(--user-panel-left-diff)) !important;
+    margin-left: calc(-63px - var(--user-panel-left-diff)) !important;
+    width: calc(100% + 60px + var(--user-panel-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .chatLayerWrapper__01ae2 .channelAttachmentArea_b77158 {
