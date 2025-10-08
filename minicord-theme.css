@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.11.15
+ * @version 8.11.16
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2994,8 +2994,7 @@ div[style='height: 8px;'] {
     padding: 7px !important;
     height: 14px !important;
     width: auto !important;
-    max-width: none !important;
-    /* max-width: 120px !important; */
+    max-width: calc(120px * 4.0) !important;
     cursor: pointer !important;
     transition: background var(--transition-speed) var(--transition-style),
     background-color var(--transition-speed) var(--transition-style),
@@ -3015,17 +3014,7 @@ div[style='height: 8px;'] {
 }
 .vc-channeltabs-folder-item {
     margin: 0px !important;
-    max-width: 30px !important;
     border-color: var(--text-default) !important;
-    transition: background var(--transition-speed) var(--transition-style),
-    background-color var(--transition-speed) var(--transition-style),
-    transform var(--transition-speed) var(--transition-style),
-    max-width var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
-}
-.vc-channeltabs-folder-item:hover {
-    max-width: calc(120px * 4.0) !important;
-    transition-delay: var(--transition-delay-enter) !important;
 }
 .vc-channeltabs-bookmark > svg[style='margin-right: 0.25rem;'],
 .vc-channeltabs-bookmark > svg[style='margin-left: 0.25rem;'] {
@@ -3152,6 +3141,16 @@ div[style='height: 8px;'] {
 }
 .vc-channeltabs-tab-compact.vc-channeltabs-tab-selected .vc-channeltabs-name-text,
 .vc-channeltabs-tab-compact:hover .vc-channeltabs-name-text {
+    margin-left: 0px !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.vc-channeltabs-folder-item .vc-channeltabs-name-text {
+    max-width: 0px !important;
+    margin-left: -7px !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.vc-channeltabs-folder-item:hover .vc-channeltabs-name-text {
+    max-width: calc(120px * 4.0) !important;
     margin-left: 0px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
