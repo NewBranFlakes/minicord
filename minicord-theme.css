@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.11.16
+ * @version 8.11.17
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2986,6 +2986,8 @@ div[style='height: 8px;'] {
 /* Bookmark div */
 .vc-channeltabs-bookmark {
     opacity: 1 !important;
+    border: none !important;
+    border-color: var(--text-default) !important;
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-secondary) !important;
     gap: 0px !important;
@@ -3001,6 +3003,9 @@ div[style='height: 8px;'] {
     transform var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
+.vc-channeltabs-bookmark.vc-channeltabs-bookmark-active {
+    transform: translateY(-1px) scale(1.02) !important;
+}
 .vc-channeltabs-bookmark:hover {
     background: var(--bg-overlay-4) !important;
     background-color: var(--background-primary-lighter) !important;
@@ -3011,6 +3016,9 @@ div[style='height: 8px;'] {
 .vc-channeltabs-folder-expanded {
     background: var(--bg-overlay-4) !important;
     background-color: var(--background-primary-lighter) !important;
+}
+.vc-channeltabs-bookmark-active {
+    box-shadow: none !important;
 }
 .vc-channeltabs-folder-item {
     margin: 0px !important;
