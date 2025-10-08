@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.11.17
+ * @version 8.11.18
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -63,6 +63,8 @@
     --background-primary-dimmer: color-mix(in srgb, var(--background-primary) 100%, rgba(calc(128*0.5), calc(128*0.5), calc(128*0.5 + 5), 1) 25%);
     --background-overlay-floating-lighter: color-mix(in srgb, var(--bg-overlay-floating) 100%, rgba(calc(128*0.5), calc(128*0.5), calc(128*0.5), 1) 25%);
     --border-subtle-lighter: color-mix(in srgb, var(--border-subtle) 100%, rgba(calc(128*0.5), calc(128*0.5), calc(128*0.5), 1) 25%);
+
+    --dPath: path("M 10 17 l 5 -5 l -5 -5 Z");
 }
 
 /* Window top bar */
@@ -3031,15 +3033,33 @@ div[style='height: 8px;'] {
     height: 21px !important;
     margin-right: calc(-14px * 0.5) !important;
     margin-left: calc(-14px * 0.5) !important;
+    transform: rotate(0deg) !important;
     transition: background var(--transition-speed) var(--transition-style),
     background-color var(--transition-speed) var(--transition-style),
     transform var(--transition-speed) var(--transition-style),
     max-width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.vc-channeltabs-bookmark:hover svg[style='margin-right: 0.25rem;'] {
+.vc-channeltabs-bookmark > svg[style='margin-right: 0.25rem;'] {
+    transform: rotate(180deg) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.vc-channeltabs-bookmark > svg[style='margin-right: 0.25rem;'] {
+    transform: rotate(-90deg) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.vc-channeltabs-bookmark-active svg[style='margin-right: 0.25rem;'] {
     transform: rotate(90deg) !important;
     transition-delay: var(--transition-delay-enter) !important;
+}
+.vc-channeltabs-folder-expanded svg[style='margin-right: 0.25rem;'],
+.vc-channeltabs-folder-expanded svg[style='margin-left: 0.25rem;'] {
+    transform: rotate(180deg) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.vc-channeltabs-bookmark > svg[style='margin-right: 0.25rem;'] path,
+.vc-channeltabs-bookmark > svg[style='margin-left: 0.25rem;'] path {
+    d: var(--dPath) !important;
 }
 
 /* Sidebar outline */
@@ -3664,4 +3684,9 @@ div[style='height: 8px;'] {
     padding: 0px !important;
     height: 16px !important;
     width: 16px !important;
+}
+
+/* VC Time Plugin */
+.tabularNumbers__4bd52 {
+    color: var(--text-default) !important;
 }
