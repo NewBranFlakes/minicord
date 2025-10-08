@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.11.13
+ * @version 8.11.14
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2981,6 +2981,7 @@ div[style='height: 8px;'] {
 
 /* Bookmark div */
 .vc-channeltabs-bookmark {
+    opacity: 1 !important;
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-secondary) !important;
     gap: 0px !important;
@@ -2989,8 +2990,8 @@ div[style='height: 8px;'] {
     padding: 7px !important;
     height: 14px !important;
     width: auto !important;
-    /* max-width: 120px !important; */
     max-width: none !important;
+    /* max-width: 120px !important; */
     cursor: pointer !important;
     transition: background var(--transition-speed) var(--transition-style),
     background-color var(--transition-speed) var(--transition-style),
@@ -3010,7 +3011,34 @@ div[style='height: 8px;'] {
 }
 .vc-channeltabs-folder-item {
     margin: 0px !important;
+    max-width: 30px !important;
     border-color: var(--text-default) !important;
+    transition: background var(--transition-speed) var(--transition-style),
+    background-color var(--transition-speed) var(--transition-style),
+    transform var(--transition-speed) var(--transition-style),
+    max-width var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.vc-channeltabs-folder-item:hover {
+    max-width: calc(120px * 4.0) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.vc-channeltabs-bookmark > svg[style='margin-right: 0.25rem;'],
+.vc-channeltabs-bookmark > svg[style='margin-left: 0.25rem;'] {
+    width: auto !important;
+    min-width: 21px !important;
+    height: 21px !important;
+    margin-right: calc(-14px * 0.5) !important;
+    margin-left: calc(-14px * 0.5) !important;
+    transition: background var(--transition-speed) var(--transition-style),
+    background-color var(--transition-speed) var(--transition-style),
+    transform var(--transition-speed) var(--transition-style),
+    max-width var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.vc-channeltabs-bookmark:hover svg[style='margin-right: 0.25rem;'] {
+    transform: rotate(90deg) !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Sidebar outline */
@@ -3248,8 +3276,8 @@ div[style='height: 8px;'] {
 .vc-channeltabs-bookmark .wrapper__44b0c svg {
     width: 100% !important;
     height: 100% !important;
-    min-width: 0px !important;
-    min-height: 0px !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
 }
 .iconContainer_c1e9c4:has(.wrapper__44b0c),
 .vc-channeltabs-tab-inner .wrapper__44b0c,
