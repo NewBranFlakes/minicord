@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.11.14
+ * @version 8.11.15
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1729,7 +1729,7 @@ div[style='height: 8px;'] {
     margin: 0px !important;
     gap: 0px !important;
 }
-.container_aa63ab, .buttonContainer_aa63ab, .button_aa63ab, .button__74017, .channelAppLauncher_e6e74f, .app-launcher-entrypoint, .app-launcher-entrypoint .button__201d5 {
+.container_aa63ab, .buttonContainer_aa63ab, .button_aa63ab, .button__74017, .channelAppLauncher_e6e74f, .app-launcher-entrypoint, .app-launcher-entrypoint .button_e6e74f {
     min-width: 20px !important;
     min-height: 20px !important;
     width: auto !important;
@@ -1777,16 +1777,19 @@ div[style='height: 8px;'] {
     z-index: 1 !important;
 }
 .buttonContainer__74017 {
-    margin-right: -27px !important;
+    margin-right: -7px !important;
+    max-width: 0px !important;
     pointer-events: none !important;
     opacity: 0 !important;
-    transition: margin-right var(--transition-speed) var(--transition-style),
+    transition: max-width var(--transition-speed) var(--transition-style),
+    margin-right var(--transition-speed) var(--transition-style),
     opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .buttons__74017:hover .buttonContainer__74017 {
     pointer-events: all !important;
     opacity: 1 !important;
+    max-width: 100px !important;
     margin-right: 0px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -1796,6 +1799,7 @@ div[style='height: 8px;'] {
 .focusLock__49fc1 .buttonContainer__74017 {
     opacity: 1 !important;
     margin-right: 0px !important;
+    max-width: none !important;
     pointer-events: all !important;
 }
 .contents_c19a55 .channelTextArea__5126c,
