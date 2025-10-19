@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.11.19
+ * @version 8.12.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -338,7 +338,11 @@
 .content_c48ade:has(.guilds_c48ade:hover) .blobContainer_e5445c,
 .content_c48ade:has(.guilds_c48ade:hover) .folderHeader__48112,
 .content_c48ade:has(.guilds_c48ade:hover) .folderGroupBackground__48112,
-.content_c48ade:has(.guilds_c48ade:hover) .listItemWrapper__91816 {
+.content_c48ade:has(.guilds_c48ade:hover) .listItemWrapper__91816, 
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .blobContainer_e5445c,
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .folderHeader__48112,
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .folderGroupBackground__48112,
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .listItemWrapper__91816 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -405,6 +409,11 @@
     left: calc(var(--server-channels-left-offset)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .sidebarList_c48ade,
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.guilds_c48ade:hover) .sidebarList_c48ade {
+    left: calc(var(--servers-list-left-expanded)) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
 .sidebarList_c48ade:hover {
     left: calc(var(--server-channels-left-offset) + 32px) !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -446,7 +455,8 @@
     left: calc(32px - 24px - 1px - 32px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content_c48ade:has(.guilds_c48ade:hover) .guilds_c48ade::before {
+.content_c48ade:has(.guilds_c48ade:hover) .guilds_c48ade::before,
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .guilds_c48ade::before {
     left: calc(32px - 24px - 1px + var(--servers-list-left-diff)) !important;
     opacity: 0 !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -711,6 +721,12 @@ div[style='height: 8px;'] {
 .content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .panels_c48ade[aria-label='User area'] {
     left: calc(44px + 7px) !important;
     bottom: calc(100% - 114px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .panels_c48ade[aria-label='User area'],
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.guilds_c48ade:hover) .panels_c48ade[aria-label='User area'],
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.sidebarList_c48ade:hover) .panels_c48ade[aria-label='User area'] {
+    left: calc(44px + 7px + var(--servers-list-left-diff) + var(--server-channels-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .panels_c48ade[aria-label='User area']:hover {
@@ -1045,6 +1061,13 @@ div[style='height: 8px;'] {
     left: calc(var(--server-channels-left-expanded)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .page_c48ade,
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.guilds_c48ade:hover) .page_c48ade,
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.sidebarList_c48ade:hover) .page_c48ade {
+    left: calc(var(--servers-list-left-diff) + var(--server-channels-left-expanded)) !important;
+    width: calc(100% - var(--servers-list-left-diff) - var(--server-channels-left-expanded)) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
 .content_c48ade:has(.sidebarList_c48ade:hover) .page_c48ade {
     left: calc(var(--server-channels-left-expanded) + 32px) !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -1159,6 +1182,12 @@ div[style='height: 8px;'] {
     width: calc(100%) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .container__9293f, 
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.sidebarList_c48ade:hover) .container__9293f,
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.guilds_c48ade:hover) .container__9293f {
+    width: calc(100%) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
 .content_c48ade:has(.chatLayerWrapper__01ae2):has(.sidebarList_c48ade:hover) .container__9293f {
     width: calc(100%) !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -1201,6 +1230,12 @@ div[style='height: 8px;'] {
 .upperContainer__9293f {
     max-width: 100% !important;
     transition: max-width var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .upperContainer__9293f,
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.sidebarList_c48ade:hover) .upperContainer__9293f,
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.guilds_c48ade:hover) .upperContainer__9293f {
+    max-width: calc(100%) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .content_c48ade:has(.sidebarList_c48ade:hover):not(:has(.chatLayerWrapper__01ae2)) .upperContainer__9293f {
@@ -2416,6 +2451,10 @@ div[style='height: 8px;'] {
 	transition: width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .searchBar__35e86 {
+    width: 100% !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
 .content_c48ade:has(.sidebarList_c48ade:hover) .searchBar__35e86 {
     width: 100% !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -2480,6 +2519,10 @@ div[style='height: 8px;'] {
     opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .content__20a53 {
+    opacity: 1 !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
 .content_c48ade:has(.sidebarList_c48ade:hover) .content__20a53 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -2506,7 +2549,8 @@ div[style='height: 8px;'] {
     color: var(--interactive-hover) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content_c48ade:has(.sidebarList_c48ade:hover) .privateChannelsHeaderContainer__99e7c {
+.content_c48ade:has(.sidebarList_c48ade:hover) .privateChannelsHeaderContainer__99e7c,
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .privateChannelsHeaderContainer__99e7c {
     max-width: var(--server-channels-width) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
