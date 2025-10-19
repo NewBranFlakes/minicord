@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.12.0
+ * @version 8.12.1
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -725,7 +725,10 @@ div[style='height: 8px;'] {
 }
 .content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .panels_c48ade[aria-label='User area'],
 .content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.guilds_c48ade:hover) .panels_c48ade[aria-label='User area'],
-.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.sidebarList_c48ade:hover) .panels_c48ade[aria-label='User area'] {
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.sidebarList_c48ade:hover) .panels_c48ade[aria-label='User area'],
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.container_e131a9) .panels_c48ade[aria-label='User area'],
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.panel__5dec7.activityPanel_c48ade) .panels_c48ade[aria-label='User area'],
+.content_c48ade:has(.peopleColumn__133bf[id='all-tab']):has(.container_e131a9):has(.panel__5dec7.activityPanel_c48ade) .panels_c48ade[aria-label='User area'] {
     left: calc(44px + 7px + var(--servers-list-left-diff) + var(--server-channels-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
