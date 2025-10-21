@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.13.2
+ * @version 8.14.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -344,6 +344,62 @@
 .content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .folderGroupBackground__48112,
 .content_c48ade:has(.peopleColumn__133bf[id='all-tab']) .listItemWrapper__91816 {
     opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+
+.stack_dbd263 {
+    padding: 0px !important;
+    gap: 0px !important;
+    height: auto !important;
+}
+
+.tutorialContainer__1f388, .questify-quest-button-container,
+.stack_dbd263 > .tutorialContainer__650eb {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+}
+.tutorialContainer__1f388:has(.wrapper__6e9f8[data-list-item-id='guildsnav___home']) {
+    margin-top: 0px !important;
+}
+
+.stack_dbd263 > .listItem__650eb:not(:has(.guildSeparator__252b6)) {
+    margin: 0px !important;
+    opacity: 1 !important;
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+    max-height: 40px !important;
+    transition: opacity var(--transition-speed) var(--transition-style),
+    margin var(--transition-speed) var(--transition-style),
+    max-height var(--transition-speed) var(--transition-style) !important;
+}
+.stack_dbd263 > .folderGroup__48112 {
+    overflow: hidden !important;
+    margin: 0px !important;
+    opacity: 1 !important;
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+    max-height: 48px !important;
+    transition: opacity var(--transition-speed) var(--transition-style),
+    margin var(--transition-speed) var(--transition-style),
+    max-height var(--transition-speed) var(--transition-style) !important;
+}
+.stack_dbd263 > .folderGroup__48112.isExpanded__48112 {
+    max-height: none !important;
+}
+.listItem__650eb:has(.guildSeparator__252b6) {
+    margin-top: calc(3px + 6px) !important;
+    margin-bottom: calc(-3px + 6px) !important;
+}
+
+.content_c48ade:has(.peopleColumn__133bf[id='suggestions-tab']) .stack_dbd263 > .listItem__650eb:not(:has(.item__58105)):not(:has(.lowerBadge_cc5dd2)):not(:has(.upperBadge_cc5dd2)):not(:has(.guildSeparator__252b6)),
+.content_c48ade:has(.peopleColumn__133bf[id='suggestions-tab']) .stack_dbd263 > .folderGroup__48112:not(:has(.item__58105)):not(:has(.lowerBadge_cc5dd2)):not(:has(.upperBadge_cc5dd2)) {
+    padding: 0px !important;
+    max-height: 0px !important;
+    gap: 0px !important;
+    opacity: 0 !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    pointer-events: none !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -721,7 +777,7 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content_c48ade:has(.peopleColumn__133bf[id='add_friend-tab']) .panels_c48ade[aria-label='User area'] {
-    left: calc(44px + 7px) !important;
+    left: calc(44px + 7px - 51px + 8px) !important;
     bottom: calc(100% - 114px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -2530,9 +2586,9 @@ div[style='height: 8px;'] {
     margin var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.content_c48ade:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-offline)']),
-.content_c48ade:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0:has(.cursorDefault__44b0c rect[fill='#82838b']),
-.content_c48ade:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0:has(.subtext__972a0):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-online)'])):not(:has(foreignObject[mask='url(#svg-mask-status-online)'])) {
+.content_c48ade:has(.peopleColumn__133bf[id='suggestions-tab']) .dm__972a0:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-offline)']):not(:has(.interactiveSelected__972a0)):not(:hover),
+.content_c48ade:has(.peopleColumn__133bf[id='suggestions-tab']) .dm__972a0:has(.cursorDefault__44b0c rect[fill='#82838b']):not(:has(.interactiveSelected__972a0)):not(:hover),
+.content_c48ade:has(.peopleColumn__133bf[id='suggestions-tab']) .dm__972a0:has(.subtext__972a0):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-online)'])):not(:has(foreignObject[mask='url(#svg-mask-status-online)'])):not(:has(.interactiveSelected__972a0)):not(:hover) {
     padding: 0px !important;
     max-height: 0px !important;
     opacity: 0 !important;
@@ -2540,8 +2596,14 @@ div[style='height: 8px;'] {
     pointer-events: none !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content_c48ade:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0 .pointerEvents__44b0c[mask='url(#svg-mask-status-offline)'] {
+.content_c48ade:has(.peopleColumn__133bf[id='suggestions-tab']) .dm__972a0:not(:has(.interactiveSelected__972a0)) .pointerEvents__44b0c[mask='url(#svg-mask-status-offline)'] {
     pointer-events: none !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-offline)']):not(:has(.interactiveSelected__972a0)):not(:hover),
+.content_c48ade:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0:has(.cursorDefault__44b0c rect[fill='#82838b']):not(:has(.interactiveSelected__972a0)):not(:hover),
+.content_c48ade:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0:has(.subtext__972a0):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-online)'])):not(:has(foreignObject[mask='url(#svg-mask-status-online)'])):not(:has(.interactiveSelected__972a0)):not(:hover) {
+    opacity: 0.2 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .dm__972a0 .interactive__972a0,
