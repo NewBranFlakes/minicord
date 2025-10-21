@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.13.1
+ * @version 8.13.2
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -688,6 +688,7 @@ div[style='height: 8px;'] {
 
 /* User panel main div */
 .panels_c48ade[aria-label='User area'] {
+    opacity: 1 !important;
     position: absolute !important;
     left: calc(44px + 7px) !important;
     bottom: 24px !important;
@@ -695,7 +696,8 @@ div[style='height: 8px;'] {
     max-width: var(--user-panel-left-shrunk) !important;
     transition: max-width var(--transition-speed) var(--transition-style),
     left var(--transition-speed) var(--transition-style),
-    bottom var(--transition-speed) var(--transition-style) !important;
+    bottom var(--transition-speed) var(--transition-style),
+    opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .content_c48ade:not(:has(.chat_f75fb0)) .panels_c48ade[aria-label='User area'] {
@@ -744,13 +746,14 @@ div[style='height: 8px;'] {
     left: calc(44px + 7px + var(--servers-list-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content_c48ade:has(.video_cb9592) .panels_c48ade[aria-label='User area'] {
-    left: calc(44px + 7px - 63px - 7px) !important;
+.content_c48ade:has(.wrapper_cb9592):not(:has(.wrapper_cb9592:hover)):not(:has(.panels_c48ade[aria-label='User area']:hover)) .panels_c48ade[aria-label='User area'] {
+    opacity: 0 !important;
+    left: calc(44px + 7px - 51px + 8px) !important;
+    pointer-events: none !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content_c48ade:has(.video_cb9592) .panels_c48ade[aria-label='User area']:hover {
-    left: calc(44px + 7px - 51px + 7px) !important;
-    transition-delay: var(--transition-delay-enter) !important;
+.content_c48ade:has(.panels_c48ade[aria-label='User area']:hover) .gradientBottom_bfe55a {
+    opacity: 1 !important;
 }
 
 /* Background for user panel sections */
