@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.13.0
+ * @version 8.13.1
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1216,6 +1216,12 @@ div[style='height: 8px;'] {
     border: none !important;
     background-color: var(--background-tertiary) !important;
     z-index: 3 !important;
+}
+
+/* Quests subtitle bar */ 
+.container__955a3 {
+    overflow: hidden !important;
+    border: none !important;
 }
 
 /* Subtitle bar, inner div */
