@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.12.1
+ * @version 8.13.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -15,8 +15,8 @@
     --transition-style: cubic-bezier(0.5, 0, 0.5, 1);
     --settings-leave: cubic-bezier(0.5, 0, 0.5, 0);
     --settings-enter: cubic-bezier(0, 0.5, 0.5, 1);
-    --transition-delay-enter: 0.1s;
-    --transition-delay-exit: 0.1s;
+    --transition-delay-enter: 0s;
+    --transition-delay-exit: 0s;
 
     --servers-list-left-shrunk: calc(-32px - 32px);
     --servers-list-left-expanded: 2px;
@@ -2505,8 +2505,48 @@ div[style='height: 8px;'] {
 }
 
 /* DMs, user DM */
-.channel__972a0.dm__972a0 {
-    margin-left: 3px !important;
+.dm__972a0 {
+    border-radius: 8px !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    margin-left: calc(12px * 0.5) !important;
+    margin-bottom: 7px !important;
+    overflow: hidden !important;
+    height: 40px !important;
+    max-height: 40px !important;
+    opacity: 1 !important;
+    transition: padding var(--transition-speed) var(--transition-style),
+    max-height var(--transition-speed) var(--transition-style),
+    opacity var(--transition-speed) var(--transition-style),
+    margin var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.content_c48ade:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-offline)']),
+.content_c48ade:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0:has(.cursorDefault__44b0c rect[fill='#82838b']),
+.content_c48ade:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0:has(.subtext__972a0):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-online)'])):not(:has(foreignObject[mask='url(#svg-mask-status-online)'])) {
+    padding: 0px !important;
+    max-height: 0px !important;
+    opacity: 0 !important;
+    margin-bottom: 0px !important;
+    pointer-events: none !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content_c48ade:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0 .pointerEvents__44b0c[mask='url(#svg-mask-status-offline)'] {
+    pointer-events: none !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.dm__972a0 .interactive__972a0,
+.dm__972a0 .link__972a0 {
+    padding: 0px !important;
+    margin: 0px !important;
+    height: 100% !important;
+}
+.dm__972a0 .layout__20a53 {
+    gap: 0px !important;
+    column-gap: 7px !important;
+}
+.dm__972a0 .iconsContainer__972a0 {
+    padding: 0px !important;
 }
 
 /* DMs, user DM selection highlight */
@@ -2546,7 +2586,7 @@ div[style='height: 8px;'] {
     text-transform: none !important;
     font-size: 14px !important;
     font-weight: 500 !important;
-    margin-left: 4px !important;
+    margin-left: calc(12px * 0.5) !important;
 }
 .privateChannelsHeaderContainer__99e7c:hover {
     color: var(--interactive-hover) !important;
@@ -2566,19 +2606,28 @@ div[style='height: 8px;'] {
 /* DMs, tabs buttons */
 .channel__972a0.container_e45859:has(.interactive_bf202d.interactive__972a0.linkButton__972a0) {
 	padding: 0px !important;
-	margin-left: 9px !important;
-	margin-top: 5px !important;
-	margin-bottom: 5px !important;
+    height: calc(20px + 8px) !important;
+    margin: 0px !important;
+	margin-left: calc(24px * 0.5) !important;
+	margin-bottom: 7px !important;
+}
+.channel__972a0.container_e45859:has(.interactive_bf202d.interactive__972a0.linkButton__972a0) .layout__20a53 {
+    column-gap: 7px !important;
+}
+.channel__972a0.container_e45859 .linkButton__972a0 {
+    height: 100% !important;
+    width: 100% !important;
 }
 
 /* DMs, tabs buttons inner div */
 .link__972a0 {
-	padding: 2px !important;
+    margin: 0px !important;
+	padding: 0px !important;
 }
 
 /* DMs, tab buttons icon */
 .avatar__20a53 {
-	margin-right: 10px !important;
+	margin: 0px !important;
 }
 
 /* DMs, tab buttons icon (actual) */
@@ -3736,4 +3785,9 @@ div[style='height: 8px;'] {
 /* VC Time Plugin */
 .tabularNumbers__4bd52 {
     color: var(--text-default) !important;
+}
+
+/* Tooltips for voice connection buttons */
+.layer__59d0d:has(.tooltip__4e35b) {
+    pointer-events: none;
 }
