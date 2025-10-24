@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.14.0
+ * @version 8.14.1
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -347,14 +347,14 @@
     transition-delay: var(--transition-delay-enter) !important;
 }
 
-.stack_dbd263 {
+.tree_ef3116 .stack_dbd263 {
     padding: 0px !important;
     gap: 0px !important;
     height: auto !important;
 }
 
 .tutorialContainer__1f388, .questify-quest-button-container,
-.stack_dbd263 > .tutorialContainer__650eb {
+.tree_ef3116 .stack_dbd263 > .tutorialContainer__650eb {
     margin-top: 3px !important;
     margin-bottom: 3px !important;
 }
@@ -362,7 +362,7 @@
     margin-top: 0px !important;
 }
 
-.stack_dbd263 > .listItem__650eb:not(:has(.guildSeparator__252b6)) {
+.tree_ef3116 .stack_dbd263 > .listItem__650eb:not(:has(.guildSeparator__252b6)) {
     margin: 0px !important;
     opacity: 1 !important;
     margin-top: 3px !important;
@@ -372,7 +372,7 @@
     margin var(--transition-speed) var(--transition-style),
     max-height var(--transition-speed) var(--transition-style) !important;
 }
-.stack_dbd263 > .folderGroup__48112 {
+.tree_ef3116 .stack_dbd263 > .folderGroup__48112 {
     overflow: hidden !important;
     margin: 0px !important;
     opacity: 1 !important;
@@ -383,7 +383,7 @@
     margin var(--transition-speed) var(--transition-style),
     max-height var(--transition-speed) var(--transition-style) !important;
 }
-.stack_dbd263 > .folderGroup__48112.isExpanded__48112 {
+.tree_ef3116 .stack_dbd263 > .folderGroup__48112.isExpanded__48112 {
     max-height: none !important;
 }
 .listItem__650eb:has(.guildSeparator__252b6) {
@@ -391,8 +391,8 @@
     margin-bottom: calc(-3px + 6px) !important;
 }
 
-.content_c48ade:has(.peopleColumn__133bf[id='suggestions-tab']) .stack_dbd263 > .listItem__650eb:not(:has(.item__58105)):not(:has(.lowerBadge_cc5dd2)):not(:has(.upperBadge_cc5dd2)):not(:has(.guildSeparator__252b6)),
-.content_c48ade:has(.peopleColumn__133bf[id='suggestions-tab']) .stack_dbd263 > .folderGroup__48112:not(:has(.item__58105)):not(:has(.lowerBadge_cc5dd2)):not(:has(.upperBadge_cc5dd2)) {
+.content_c48ade:has(.peopleColumn__133bf[id='suggestions-tab']) .tree_ef3116 .stack_dbd263 > .listItem__650eb:not(:has(.item__58105)):not(:has(.lowerBadge_cc5dd2)):not(:has(.upperBadge_cc5dd2)):not(:has(.guildSeparator__252b6)),
+.content_c48ade:has(.peopleColumn__133bf[id='suggestions-tab']) .tree_ef3116 .stack_dbd263 > .folderGroup__48112:not(:has(.item__58105)):not(:has(.lowerBadge_cc5dd2)):not(:has(.upperBadge_cc5dd2)) {
     padding: 0px !important;
     max-height: 0px !important;
     gap: 0px !important;
