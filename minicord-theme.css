@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.14.4
+ * @version 8.14.5
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2547,7 +2547,7 @@ div[style='height: 8px;'] {
 }
 
 /* DMs, friends big search bar */
-.container__0f084 {
+.searchBar__5ec2f .container__0f084 {
     background-color: transparent !important;
     border: none !important;
 }
@@ -3869,4 +3869,19 @@ div[style='height: 8px;'] {
 /* Tooltips for voice connection buttons */
 .layer__59d0d:has(.tooltip__4e35b) {
     pointer-events: none;
+}
+
+/* Inbox popup */
+.recentMentionsPopout__95796 .header_e8b59c,
+.recentMentionsPopout__95796 .messagesPopoutWrap_e8b59c,
+.recentMentionsPopout__95796 .messagesPopout_e8b59c,
+.recentMentionsPopout__95796 .tabBar_ab6641 {
+    border: none !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+}
+.recentMentionsPopout__95796 .tabBar_ab6641 {
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+    border-bottom-color: var(--border-normal) !important;
 }
