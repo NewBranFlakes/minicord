@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.14.5
+ * @version 8.14.6
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -352,6 +352,10 @@
     gap: 0px !important;
     height: auto !important;
 }
+.tree_ef3116 .stack_dbd263[aria-label='Direct Messages'] > div {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+}
 
 .tutorialContainer__1f388, .questify-quest-button-container,
 .tree_ef3116 .stack_dbd263 > .tutorialContainer__650eb {
@@ -387,8 +391,11 @@
     max-height: none !important;
 }
 .listItem__650eb:has(.guildSeparator__252b6) {
-    margin-top: calc(3px + 6px) !important;
-    margin-bottom: calc(-3px + 6px) !important;
+    margin-top: calc(6px + 0px) !important;
+    margin-bottom: calc(6px + 0px) !important;
+}
+.listItem__650eb > .guildSeparator__252b6 {
+    background-color: var(--border-subtle-lighter) !important;
 }
 
 .content__5e434:has(.peopleColumn__133bf[id='suggestions-tab']) .tree_ef3116 .stack_dbd263 > .listItem__650eb:not(:has(.item__58105)):not(:has(.lowerBadge_cc5dd2)):not(:has(.upperBadge_cc5dd2)):not(:has(.guildSeparator__252b6)),
