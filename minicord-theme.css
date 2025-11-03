@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.14.6
+ * @version 8.14.7
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -351,6 +351,9 @@
     padding: 0px !important;
     gap: 0px !important;
     height: auto !important;
+}
+.tree_ef3116 .stack_dbd263[aria-label='Direct Messages'] {
+    margin: 0px !important;
 }
 .tree_ef3116 .stack_dbd263[aria-label='Direct Messages'] > div {
     margin-top: 3px !important;
