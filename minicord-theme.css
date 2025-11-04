@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.14.7
+ * @version 8.14.8
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -335,15 +335,25 @@
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.guilds__5e434:hover) .blobContainer_e5445c,
-.content__5e434:has(.guilds__5e434:hover) .folderHeader__48112,
-.content__5e434:has(.guilds__5e434:hover) .folderGroupBackground__48112,
-.content__5e434:has(.guilds__5e434:hover) .listItemWrapper__91816, 
+.content__5e434:has(.guilds__5e434:hover):has(.chat_f75fb0) .blobContainer_e5445c,
+.content__5e434:has(.guilds__5e434:hover):has(.chat_f75fb0) .folderHeader__48112,
+.content__5e434:has(.guilds__5e434:hover):has(.chat_f75fb0) .folderGroupBackground__48112,
+.content__5e434:has(.guilds__5e434:hover):has(.chat_f75fb0) .listItemWrapper__91816,
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']) .blobContainer_e5445c,
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']) .folderHeader__48112,
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']) .folderGroupBackground__48112,
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']) .listItemWrapper__91816 {
     opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+
+.tree_ef3116:has(> .itemsContainer_ef3116) {
+    opacity: 1 !important;
+    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.content__5e434:has(.peopleColumn__133bf[id='add_friend-tab']) .tree_ef3116:has(> .itemsContainer_ef3116) {
+    opacity: 0 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -378,6 +388,7 @@
     transition: opacity var(--transition-speed) var(--transition-style),
     margin var(--transition-speed) var(--transition-style),
     max-height var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
 }
 .tree_ef3116 .stack_dbd263 > .folderGroup__48112 {
     overflow: hidden !important;
@@ -389,6 +400,7 @@
     transition: opacity var(--transition-speed) var(--transition-style),
     margin var(--transition-speed) var(--transition-style),
     max-height var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
 }
 .tree_ef3116 .stack_dbd263 > .folderGroup__48112.isExpanded__48112 {
     max-height: none !important;
@@ -414,12 +426,11 @@
 }
 
 /* Server channels list filtering */
-.container_eff079,
 .container_f37cb1,
 .containerDefault__29444,
 .containerDefault_c69b6d,
 .spine__5b40b {
-    opacity: 0.5 !important;
+    opacity: 0.2 !important;
     transition: opacity var(--transition-speed) var(--transition-style),
     color var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
@@ -441,7 +452,6 @@
     color: var(--interactive-active) !important;
     font-weight: 500 !important;
 }
-.content__5e434:has(.sidebarList__5e434:hover) .container_eff079,
 .content__5e434:has(.sidebarList__5e434:hover) .container_f37cb1,
 .content__5e434:has(.sidebarList__5e434:hover) .containerDefault__29444,
 .content__5e434:has(.sidebarList__5e434:hover) .containerDefault_c69b6d,
