@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.14.9
+ * @version 8.14.10
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3028,6 +3028,11 @@ div[style='height: 8px;'] {
     z-index: -1 !important;
     overflow: hidden !important;
     pointer-events: none !important;
+}
+.vc-channeltabs-tab-scroller {
+    gap: 0px !important;
+    padding: 0px !important;
+    column-gap: 7px !important;
 }
 
 /* Separation between tabs and bookmarks */
