@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.14.10
+ * @version 8.15.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -432,8 +432,7 @@
 /* Server channels list filtering */
 .container_f37cb1,
 .containerDefault__29444,
-.containerDefault_c69b6d,
-.spine__5b40b {
+.containerDefault_c69b6d {
     opacity: 0.2 !important;
     transition: opacity var(--transition-speed) var(--transition-style),
     color var(--transition-speed) var(--transition-style) !important;
@@ -458,8 +457,7 @@
 }
 .content__5e434:has(.sidebarList__5e434:hover) .container_f37cb1,
 .content__5e434:has(.sidebarList__5e434:hover) .containerDefault__29444,
-.content__5e434:has(.sidebarList__5e434:hover) .containerDefault_c69b6d,
-.content__5e434:has(.sidebarList__5e434:hover) .spine__5b40b {
+.content__5e434:has(.sidebarList__5e434:hover) .containerDefault_c69b6d {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -636,12 +634,6 @@
     transition-delay: var(--transition-delay-exit) !important;
 }
 
-/* Channel buttons */
-.iconItem_c69b6d.iconBase_c69b6d.iconWithChannelInfo_c69b6d,
-.iconItem_c69b6d.iconBase_c69b6d.iconNoChannelInfo_c69b6d {
-    display: none !important;
-}
-
 /* Server channel name */
 .name__2ea32 {
     order: -2 !important;
@@ -650,14 +642,64 @@
     color var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.content__5e434:has(.sidebarList__5e434:hover) .name__2ea32,
-.containerDefault_c69b6d.selected_c69b6d:has(.spine__5b40b) .name__2ea32 {
+.content__5e434:has(.sidebarList__5e434:hover) .name__2ea32 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
+/* Channel thread spine */
+.spine__5b40b, .spineBorder__5b40b {
+    opacity: 1 !important;
+    margin-top: -4px !important;
+    height: 20px !important;
+    width: 10px !important;
+    border-radius: 0px !important;
+    background-color: transparent !important;
+    color: var(--channel-icon) !important;
+    transition: opacity var(--transition-speed) var(--transition-style),
+    color var(--transition-speed) var(--transition-style),
+    margin-top var(--transition-speed) var(--transition-style),
+    height var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.content__5e434:not(:has(.sidebarList__5e434:hover)) .containerDefault_c69b6d.selected_c69b6d .spine__5b40b {
+    opacity: 0.2 !important;
+}
+.container__5b40b .containerDefault_c69b6d.selected_c69b6d::before {
+    z-index: 1 !important;
+    content: "" !important;
+    background-color: var(--interactive-active) !important;
+    position: absolute !important;
+    display: block !important;
+    top: calc(2.5px) !important;
+    left: calc(12px) !important;
+    width: calc(24px - 10px) !important;
+    height: calc(24px - 10px) !important;
+    border-radius: 6px !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-color: var(--channel-icon) !important;
+    pointer-events: none !important;
+    opacity: 1 !important;
+    transition: opacity var(--transition-speed) var(--transition-style),
+    width var(--transition-speed) var(--transition-style),
+    height var(--transition-speed) var(--transition-style),
+    left var(--transition-speed) var(--transition-style),
+    top var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.containerDefault_c69b6d:has(.spine__5b40b) .unread__2ea32 {
+    top: 7px !important;
+}
+
+/* Threads, thread server channel */
+.container__5b40b .link__2ea32 {
+    margin-left: 39px !important;
+}
+
 /* Server channel icon */
 .icon__2ea32 {
+    color: var(--channel-icon) !important;
     width: 20px !important;
     height: 20px !important;
     transition: opacity var(--transition-speed) var(--transition-style),
@@ -665,7 +707,7 @@
     transition-delay: var(--transition-delay-exit) !important;
 }
 .containerDefault_c69b6d:hover .icon__2ea32 {
-    color: var(--interactive-active);
+    color: var(--interactive-active) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -762,8 +804,8 @@ div[style='height: 8px;'] {
 }
 
 /* Server channel side icons (children) */
-.children__2ea32 > *:not(.channelInfo_c69b6d) {
-    display: none !important;
+.children__2ea32 > span {
+    order: -1 !important;
 }
 
 /* User panel main div */
@@ -2518,11 +2560,6 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-enter) !important;
 }
 
-/* Threads, thread server channel */
-.container__5b40b .wrapper__2ea32 {
-    margin-left: 39px !important;
-}
-
 /* DMs sidebar padding fix */
 .scroller__99e7c {
     background: var(--bg-overlay-2) !important;
@@ -3094,7 +3131,6 @@ div[style='height: 8px;'] {
     width: auto !important;
     min-width: 36px !important;
     max-width: none !important;
-    order: -1 !important;
 }
 .vc-channeltabs-tab.vc-channeltabs-wider {
     width: calc(175px * 2.0) !important;
