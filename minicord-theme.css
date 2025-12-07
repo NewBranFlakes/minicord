@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.15.0
+ * @version 8.15.1
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -70,11 +70,6 @@
 /* Window top bar */
 .bar_c38106 {
     z-index: 1 !important;
-}
-
-/* Window top bar, "help" button */
-.button__85643.iconWrapper__9293f.clickable__9293f[aria-label='Help'] {
-    display: none !important;
 }
 
 /* Window top bar, window buttons */
@@ -2863,148 +2858,9 @@ div[style='height: 8px;'] {
     transition-delay: 1e6s !important;
 }
 
-/* Allows events from main app to pass through the "no click" filter layer */
-.clickTrapContainer_da8173.trapClicks_da8173 {
-    pointer-events: none !important;
-}
-
 /* Settings menu, window bar */
 .bar_c38106.systemBar_c38106.fixed_c38106.show_c38106 {
     display: none !important;
-}
-
-/* Main chat space layer */
-.layer__960e4.baseLayer__960e4,
-.layer__960e4.baseLayer__960e4.stop-animations,
-.layer__960e4.baseLayer__960e4.animating__960e4.stop-animations,
-.layer__960e4.baseLayer__960e4.animating__960e4 {
-    transform: none !important;
-    padding: 0px !important;
-    margin: 0px !important;
-    top: 0px !important;
-    left: 0px !important;
-    width: 100% !important;
-    height: 100% !important;
-    opacity: 1 !important;
-    transition: opacity var(--transition-speed) var(--transition-enter) !important;
-    transition-delay: 0s !important;
-    z-index: 0 !important;
-}
-
-/* Settings space layer */
-.layer__960e4:has(.standardSidebarView__23e6b),
-.layer__960e4.stop-animations:has(.standardSidebarView__23e6b),
-.layer__960e4.animating__960e4.stop-animations:has(.standardSidebarView__23e6b),
-.layer__960e4.animating__960e4:has(.standardSidebarView__23e6b) {
-    transform: none !important;
-    padding: 0px !important;
-    margin: 0px !important;
-    top: 0px !important;
-    left: 0px !important;
-    width: 100% !important;
-    height: 100% !important;
-    background: rgba(0, 0, 0, 0.75) !important;
-    z-index: 1 !important;
-    transition: opacity var(--transition-speed) var(--settings-enter) !important;
-    transition-delay: 0s !important;
-}
-
-/* Settings menu, inner div */
-.standardSidebarView__23e6b {
-    display: flex !important;
-    position: fixed !important;
-    top: calc(10px + 81px + 10px) !important;
-    left: calc(50% - (960px / 2.0)) !important;
-    width: 960px !important;
-    height: calc(100% - 20px - (91px * 2.0) - (10px * 2.0)) !important;
-    background: transparent !important;
-    border: none !important;
-    border-radius: 8px !important;
-    border-width: 1px !important;
-    border-style: solid !important;
-    border-color: var(--border-normal) !important;
-    overflow: hidden !important;
-}
-
-/* Change settings menu to be more mobile-friendly after reaching a certain size */
-@media (max-width: 1020px) { /* 960px */
-    .standardSidebarView__23e6b {
-        left: calc(10px + 20px) !important;
-        width: calc(100% - 20px - 40px) !important;
-    }
-}
-
-/* Settings tabs menu */
-.sidebarRegion__23e6b {
-    flex-basis: 0px !important;
-    justify-content: unset !important;
-    display: block !important;
-    position: absolute !important;
-    top: 0px !important;
-    left: 0px !important;
-    width: 200px !important;
-    height: 100% !important;
-    padding-left: 6px !important;
-    background-color: var(--background-tertiary) !important;
-}
-
-/* Settings tabs menu scroller */
-.sidebarRegionScroller__23e6b {
-    width: 100% !important;
-    height: 100% !important;
-}
-
-/* Settings tabs menu innermost div */
-.sidebar__23e6b {
-    padding: 0px !important;
-    margin: 0px !important;
-    margin-top: 0px !important;
-    width: 100% !important;
-}
-
-/* Settings search bar */
-.searchBar_c7e907 {
-    width: calc(100%) !important;
-    margin-left: 0px !important;
-    margin-top: 8px !important;
-    margin-bottom: 0px !important;
-}
-.searchBar_c7e907 .wrapper__3412a,
-.container__3412a .wrapper__3412a {
-    background-color: var(--background-primary-lighter) !important;
-}
-
-/* Settings tab content */
-.contentRegion__23e6b {
-    display: block !important;
-    position: absolute !important;
-    top: 0px !important;
-    left: 200px !important;
-    width: calc(100% - 200px) !important;
-    height: 100% !important;
-}
-
-/* Remove padding stuff on settings tab section content */
-.contentRegionScroller__23e6b.contentRegionShownSidebar__23e6b.auto_d125d2.scrollerBase_d125d2 {
-    padding: 0px !important;
-    margin: 0px !important;
-}
-
-/* Settings tools (ex. close button) */
-.toolsContainer__23e6b {
-    display: block !important;
-    position: absolute !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    top: 8px !important;
-    left: 8px !important;
-}
-
-/* Settings menu, close button */
-.closeButton_c2b141 {
-    flex-basis: 0px !important;
-    width: 20px !important;
-    height: 20px !important;
 }
 
 /* Voice channel members section */
@@ -3949,4 +3805,68 @@ div[style='height: 8px;'] {
     border-bottom-style: solid !important;
     border-bottom-width: 1px !important;
     border-bottom-color: var(--border-normal) !important;
+}
+
+/* Settings */
+.outerContainer_e44912 .modal_e44912,
+.outerContainer_e44912 .content_e9e3ed,
+.outerContainer_e44912 .contentHeader_e9e3ed {
+    
+    background-color: var(--background-primary) !important;
+}
+.outerContainer_e44912 .modal_e44912 {
+    padding-top: 32px !important;
+}
+.outerContainer_e44912 .modal_e44912::before {
+    content: '' !important;
+    background: var(--bg-overlay-4) !important;
+    background-color: var(--background-secondary) !important;
+    display: block !important;
+    position: absolute !important;
+    height: 32px !important;
+    width: 100% !important;
+    top: 0px !important;
+    left: 0px !important;
+    z-index: 1 !important;
+    opacity: 1 !important;
+    border-bottom: 1px solid var(--input-border-default) !important;
+    box-sizing: border-box !important;
+    pointer-events: none !important;
+}
+.outerContainer_e44912 .modal_e44912::after {
+    content: '' !important;
+    background: linear-gradient(to right, var(--background-primary) 0%, var(--background-primary) 252px, var(--background-tertiary) 252px, var(--background-tertiary) 100%) !important;
+    background-color: var(--background-secondary) !important;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 0px) !important;
+    mask-composite: intersect !important;
+    mask-repeat: no-repeat !important;
+    mask-size: 100% 100% !important;
+    display: block !important;
+    position: absolute !important;
+    height: 32px !important;
+    width: 100% !important;
+    top: 0px !important;
+    left: 0px !important;
+    z-index: 2 !important;
+    opacity: 1 !important;
+    pointer-events: none !important;
+}
+.outerContainer_e44912 .contentHeader_e9e3ed {
+    background-color: var(--background-tertiary) !important;
+}
+.outerContainer_e44912 .content_e9e3ed {
+    background-color: var(--background-quaternary) !important;
+}
+.outerContainer_e44912 .fixedContent__409aa::after {
+    background: linear-gradient(to bottom, var(--background-secondary), transparent) !important;
+}
+.outerContainer_e44912 .sidebar__409aa,
+.outerContainer_e44912 .contentHeader_e9e3ed,
+.outerContainer_e44912 .modalContent_e44912 {
+    border: none !important;
+}
+@media (max-width: 1080px) {
+    .outerContainer_e44912 .modal_e44912::before {
+        opacity: 1 !important;
+    }
 }
