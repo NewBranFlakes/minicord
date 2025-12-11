@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.16.0
+ * @version 8.16.1
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2948,6 +2948,10 @@ div[style='height: 8px;'] {
 .vc-channeltabs-new-button {
     margin: 0px !important;
     padding: 0px !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: var(--background-mod-muted) !important;
+    box-sizing: border-box !important;
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-secondary) !important;
     transition: background var(--transition-speed) var(--transition-style),
@@ -3204,7 +3208,9 @@ div[style='height: 8px;'] {
     margin-right: calc(7px * 2.0) !important;
 }
 .vc-channeltabs-new-button svg[role='img'] {
-    color: var(--text-default) !important;
+    color: var(--interactive-text-hover) !important;
+    margin-left: -1px !important;
+    margin-top: -1px !important;
 }
 
 /* Apparently something about the textbox placeholder text element causes major performance issues; this is an attempt to bandage it */
@@ -3660,8 +3666,14 @@ div[style='height: 8px;'] {
 
 /* Home page "add friend" button */
 .addFriend__133bf {
-    background-color: var(--background-primary-lighter) !important;
+    background-color: var(--background-quaternary) !important;
     color: var(--text-default) !important;
+}
+.addFriend__133bf:hover {
+    background-color: var(--background-primary) !important;
+}
+.addFriend__133bf.selected_aa8da2 {
+    background-color: var(--background-primary-lighter) !important;
 }
 
 /* Discord quests (user panel); will get around to properly stylizing this but for now just hide it */
