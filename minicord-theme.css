@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.15.1
+ * @version 8.16.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -442,12 +442,12 @@
 .containerDefault_c69b6d.selected_c69b6d .name__2ea32,
 .containerDefault_c69b6d:has(.unread__2ea32) .name__2ea32,
 .containerDefault_c69b6d:has(.unread__2ea32) .icon__2ea32 {
-    color: var(--interactive-active) !important;
+    color: var(--interactive-text-hover) !important;
 }
 .containerDefault_c69b6d:has(.list_c3cd7d) .name__2ea32,
 .containerDefault_c69b6d:has(.list_c3cd7d) .icon__2ea32,
 .containerDefault_c69b6d:has(.list_c3cd7d) .overflow__82b15 {
-    color: var(--interactive-active) !important;
+    color: var(--interactive-text-hover) !important;
     font-weight: 500 !important;
 }
 .content__5e434:has(.sidebarList__5e434:hover) .container_f37cb1,
@@ -663,7 +663,7 @@
 .container__5b40b .containerDefault_c69b6d.selected_c69b6d::before {
     z-index: 1 !important;
     content: "" !important;
-    background-color: var(--interactive-active) !important;
+    background-color: var(--interactive-text-hover) !important;
     position: absolute !important;
     display: block !important;
     top: calc(2.5px) !important;
@@ -702,7 +702,7 @@
     transition-delay: var(--transition-delay-exit) !important;
 }
 .containerDefault_c69b6d:hover .icon__2ea32 {
-    color: var(--interactive-active) !important;
+    color: var(--interactive-text-hover) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
@@ -1905,7 +1905,7 @@ div[style='height: 8px;'] {
     scale: 1.0 !important;
 }
 .buttonWrapper__24af7 div span {
-    color: var(--interactive-active) !important;
+    color: var(--interactive-text-hover) !important;
 }
 
 .buttons__74017 {
@@ -2154,11 +2154,11 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit) !important;
 }
 .layer__960e4:has(.vc-channeltabs-container) .container_c8ffbb {
-    height: calc(100% - 78px - 48px) !important;
+    height: calc(100% - 78px - 48px - 3px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .layer__960e4:has(.vc-channeltabs-bookmark) .container_c8ffbb {
-    height: calc(100% - 78px - 48px - 43px) !important;
+    height: calc(100% - 78px - 48px - 43px - 6px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .container_c8ffbb:hover {
@@ -2607,6 +2607,10 @@ div[style='height: 8px;'] {
     background-color: transparent !important;
     border: none !important;
 }
+.searchBar__5ec2f .wrapper__72c38,
+.searchBar__5ec2f .icon__0f084 {
+    -webkit-text-fill-color: var(--text-muted) !important;
+}
 
 /* DMs, "Active Now" section */
 .container__7d20c {
@@ -2716,7 +2720,7 @@ div[style='height: 8px;'] {
     margin-left: calc(12px * 0.5) !important;
 }
 .privateChannelsHeaderContainer__99e7c:hover {
-    color: var(--interactive-hover) !important;
+    color: var(--interactive-text-hover) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content__5e434:has(.sidebarList__5e434:hover) .privateChannelsHeaderContainer__99e7c,
@@ -2763,7 +2767,7 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit) !important;
 }
 .channel__972a0:hover .linkButtonIcon__972a0 {
-    color: var(--interactive-active) !important;
+    color: var(--interactive-text-hover) !important;
 }
 
 /* DMs, main friend area */
@@ -2937,9 +2941,7 @@ div[style='height: 8px;'] {
     width: calc(100% - 7px * 2.0) !important;
     margin: 0px !important;
     order: -1 !important;
-    color: var(--border-subtle-lighter) !important;
-    background: var(--border-subtle-lighter) !important;
-    background-color: var(--border-subtle-lighter) !important;
+    background: var(--bg-overlay-floating) !important;
 }
 
 /* Tab button */
@@ -2962,13 +2964,15 @@ div[style='height: 8px;'] {
 .vc-channeltabs-tab {
     padding: 0px !important;
     height: 35px !important;
-    width: 175px !important;
     min-width: 36px !important;
     container-type: inline-size !important;
     container-name: vc-channel-tab !important;
     margin: 0px !important;
     gap: 0px !important;
-    border-color: var(--text-default) !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: var(--background-mod-muted) !important;
+    box-sizing: border-box !important;
     border-radius: 8px !important;
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-secondary) !important;
@@ -2977,18 +2981,21 @@ div[style='height: 8px;'] {
     transform var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
+.vc-channeltabs-tab:not(:has(.vc-channeltabs-tab-resize-handle)) {
+    width: 175px !important;
+}
 .vc-channeltabs-tab:hover {
     background: var(--bg-overlay-4) !important;
     background-color: var(--background-primary-lighter) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.vc-channeltabs-tab-compact {
+.vc-channeltabs-tab.vc-channeltabs-tab-compact {
     container-type: normal !important;
     width: auto !important;
     min-width: 36px !important;
     max-width: none !important;
 }
-.vc-channeltabs-tab.vc-channeltabs-wider {
+.vc-channeltabs-tab:not(:has(.vc-channeltabs-tab-resize-handle)) .vc-channeltabs-tab.vc-channeltabs-wider {
     width: calc(175px * 2.0) !important;
 }
 @container vc-channel-tab (width < 63px) {
@@ -2996,9 +3003,13 @@ div[style='height: 8px;'] {
         display: none !important;
     }
 }
+.vc-channeltabs-tab-resize-handle {
+    background-color: var(--interactive-text-hover) !important;
+}
 
 /* Tab div (selected) */
 .vc-channeltabs-tab-selected {
+    border: none !important;
     background: var(--bg-overlay-4) !important;
     background-color: var(--background-primary-lighter) !important;
     margin: 0px !important;
@@ -3053,7 +3064,8 @@ div[style='height: 8px;'] {
 .vc-channeltabs-bookmark-container {
     order: 0 !important;
     padding: 0px !important;
-    width: calc(100% - 7px * 2.0 - 8px) !important;
+    width: calc(100% - 7px * 2 - 6px) !important;
+    height: calc(31px) !important;
 }
 
 /* Favorite bookmark button */
@@ -3079,15 +3091,18 @@ div[style='height: 8px;'] {
 /* Bookmark div */
 .vc-channeltabs-bookmark {
     opacity: 1 !important;
-    border: none !important;
-    border-color: var(--text-default) !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: var(--background-mod-muted) !important;
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-secondary) !important;
     gap: 0px !important;
     column-gap: 7px !important;
     border-radius: 8px !important;
     padding: 7px !important;
-    height: 14px !important;
+    height: 28px !important;
     width: auto !important;
     max-width: calc(120px * 4.0) !important;
     cursor: pointer !important;
@@ -3113,12 +3128,9 @@ div[style='height: 8px;'] {
     background: var(--bg-overlay-4) !important;
     background-color: var(--background-primary-lighter) !important;
 }
-.vc-channeltabs-bookmark-active {
-    box-shadow: none !important;
-}
 .vc-channeltabs-folder-item {
     margin: 0px !important;
-    border-color: var(--text-default) !important;
+    border-color: var(--background-mod-muted) !important;
 }
 .vc-channeltabs-bookmark > svg[style='margin-right: 0.25rem;'],
 .vc-channeltabs-bookmark > svg[style='margin-left: 0.25rem;'] {
@@ -3364,7 +3376,7 @@ div[style='height: 8px;'] {
     gap: 0px !important;
     padding: 0px !important;
     column-gap: 7px !important;
-    height: 100% !important;
+    height: calc(35px + 3px) !important;
     width: 100% !important;
 }
 
