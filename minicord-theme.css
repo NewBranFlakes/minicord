@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.17.2
+ * @version 8.17.3
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -565,7 +565,7 @@
 }
 
 /* Unread server channel indicator */
-._2ea32c412048f708-unread._2ea32c412048f708-unreadImportant {
+._2ea32c412048f708-unread {
     padding-bottom: 10px !important;
     top: 5px !important;
     left: 1px !important;
@@ -631,11 +631,19 @@
 
 /* Server channel name */
 ._2ea32c412048f708-name {
+    font-weight: 400 !important;
+    line-height: 20px !important;
+    font-size: 16px !important;
     order: -2 !important;
     opacity: 0 !important;
     transition: opacity var(--transition-speed) var(--transition-style),
     color var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
+}
+.c69b6db0641110f6-containerDefault:has(._5b40bdd67543ba35-spine) ._2ea32c412048f708-name {
+    text-decoration: underline !important;
+    text-decoration-style: solid !important;
+    text-decoration-thickness: 2px !important;
 }
 ._5e434347c823b592-content:has(._5e434347c823b592-sidebarList:hover) ._2ea32c412048f708-name {
     opacity: 1 !important;
@@ -666,7 +674,7 @@
     background-color: var(--interactive-text-hover) !important;
     position: absolute !important;
     display: block !important;
-    top: calc(2.5px) !important;
+    top: calc(0.5px) !important;
     left: calc(12px) !important;
     width: calc(24px - 10px) !important;
     height: calc(24px - 10px) !important;
@@ -684,7 +692,7 @@
     transition-delay: var(--transition-delay-exit) !important;
 }
 .c69b6db0641110f6-containerDefault:has(._5b40bdd67543ba35-spine) ._2ea32c412048f708-unread {
-    top: 7px !important;
+    top: 5px !important;
 }
 
 /* Threads, thread server channel */
@@ -867,7 +875,8 @@ div[style='height: 8px;'] {
     left: calc(44px + 7px + var(--servers-list-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-._5e434347c823b592-content:has(.cb9592ad77576717-wrapper):not(:has(.cb9592ad77576717-wrapper:hover)):not(:has(._5e434347c823b592-panels[aria-label='User area']:hover)) ._5e434347c823b592-panels[aria-label='User area'] {
+._5e434347c823b592-content:has(.cb9592ad77576717-wrapper):not(:has(.cb9592ad77576717-wrapper:hover)):not(:has(._5e434347c823b592-panels[aria-label='User area']:hover)) ._5e434347c823b592-panels[aria-label='User area'],
+._5e434347c823b592-content:has(.f75fb00fb7356cbe-content .f369dba7416c67f0-container) ._5e434347c823b592-panels[aria-label='User area'] {
     opacity: 0 !important;
     left: calc(44px + 7px - 51px + 8px) !important;
     pointer-events: none !important;
@@ -1219,40 +1228,53 @@ div[style='height: 8px;'] {
 }
 
 /* Main chat, wrapper */
-.f75fb00fb7356cbe-chatContent {
+.f75fb00fb7356cbe-chatContent,
+.f369dba7416c67f0-container {
     border: none !important;
     background: var(--bg-overlay-4) !important;
     background-color: var(--background-secondary) !important;
     max-width: 100% !important;
 }
 ._5e434347c823b592-content:has(.c8ffbb79449f399c-container) .f75fb00fb7356cbe-chatContent,
-._5e434347c823b592-content:has(.c8ffbb79449f399c-membersWrap) .f75fb00fb7356cbe-chatContent {
+._5e434347c823b592-content:has(.c8ffbb79449f399c-membersWrap) .f75fb00fb7356cbe-chatContent,
+._5e434347c823b592-content:has(.c8ffbb79449f399c-container) .f369dba7416c67f0-container,
+._5e434347c823b592-content:has(.c8ffbb79449f399c-membersWrap) .f369dba7416c67f0-container {
     max-width: calc(100% - var(--server-members-left-shrunk)) !important;
 }
 ._5e434347c823b592-content:has(.c8ffbb79449f399c-container):has(._01ae244280823725-chatLayerWrapper) .f75fb00fb7356cbe-chatContent,
-._5e434347c823b592-content:has(.c8ffbb79449f399c-membersWrap):has(._01ae244280823725-chatLayerWrapper) .f75fb00fb7356cbe-chatContent {
+._5e434347c823b592-content:has(.c8ffbb79449f399c-membersWrap):has(._01ae244280823725-chatLayerWrapper) .f75fb00fb7356cbe-chatContent,
+._5e434347c823b592-content:has(.c8ffbb79449f399c-container):has(._01ae244280823725-chatLayerWrapper) .f369dba7416c67f0-container,
+._5e434347c823b592-content:has(.c8ffbb79449f399c-membersWrap):has(._01ae244280823725-chatLayerWrapper) .f369dba7416c67f0-container {
     max-width: 100% !important;
 }
 ._5e434347c823b592-content:has(.c8ffbb79449f399c-container) ._01ae244280823725-chatLayerWrapper .f75fb00fb7356cbe-chatContent,
-._5e434347c823b592-content:has(.c8ffbb79449f399c-membersWrap) ._01ae244280823725-chatLayerWrapper .f75fb00fb7356cbe-chatContent {
+._5e434347c823b592-content:has(.c8ffbb79449f399c-membersWrap) ._01ae244280823725-chatLayerWrapper .f75fb00fb7356cbe-chatContent,
+._5e434347c823b592-content:has(.c8ffbb79449f399c-container) ._01ae244280823725-chatLayerWrapper .f369dba7416c67f0-container,
+._5e434347c823b592-content:has(.c8ffbb79449f399c-membersWrap) ._01ae244280823725-chatLayerWrapper .f369dba7416c67f0-container {
     max-width: calc(100% - var(--server-members-left-shrunk)) !important;
 }
-._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap) .f75fb00fb7356cbe-chatContent {
+._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap) .f75fb00fb7356cbe-chatContent,
+._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap) .f369dba7416c67f0-container {
     max-width: calc(100% - var(--search-results-left)) !important;
 }
-._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) .f75fb00fb7356cbe-chatContent {
+._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) .f75fb00fb7356cbe-chatContent,
+._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) .f369dba7416c67f0-container {
     max-width: calc(100%) !important;
 }
-._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) ._01ae244280823725-chatLayerWrapper .f75fb00fb7356cbe-chatContent {
+._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) ._01ae244280823725-chatLayerWrapper .f75fb00fb7356cbe-chatContent,
+._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) ._01ae244280823725-chatLayerWrapper .f369dba7416c67f0-container {
     max-width: calc(100% - var(--search-results-left)) !important;
 }
-._5e434347c823b592-content:has(.user-profile-sidebar) .f75fb00fb7356cbe-chatContent {
+._5e434347c823b592-content:has(.user-profile-sidebar) .f75fb00fb7356cbe-chatContent,
+._5e434347c823b592-content:has(.user-profile-sidebar) .f369dba7416c67f0-container {
     max-width: calc(100% - 112px) !important;
 }
-._5e434347c823b592-content:has(.user-profile-sidebar):has(._01ae244280823725-chatLayerWrapper) .f75fb00fb7356cbe-chatContent {
+._5e434347c823b592-content:has(.user-profile-sidebar):has(._01ae244280823725-chatLayerWrapper) .f75fb00fb7356cbe-chatContent,
+._5e434347c823b592-content:has(.user-profile-sidebar):has(._01ae244280823725-chatLayerWrapper) .f369dba7416c67f0-container {
     max-width: 100% !important;
 }
-._5e434347c823b592-content:has(._01ae244280823725-chatLayerWrapper):has(.user-profile-sidebar) ._01ae244280823725-chatLayerWrapper .f75fb00fb7356cbe-chatContent {
+._5e434347c823b592-content:has(._01ae244280823725-chatLayerWrapper):has(.user-profile-sidebar) ._01ae244280823725-chatLayerWrapper .f75fb00fb7356cbe-chatContent,
+._5e434347c823b592-content:has(._01ae244280823725-chatLayerWrapper):has(.user-profile-sidebar) ._01ae244280823725-chatLayerWrapper .f369dba7416c67f0-container {
     max-width: calc(100% - 112px) !important;
 }
 
