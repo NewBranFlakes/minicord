@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Shrinks and/or minimizes discord elements.
  * @author BranFlakes
- * @version 8.17.3
+ * @version 8.17.4
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3001,9 +3001,9 @@ div[style='height: 8px;'] {
 .vc-channeltabs-tab {
     padding: 0px !important;
     height: 35px !important;
+    width: auto !important;
+    max-width: none !important;
     min-width: 36px !important;
-    container-type: inline-size !important;
-    container-name: vc-channel-tab !important;
     margin: 0px !important;
     gap: 0px !important;
     border-style: solid !important;
@@ -3018,9 +3018,6 @@ div[style='height: 8px;'] {
     transform var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.vc-channeltabs-tab:not(:has(.vc-channeltabs-tab-resize-handle)) {
-    width: 175px !important;
-}
 .vc-channeltabs-tab:hover {
     background: var(--bg-overlay-4) !important;
     background-color: var(--background-primary-lighter) !important;
@@ -3031,14 +3028,6 @@ div[style='height: 8px;'] {
     width: auto !important;
     min-width: 36px !important;
     max-width: none !important;
-}
-.vc-channeltabs-tab:not(:has(.vc-channeltabs-tab-resize-handle)) .vc-channeltabs-tab.vc-channeltabs-wider {
-    width: calc(175px * 2.0) !important;
-}
-@container vc-channel-tab (width < 63px) {
-    .vc-channeltabs-close-button {
-        display: none !important;
-    }
 }
 .vc-channeltabs-tab-resize-handle {
     background-color: var(--interactive-text-hover) !important;
