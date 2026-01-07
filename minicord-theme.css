@@ -1,8 +1,8 @@
 /**
  * @name Minicord
- * @description Shrinks and/or minimizes discord elements.
+ * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.18.0
+ * @version 8.18.2
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1253,16 +1253,16 @@ div[style='height: 8px;'] {
 ._5e434347c823b592-content:has(.c8ffbb79449f399c-membersWrap) ._01ae244280823725-chatLayerWrapper .f369dba7416c67f0-container {
     max-width: calc(100% - var(--server-members-left-shrunk)) !important;
 }
-._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap) .f75fb00fb7356cbe-chatContent,
-._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap) .f369dba7416c67f0-container {
+._5e434347c823b592-content:has(.a98f3b020416ad54-searchResultsWrap) .f75fb00fb7356cbe-chatContent,
+._5e434347c823b592-content:has(.a98f3b020416ad54-searchResultsWrap) .f369dba7416c67f0-container {
     max-width: calc(100% - var(--search-results-left)) !important;
 }
-._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) .f75fb00fb7356cbe-chatContent,
-._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) .f369dba7416c67f0-container {
+._5e434347c823b592-content:has(.a98f3b020416ad54-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) .f75fb00fb7356cbe-chatContent,
+._5e434347c823b592-content:has(.a98f3b020416ad54-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) .f369dba7416c67f0-container {
     max-width: calc(100%) !important;
 }
-._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) ._01ae244280823725-chatLayerWrapper .f75fb00fb7356cbe-chatContent,
-._5e434347c823b592-content:has(.a9e7064fdee8e9b0-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) ._01ae244280823725-chatLayerWrapper .f369dba7416c67f0-container {
+._5e434347c823b592-content:has(.a98f3b020416ad54-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) ._01ae244280823725-chatLayerWrapper .f75fb00fb7356cbe-chatContent,
+._5e434347c823b592-content:has(.a98f3b020416ad54-searchResultsWrap):has(._01ae244280823725-chatLayerWrapper) ._01ae244280823725-chatLayerWrapper .f369dba7416c67f0-container {
     max-width: calc(100% - var(--search-results-left)) !important;
 }
 ._5e434347c823b592-content:has(.user-profile-sidebar) .f75fb00fb7356cbe-chatContent,
@@ -1425,7 +1425,7 @@ div[style='height: 8px;'] {
 }
 
 /* Subtitle bar search bar component */
-._974928fe84ca9647-searchBar {
+.c322aadb96ff59c9-searchBar {
     background: var(--bg-overlay-floating) !important;
     background-color: var(--background-primary-lighter) !important;
     border: none !important;
@@ -1433,7 +1433,7 @@ div[style='height: 8px;'] {
     transition: width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-._496769951eb140fe-search:has(._974928fe84ca9647-search._974928fe84ca9647-open) ._974928fe84ca9647-searchBar {
+._496769951eb140fe-search:has(.c322aadb96ff59c9-search.c322aadb96ff59c9-open) .c322aadb96ff59c9-searchBar {
     width: 240px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -1444,7 +1444,7 @@ div[style='height: 8px;'] {
     transition: padding-left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-._496769951eb140fe-search:has(._974928fe84ca9647-search._974928fe84ca9647-open) .DraftEditor-root {
+._496769951eb140fe-search:has(.c322aadb96ff59c9-search.c322aadb96ff59c9-open) .DraftEditor-root {
     padding-left: 5px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -2031,7 +2031,7 @@ div[style='height: 8px;'] {
 }
 
 /* Search results list */
-.a9e7064fdee8e9b0-searchResultsWrap {
+.a98f3b020416ad54-searchResultsWrap {
     position: fixed !important;
     height: calc(100% - 81px) !important;
     z-index: 3 !important;
@@ -2043,21 +2043,21 @@ div[style='height: 8px;'] {
     height var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-._960e4207cea8323e-layer:has(.vc-channeltabs-container) .a9e7064fdee8e9b0-searchResultsWrap {
+._960e4207cea8323e-layer:has(.vc-channeltabs-container) .a98f3b020416ad54-searchResultsWrap {
     height: calc(100% - 81px - 43px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-._960e4207cea8323e-layer:has(.vc-channeltabs-bookmark) .a9e7064fdee8e9b0-searchResultsWrap {
+._960e4207cea8323e-layer:has(.vc-channeltabs-bookmark) .a98f3b020416ad54-searchResultsWrap {
     height: calc(100% - 81px - 43px - 41px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.a9e7064fdee8e9b0-searchResultsWrap:hover {
+.a98f3b020416ad54-searchResultsWrap:hover {
     left: calc(100% - var(--search-results-width)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Search results, individual result */
-.c68065c20f8328a7-searchResultGroup ._02a39cb2980ceaaf-container {
+.a7e67f4ddd7c6bb2-searchResultGroup ._80bf8435713f6adb-container {
     border-radius: 8px !important;
     display: flex !important;
     overflow: hidden !important;
@@ -2069,14 +2069,14 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit) !important;
     cursor: pointer !important;
 }
-.c68065c20f8328a7-searchResultGroup ._02a39cb2980ceaaf-container:focus-within {
+.a7e67f4ddd7c6bb2-searchResultGroup ._80bf8435713f6adb-container:focus-within {
     max-height: 600px !important;
     transition-delay: var(--transition-delay-enter) !important;
     cursor: default !important;
 }
 
 /* Search results, gradient fade */
-.c68065c20f8328a7-searchResultGroup ._02a39cb2980ceaaf-searchResult::after {
+.a7e67f4ddd7c6bb2-searchResultGroup ._80bf8435713f6adb-searchResult::after {
     content: "" !important;
     position: absolute !important;
     top: 0px !important;
@@ -2092,31 +2092,31 @@ div[style='height: 8px;'] {
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.c68065c20f8328a7-searchResultGroup ._02a39cb2980ceaaf-container:focus-within ._02a39cb2980ceaaf-searchResult::after {
+.a7e67f4ddd7c6bb2-searchResultGroup ._80bf8435713f6adb-container:focus-within ._80bf8435713f6adb-searchResult::after {
     opacity: 0;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Search results, search result content */
-.c68065c20f8328a7-searchResultGroup .c19a557985eb7793-header,
-.c68065c20f8328a7-searchResultGroup .c19a557985eb7793-messageContent,
-.c68065c20f8328a7-searchResultGroup .b7e1cb0370c2dd0e-container,
-.c68065c20f8328a7-searchResultGroup .c19a557985eb7793-repliedMessage > * {
+.a7e67f4ddd7c6bb2-searchResultGroup .c19a557985eb7793-header,
+.a7e67f4ddd7c6bb2-searchResultGroup .c19a557985eb7793-messageContent,
+.a7e67f4ddd7c6bb2-searchResultGroup .b7e1cb0370c2dd0e-container,
+.a7e67f4ddd7c6bb2-searchResultGroup .c19a557985eb7793-repliedMessage > * {
     opacity: 0 !important;
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 
-.a9e7064fdee8e9b0-searchResultsWrap:hover .c68065c20f8328a7-searchResultGroup .c19a557985eb7793-header,
-.a9e7064fdee8e9b0-searchResultsWrap:hover .c68065c20f8328a7-searchResultGroup .c19a557985eb7793-messageContent,
-.a9e7064fdee8e9b0-searchResultsWrap:hover .c68065c20f8328a7-searchResultGroup .b7e1cb0370c2dd0e-container,
-.a9e7064fdee8e9b0-searchResultsWrap:hover .c68065c20f8328a7-searchResultGroup .c19a557985eb7793-repliedMessage > * {
+.a98f3b020416ad54-searchResultsWrap:hover .a7e67f4ddd7c6bb2-searchResultGroup .c19a557985eb7793-header,
+.a98f3b020416ad54-searchResultsWrap:hover .a7e67f4ddd7c6bb2-searchResultGroup .c19a557985eb7793-messageContent,
+.a98f3b020416ad54-searchResultsWrap:hover .a7e67f4ddd7c6bb2-searchResultGroup .b7e1cb0370c2dd0e-container,
+.a98f3b020416ad54-searchResultsWrap:hover .a7e67f4ddd7c6bb2-searchResultGroup .c19a557985eb7793-repliedMessage > * {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Disable "jump to" behavior when clicking entire search result the first time */
-.c68065c20f8328a7-searchResultGroup ._02a39cb2980ceaaf-searchResult {
+.a7e67f4ddd7c6bb2-searchResultGroup ._80bf8435713f6adb-searchResult {
     width: 100% !important;
     margin: 0px !important;
     pointer-events: none !important;
@@ -2124,31 +2124,31 @@ div[style='height: 8px;'] {
     transition: background-color var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.c68065c20f8328a7-searchResultGroup ._02a39cb2980ceaaf-container:focus-within ._02a39cb2980ceaaf-searchResult {
+.a7e67f4ddd7c6bb2-searchResultGroup ._80bf8435713f6adb-container:focus-within ._80bf8435713f6adb-searchResult {
     pointer-events: all !important;
     background-color: var(--background-primary-lighter) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Re-enable content clicking when the search result is focused/maximized */
-.c68065c20f8328a7-searchResultGroup ._02a39cb2980ceaaf-container:focus-within ._02a39cb2980ceaaf-message {
+.a7e67f4ddd7c6bb2-searchResultGroup ._80bf8435713f6adb-container:focus-within ._80bf8435713f6adb-message {
     pointer-events: all !important;
 }
 
 /* Search results list header */
-.f3b986a284a18c78-searchHeader {
+.ae7890a1b8e75804-searchHeader {
     border: none !important;
     padding: 10px !important;
 }
 
 /* Search results inner list */
-.a9e7064fdee8e9b0-scroller.d125d22cdfd32cfe-thin.d125d22cdfd32cfe-scrollerBase {
+.a98f3b020416ad54-scroller.d125d22cdfd32cfe-thin.d125d22cdfd32cfe-scrollerBase {
     padding-right: 10px !important;
     padding-left: 10px !important;
 }
 
 /* Search results scrolling padding fix */
-.c68065c20f8328a7-searchResultGroup {
+.a7e67f4ddd7c6bb2-searchResultGroup {
     display: flex !important;
     flex-direction: column !important;
     gap: 0px !important;
@@ -2953,6 +2953,7 @@ div[style='height: 8px;'] {
     padding: 0px !important;
     column-gap: 7px !important;
     order: -2 !important;
+    overflow: hidden !important;
 }
 .vc-channeltabs-tab-container::before {
     background-color: rgba(0, 0, 0, 0.25) !important;
@@ -3456,6 +3457,7 @@ div[style='height: 8px;'] {
     column-gap: 7px !important;
     height: calc(35px + 3px) !important;
     width: 100% !important;
+    overflow: hidden !important;
 }
 
 /* Bookmark folder popup div */
