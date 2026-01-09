@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.18.3
+ * @version 8.18.4
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2225,29 +2225,42 @@ div[style='height: 8px;'] {
 }
 
 /* Server members list, server member role category */
-.c8ffbb79449f399c-membersGroup._13cf1aa56cd732d2-container {
+.c8ffbb79449f399c-membersGroup, .c8ffbb79449f399c-membersGroupHeader, .c8ffbb79449f399c-membersGroupName {
     margin: 0px !important;
     padding: 0px !important;
 }
-.c8ffbb79449f399c-membersGroup._13cf1aa56cd732d2-container {
+.c8ffbb79449f399c-membersGroupHeader,
+.c8ffbb79449f399c-members .c8ffbb79449f399c-membersGroup:not(:has(.c8ffbb79449f399c-membersGroupHeader)) {
+    font-weight: 700 !important;
     margin-left: 10px !important;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-    max-width: calc(var(--server-members-left-shrunk) - 10px - 10px) !important;
     overflow: hidden !important;
-	white-space: nowrap !important;
-	text-overflow: ellipsis !important;
-    text-align: center !important;
+    width: auto !important;
+    max-width: calc(var(--server-members-left-shrunk) - 10px - 10px) !important;
     transition: max-width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-._5e434347c823b592-content:has(.c8ffbb79449f399c-container:hover) .c8ffbb79449f399c-membersGroup._13cf1aa56cd732d2-container,
-.c8ffbb79449f399c-membersWrap.c8ffbb79449f399c-hiddenMembers._7641b507c6cdbb10-container:hover .c8ffbb79449f399c-membersGroup._13cf1aa56cd732d2-container { 
-    max-width: var(--server-members-left-expanded) !important;
+._5e434347c823b592-content:has(.c8ffbb79449f399c-container:hover) .c8ffbb79449f399c-membersGroupHeader,
+._5e434347c823b592-content:has(.c8ffbb79449f399c-members:hover) .c8ffbb79449f399c-membersGroup:not(:has(.c8ffbb79449f399c-membersGroupHeader)) {
+    max-width: 100% !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.c8ffbb79449f399c-membersGroup._13cf1aa56cd732d2-container span {
-    font-weight: 700 !important;
+.c8ffbb79449f399c-membersGroupName {
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+.c8ffbb79449f399c-membersGroupHeader span:not(.c8ffbb79449f399c-membersGroupName) {
+    overflow: hidden !important;
+    opacity: 0 !important;
+    width: auto !important;
+    max-width: 0px !important;
+    transition: max-width var(--transition-speed) var(--transition-style),
+    opacity var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+._5e434347c823b592-content:has(.c8ffbb79449f399c-container:hover) .c8ffbb79449f399c-membersGroupHeader span:not(.c8ffbb79449f399c-membersGroupName) {
+    opacity: 1 !important;
+    max-width: 100px !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Divider between role categories */
@@ -2257,16 +2270,21 @@ div[style='height: 8px;'] {
     position: relative !important;
     top: 0px !important;
     left: 0px !important;
-    margin-left: 0px !important;
+    margin-left: 8px !important;
     margin-top: calc(7px) !important;
     margin-bottom: calc(7px) !important;
     height: 0px !important;
     width: 100% !important;
+    max-width: calc(var(--server-members-left-shrunk) - 8px * 2.0) !important;
     border-top-width: 1px !important;
     border-top-style: solid !important;
     border-top-color: var(--border-subtle) !important;
-    transition: margin-left var(--transition-speed) var(--transition-style) !important;
+    transition: max-width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
+}
+._5e434347c823b592-content:has(.c8ffbb79449f399c-container:hover) .c8ffbb79449f399c-membersGroup._13cf1aa56cd732d2-container::before {
+    max-width: 100% !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Server members list, server member role category icon */
