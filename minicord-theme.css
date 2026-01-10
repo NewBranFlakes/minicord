@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.18.4
+ * @version 8.19.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2225,16 +2225,16 @@ div[style='height: 8px;'] {
 }
 
 /* Server members list, server member role category */
-.c8ffbb79449f399c-membersGroup, .c8ffbb79449f399c-membersGroupHeader, .c8ffbb79449f399c-membersGroupName {
+.c8ffbb79449f399c-membersGroup, .c8ffbb79449f399c-membersGroupHeader, .c8ffbb79449f399c-membersGroupName, .c8ffbb79449f399c-roleIcon, .c8ffbb79449f399c-membersGroupHeader span:has(.c8ffbb79449f399c-roleIcon) {
     margin: 0px !important;
     padding: 0px !important;
 }
 .c8ffbb79449f399c-membersGroupHeader,
 .c8ffbb79449f399c-members .c8ffbb79449f399c-membersGroup:not(:has(.c8ffbb79449f399c-membersGroupHeader)) {
     font-weight: 700 !important;
-    margin-left: 10px !important;
+    margin-left: 11px !important;
     overflow: hidden !important;
-    width: auto !important;
+    width: 100% !important;
     max-width: calc(var(--server-members-left-shrunk) - 10px - 10px) !important;
     transition: max-width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
@@ -2248,19 +2248,41 @@ div[style='height: 8px;'] {
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
 }
-.c8ffbb79449f399c-membersGroupHeader span:not(.c8ffbb79449f399c-membersGroupName) {
+.c8ffbb79449f399c-membersGroupHeader span:not(.c8ffbb79449f399c-membersGroupName):not(:has(.ee71ee16cc02184d-roleIcon)) {
     overflow: hidden !important;
-    opacity: 0 !important;
-    width: auto !important;
-    max-width: 0px !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    max-width: 32px !important;
+    margin-left: 0px !important;
+    margin-right: 1px !important;
+    /* direction: rtl !important; */
+    /* text-align: right !important; */
     transition: max-width var(--transition-speed) var(--transition-style),
     opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-._5e434347c823b592-content:has(.c8ffbb79449f399c-container:hover) .c8ffbb79449f399c-membersGroupHeader span:not(.c8ffbb79449f399c-membersGroupName) {
+.c8ffbb79449f399c-membersGroupHeader:has(.ee71ee16cc02184d-roleIcon) span:not(.c8ffbb79449f399c-membersGroupName):not(:has(.ee71ee16cc02184d-roleIcon)) {
+    opacity: 0 !important;
+    max-width: 0px !important;
+    margin-left: 7px !important;
+}
+._5e434347c823b592-content:has(.c8ffbb79449f399c-container:hover) .c8ffbb79449f399c-membersGroupHeader span:not(.c8ffbb79449f399c-membersGroupName):not(:has(.ee71ee16cc02184d-roleIcon)) {
     opacity: 1 !important;
-    max-width: 100px !important;
+    max-width: 100% !important;
     transition-delay: var(--transition-delay-enter) !important;
+}
+
+/* Server members list, server member role category icon */
+.c8ffbb79449f399c-membersGroupHeader span:has(.c8ffbb79449f399c-roleIcon) {
+    /* background-color: white !important; */
+    width: 32px !important;
+    height: 18px !important;
+}
+.c8ffbb79449f399c-membersGroupHeader span .c8ffbb79449f399c-roleIcon {
+    width: 32px !important;
+    height: 100% !important;
 }
 
 /* Divider between role categories */
@@ -2285,12 +2307,6 @@ div[style='height: 8px;'] {
 ._5e434347c823b592-content:has(.c8ffbb79449f399c-container:hover) .c8ffbb79449f399c-membersGroup._13cf1aa56cd732d2-container::before {
     max-width: 100% !important;
     transition-delay: var(--transition-delay-enter) !important;
-}
-
-/* Server members list, server member role category icon */
-.ee71ee16cc02184d-roleIcon.c8ffbb79449f399c-roleIcon {
-    margin-right: 7px !important;
-	margin-left: 9px !important;
 }
 
 /* Server members list, server member details */
@@ -2408,6 +2424,7 @@ div[style='height: 8px;'] {
 }
 ._55bab3f0b2555838-draggable {
     margin-left: 0px !important;
+    z-index: 0 !important;
 }
 ._5e434347c823b592-content:has(._5e434347c823b592-sidebarList:hover) ._55bab3f0b2555838-draggable {
     margin-left: 0px !important;
@@ -2427,11 +2444,14 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit) !important;
 }
 ._394db220ddf598fe-container {
-
     height: 28px !important;
+}
+._55bab3f0b2555838-draggable:hover {
+    z-index: 3 !important;
 }
 ._55bab3f0b2555838-draggable:hover ._394db220ddf598fe-container {
     height: calc(28px + 12px) !important;
+    z-index: 2 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 ._5e434347c823b592-content:has(._5e434347c823b592-sidebarList:hover) ._394db220ddf598fe-container,
@@ -2467,6 +2487,7 @@ div[style='height: 8px;'] {
     border-style: solid !important;
     border-radius: 24px !important;
     border-width: 2px !important;
+    z-index: 2 !important;
 }
 ._394db220ddf598fe-chipletParent {
     margin: 0px !important;
@@ -2544,10 +2565,14 @@ div[style='height: 8px;'] {
     width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.c69b6db0641110f6-containerDefault:hover .c3cd7d38925bcd00-list.c3cd7d38925bcd00-collapsed ._55bab3f0b2555838-draggable {
+.c69b6db0641110f6-containerDefault:hover .c3cd7d38925bcd00-list.c3cd7d38925bcd00-collapsed ._55bab3f0b2555838-draggable:not(:hover) {
     width: calc(28px + 7px) !important;
     height: calc(28px + 7px) !important;
     transition-delay: var(--transition-delay-enter) !important;
+}
+.c3cd7d38925bcd00-list.c3cd7d38925bcd00-collapsed ._55bab3f0b2555838-draggable:hover {
+    width: calc(28px - 14px + 93px + 7px) !important;
+    height: calc(28px + 7px) !important;
 }
 ._55bab3f0b2555838-moreContainer {
     background-color: transparent !important;
@@ -3840,6 +3865,7 @@ div[style='height: 8px;'] {
 
 /* Equicord voice user buttons plugin */
 .voice-user-buttons {
+    z-index: 1 !important;
     order: 1 !important;
     width: 0px !important;
     height: 16px !important;
@@ -3856,6 +3882,24 @@ div[style='height: 8px;'] {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
+.c3cd7d38925bcd00-list.c3cd7d38925bcd00-collapsed .voice-user-buttons {
+    padding: 6px !important;
+    padding-left: calc(5px + 7px) !important;
+    border-radius: 24px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    margin-left: calc(-20px) !important;
+    background-color: var(--background-secondary) !important;
+    /* width: calc(64px + 7px) !important; */
+    /* opacity: 1 !important; */
+    pointer-events: none !important;
+    transition: opacity var(--transition-speed) var(--transition-style),
+    width var(--transition-speed) var(--transition-style) !important;
+}
+.c3cd7d38925bcd00-list.c3cd7d38925bcd00-collapsed ._55bab3f0b2555838-draggable:hover .voice-user-buttons {
+    pointer-events: all !important;
+    width: calc(67px + 7px) !important;
+}
 .voice-user-buttons::before {
     display: flex !important;
     position: relative !important;
@@ -3867,6 +3911,11 @@ div[style='height: 8px;'] {
     color: var(--background-base-low) !important;
     border-left-width: 1px !important;
     border-left-style: solid !important;
+}
+.c3cd7d38925bcd00-list.c3cd7d38925bcd00-collapsed .voice-user-buttons::before {
+    opacity: 0 !important;
+    /* display: none !important; */
+    /* margin-left: -7px !important; */
 }
 .voice-user-button-container,
 .voice-user-button-container > button,
