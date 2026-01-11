@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.19.1
+ * @version 8.19.2
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2026,8 +2026,12 @@ div[style='height: 8px;'] {
 
 /* Main chat message */
 ._5126c0cd07f243a0-message {
-    transition: background-color var(--transition-speed) var(--transition-style) !important;
+    transition: background var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
+    border-radius: 8px !important;
+}
+._5126c0cd07f243a0-message:focus-within {
+    background: var(--interactive-background-selected) !important;
 }
 
 /* Search results list */
@@ -2225,53 +2229,30 @@ div[style='height: 8px;'] {
 }
 
 /* Server members list, server member role category */
-.c8ffbb79449f399c-membersGroup, .c8ffbb79449f399c-membersGroupHeader, .c8ffbb79449f399c-membersGroupName, .c8ffbb79449f399c-roleIcon, .c8ffbb79449f399c-membersGroupHeader span:has(.c8ffbb79449f399c-roleIcon) {
+.c8ffbb79449f399c-membersGroup, .c8ffbb79449f399c-membersGroupHeader, .c8ffbb79449f399c-membersGroupHeader > span, .c8ffbb79449f399c-membersGroupHeader > span:has(.ee71ee16cc02184d-roleIcon) {
     margin: 0px !important;
     padding: 0px !important;
 }
-.c8ffbb79449f399c-membersGroupHeader,
-.c8ffbb79449f399c-members .c8ffbb79449f399c-membersGroup:not(:has(.c8ffbb79449f399c-membersGroupHeader)) {
-    font-weight: 700 !important;
+.c8ffbb79449f399c-membersGroupHeader {
+    /* background-color: white !important; */
     margin-left: 11px !important;
-    overflow: hidden !important;
-    width: 100% !important;
-    max-width: calc(var(--server-members-left-shrunk) - 10px - 10px) !important;
+    width: calc(100% - 12px) !important;
+    max-width: 32px !important;
     transition: max-width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-._5e434347c823b592-content:has(.c8ffbb79449f399c-container:hover) .c8ffbb79449f399c-membersGroupHeader,
-._5e434347c823b592-content:has(.c8ffbb79449f399c-members:hover) .c8ffbb79449f399c-membersGroup:not(:has(.c8ffbb79449f399c-membersGroupHeader)) {
-    max-width: 100% !important;
-    transition-delay: var(--transition-delay-enter) !important;
+._5e434347c823b592-content:has(.c8ffbb79449f399c-container:hover) .c8ffbb79449f399c-membersGroupHeader {
+    max-width: var(--server-members-left-expanded) !important;
 }
-.c8ffbb79449f399c-membersGroupName {
-    text-overflow: ellipsis !important;
-    white-space: nowrap !important;
-}
-.c8ffbb79449f399c-membersGroupHeader span:not(.c8ffbb79449f399c-membersGroupName):not(:has(.ee71ee16cc02184d-roleIcon)) {
+.c8ffbb79449f399c-membersGroupHeader > span {
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
-    opacity: 1 !important;
-    width: 100% !important;
-    max-width: 32px !important;
-    margin-left: 0px !important;
-    margin-right: 1px !important;
-    /* direction: rtl !important; */
-    /* text-align: right !important; */
-    transition: max-width var(--transition-speed) var(--transition-style),
-    opacity var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
+    font-weight: 700 !important;
 }
-.c8ffbb79449f399c-membersGroupHeader:has(.ee71ee16cc02184d-roleIcon) span:not(.c8ffbb79449f399c-membersGroupName):not(:has(.ee71ee16cc02184d-roleIcon)) {
-    opacity: 0 !important;
-    max-width: 0px !important;
-    margin-left: 7px !important;
-}
-._5e434347c823b592-content:has(.c8ffbb79449f399c-container:hover) .c8ffbb79449f399c-membersGroupHeader span:not(.c8ffbb79449f399c-membersGroupName):not(:has(.ee71ee16cc02184d-roleIcon)) {
-    opacity: 1 !important;
-    max-width: 100% !important;
-    transition-delay: var(--transition-delay-enter) !important;
+.c8ffbb79449f399c-membersGroupHeader > span:has(.ee71ee16cc02184d-roleIcon) {
+    min-width: 32px !important;
+    margin-right: 7px !important;
 }
 
 /* Server members list, server member role category icon */
@@ -3599,9 +3580,9 @@ div[style='height: 8px;'] {
     max-width: 210px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-._5126c0cd07f243a0-messageListItem:hover:not(:has(._23977d5b7cef7361-reaction:hover)) ._23977d5b7cef7361-reaction {
+._5126c0cd07f243a0-messageListItem:focus-within ._23977d5b7cef7361-reaction {
     max-width: 210px !important;
-    transition-delay: 1s !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 
 ._23977d5b7cef7361-reactionCount,
@@ -3617,11 +3598,11 @@ div[style='height: 8px;'] {
     pointer-events: all !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-._5126c0cd07f243a0-messageListItem:hover:not(:has(._23977d5b7cef7361-reaction:hover)) ._23977d5b7cef7361-reactionCount,
-._5126c0cd07f243a0-messageListItem:hover:not(:has(._23977d5b7cef7361-reaction:hover)) ._23977d5b7cef7361-reactionInner div:has(._183c2cc3c55377b0-container) {
+._5126c0cd07f243a0-messageListItem:focus-within ._23977d5b7cef7361-reactionCount,
+._5126c0cd07f243a0-messageListItem:focus-within ._23977d5b7cef7361-reactionInner div:has(._183c2cc3c55377b0-container) {
     opacity: 1 !important;
     pointer-events: all !important;
-    transition-delay: 1s !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Viewing older messages popup */
