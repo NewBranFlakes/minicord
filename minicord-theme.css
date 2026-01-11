@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.19.0
+ * @version 8.19.1
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3591,7 +3591,6 @@ div[style='height: 8px;'] {
 /* Message reactions */
 ._23977d5b7cef7361-reaction {
     max-width: 34px !important;
-    overflow: hidden !important;
     transition: max-width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
@@ -3602,6 +3601,26 @@ div[style='height: 8px;'] {
 }
 ._5126c0cd07f243a0-messageListItem:hover:not(:has(._23977d5b7cef7361-reaction:hover)) ._23977d5b7cef7361-reaction {
     max-width: 210px !important;
+    transition-delay: 1s !important;
+}
+
+._23977d5b7cef7361-reactionCount,
+._23977d5b7cef7361-reactionInner div:has(._183c2cc3c55377b0-container) {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+._23977d5b7cef7361-reaction:hover ._23977d5b7cef7361-reactionCount,
+._23977d5b7cef7361-reaction:hover ._23977d5b7cef7361-reactionInner div:has(._183c2cc3c55377b0-container) {
+    opacity: 1 !important;
+    pointer-events: all !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+._5126c0cd07f243a0-messageListItem:hover:not(:has(._23977d5b7cef7361-reaction:hover)) ._23977d5b7cef7361-reactionCount,
+._5126c0cd07f243a0-messageListItem:hover:not(:has(._23977d5b7cef7361-reaction:hover)) ._23977d5b7cef7361-reactionInner div:has(._183c2cc3c55377b0-container) {
+    opacity: 1 !important;
+    pointer-events: all !important;
     transition-delay: 1s !important;
 }
 
