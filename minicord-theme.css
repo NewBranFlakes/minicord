@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.19.2
+ * @version 8.19.3
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -4015,6 +4015,9 @@ div[style='height: 8px;'] {
 @media (max-width: 1080px) {
     .e4491282b6a5364a-outerContainer .e4491282b6a5364a-modal::before {
         opacity: 1 !important;
+    }
+    #app-mount:has(.e4491282b6a5364a-outerContainer) .c38106a3f0c3ca76-trailing {
+        display: none !important;
     }
 }
 
