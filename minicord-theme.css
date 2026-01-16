@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.19.3
+ * @version 8.19.4
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3488,7 +3488,7 @@ div[style='height: 8px;'] {
 .c1e9c47c23f12ca3-scroller {
     padding: 0px !important;
 }
-.c1e9c47c23f12ca3-scroller div[aria-hidden='true'], .c1e9c47c23f12ca3-scroller::-webkit-scrollbar {
+.c1e9c47c23f12ca3-scroller::-webkit-scrollbar {
     display: none !important;
 }
 
@@ -3500,17 +3500,6 @@ div[style='height: 8px;'] {
 }
 
 /* Move bookmark folder content's server icon to the front */
-.c1e9c47c23f12ca3-iconContainer {
-    margin: 0px !important;
-    padding: 0px !important;
-}
-.c1e9c47c23f12ca3-iconContainer:has(.vc-channeltabs-bookmark-icon),
-.c1e9c47c23f12ca3-iconContainer:has(._44b0c28be7879b7b-wrapper) {
-    order: -1 !important;
-}
-.c1e9c47c23f12ca3-iconContainer .vc-channeltabs-bookmark-icon,
-.c1e9c47c23f12ca3-iconContainer ._44b0c28be7879b7b-wrapper,
-.c1e9c47c23f12ca3-iconContainer ._44b0c28be7879b7b-wrapper svg,
 .vc-channeltabs-tab-inner ._44b0c28be7879b7b-wrapper,
 .vc-channeltabs-tab-inner ._44b0c28be7879b7b-wrapper svg,
 .vc-channeltabs-bookmark ._44b0c28be7879b7b-wrapper,
@@ -3520,7 +3509,7 @@ div[style='height: 8px;'] {
     min-width: 16px !important;
     min-height: 16px !important;
 }
-.c1e9c47c23f12ca3-iconContainer:has(._44b0c28be7879b7b-wrapper),
+
 .vc-channeltabs-tab-inner ._44b0c28be7879b7b-wrapper,
 .vc-channeltabs-bookmark ._44b0c28be7879b7b-wrapper {
     width: 20px !important;
