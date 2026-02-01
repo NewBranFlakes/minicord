@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.20.2
+ * @version 8.20.3
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -229,7 +229,8 @@
 
 .tutorialContainer__1f388 .childWrapper__6e9f8,
 .questify-quest-button-container .questify-quest-button-button,
-.tutorialContainer__650eb .circleIconButton__5bc7e {
+.tutorialContainer__650eb .circleIconButton__5bc7e,
+.listItem__650eb .circleIconButton__5bc7e.discoveryIcon_ef3116 {
     background: var(--bg-overlay-floating) !important;
     background-color: var(--background-primary-lighter) !important;
     filter: invert(0%) !important;
@@ -239,13 +240,19 @@
 
 .tutorialContainer__1f388 .childWrapper__6e9f8 svg,
 .questify-quest-button-container .questify-quest-button-button svg,
-.tutorialContainer__650eb .circleIconButton__5bc7e svg {
+.tutorialContainer__650eb .circleIconButton__5bc7e svg,
+.listItem__650eb .circleIconButton__5bc7e.discoveryIcon_ef3116 svg {
     color: var(--text-default) !important;
 }
 
 .tutorialContainer__1f388 .childWrapper__6e9f8:hover,
+.tutorialContainer__1f388:has(.listItemWrapper__91816.selected__91816) .childWrapper__6e9f8,
 .questify-quest-button-container .questify-quest-button-button:hover,
-.tutorialContainer__650eb .circleIconButton__5bc7e:hover {
+.questify-quest-button-container:has(.listItemWrapper__91816.selected__91816) .questify-quest-button-button,
+.tutorialContainer__650eb .circleIconButton__5bc7e:hover,
+.tutorialContainer__650eb:has(.listItemWrapper__91816.selected__91816) .circleIconButton__5bc7e,
+.listItem__650eb .circleIconButton__5bc7e.discoveryIcon_ef3116:hover,
+.listItem__650eb:has(.listItemWrapper__91816.selected__91816) .circleIconButton__5bc7e.discoveryIcon_ef3116 {
     filter: invert(100%) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -361,7 +368,8 @@
 .listItem__650eb:hover .blobContainer_e5445c,
 .listItem__650eb:hover .folderHeader__48112,
 .listItem__650eb:hover .folderGroupBackground__48112,
-.listItem__650eb:hover .listItemWrapper__91816 {
+.listItem__650eb:hover .listItemWrapper__91816,
+.listItem__650eb:has(.listItemWrapper__91816.selected__91816) .listItemWrapper__91816 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
