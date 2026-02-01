@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.20.1
+ * @version 8.20.2
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -905,7 +905,7 @@ div[style='height: 8px;'] {
     opacity: 1 !important;
     position: absolute !important;
     left: calc(44px + 7px) !important;
-    bottom: 24px !important;
+    bottom: 29.5px !important;
     border: none !important;
     max-width: var(--user-panel-left-shrunk) !important;
     transition: max-width var(--transition-speed) var(--transition-style),
@@ -913,6 +913,10 @@ div[style='height: 8px;'] {
     bottom var(--transition-speed) var(--transition-style),
     opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
+}
+.layer__960e4:has(.vc-channeltabs-container) .panels__5e434[aria-label='User area'] {
+    bottom: 24px !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 .content__5e434:not(:has(.chat_f75fb0)) .panels__5e434[aria-label='User area'] {
     left: calc(44px + 7px) !important;
@@ -2123,23 +2127,20 @@ div[style='height: 8px;'] {
 /* Search results list */
 .searchResultsWrap_a98f3b {
     position: fixed !important;
-    height: calc(100% - 81px) !important;
+    height: calc(100% - 81px - 66px) !important;
     z-index: 3 !important;
     width: var(--search-results-width) !important;
     border: none !important;
 
     left: calc(100% - var(--search-results-left)) !important;
-    transition: left var(--transition-speed) var(--transition-style),
-    height var(--transition-speed) var(--transition-style) !important;
+    transition: left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .layer__960e4:has(.vc-channeltabs-container) .searchResultsWrap_a98f3b {
-    height: calc(100% - 81px - 43px) !important;
-    transition-delay: var(--transition-delay-enter) !important;
+    height: calc(100% - 81px - 66px - 43px) !important;
 }
 .layer__960e4:has(.vc-channeltabs-bookmark) .searchResultsWrap_a98f3b {
-    height: calc(100% - 81px - 43px - 41px) !important;
-    transition-delay: var(--transition-delay-enter) !important;
+    height: calc(100% - 81px - 71px - 43px - 41px) !important;
 }
 .searchResultsWrap_a98f3b:hover {
     left: calc(100% - var(--search-results-width)) !important;
@@ -2265,7 +2266,7 @@ div[style='height: 8px;'] {
 /* Server members list */
 .container_c8ffbb {
     position: fixed !important;
-    height: calc(100% - 75px - 64px) !important;
+    height: calc(100% - 75px - 67px) !important;
     width: 256px !important;
     z-index: 3 !important;
     border: none !important;
