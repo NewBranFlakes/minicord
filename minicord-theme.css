@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.20.3
+ * @version 8.20.4
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -181,7 +181,7 @@
     transform-origin: top left !important;
     width: 64px !important;
     height: 100vw !important;
-    z-index: 6 !important;
+    z-index: 1 !important;
     overflow: hidden !important;
     mask-image: linear-gradient(to bottom,
     rgba(0, 0, 0, 0) 0%,
@@ -196,7 +196,6 @@
     mask-composite: intersect !important;
     mask-repeat: no-repeat !important;
     mask-size: 100% 100% !important;
-    transition-delay: var(--transition-delay-exit) !important;
     background: transparent !important;
     box-sizing: border-box !important;
     border-right-width: 1px !important;
@@ -205,6 +204,15 @@
     border-left-width: 1px !important;
     border-left-style: solid !important;
     border-left-color: var(--border-subtle) !important;
+    pointer-events: all !important;
+    opacity: 1 !important;
+    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.content__5e434:has(.peopleColumn__133bf[id='add_friend-tab']) .guilds__5e434 {
+    pointer-events: none !important;
+    /* opacity: 0 !important; */
+    transition-delay: var(--transition-delay-enter) !important;
 }
 /* .guilds__5e434:hover {
     transition-delay: var(--transition-delay-enter) !important;
@@ -1570,6 +1578,12 @@ div[style='height: 8px;'] {
     width: 100% !important;
     overflow: hidden !important;
     margin-top: 64px !important;
+    transition: margin-top var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.content__5e434:has(.peopleColumn__133bf[id='add_friend-tab']) {
+    margin-top: 0px !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Main chat textbox */
