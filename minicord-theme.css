@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.20.4
+ * @version 8.20.5
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -433,18 +433,17 @@
 .tutorialContainer__1f388:has(.wrapper__6e9f8[data-list-item-id='guildsnav___home']) {
     margin-top: 0px !important;
 }
-.tutorialContainer__1f388:has(.wrapper__6e9f8[data-list-item-id='guildsnav___home']) span:has(.listItemWrapper__91816),
-.tutorialContainer__650eb:has(.circleIconButton__5bc7e),
-.questify-quest-button-container > .questify-quest-button-server-list-button-container,
-.tree_ef3116 .stack_dbd263 > .folderGroup__48112:not(.isExpanded__48112) .folderHeader__48112,
-.tree_ef3116 .stack_dbd263 > .listItem__650eb:not(:has(.guildSeparator__252b6)) span:has(> .blobContainer_e5445c),
-.stack_dbd263 .listItem__650eb:not(:has(.guildSeparator__252b6)) span:has(> .wrapper_cc5dd2),
-.stack_dbd263 .listItem__650eb:has(.discoveryIcon_ef3116) {
+/* Have to index each one manually, descendant by descendant, to avoid targetting unintended descendants */
+.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .tutorialContainer__1f388 > .listItem__650eb > span,
+.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .questify-quest-button-container > .questify-quest-button-server-list-button-container > .listItem__650eb > span,
+.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Direct Messages'] > div > .listItem__650eb > span,
+.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Servers'] > .listItem__650eb > span,
+.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Servers'] > .folderGroup__48112 > .listItem__650eb > .folderHeader__48112,
+.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Servers'] > .folderGroup__48112 > .stack_dbd263 > .listItem__650eb > span,
+.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .tutorialContainer__650eb > .listItem__650eb > span,
+.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .listItem__650eb > span {
     transform: rotate(90deg) !important;
     transform-origin: center center !important;
-}
-.tree_ef3116 .stack_dbd263 > .folderGroup__48112.isExpanded__48112 .folderHeader__48112 .folderIconWrapper__48112 {
-    transform: rotate(90deg) !important;
 }
 .unreadMentionsIndicatorTop_ef3116,
 .unreadMentionsIndicatorBottom_ef3116 {
