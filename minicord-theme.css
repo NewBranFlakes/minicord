@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.20.5
+ * @version 8.20.6
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -463,6 +463,10 @@
     transform: rotate(90deg) !important;
     transform-origin: center center !important;
 }
+/* .folderHeader__48112 {
+    border-radius: 14px !important;
+    overflow: hidden !important;
+} */
 
 /* Uncomment this if you prefer having the pill/notification indicators above the servers, instead of below. */
 
@@ -3815,7 +3819,8 @@ div[style='height: 8px;'] {
 
 /* Servers list lower badge mask */
 .svg_cc5dd2 defs rect,
-.svg_cc5dd2 mask:has(rect) {
+.svg_cc5dd2 mask:has(rect),
+.svg_cc5dd2 mask:has(> use:not(:nth-of-type(1))) {
     display: none !important;
 }
 
@@ -4126,5 +4131,4 @@ div[style='height: 8px;'] {
 }
 .vc-media-playback-speed-icon:hover {
     color: var(--interactive-text-active) !important;
-    
 }
