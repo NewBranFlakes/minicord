@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.20.7
+ * @version 8.20.8
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -920,7 +920,7 @@ div[style='height: 8px;'] {
 }
 
 /* User panel main div */
-.panels__5e434[aria-label='User area'] {
+.panels__5e434 {
     opacity: 1 !important;
     position: absolute !important;
     left: calc(44px + 7px) !important;
@@ -933,69 +933,69 @@ div[style='height: 8px;'] {
     opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.layer__960e4:has(.vc-channeltabs-container) .panels__5e434[aria-label='User area'] {
+.layer__960e4:has(.vc-channeltabs-container) .panels__5e434 {
     bottom: 24px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:not(:has(.chat_f75fb0)) .panels__5e434[aria-label='User area'] {
+.content__5e434:not(:has(.chat_f75fb0)) .panels__5e434 {
     left: calc(44px + 7px) !important;
     bottom: calc(100% - 114px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:not(:has(.chat_f75fb0)):has(.container_e131a9) .panels__5e434[aria-label='User area']:hover {
+.content__5e434:not(:has(.chat_f75fb0)):has(.container_e131a9) .panels__5e434:hover {
     left: calc(44px + 7px) !important;
     bottom: calc(100% - 114px - 149px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:not(:has(.chat_f75fb0)):has(.panel__5dec7.activityPanel__5e434) .panels__5e434[aria-label='User area']:hover {
+.content__5e434:not(:has(.chat_f75fb0)):has(.panel__5dec7.activityPanel__5e434) .panels__5e434:hover {
     left: calc(44px + 7px) !important;
     bottom: calc(100% - 114px - 63px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:not(:has(.chat_f75fb0)):has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434) .panels__5e434[aria-label='User area']:hover {
+.content__5e434:not(:has(.chat_f75fb0)):has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434) .panels__5e434:hover {
     left: calc(44px + 7px) !important;
     bottom: calc(100% - 114px - 149px - 63px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.peopleColumn__133bf[id='add_friend-tab']) .panels__5e434[aria-label='User area'] {
+.content__5e434:has(.peopleColumn__133bf[id='add_friend-tab']) .panels__5e434 {
     left: calc(44px + 7px - 51px + 8px) !important;
     bottom: calc(100% - 114px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.peopleColumn__133bf[id='all-tab']) .panels__5e434[aria-label='User area'],
-/* .content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.guilds__5e434:hover) .panels__5e434[aria-label='User area'], */
-.content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.sidebarList__5e434:hover) .panels__5e434[aria-label='User area'],
-.content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.container_e131a9) .panels__5e434[aria-label='User area'],
-.content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.panel__5dec7.activityPanel__5e434) .panels__5e434[aria-label='User area'],
-.content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434) .panels__5e434[aria-label='User area'] {
+.content__5e434:has(.peopleColumn__133bf[id='all-tab']) .panels__5e434,
+/* .content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.guilds__5e434:hover) .panels__5e434, */
+.content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.sidebarList__5e434:hover) .panels__5e434,
+.content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.container_e131a9) .panels__5e434,
+.content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.panel__5dec7.activityPanel__5e434) .panels__5e434,
+.content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434) .panels__5e434 {
     left: calc(44px + 7px + var(--servers-list-left-diff) + var(--server-channels-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.panels__5e434[aria-label='User area']:hover {
+.panels__5e434:hover {
     max-width: var(--user-panel-left-expanded) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.sidebarList__5e434:hover) .panels__5e434[aria-label='User area'] {
+.content__5e434:has(.sidebarList__5e434:hover) .panels__5e434 {
     left: calc(44px + 7px + var(--server-channels-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-/* .content__5e434:has(.guilds__5e434:hover) .panels__5e434[aria-label='User area'] {
+/* .content__5e434:has(.guilds__5e434:hover) .panels__5e434 {
     left: calc(44px + 7px + var(--servers-list-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 } */
-.content__5e434:has(.wrapper_cb9592):not(:has(.wrapper_cb9592:hover)):not(:has(.panels__5e434[aria-label='User area']:hover)) .panels__5e434[aria-label='User area'],
-.content__5e434:has(.content_f75fb0 .container_f369db) .panels__5e434[aria-label='User area'] {
+.content__5e434:has(.wrapper_cb9592):not(:has(.wrapper_cb9592:hover)):not(:has(.panels__5e434:hover)) .panels__5e434,
+.content__5e434:has(.content_f75fb0 .container_f369db) .panels__5e434 {
     opacity: 0 !important;
     left: calc(44px + 7px - 51px + 8px - 32px) !important;
     pointer-events: none !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.panels__5e434[aria-label='User area']:hover) .gradientBottom_bfe55a {
+.content__5e434:has(.panels__5e434:hover) .gradientBottom_bfe55a {
     opacity: 1 !important;
 }
 
 /* Background for user panel sections */
-.panels__5e434[aria-label='User area']::before {
+.panels__5e434::before {
     z-index: 0 !important;
     padding: 2px !important;
     border-radius: 8px !important;
@@ -1014,19 +1014,19 @@ div[style='height: 8px;'] {
     opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.content__5e434:has(.container_e131a9):has(.panels__5e434[aria-label='User area']:hover) .panels__5e434[aria-label='User area']::before {
+.content__5e434:has(.container_e131a9):has(.panels__5e434:hover) .panels__5e434::before {
     top: calc(-149px - 2px) !important;
     height: calc(100% + 147px + 2px) !important;
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434[aria-label='User area']:hover) .panels__5e434[aria-label='User area']::before {
+.content__5e434:has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .panels__5e434::before {
     top: calc(-2px - 61px - 2px) !important;
     height: calc(100% + 61px + 2px) !important;
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434[aria-label='User area']:hover) .panels__5e434[aria-label='User area']::before {
+.content__5e434:has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .panels__5e434::before {
     top: calc(-149px - 2px - 61px - 2px) !important;
     height: calc(100% + 147px + 2px + 61px + 2px) !important;
     opacity: 1 !important;
@@ -1068,11 +1068,11 @@ div[style='height: 8px;'] {
     height: calc(56px - 14px) !important;
     width: calc(56px - 14px) !important;
 }
-.panels__5e434[aria-label='User area'] .mask__44b0c {
+.panels__5e434 .mask__44b0c {
     height: calc(56px - 14px + 8px + 5px) !important;
     width: calc(56px - 14px + 8px + 5px) !important;
 }
-.panels__5e434[aria-label='User area'] .avatarDecoration__44b0c {
+.panels__5e434 .avatarDecoration__44b0c {
     height: calc(56px - 14px + 8px + 5px - 1.6px) !important;
     width: calc(56px - 14px + 8px + 5px + 5.9px) !important;
 }
@@ -1086,8 +1086,8 @@ div[style='height: 8px;'] {
 .nameTag__37e49 {
     margin: 0px !important;
 }
-.panels__5e434[aria-label='User area']:hover .buttons__37e49,
-.panels__5e434[aria-label='User area']:hover .nameTag__37e49 {
+.panels__5e434:hover .buttons__37e49,
+.panels__5e434:hover .nameTag__37e49 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -1108,7 +1108,7 @@ div[style='height: 8px;'] {
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.panels__5e434[aria-label='User area']:has(.buttons__37e49:hover) .buttons__37e49::before {
+.panels__5e434:has(.buttons__37e49:hover) .buttons__37e49::before {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -1145,7 +1145,7 @@ div[style='height: 8px;'] {
     padding: 8px !important;
     border: none !important;
 }
-.panels__5e434[aria-label='User area']:hover .wrapper_e131a9 {
+.panels__5e434:hover .wrapper_e131a9 {
     top: calc(-142px - 7px) !important;
     height: 142px !important;
 }
@@ -1179,7 +1179,7 @@ div[style='height: 8px;'] {
     opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.panels__5e434[aria-label='User area']:hover .labelWrapper__06d62 {
+.panels__5e434:hover .labelWrapper__06d62 {
     margin-bottom: 0px !important;
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -1194,7 +1194,7 @@ div[style='height: 8px;'] {
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.panels__5e434[aria-label='User area']:hover .actionButtons_e131a9 {
+.panels__5e434:hover .actionButtons_e131a9 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -1204,11 +1204,11 @@ div[style='height: 8px;'] {
     z-index: 3 !important;
     height: 56px !important;
 }
-.content__5e434:has(.panels__5e434[aria-label='User area']:hover) .panel__5dec7.activityPanel__5e434 {
+.content__5e434:has(.panels__5e434:hover) .panel__5dec7.activityPanel__5e434 {
     top: calc(-56px - 7px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.container_e131a9):has(.panels__5e434[aria-label='User area']:hover) .panel__5dec7.activityPanel__5e434 {
+.content__5e434:has(.container_e131a9):has(.panels__5e434:hover) .panel__5dec7.activityPanel__5e434 {
     top: calc(-56px - 149px - 7px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -1221,25 +1221,25 @@ div[style='height: 8px;'] {
 .gameWrapper__5dec7 {
     column-gap: 7px !important;
 }
-.panels__5e434[aria-label='User area'] .gameWrapper__5dec7, .panels__5e434[aria-label='User area'] .gameWrapper__8c6c2 {
+.panels__5e434 .gameWrapper__5dec7, .panels__5e434 .gameWrapper__8c6c2 {
     width: 100% !important;
     height: 100% !important;
 }
-.panels__5e434[aria-label='User area'] .svg__2338f, .panels__5e434[aria-label='User area'] .gameIcon__8c6c2 {
+.panels__5e434 .svg__2338f, .panels__5e434 .gameIcon__8c6c2 {
     width: 40px !important;
     height: 40px !important;
 }
-.panels__5e434[aria-label='User area'] .wrapper_a629d4, .panels__5e434[aria-label='User area'] .gameIconWrapper__8c6c2 {
+.panels__5e434 .wrapper_a629d4, .panels__5e434 .gameIconWrapper__8c6c2 {
     width: 40px !important;
     height: 40px !important;
     margin-left: 0px !important;
     margin-top: 0px !important;
 }
-.panels__5e434[aria-label='User area'] .wrapper_a629d4 div svg foreignObject {
+.panels__5e434 .wrapper_a629d4 div svg foreignObject {
     mask: unset !important;
 }
-.panels__5e434[aria-label='User area'] .badge_a629d4,
-.panels__5e434[aria-label='User area'] .liveBadge__8c6c2 {
+.panels__5e434 .badge_a629d4,
+.panels__5e434 .liveBadge__8c6c2 {
     display: absolute !important;
     border-width: 2px !important;
     border-style: solid !important;
@@ -1253,8 +1253,8 @@ div[style='height: 8px;'] {
     width: 15px !important;
     height: 15px !important;
 }
-.panels__5e434[aria-label='User area'] .badge_a629d4 path[fill='currentColor'],
-.panels__5e434[aria-label='User area'] .liveBadge__8c6c2 path[fill='currentColor'] {
+.panels__5e434 .badge_a629d4 path[fill='currentColor'],
+.panels__5e434 .liveBadge__8c6c2 path[fill='currentColor'] {
     display: block !important;
     top: 0px !important;
     left: 0px !important;
@@ -1272,7 +1272,7 @@ div[style='height: 8px;'] {
     margin-left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.panels__5e434[aria-label='User area']:hover .actions__4cd01 {
+.panels__5e434:hover .actions__4cd01 {
     opacity: 1 !important;
     margin-left: 7px !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -1610,12 +1610,12 @@ div[style='height: 8px;'] {
     width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.content__5e434:has(.panels__5e434[aria-label='User area']:hover) .form_f75fb0 {
+.content__5e434:has(.panels__5e434:hover) .form_f75fb0 {
     margin-left: calc(57px + 7px + var(--user-panel-left-diff)) !important;
     width: calc(100% - 60px - 14px - var(--user-panel-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.panels__5e434[aria-label='User area']:hover) .chatLayerWrapper__01ae2 .form_f75fb0 {
+.content__5e434:has(.panels__5e434:hover) .chatLayerWrapper__01ae2 .form_f75fb0 {
     margin-left: 0px !important;
     width: calc(100% - 4px - 7px) !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -1657,19 +1657,19 @@ div[style='height: 8px;'] {
     top: calc(-89px - 6px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.panels__5e434[aria-label='User area']:hover) .stackedBars__74017 {
+.content__5e434:has(.panels__5e434:hover) .stackedBars__74017 {
     margin-left: calc(-63px - var(--user-panel-left-diff)) !important;
     width: calc(100% + 60px + var(--user-panel-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.panels__5e434[aria-label='User area']:hover) .chatLayerWrapper__01ae2 .stackedBars__74017 {
+.content__5e434:has(.panels__5e434:hover) .chatLayerWrapper__01ae2 .stackedBars__74017 {
     margin-left: 0px !important;
     width: calc(100% - 3px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.container_e131a9):has(.panels__5e434[aria-label='User area']:hover) .stackedBars__74017,
-.content__5e434:has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434[aria-label='User area']:hover) .stackedBars__74017,
-.content__5e434:has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434[aria-label='User area']:hover) .stackedBars__74017 {
+.content__5e434:has(.container_e131a9):has(.panels__5e434:hover) .stackedBars__74017,
+.content__5e434:has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .stackedBars__74017,
+.content__5e434:has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .stackedBars__74017 {
     margin-left: 0px !important;
     width: calc(100% - 3px) !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -1724,19 +1724,19 @@ div[style='height: 8px;'] {
 .content__5e434:has(.stackedBars__74017) .channelAttachmentArea_b77158 {
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.panels__5e434[aria-label='User area']:hover) .channelAttachmentArea_b77158 {
+.content__5e434:has(.panels__5e434:hover) .channelAttachmentArea_b77158 {
     margin-left: calc(-63px - var(--user-panel-left-diff)) !important;
     width: calc(100% + 60px + var(--user-panel-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.panels__5e434[aria-label='User area']:hover) .chatLayerWrapper__01ae2 .channelAttachmentArea_b77158 {
+.content__5e434:has(.panels__5e434:hover) .chatLayerWrapper__01ae2 .channelAttachmentArea_b77158 {
     margin-left: 0px !important;
     width: calc(100% + 3px - 6px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:has(.container_e131a9):has(.panels__5e434[aria-label='User area']:hover) .channelAttachmentArea_b77158,
-.content__5e434:has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434[aria-label='User area']:hover) .channelAttachmentArea_b77158,
-.content__5e434:has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434[aria-label='User area']:hover) .channelAttachmentArea_b77158 {
+.content__5e434:has(.container_e131a9):has(.panels__5e434:hover) .channelAttachmentArea_b77158,
+.content__5e434:has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .channelAttachmentArea_b77158,
+.content__5e434:has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .channelAttachmentArea_b77158 {
     margin-left: 0px !important;
     width: calc(100% - 3px) !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -2960,7 +2960,7 @@ div[style='height: 8px;'] {
     margin-left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.content__5e434:has(.panels__5e434[aria-label='User area']:hover) .searchBar__5ec2f {
+.content__5e434:has(.panels__5e434:hover) .searchBar__5ec2f {
     width: calc(100% - 70px - 7px - var(--user-panel-left-diff)) !important;
     margin-left: calc(63px + 7px + var(--user-panel-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -3830,7 +3830,7 @@ div[style='height: 8px;'] {
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.panels__5e434[aria-label='User area']:has(.buttons__37e49:hover) .img__4bbc6 {
+.panels__5e434:has(.buttons__37e49:hover) .img__4bbc6 {
     opacity: calc(1 - 0.16) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
