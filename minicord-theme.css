@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.20.9
+ * @version 8.20.10
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2813,7 +2813,7 @@ div[style='height: 8px;'] {
     overflow: hidden !important;
     height: 40px !important;
     max-height: 40px !important;
-    opacity: 0.2 !important;
+    opacity: 1 !important;
     transition: padding var(--transition-speed) var(--transition-style),
     max-height var(--transition-speed) var(--transition-style),
     opacity var(--transition-speed) var(--transition-style),
@@ -2834,12 +2834,8 @@ div[style='height: 8px;'] {
     pointer-events: none !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.dm__972a0:hover,
-.dm__972a0:has(.interactiveSelected__972a0),
-.dm__972a0:has(.avatar__20a53 > .container__1ce5d):has(foreignObject[mask='url(#svg-mask-status-online)']),
-.dm__972a0:not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-offline)'])):not(:has(.avatar__20a53 > .container__1ce5d)):not(:has(foreignObject[mask='url(#svg-mask-avatar-default)'])):not(:has(foreignObject[mask='url(#svg-mask-avatar-online)'])),
-.content__5e434:has(.peopleColumn__133bf[id='all-tab']) .dm__972a0 {
-    opacity: 1 !important;
+.content__5e434:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0:not(:hover):not(:has(.interactiveSelected__972a0)):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-online)'])):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-idle)'])):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-dnd)'])):not(:has(.status_a423bd)) {
+    opacity: 0.2 !important;
 }
 .dm__972a0 .interactive__972a0,
 .dm__972a0 .link__972a0 {
