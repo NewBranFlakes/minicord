@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.20.11
+ * @version 8.20.12
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2834,7 +2834,7 @@ div[style='height: 8px;'] {
     pointer-events: none !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.content__5e434:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0:not(:hover):not(:has(.interactiveSelected__972a0)):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-online)'])):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-idle)'])):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-dnd)'])):not(:has(.status_a423bd)):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-online-mobile)'])):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-idle-mobile)'])):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-dnd-mobile)'])) {
+.content__5e434:not(:has(.peopleColumn__133bf[id='all-tab'])) .dm__972a0:not(:hover):not(:has(.interactiveSelected__972a0)):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-online)'])):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-idle)'])):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-dnd)'])):not(:has(.status_a423bd)):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-online-mobile)'])):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-idle-mobile)'])):not(:has(.pointerEvents__44b0c[mask='url(#svg-mask-status-dnd-mobile)'])):not(:has(foreignObject[mask='url(#svg-mask-avatar-decoration-status-mobile-32)'])) {
     opacity: 0.2 !important;
 }
 .dm__972a0 .interactive__972a0,
