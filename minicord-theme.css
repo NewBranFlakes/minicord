@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.21.4
+ * @version 8.21.5
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3720,7 +3720,8 @@ div[style='height: 8px;'] {
     max-width: 210px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.messageListItem__5126c:focus-within .reaction__23977 {
+.messageListItem__5126c:focus-within .reaction__23977,
+.appMount__51fd7:has(.wrapper_c0e32c[id='emoji-picker-tab-panel']) .reaction__23977 {
     max-width: 210px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -3733,16 +3734,22 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit) !important;
 }
 .reaction__23977:hover .reactionCount__23977,
-.reaction__23977:hover .reactionInner__23977 div:has(.container__183c2) {
+.reaction__23977:hover .reactionInner__23977 div:has(.container__183c2),
+.messageListItem__5126c:focus-within .reactionCount__23977,
+.messageListItem__5126c:focus-within .reactionInner__23977 div:has(.container__183c2),
+.appMount__51fd7:has(.wrapper_c0e32c[id='emoji-picker-tab-panel']) .reactionCount__23977,
+.appMount__51fd7:has(.wrapper_c0e32c[id='emoji-picker-tab-panel']) .reactionInner__23977 div:has(.container__183c2) {
     opacity: 1 !important;
     pointer-events: all !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.messageListItem__5126c:focus-within .reactionCount__23977,
-.messageListItem__5126c:focus-within .reactionInner__23977 div:has(.container__183c2) {
-    opacity: 1 !important;
-    pointer-events: all !important;
-    transition-delay: var(--transition-delay-enter) !important;
+
+span:has(> .reactionBtn__23977) {
+    order: -1 !important;
+}
+
+.layer__59d0d > div > .wrapper_c0e32c[id='emoji-picker-tab-panel'] {
+    margin-top: calc(29px + 4px) !important;
 }
 
 /* Viewing older messages popup */
