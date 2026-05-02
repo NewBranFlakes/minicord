@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.21.5
+ * @version 8.21.6
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -2296,7 +2296,7 @@ div[style='height: 8px;'] {
 }
 
 /* Search results buttons container */
-.container_a244c3 {
+.container__23ba6 {
     margin-bottom: 10px !important;
 }
 
@@ -2324,11 +2324,11 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit) !important;
 }
 .layer__960e4:has(.vc-channeltabs-container) .container_c8ffbb {
-    height: calc(100% - 75px - 64px - 48px - 3px) !important;
+    height: calc(100% - 75px - 64px - 48px - 3px - 3px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .layer__960e4:has(.vc-channeltabs-bookmark) .container_c8ffbb {
-    height: calc(100% - 75px - 64px - 48px - 43px - 6px) !important;
+    height: calc(100% - 75px - 64px - 48px - 43px - 6px - 3px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .container_c8ffbb:hover {
@@ -2945,17 +2945,17 @@ div[style='height: 8px;'] {
 }
 
 /* DMs, tabs buttons */
-.channel__972a0.container_e45859:has(.interactive_bf202d.interactive__972a0.linkButton__972a0) {
+.channel__972a0.container__23ba6:has(.interactive_bf202d.interactive__972a0.linkButton__972a0) {
 	padding: 0px !important;
     height: calc(20px + 8px) !important;
     margin: 0px !important;
 	margin-left: calc(24px * 0.5) !important;
 	margin-bottom: 7px !important;
 }
-.channel__972a0.container_e45859:has(.interactive_bf202d.interactive__972a0.linkButton__972a0) .layout__20a53 {
+.channel__972a0.container__23ba6:has(.interactive_bf202d.interactive__972a0.linkButton__972a0) .layout__20a53 {
     column-gap: 7px !important;
 }
-.channel__972a0.container_e45859 .linkButton__972a0 {
+.channel__972a0.container__23ba6 .linkButton__972a0 {
     height: 100% !important;
     width: 100% !important;
 }
@@ -3125,6 +3125,7 @@ div[style='height: 8px;'] {
     column-gap: 7px !important;
     order: -2 !important;
     overflow: hidden !important;
+    min-height: 38px !important;
 }
 .vc-channeltabs-tab-container::before {
     background-color: rgba(0, 0, 0, 0.25) !important;
@@ -3869,12 +3870,12 @@ span:has(> .reactionBtn__23977) {
 }
 
 /* Nameplate */
-.img__4bbc6, .videoContainer__4bbc6 {
+.img_df39b2, .videoContainer_df39b2 {
     opacity: 1 !important;
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.panels__5e434:has(.buttons__37e49:hover) .img__4bbc6 {
+.panels__5e434:has(.buttons__37e49:hover) .img_df39b2 {
     opacity: calc(1 - 0.16) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
