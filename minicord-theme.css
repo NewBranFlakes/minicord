@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.21.6
+ * @version 8.22.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1548,54 +1548,96 @@ div[style='height: 8px;'] {
     height: 28px !important;
 }
 
-/* Subtitle bar search */
-.search__49676 {
-    margin-right: 0px !important;
-    order: 1 !important;
-}
-
-/* Subtitle bar search bar component */
-.searchBar_c322aa {
-    background: var(--bg-overlay-floating) !important;
-    background-color: var(--background-primary-lighter) !important;
+/* Subtitle search bar */
+.search__49676,
+.search__49676 .search_c322aa,
+.search__49676 .searchBar_c322aa,
+.search__49676 .search_c322aa .searchBar_c322aa .icon_c322aa,
+.search__49676 .search_c322aa .searchBar_c322aa .icon_c322aa .iconContainer__0c4c4 .iconContainer__0c4c4,
+.search__49676 .search_c322aa .searchBar_c322aa,
+.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root,
+.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root .public-DraftEditorPlaceholder-root,
+.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root .public-DraftEditorPlaceholder-root .public-DraftEditorPlaceholder-inner,
+.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root .DraftEditor-editorContainer,
+.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root .DraftEditor-editorContainer .public-DraftEditor-content {
+    padding: 0px !important;
+    margin: 0px !important;
+    min-width: 0px !important;
+    max-width: none !important;
+    min-height: 0px !important;
+    max-height: none !important;
+    flex-basis: 0px !important;
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
     border: none !important;
-    width: 29px !important;
-    transition: width var(--transition-speed) var(--transition-style) !important;
+    border-radius: 0px !important;
+    overflow: unset !important;
+}
+.search__49676 {
+    box-sizing: content-box !important;
+    min-width: 28px !important;
+    max-height: 28px !important;
+    flex-grow: 1 !important;
+    flex-shrink: 1 !important;
+    border-width: 0px !important;
+    border-color: var(--border-subtle) !important;
+    border-style: solid !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    transition: min-width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.search__49676:has(.search_c322aa.open_c322aa) .searchBar_c322aa {
-    width: 240px !important;
+.search__49676:hover, .search__49676:has(.search_c322aa.open_c322aa) {
+    min-width: 244px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-
-/* Search bar textbox input */
-.DraftEditor-root {
-	padding: 0px !important;
-    transition: padding-left var(--transition-speed) var(--transition-style) !important;
+.search__49676 .search_c322aa .searchBar_c322aa {
+    background: var(--bg-overlay-floating) !important;
+    border: none !important;
+    border-radius: 8px !important;
+}
+.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root {
+    flex-grow: 1 !important;
+    flex-shrink: 1 !important;
+    overflow: visible !important;
+    overflow-x: scroll !important;
+    padding-top: 3px !important;
+    transition: margin-left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.search__49676:has(.search_c322aa.open_c322aa) .DraftEditor-root {
-    padding-left: 5px !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-
-/* Search bar "search" placeholder text */
-.public-DraftEditorPlaceholder-root {
+.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root::-webkit-scrollbar {
     display: none !important;
 }
-
-/* Search bar "search" icon */
+.search__49676 .search_c322aa .searchBar_c322aa .icon_c322aa {
+    min-width: 28px !important;
+    min-height: 28px !important;
+    width: 28px !important;
+    height: 28px !important;
+    padding: 6px !important;
+    background: var(--bg-overlay-floating) !important;
+    border-radius: 8px !important;
+    z-index: 1 !important;
+}
 .iconContainer__0c4c4 {
-    margin-top: 0px !important;
-    margin-left: -4px !important;
     width: 100% !important;
     height: 100% !important;
 }
-
-/* Search bar "search" actual icon */
-.icon__0c4c4, .icon__0c4c4 path {
-    width: 100% !important;
-    height: 100% !important;
+.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root .public-DraftEditorPlaceholder-root {
+    opacity: 0 !important;
+    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.search__49676:hover .search_c322aa .searchBar_c322aa .DraftEditor-root,
+.search__49676:has(.search_c322aa.open_c322aa) .search_c322aa .searchBar_c322aa .DraftEditor-root {
+    margin-left: 6px !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.search__49676:hover .search_c322aa .searchBar_c322aa .DraftEditor-root .public-DraftEditorPlaceholder-root,
+.search__49676:has(.search_c322aa.open_c322aa) .search_c322aa .searchBar_c322aa .DraftEditor-root .public-DraftEditorPlaceholder-root {
+    opacity: 1 !important;
+    transition-delay: var(--transition-delay-enter) !important;
 }
 
 /* Main chat */
@@ -2296,7 +2338,7 @@ div[style='height: 8px;'] {
 }
 
 /* Search results buttons container */
-.container__23ba6 {
+.container_a244c3 {
     margin-bottom: 10px !important;
 }
 
@@ -2945,17 +2987,17 @@ div[style='height: 8px;'] {
 }
 
 /* DMs, tabs buttons */
-.channel__972a0.container__23ba6:has(.interactive_bf202d.interactive__972a0.linkButton__972a0) {
+.channel__972a0.container_a244c3:has(.interactive_bf202d.interactive__972a0.linkButton__972a0) {
 	padding: 0px !important;
     height: calc(20px + 8px) !important;
     margin: 0px !important;
 	margin-left: calc(24px * 0.5) !important;
 	margin-bottom: 7px !important;
 }
-.channel__972a0.container__23ba6:has(.interactive_bf202d.interactive__972a0.linkButton__972a0) .layout__20a53 {
+.channel__972a0.container_a244c3:has(.interactive_bf202d.interactive__972a0.linkButton__972a0) .layout__20a53 {
     column-gap: 7px !important;
 }
-.channel__972a0.container__23ba6 .linkButton__972a0 {
+.channel__972a0.container_a244c3 .linkButton__972a0 {
     height: 100% !important;
     width: 100% !important;
 }
@@ -3846,9 +3888,9 @@ span:has(> .reactionBtn__23977) {
 }
 
 /* Discord quests page, icon */
-.children__9293f > svg {
+/* .children__9293f > svg {
     margin-left: 16px !important;
-}
+} */
 
 /* Discord quests page, side panel header */
 .header__551b0 {
