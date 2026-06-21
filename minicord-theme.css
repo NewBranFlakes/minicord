@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.22.1
+ * @version 8.22.2
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -3766,25 +3766,22 @@ div[style='height: 8px;'] {
     max-width: 210px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.messageListItem__5126c:focus-within .reaction__23977,
-.appMount__51fd7:has(.wrapper_c0e32c[id='emoji-picker-tab-panel']) .reaction__23977 {
+.messageListItem__5126c:focus-within .reaction__23977 {
     max-width: 210px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 
 .reactionCount__23977,
-.reactionInner__23977 div:has(.container__183c2) {
+.reactionInner__23977 > div[style='margin-left: 0.5em; transform: scale(0.9);'] {
     opacity: 0 !important;
     pointer-events: none !important;
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .reaction__23977:hover .reactionCount__23977,
-.reaction__23977:hover .reactionInner__23977 div:has(.container__183c2),
+.reaction__23977:hover .reactionInner__23977 > div[style='margin-left: 0.5em; transform: scale(0.9);'],
 .messageListItem__5126c:focus-within .reactionCount__23977,
-.messageListItem__5126c:focus-within .reactionInner__23977 div:has(.container__183c2),
-.appMount__51fd7:has(.wrapper_c0e32c[id='emoji-picker-tab-panel']) .reactionCount__23977,
-.appMount__51fd7:has(.wrapper_c0e32c[id='emoji-picker-tab-panel']) .reactionInner__23977 div:has(.container__183c2) {
+.messageListItem__5126c:focus-within .reactionInner__23977 > div[style='margin-left: 0.5em; transform: scale(0.9);'] {
     opacity: 1 !important;
     pointer-events: all !important;
     transition-delay: var(--transition-delay-enter) !important;
