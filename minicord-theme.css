@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.22.2
+ * @version 8.22.3
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -11,7 +11,7 @@
 */
 
 :root {
-    --transition-speed: 0.3s;
+    --transition-speed: 0.25s;
     --transition-style: cubic-bezier(0.5, 0, 0.5, 1);
     --settings-leave: cubic-bezier(0.5, 0, 0.5, 0);
     --settings-enter: cubic-bezier(0, 0.5, 0.5, 1);
@@ -220,18 +220,8 @@
 }
 .content__5e434:has(.peopleColumn__133bf[id='add_friend-tab']) .guilds__5e434 {
     pointer-events: none !important;
-    /* opacity: 0 !important; */
     transition-delay: var(--transition-delay-enter) !important;
 }
-/* .guilds__5e434:hover {
-    transition-delay: var(--transition-delay-enter) !important;
-} */
-
-/* .tree_ef3116, .tree_ef3116 > .itemsContainer_ef3116, .tree_ef3116 .stack_dbd263 {
-    width: 100% !important;
-    height: 100% !important;
-    flex-direction: row !important;
-} */
 
 /* Background for servers list items */
 .wrapper__6e9f8, .circleIconButton__5bc7e, .childWrapper__6e9f8, .folderButtonContent__48112, .folderGroupBackground__48112 {
@@ -286,7 +276,7 @@
 }
 
 /* Servers list inner div */
-.itemsContainer_ef3116 {
+.tree_ef3116 {
     background: transparent !important;
     background-color: transparent !important;
 }
@@ -390,10 +380,6 @@
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-/* .content__5e434:has(.guilds__5e434:hover):has(.chat_f75fb0) .blobContainer_e5445c,
-.content__5e434:has(.guilds__5e434:hover):has(.chat_f75fb0) .folderHeader__48112,
-.content__5e434:has(.guilds__5e434:hover):has(.chat_f75fb0) .folderGroupBackground__48112,
-.content__5e434:has(.guilds__5e434:hover):has(.chat_f75fb0) .listItemWrapper__91816, */
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']) .blobContainer_e5445c,
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']) .folderHeader__48112,
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']) .folderGroupBackground__48112,
@@ -402,27 +388,23 @@
     transition-delay: var(--transition-delay-enter) !important;
 }
 
-.tree_ef3116:has(> .itemsContainer_ef3116) {
+.tree_ef3116:has(> .stack_dbd263) {
     opacity: 1 !important;
     margin-top: 4.5px !important;
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-/* .content__5e434:has(.peopleColumn__133bf[id='add_friend-tab']) .tree_ef3116:has(> .itemsContainer_ef3116) {
-    opacity: 0 !important;
-    transition-delay: var(--transition-delay-enter) !important;
-} */
 
 .tree_ef3116 .stack_dbd263 {
     padding: 0px !important;
     gap: 0px !important;
     height: auto !important;
 }
-/* .tree_ef3116 .stack_dbd263::-webkit-scrollbar {
-    display: none !important;
-} */
-.itemsContainer_ef3116 > .stack_dbd263 {
+.tree_ef3116 > .stack_dbd263 {
     overflow: auto !important;
+}
+.stack_dbd263::-webkit-scrollbar {
+    display: none !important;
 }
 
 .tree_ef3116 .stack_dbd263[aria-label='Direct Messages'] {
@@ -443,14 +425,14 @@
     margin-top: 0px !important;
 }
 /* Have to index each one manually, descendant by descendant, to avoid targetting unintended descendants */
-.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .tutorialContainer__1f388 > .listItem__650eb > span,
-.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .questify-quest-button-container > .questify-quest-button-server-list-button-container > .listItem__650eb > span,
-.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Direct Messages'] > div > .listItem__650eb > span,
-.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Servers'] > .listItem__650eb > span,
-.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Servers'] > .folderGroup__48112 > .listItem__650eb > .folderHeader__48112,
-.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Servers'] > .folderGroup__48112 > .stack_dbd263 > .listItem__650eb > span,
-.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .tutorialContainer__650eb > .listItem__650eb > span,
-.tree_ef3116 > .itemsContainer_ef3116 > .stack_dbd263 > .listItem__650eb > span {
+.tree_ef3116 > .stack_dbd263 > .tutorialContainer__1f388 > .listItem__650eb > span,
+.tree_ef3116 > .stack_dbd263 > .questify-quest-button-container > .questify-quest-button-server-list-button-container > .listItem__650eb > span,
+.tree_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Direct Messages'] > div > .listItem__650eb > span,
+.tree_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Servers'] > .listItem__650eb > span,
+.tree_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Servers'] > .folderGroup__48112 > .listItem__650eb > .folderHeader__48112,
+.tree_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Servers'] > .folderGroup__48112 > .stack_dbd263 > .listItem__650eb > span,
+.tree_ef3116 > .stack_dbd263 > .tutorialContainer__650eb > .listItem__650eb > span,
+.tree_ef3116 > .stack_dbd263 > .listItem__650eb > span {
     transform: rotate(90deg) !important;
     transform-origin: center center !important;
 }
@@ -472,23 +454,6 @@
     transform: rotate(90deg) !important;
     transform-origin: center center !important;
 }
-/* .folderHeader__48112 {
-    border-radius: 14px !important;
-    overflow: hidden !important;
-} */
-
-/* Uncomment this if you prefer having the pill/notification indicators above the servers, instead of below. */
-
-/* .listItem__650eb .pill_e5445c,
-.listItem__650eb .pill__1f388,
-.questify-quest-button-pill {
-    margin-left: calc(100% - 10px) !important;
-    transform: rotate(180deg) !important;
-}
-.questify-quest-button-pill {
-    margin-left: calc(100% - 8px) !important;
-    transform: rotate(180deg) !important;
-} */
 
 .tree_ef3116 .stack_dbd263 > .listItem__650eb:not(:has(.guildSeparator__252b6)) {
     margin: 0px !important;
@@ -593,12 +558,7 @@
     left: calc(var(--server-channels-left-offset)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-/* .content__5e434:has(.peopleColumn__133bf[id='add_friend-tab']) .sidebarList__5e434 {
-    left: calc(var(--server-channels-left-offset)) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-} */
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']) .sidebarList__5e434 {
-/* .content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.guilds__5e434:hover) .sidebarList__5e434 { */
     left: calc(var(--servers-list-left-expanded)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -606,49 +566,6 @@
     left: calc(var(--server-channels-left-offset)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-/* .content__5e434:has(.guilds__5e434:hover) .sidebarList__5e434 {
-    left: calc(var(--servers-list-left-expanded)) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-} */
-
-/* Gradient fade for servers list */
-/* .guilds__5e434::before {
-    z-index: 1 !important;
-    position: fixed !important;
-    display: flex !important;
-    content: '' !important;
-    width: calc(24px * 2.0) !important;
-    height: calc(100% - 32px) !important;
-    top: 32px !important;
-    left: calc(32px - 24px - 1px - 32px) !important;
-    background: var(--bg-overlay-1) !important;
-    background-color: var(--background-quaternary) !important;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 0.5%, rgba(0, 0, 0, 1) 100%),
-    linear-gradient(to left, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%) !important;
-    mask-composite: intersect !important;
-    mask-repeat: no-repeat !important;
-    mask-size: 100% 100% !important;
-    pointer-events: none !important;
-    transition: opacity var(--transition-speed) var(--transition-style),
-    left var(--transition-speed) var(--transition-style) !important;
-    transition-delay: var(--transition-delay-exit) !important;
-    opacity: 1 !important;
-}
-.content__5e434:not(:has(.chat_f75fb0)) .guilds__5e434::before,
-.content__5e434:has(.sidebarList__5e434:hover) .guilds__5e434::before {
-    left: calc(32px - 24px - 1px) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-.content__5e434:has(.peopleColumn__133bf[id='add_friend-tab']) .guilds__5e434::before {
-    left: calc(32px - 24px - 1px - 32px) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-.content__5e434:has(.guilds__5e434:hover) .guilds__5e434::before,
-.content__5e434:has(.peopleColumn__133bf[id='all-tab']) .guilds__5e434::before {
-    left: calc(32px - 24px - 1px + var(--servers-list-left-diff)) !important;
-    opacity: 0 !important;
-    transition-delay: var(--transition-delay-enter) !important;
-} */
 
 /* Server channels sidebar padding fix */
 .container__2637a {
@@ -981,7 +898,6 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']) .panels__5e434,
-/* .content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.guilds__5e434:hover) .panels__5e434, */
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.sidebarList__5e434:hover) .panels__5e434,
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.container_e131a9) .panels__5e434,
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.panel__5dec7.activityPanel__5e434) .panels__5e434,
@@ -998,10 +914,6 @@ div[style='height: 8px;'] {
     left: calc(44px + 7px + var(--server-channels-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-/* .content__5e434:has(.guilds__5e434:hover) .panels__5e434 {
-    left: calc(44px + 7px + var(--servers-list-left-diff)) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-} */
 .content__5e434:has(.wrapper_cb9592):not(:has(.wrapper_cb9592:hover)):not(:has(.panels__5e434:hover)) .panels__5e434,
 .content__5e434:has(.content_f75fb0 .container_f369db) .panels__5e434 {
     opacity: 0 !important;
@@ -1315,17 +1227,7 @@ div[style='height: 8px;'] {
     width: calc(100% + var(--servers-list-left-diff) + var(--server-channels-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-/* .content__5e434:has(.peopleColumn__133bf[id='add_friend-tab']) .page__5e434 {
-    left: calc(var(--server-channels-left-shrunk)) !important;
-    width: calc(100% + var(--servers-list-left-diff) + var(--server-channels-left-diff) - 2px) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-}
-.content__5e434:has(.peopleColumn__133bf[id='add_friend-tab']):has(.sidebarList__5e434:hover) .page__5e434 {
-    left: calc(var(--server-channels-left-expanded)) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-} */
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']) .page__5e434,
-/* .content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.guilds__5e434:hover) .page__5e434, */
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.sidebarList__5e434:hover) .page__5e434 {
     left: calc(var(--servers-list-left-diff) + var(--server-channels-left-expanded)) !important;
     width: calc(100% - var(--servers-list-left-diff) - var(--server-channels-left-expanded)) !important;
@@ -1336,10 +1238,6 @@ div[style='height: 8px;'] {
     left: calc(var(--server-channels-left-expanded)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-/* .content__5e434:has(.guilds__5e434:hover) .page__5e434 {
-    left: calc(var(--server-channels-left-shrunk) + var(--servers-list-left-diff)) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-} */
 .content__5e434:has(.fullScreen_cb9592) .page__5e434 {
     width: 100% !important;
     left: 0px !important;
@@ -1448,21 +1346,12 @@ div[style='height: 8px;'] {
     background: var(--bg-overlay-2) !important;
     background-color: var(--background-tertiary) !important;
 }
-/* .content__5e434:not(:has(.chat_f75fb0)):has(.guilds__5e434:hover) .container__9293f {
-    width: calc(100% + 32px) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-} */
 .content__5e434:has(.chat_f75fb0):has(.sidebarList__5e434:hover) .container__9293f {
     width: calc(100%) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-/* .content__5e434:has(.peopleColumn__133bf[id='add_friend-tab']) .container__9293f {
-    width: calc(100%) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-} */
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']) .container__9293f, 
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.sidebarList__5e434:hover) .container__9293f {
-/* .content__5e434:has(.peopleColumn__133bf[id='all-tab']):has(.guilds__5e434:hover) .container__9293f { */
     width: calc(100%) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -1470,15 +1359,10 @@ div[style='height: 8px;'] {
     width: calc(100%) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-/* .content__5e434:has(.chatLayerWrapper__01ae2):has(.guilds__5e434:hover) .chatLayerWrapper__01ae2 .container__9293f {
-    width: calc(100% - var(--servers-list-left-diff)) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-} */
 .content__5e434:has(.chatLayerWrapper__01ae2):has(.sidebarList__5e434:hover) .chatLayerWrapper__01ae2 .container__9293f {
     width: calc(100% - var(--server-channels-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-/* .content__5e434:has(.page__5e434 > .chatLayerWrapper__01ae2):has(.layerContainer__59d0d .chatLayerWrapper__01ae2):has(.guilds__5e434:hover) .layerContainer__59d0d .chatLayerWrapper__01ae2 .container__9293f, */
 .content__5e434:has(.page__5e434 > .chatLayerWrapper__01ae2):has(.layerContainer__59d0d .chatLayerWrapper__01ae2):has(.sidebarList__5e434:hover) .layerContainer__59d0d .chatLayerWrapper__01ae2 .container__9293f {
     width: calc(100%) !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -1527,10 +1411,6 @@ div[style='height: 8px;'] {
     max-width: calc(100% - var(--server-channels-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-/* .content__5e434:has(.guilds__5e434:hover):not(:has(.chatLayerWrapper__01ae2)) .upperContainer__9293f {
-    max-width: calc(100% - var(--servers-list-left-diff)) !important;
-    transition-delay: var(--transition-delay-enter) !important;
-} */
 
 /* Subtitle bar buttons */
 .toolbar__9293f {
@@ -2340,7 +2220,7 @@ div[style='height: 8px;'] {
 }
 
 /* Search results buttons container */
-.container_a244c3 {
+.container__23ba6 {
     margin-bottom: 10px !important;
 }
 
@@ -2989,17 +2869,17 @@ div[style='height: 8px;'] {
 }
 
 /* DMs, tabs buttons */
-.channel__972a0.container_a244c3:has(.interactive_bf202d.interactive__972a0.linkButton__972a0) {
+.channel__972a0.container__23ba6:has(.interactive_f88cfd.interactive__972a0.linkButton__972a0) {
 	padding: 0px !important;
     height: calc(20px + 8px) !important;
     margin: 0px !important;
 	margin-left: calc(24px * 0.5) !important;
 	margin-bottom: 7px !important;
 }
-.channel__972a0.container_a244c3:has(.interactive_bf202d.interactive__972a0.linkButton__972a0) .layout__20a53 {
+.channel__972a0.container__23ba6:has(.interactive_f88cfd.interactive__972a0.linkButton__972a0) .layout__20a53 {
     column-gap: 7px !important;
 }
-.channel__972a0.container_a244c3 .linkButton__972a0 {
+.channel__972a0.container__23ba6 .linkButton__972a0 {
     height: 100% !important;
     width: 100% !important;
 }
