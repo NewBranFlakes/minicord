@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.24.0
+ * @version 8.25.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1583,7 +1583,6 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit) !important;
 }
 
-
 /* Main chat stacked bars (reply, etc.) */
 .stackedBars__74017 {
     position: absolute !important;
@@ -1888,6 +1887,36 @@ div[style='height: 8px;'] {
     line-height: 16px !important;
     opacity: 1 !important;
     padding-top: 0px !important;
+}
+
+/* Main chat textbox input field */
+.form_f75fb0 .textArea__74017::before {
+    pointer-events: none !important;
+    z-index: 0 !important;
+    left: calc(0px - 1px) !important;
+    top: calc(17px - 1px) !important;
+    position: absolute !important;
+    display: block !important;
+    content: '' !important;
+    background: var(--bg-overlay-1) !important;
+    background-color: var(--background-quaternary) !important;
+    border-radius: 8px !important;
+    mask-size: 100% 100% !important;
+    opacity: 0.85 !important;
+    height: calc(100% - (17px * 2.0) + 0px) !important;
+    width: calc(100% - 0px) !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    border-width: 1px !important;
+    border-color: var(--border-subtle) !important;
+    border-style: solid !important;
+    box-sizing: content-box !important;
+    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.inner__74017:has(div:only-of-type > span > .emptyText__1464f) .textArea__74017::before {
+    transition-delay: var(--transition-delay-enter) !important;
+    opacity: 0 !important;
 }
 
 /* Alternative style that looks like a date timestamp */
