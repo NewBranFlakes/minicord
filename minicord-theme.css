@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.23.0
+ * @version 8.24.0
  * @invite
  * @website
  * @source https://github.com/NewBranFlakes/minicord
@@ -1292,7 +1292,7 @@ div[style='height: 8px;'] {
 .content__5e434:has(.searchResultsWrap_a98f3b):has(.chatLayerWrapper__01ae2) .chatLayerWrapper__01ae2 .container_f369db {
     max-width: calc(100% - var(--search-results-left)) !important;
 }
-.content__5e434:has(.user-profile-sidebar) .chatContent_f75fb0,
+/* .content__5e434:has(.user-profile-sidebar) .chatContent_f75fb0,
 .content__5e434:has(.user-profile-sidebar) .container_f369db {
     max-width: calc(100% - 112px) !important;
 }
@@ -1303,7 +1303,7 @@ div[style='height: 8px;'] {
 .content__5e434:has(.chatLayerWrapper__01ae2):has(.user-profile-sidebar) .chatLayerWrapper__01ae2 .chatContent_f75fb0,
 .content__5e434:has(.chatLayerWrapper__01ae2):has(.user-profile-sidebar) .chatLayerWrapper__01ae2 .container_f369db {
     max-width: calc(100% - 112px) !important;
-}
+} */
 
 /* Main chat, inner div */
 .chat_f75fb0 {
@@ -1540,7 +1540,7 @@ div[style='height: 8px;'] {
 .form_f75fb0 {
     margin-bottom: 24px !important;
     margin-left: calc(57px + 7px) !important;
-    width: calc(100% - 60px - 14px) !important;
+    width: calc(100% - 71px - 7px) !important;
     background: transparent !important;
     background-color: transparent !important;
     transition: margin-left var(--transition-speed) var(--transition-style),
@@ -1550,7 +1550,7 @@ div[style='height: 8px;'] {
 .chatLayerWrapper__01ae2 .form_f75fb0 {
     margin-bottom: 24px !important;
     margin-left: 0px !important;
-    width: calc(100% - 4px - 7px) !important;
+    width: calc(100% - 6px - 7px) !important;
     background: transparent !important;
     background-color: transparent !important;
     transition: margin-left var(--transition-speed) var(--transition-style),
@@ -1559,17 +1559,30 @@ div[style='height: 8px;'] {
 }
 .content__5e434:has(.panels__5e434:hover) .form_f75fb0 {
     margin-left: calc(57px + 7px + var(--user-panel-left-diff)) !important;
-    width: calc(100% - 60px - 14px - var(--user-panel-left-diff)) !important;
+    width: calc(100% - 71px - 7px - var(--user-panel-left-diff)) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content__5e434:has(.panels__5e434:hover) .chatLayerWrapper__01ae2 .form_f75fb0 {
     margin-left: 0px !important;
-    width: calc(100% - 4px - 7px) !important;
+    width: calc(100% - 6px - 7px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .popout__0bd4a .form_f75fb0 {
-    margin-left: 7px !important;
+    margin-left: calc(-4px + 7px) !important;
+    width: calc(100% - 12px - 7px) !important;
+    transition-delay: var(--transition-delay-exit) !important;
 }
+.popout__0bd4a:has(.membersWrap_c8ffbb) .form_f75fb0 {
+    margin-left: calc(-4px + 7px) !important;
+    width: calc(100% - 63px - 7px) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.popout__0bd4a:has(.searchResultsWrap_a98f3b) .form_f75fb0 {
+    margin-left: calc(-4px + 7px) !important;
+    width: calc(100% - 87px - 7px) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+
 
 /* Main chat stacked bars (reply, etc.) */
 .stackedBars__74017 {
@@ -1923,12 +1936,12 @@ div[style='height: 8px;'] {
 }
 
 /* Main chat textbox, inner-inner div */
-.inner__74017 {
+/* .inner__74017 {
     padding-left: 20px !important;
 }
 .user-profile-popout .inner__74017 {
     padding-left: calc(20px - 2px) !important;
-}
+} */
 .page__5e434 .inner__74017,
 .popout__0bd4a .inner__74017 {
     padding: 0px !important;
@@ -1947,13 +1960,13 @@ div[style='height: 8px;'] {
     overflow: auto !important;
     border-radius: 8px !important;
     padding: 0px !important;
-    padding-right: 3px !important;
+    padding-right: 0px !important;
     background: transparent !important;
     background-color: transparent !important;
 }
 .container__8a031 .scrollableContainer__74017,
 .footerButtons__62280 .scrollableContainer__74017 {
-    padding-right: 5px !important;
+    padding-right: 0px !important;
 }
 
 /* Textbox scrollbar (for the ENTIRE section) */
@@ -2119,6 +2132,9 @@ div[style='height: 8px;'] {
     left: calc(100% - var(--search-results-left)) !important;
     transition: left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
+}
+.popout__0bd4a .searchResultsWrap_a98f3b {
+    height: calc(100% - 72px) !important;
 }
 .layer__960e4:has(.vc-channeltabs-container) .searchResultsWrap_a98f3b {
     height: calc(100% - 81px - 66px - 43px) !important;
@@ -3781,7 +3797,54 @@ span:has(> .reactionBtn__23977) {
 }
 
 /* DMs, user panel popout */
-.user-profile-sidebar {
+.content_f75fb0 > .aside_f58343 {
+    padding: 8px !important;
+    border-radius: 8px !important;
+    margin: 0px !important;
+    height: calc(100% - 0px) !important;
+    overflow: hidden !important;
+    margin-right: calc(-201px) !important;
+    justify-content: left !important;
+    mask-image: linear-gradient(to right,
+        rgba(0, 0, 0, 1) calc(100% - 2px - 9px),
+        rgba(0, 0, 0, 0) calc(100% - 2px)
+    ) !important;
+    mask-composite: intersect !important;
+    mask-repeat: no-repeat !important;
+    mask-size: calc(110px + 9px) 100% !important;
+    transition: margin-right var(--transition-speed) var(--transition-style),
+    mask-size var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+}
+.content_f75fb0 > .aside_f58343:hover {
+    mask-size: calc(100% + 2px + 9px) 100% !important;
+    margin-right: 0px !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+/* .aside_f58343 > .user-profile-sidebar {
+    transition: max-width var(--transition-speed) var(--transition-style) !important;
+    transition-delay: var(--transition-delay-exit) !important;
+    max-width: calc(102px + 9px) !important;
+} */
+/* .content_f75fb0 > .aside_f58343:hover > .user-profile-sidebar {
+    max-width: 304px !important;
+    transition-delay: var(--transition-delay-enter) !important;
+} */
+.user-profile-sidebar .inner_c0bea0,
+.user-profile-sidebar .scrollerFade__7f9c0,
+.user-profile-sidebar .header__7f9c0 {
+    border-radius: 8px !important;
+}
+/* .user-profile-sidebar .mask__68edb {
+    min-width: 0px !important;
+    width: 100% !important;
+} */
+.user-profile-sidebar .banner__68edb {
+    width: 100% !important;
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+}
+/* .user-profile-sidebar {
     z-index: 3 !important;
     position: fixed !important;
     display: flex !important;
@@ -3802,7 +3865,7 @@ span:has(> .reactionBtn__23977) {
     width: 340px !important;
     left: calc(100% - 340px) !important;
     transition-delay: var(--transition-delay-enter) !important;
-}
+} */
 
 /* Discord quests page */
 .container_a592e1, .header__551b0 {
