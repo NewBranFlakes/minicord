@@ -2,9 +2,9 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.25.0
+ * @version 8.25.1
  * @invite
- * @website
+ * @website https://brannoneakles.webflow.io
  * @source https://github.com/NewBranFlakes/minicord
  * @authorId
  * @authorLink
@@ -156,7 +156,8 @@
     transition-delay: var(--transition-delay-exit) !important;
 }
 .content__5e434:has(.sidebarList__5e434:hover) .name_f37cb1,
-.appMount__51fd7:has(.layer__59d0d:hover .streamPreviewWrapper__6da2d) .name_f37cb1 {
+.appMount__51fd7:has(.layer__59d0d:hover .streamPreviewWrapper__6da2d) .name_f37cb1,
+.guildBadgeAndName_f37cb1:not(:has(.guildIconContainer__85d16)) .name_f37cb1 {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
@@ -670,7 +671,7 @@
     font-weight: 400 !important;
     line-height: 20px !important;
     font-size: 16px !important;
-    order: -2 !important;
+    order: 0 !important;
     opacity: 0 !important;
     transition: opacity var(--transition-speed) var(--transition-style),
     color var(--transition-speed) var(--transition-style) !important;
@@ -831,6 +832,11 @@ div[style='height: 8px;'] {
     z-index: 0 !important;
     transition: background-color var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
+}
+
+/* Special server channels */
+.link__2ea32.basicChannelRowLink__2ea32 .icon__2ea32 {
+    margin-left: 12px !important;
 }
 
 /* Server channel side icons */
@@ -1587,7 +1593,7 @@ div[style='height: 8px;'] {
 .stackedBars__74017 {
     position: absolute !important;
     top: calc(-32px - 6px) !important;
-    width: calc(100% + 67px - 7px) !important;
+    width: calc(100% + 70px - 7px) !important;
     height: 32px !important;
     border-radius: 8px !important;
     margin-right: 3px !important;
@@ -1601,7 +1607,7 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-exit) !important;
 }
 .popout__0bd4a .stackedBars__74017 {
-    width: calc(100% + 67px - 7px - 63px) !important;
+    width: calc(100% - 0px) !important;
     margin-left: 0px !important;
 }
 .chatLayerWrapper__01ae2 .stackedBars__74017 {
@@ -1625,7 +1631,7 @@ div[style='height: 8px;'] {
 }
 .content__5e434:has(.panels__5e434:hover) .stackedBars__74017 {
     margin-left: calc(-63px - var(--user-panel-left-diff)) !important;
-    width: calc(100% + 60px + var(--user-panel-left-diff)) !important;
+    width: calc(100% + 70px + var(--user-panel-left-diff) - 7px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content__5e434:has(.panels__5e434:hover) .chatLayerWrapper__01ae2 .stackedBars__74017 {
@@ -1636,6 +1642,13 @@ div[style='height: 8px;'] {
 .content__5e434:has(.container_e131a9):has(.panels__5e434:hover) .stackedBars__74017,
 .content__5e434:has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .stackedBars__74017,
 .content__5e434:has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .stackedBars__74017 {
+    margin-left: 0px !important;
+    width: calc(100% - 0px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content__5e434:has(.container_e131a9):has(.panels__5e434:hover) .chatLayerWrapper__01ae2 .stackedBars__74017,
+.content__5e434:has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .chatLayerWrapper__01ae2 .stackedBars__74017,
+.content__5e434:has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .chatLayerWrapper__01ae2 .stackedBars__74017 {
     margin-left: 0px !important;
     width: calc(100% - 3px) !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -1648,7 +1661,7 @@ div[style='height: 8px;'] {
     margin-left: -63px !important;
     top: calc(-216px - 6px) !important;
     left: 0px !important;
-    width: calc(100% + 67px - 7px) !important;
+    width: calc(100% + 70px - 7px) !important;
     height: 216px !important;
     position: absolute !important;
     overflow: visible !important;
@@ -1665,7 +1678,7 @@ div[style='height: 8px;'] {
 }
 .popout__0bd4a .channelAttachmentArea_b77158 {
     margin-left: 0px !important;
-    width: calc(100% + 67px - 7px - 63px) !important;
+    width: calc(100% - 0px) !important;
 }
 .chatLayerWrapper__01ae2 .channelAttachmentArea_b77158 {
     border-radius: 8px !important;
@@ -1696,17 +1709,24 @@ div[style='height: 8px;'] {
 }
 .content__5e434:has(.panels__5e434:hover) .channelAttachmentArea_b77158 {
     margin-left: calc(-63px - var(--user-panel-left-diff)) !important;
-    width: calc(100% + 60px + var(--user-panel-left-diff)) !important;
+    width: calc(100% + 70px + var(--user-panel-left-diff) - 7px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content__5e434:has(.panels__5e434:hover) .chatLayerWrapper__01ae2 .channelAttachmentArea_b77158 {
     margin-left: 0px !important;
-    width: calc(100% + 3px - 6px) !important;
+    width: calc(100% - 3px) !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
 .content__5e434:has(.container_e131a9):has(.panels__5e434:hover) .channelAttachmentArea_b77158,
 .content__5e434:has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .channelAttachmentArea_b77158,
 .content__5e434:has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .channelAttachmentArea_b77158 {
+    margin-left: 0px !important;
+    width: calc(100% - 0px) !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
+.content__5e434:has(.container_e131a9):has(.panels__5e434:hover) .chatLayerWrapper__01ae2 .channelAttachmentArea_b77158,
+.content__5e434:has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .chatLayerWrapper__01ae2 .channelAttachmentArea_b77158,
+.content__5e434:has(.container_e131a9):has(.panel__5dec7.activityPanel__5e434):has(.panels__5e434:hover) .chatLayerWrapper__01ae2 .channelAttachmentArea_b77158 {
     margin-left: 0px !important;
     width: calc(100% - 3px) !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -1890,33 +1910,57 @@ div[style='height: 8px;'] {
 }
 
 /* Main chat textbox input field */
-.form_f75fb0 .textArea__74017::before {
+.inner__74017 .textArea__74017::before {
     pointer-events: none !important;
     z-index: 0 !important;
-    left: calc(0px - 1px) !important;
-    top: calc(17px - 1px) !important;
+    left: calc(0px - 8px - 4px) !important;
+    top: calc(17px - 8px - 4px) !important;
     position: absolute !important;
     display: block !important;
     content: '' !important;
     background: var(--bg-overlay-1) !important;
     background-color: var(--background-quaternary) !important;
-    border-radius: 8px !important;
+    border-radius: 12px !important;
+    mask-image: linear-gradient(to top,
+    rgba(0, 0, 0, 0) calc(0% + 0px),
+    rgba(0, 0, 0, 1) calc(0% + 8px * 2.0),
+    rgba(0, 0, 0, 1) calc(100% - 8px * 2.0),
+    rgba(0, 0, 0, 0) calc(100% - 0px)),
+    linear-gradient(to right,
+    rgba(0, 0, 0, 0) calc(0% + 0px),
+    rgba(0, 0, 0, 1) calc(0% + 8px * 2.0),
+    rgba(0, 0, 0, 1) calc(100% - 8px * 2.0),
+    rgba(0, 0, 0, 0) calc(100% - 0px)) !important;
+    mask-composite: intersect !important;
+    mask-repeat: no-repeat !important;
     mask-size: 100% 100% !important;
-    opacity: 0.85 !important;
-    height: calc(100% - (17px * 2.0) + 0px) !important;
-    width: calc(100% - 0px) !important;
+    opacity: 0.8 !important;
+    height: calc(100% - (17px * 2.0) + 8px * 2.0) !important;
+    width: calc(100% + 8px * 2.0) !important;
     margin: 0px !important;
     padding: 0px !important;
-    border-width: 1px !important;
-    border-color: var(--border-subtle) !important;
+    overflow: hidden !important;
+    border-width: 4px !important;
+    border-color: var(--border-strong) !important;
     border-style: solid !important;
     box-sizing: content-box !important;
-    transition: opacity var(--transition-speed) var(--transition-style) !important;
+    transition: mask-size var(--transition-speed) var(--transition-style),
+    margin var(--transition-speed) var(--transition-style),
+    opacity var(--transition-speed) var(--transition-style),
+    height var(--transition-speed) var(--transition-style),
+    width var(--transition-speed) var(--transition-style) !important;
+    justify-content: center !important;
+    align-items: center !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.inner__74017:has(div:only-of-type > span > .emptyText__1464f) .textArea__74017::before {
+.inner__74017:has(div:only-child > span:only-child > .emptyText__1464f) .textArea__74017::before {
     transition-delay: var(--transition-delay-enter) !important;
+    /* margin-top: 17px !important; */
+    /* margin-left: 50% !important; */
+    /* width: 0px !important; */
+    /* height: 0px !important; */
     opacity: 0 !important;
+    mask-size: 0% 100% !important;
 }
 
 /* Alternative style that looks like a date timestamp */
