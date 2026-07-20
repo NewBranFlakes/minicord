@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.25.1
+ * @version 8.25.2
  * @invite
  * @website https://brannoneakles.webflow.io
  * @source https://github.com/NewBranFlakes/minicord
@@ -3432,6 +3432,20 @@ div[style='height: 8px;'] {
     width: 100% !important;
     max-width: none !important;
 }
+/* Experimental display format for Equicord sidebarchat plugin (aimed towards mobile) */
+/* @media (max-width: 1080px) {
+    .page__5e434:has(> .chatLayerWrapper__01ae2) .chat_f75fb0 {
+        max-width: 100% !important;
+    }
+    .page__5e434 {
+        flex-direction: column !important;
+    }
+    .page__5e434:has(> .chatLayerWrapper__01ae2) > .chatLayerWrapper__01ae2 {
+        left: 0px !important;
+        width: 100% !important;
+        position: relative !important;
+    }
+} */
 
 /* New tab button */
 .vc-channeltabs-new-button {
@@ -3621,7 +3635,8 @@ div[style='height: 8px;'] {
     width: auto !important;
     overflow: hidden !important;
     overflow-x: auto !important;
-    min-width: 160px !important;
+    max-width: 31px !important;
+    transition: max-width var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
 .vc-channeltabs-bookmark-search-button {
@@ -3635,6 +3650,10 @@ div[style='height: 8px;'] {
     transition-delay: var(--transition-delay-enter) !important;
     pointer-events: none !important;
 }
+.vc-channeltabs-bookmark-search-shell.vc-channeltabs-bookmark-search-shell-open {
+    max-width: 160px !important;
+    transition-delay: var(--transition-delay-enter) !important;
+}
 .vc-channeltabs-bookmark-search-shell > .vc-channeltabs-bookmark-search-field {
     margin: 0px !important;
     padding: 7px !important;
@@ -3642,7 +3661,7 @@ div[style='height: 8px;'] {
     box-sizing: border-box !important;
     height: 100% !important;
     width: 100% !important;
-    min-width: 160px !important;
+    /* max-width: 0px !important; */
     border: none !important;
     /* margin-right: calc(31px + 7px) !important; */
     border-style: solid !important;
