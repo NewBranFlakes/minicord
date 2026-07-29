@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.25.3
+ * @version 8.25.4
  * @invite
  * @website https://brannoneakles.webflow.io
  * @source https://github.com/NewBranFlakes/minicord
@@ -1435,17 +1435,21 @@ div[style='height: 8px;'] {
 }
 
 /* Subtitle search bar */
+
+/*
+ .search__49676 .search_c322aa .searchBar_c322aa .editor__25bec .public-DraftEditorPlaceholder-root,
+ .search__49676 .search_c322aa .searchBar_c322aa .editor__25bec .public-DraftEditorPlaceholder-root .public-DraftEditorPlaceholder-inner,
+ .search__49676 .search_c322aa .searchBar_c322aa .editor__25bec .DraftEditor-editorContainer,
+ .search__49676 .search_c322aa .searchBar_c322aa .editor__25bec .DraftEditor-editorContainer .public-DraftEditor-content
+*/
+
 .search__49676,
 .search__49676 .search_c322aa,
 .search__49676 .searchBar_c322aa,
 .search__49676 .search_c322aa .searchBar_c322aa .icon_c322aa,
 .search__49676 .search_c322aa .searchBar_c322aa .icon_c322aa .iconContainer__0c4c4 .iconContainer__0c4c4,
 .search__49676 .search_c322aa .searchBar_c322aa,
-.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root,
-.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root .public-DraftEditorPlaceholder-root,
-.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root .public-DraftEditorPlaceholder-root .public-DraftEditorPlaceholder-inner,
-.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root .DraftEditor-editorContainer,
-.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root .DraftEditor-editorContainer .public-DraftEditor-content {
+.search__49676 .search_c322aa .searchBar_c322aa .editor__25bec {
     padding: 0px !important;
     margin: 0px !important;
     min-width: 0px !important;
@@ -1485,7 +1489,7 @@ div[style='height: 8px;'] {
     border: none !important;
     border-radius: 8px !important;
 }
-.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root {
+.search__49676 .search_c322aa .searchBar_c322aa .editor__25bec {
     flex-grow: 1 !important;
     flex-shrink: 1 !important;
     overflow: visible !important;
@@ -1494,7 +1498,7 @@ div[style='height: 8px;'] {
     transition: margin-left var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root::-webkit-scrollbar {
+.search__49676 .search_c322aa .searchBar_c322aa .editor__25bec::-webkit-scrollbar {
     display: none !important;
 }
 .search__49676 .search_c322aa .searchBar_c322aa .icon_c322aa {
@@ -1512,21 +1516,21 @@ div[style='height: 8px;'] {
     width: 100% !important;
     height: 100% !important;
 }
-.search__49676 .search_c322aa .searchBar_c322aa .DraftEditor-root .public-DraftEditorPlaceholder-root {
+/* .search__49676 .search_c322aa .searchBar_c322aa .editor__25bec .public-DraftEditorPlaceholder-root {
     opacity: 0 !important;
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
-}
-.search__49676:hover .search_c322aa .searchBar_c322aa .DraftEditor-root,
-.search__49676:has(.search_c322aa.open_c322aa) .search_c322aa .searchBar_c322aa .DraftEditor-root {
+} */
+.search__49676:hover .search_c322aa .searchBar_c322aa .editor__25bec,
+.search__49676:has(.search_c322aa.open_c322aa) .search_c322aa .searchBar_c322aa .editor__25bec {
     margin-left: 6px !important;
     transition-delay: var(--transition-delay-enter) !important;
 }
-.search__49676:hover .search_c322aa .searchBar_c322aa .DraftEditor-root .public-DraftEditorPlaceholder-root,
-.search__49676:has(.search_c322aa.open_c322aa) .search_c322aa .searchBar_c322aa .DraftEditor-root .public-DraftEditorPlaceholder-root {
+/* .search__49676:hover .search_c322aa .searchBar_c322aa .editor__25bec .public-DraftEditorPlaceholder-root,
+.search__49676:has(.search_c322aa.open_c322aa) .search_c322aa .searchBar_c322aa .editor__25bec .public-DraftEditorPlaceholder-root {
     opacity: 1 !important;
     transition-delay: var(--transition-delay-enter) !important;
-}
+} */
 
 /* Main chat */
 .content__5e434 {
