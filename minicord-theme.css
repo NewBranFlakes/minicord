@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.25.5
+ * @version 8.25.6
  * @invite
  * @website https://brannoneakles.webflow.io
  * @source https://github.com/NewBranFlakes/minicord
@@ -427,7 +427,7 @@
 }
 /* Have to index each one manually, descendant by descendant, to avoid targetting unintended descendants */
 .tree_ef3116 > .stack_dbd263 > .tutorialContainer__1f388 > .listItem__650eb > span,
-.tree_ef3116 > .stack_dbd263 > .questify-quest-button-container > .questify-quest-button-server-list-button-container > .listItem__650eb > span,
+.tree_ef3116 > .stack_dbd263 > .vc-server-list-item.questify-quest-button-container > div > .listItem__650eb > span,
 .tree_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Direct Messages'] > div > .listItem__650eb > span,
 .tree_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Servers'] > .listItem__650eb > span,
 .tree_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Servers'] > .folderGroup__48112 > .listItem__650eb > .folderHeader__48112,
@@ -2644,7 +2644,7 @@ div[style='height: 8px;'] {
     border-style var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.draggable__55bab:has(.live_a7acae) .avatar__07f91 {
+.draggable__55bab:has(.badge__52929) .avatar__07f91 {
     border-color: var(--red-400) !important;
     border-style: outset !important;
     transition-delay: var(--transition-delay-enter) !important;
@@ -2673,10 +2673,10 @@ div[style='height: 8px;'] {
 .iconSpacing__07f91 {
     margin-left: 7px !important;
 }
-.live_a7acae {
+/* .badge__52929 {
     padding-left: 7px !important;
     padding-right: 7px !important;
-}
+} */
 .subtitle__2ea32 > .overflow_b0dfc2, .linkBottom__2ea32 .statusDiv__5cda9 {
     margin-top: -16px !important;
     transition: margin-top var(--transition-speed) var(--transition-style) !important;
