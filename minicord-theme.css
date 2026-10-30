@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.25.6
+ * @version 8.25.7
  * @invite
  * @website https://brannoneakles.webflow.io
  * @source https://github.com/NewBranFlakes/minicord
@@ -2644,7 +2644,7 @@ div[style='height: 8px;'] {
     border-style var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
-.draggable__55bab:has(.badge__52929) .avatar__07f91 {
+.draggable__55bab:has(.badgeWrapper_a7acae) .avatar__07f91 {
     border-color: var(--red-400) !important;
     border-style: outset !important;
     transition-delay: var(--transition-delay-enter) !important;
