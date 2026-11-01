@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.25.8
+ * @version 8.25.9
  * @invite
  * @website https://brannoneakles.webflow.io
  * @source https://github.com/NewBranFlakes/minicord
@@ -184,12 +184,12 @@
     position: fixed !important;
     margin: 0px !important;
     left: 0px !important;
-    top: 96px !important;
+    top: 98px !important;
     right: 0px !important;
     border: 0px !important;
     transform: rotate(-90deg) !important;
     transform-origin: top left !important;
-    width: 64px !important;
+    width: 66px !important;
     height: 100vw !important;
     z-index: 1 !important;
     overflow: hidden !important;
@@ -236,8 +236,9 @@
 }
 
 .tutorialContainer__1f388 .childWrapper__6e9f8,
-.questify-quest-button-container .questify-quest-button-button,
+.questify-quest-button-container .childWrapper__6e9f8,
 .tutorialContainer__650eb .circleIconButton__5bc7e,
+.vc-server-list-item .circleIconButton__5bc7e,
 .listItem__650eb .circleIconButton__5bc7e.discoveryIcon_ef3116 {
     background: var(--bg-overlay-floating) !important;
     background-color: var(--background-primary-lighter) !important;
@@ -247,16 +248,18 @@
 }
 
 .tutorialContainer__1f388 .childWrapper__6e9f8 svg,
-.questify-quest-button-container .questify-quest-button-button svg,
+.questify-quest-button-container div[style='position: relative;'] svg,
 .tutorialContainer__650eb .circleIconButton__5bc7e svg,
+.vc-server-list-item .circleIconButton__5bc7e svg,
 .listItem__650eb .circleIconButton__5bc7e.discoveryIcon_ef3116 svg {
     color: var(--text-default) !important;
 }
 
 .tutorialContainer__1f388 .childWrapper__6e9f8:hover,
 .tutorialContainer__1f388:has(.listItemWrapper__91816.selected__91816) .childWrapper__6e9f8,
-.questify-quest-button-container .questify-quest-button-button:hover,
-.questify-quest-button-container:has(.listItemWrapper__91816.selected__91816) .questify-quest-button-button,
+.vc-server-list-item .circleIconButton__5bc7e:hover,
+.questify-quest-button-container .childWrapper__6e9f8 > div:hover,
+.questify-quest-button-container:has(.listItemWrapper__91816.selected__91816) .childWrapper__6e9f8 > div,
 .tutorialContainer__650eb .circleIconButton__5bc7e:hover,
 .tutorialContainer__650eb:has(.listItemWrapper__91816.selected__91816) .circleIconButton__5bc7e,
 .listItem__650eb .circleIconButton__5bc7e.discoveryIcon_ef3116:hover,
@@ -392,6 +395,7 @@
 .tree_ef3116:has(> .stack_dbd263) {
     opacity: 1 !important;
     margin-top: 4.5px !important;
+    height: calc(100% - 8px) !important;
     transition: opacity var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
@@ -433,6 +437,7 @@
 .tree_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Servers'] > .folderGroup__48112 > .listItem__650eb > .folderHeader__48112,
 .tree_ef3116 > .stack_dbd263 > .stack_dbd263[aria-label='Servers'] > .folderGroup__48112 > .stack_dbd263 > .listItem__650eb > span,
 .tree_ef3116 > .stack_dbd263 > .tutorialContainer__650eb > .listItem__650eb > span,
+.tree_ef3116 > .stack_dbd263 > .vc-server-list-item .listItem__650eb > span,
 .tree_ef3116 > .stack_dbd263 > .listItem__650eb > span {
     transform: rotate(90deg) !important;
     transform-origin: center center !important;
@@ -444,10 +449,12 @@
 }
 .unreadMentionsIndicatorTop_ef3116 {
     margin-top: calc(20px + 8px) !important;
+    /* width: 64px !important; */
     overflow: visible !important;
 }
 .unreadMentionsIndicatorBottom_ef3116 {
     margin-bottom: calc(20px + 8px) !important;
+    /* width: 64px !important; */
     overflow: visible !important;
 }
 .unreadMentionsIndicatorTop_ef3116 > .bar__3b95d,
@@ -1541,7 +1548,7 @@ div[style='height: 8px;'] {
 .content__5e434 {
     width: 100% !important;
     overflow: hidden !important;
-    margin-top: 64px !important;
+    margin-top: 66px !important;
     transition: margin-top var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
 }
