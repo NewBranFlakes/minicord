@@ -2,7 +2,7 @@
  * @name Minicord
  * @description Streamlines the Discord client by shrinking/minimizing various elements and interactables.
  * @author BranFlakes
- * @version 8.25.9
+ * @version 8.25.10
  * @invite
  * @website https://brannoneakles.webflow.io
  * @source https://github.com/NewBranFlakes/minicord
@@ -2964,6 +2964,7 @@ div[style='height: 8px;'] {
 	overflow: hidden !important;
 	text-overflow: ellipsis !important;
     max-width: 59px !important;
+    min-width: 59px !important;
     transition: max-width var(--transition-speed) var(--transition-style),
     color var(--transition-speed) var(--transition-style) !important;
     transition-delay: var(--transition-delay-exit) !important;
@@ -2981,6 +2982,9 @@ div[style='height: 8px;'] {
 .content__5e434:has(.peopleColumn__133bf[id='all-tab']) .privateChannelsHeaderContainer__99e7c {
     max-width: var(--server-channels-width) !important;
     transition-delay: var(--transition-delay-enter) !important;
+}
+.headerText__99e7c {
+    min-width: 33px !important;
 }
 
 /* Categorized DMs, collapse icon */
