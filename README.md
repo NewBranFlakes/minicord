@@ -1,3 +1,9 @@
+### ⚠️ Important Notice: Discord is moving towards a client rewrite into Rust, which likely means that this theme will be unusable in the near future.  
+Details are sparse for now, but the likely scenario is that [most client mods (Vencord, Equicord, etc.) will completely break down](<https://x.com/vencordapp/status/2118879182348259462>), and thus I assume theme injections will also not work anymore.  
+I can only hope that *eventually* a client mod comes around that is able to restore custom theming, but otherwise it's probably the absolute end for this project. I suppose it was a nice ride while it lasted...  
+I will try to keep the theme maintained, but don't expect any new features. When the new client goes live, I will likely archive this repository.  
+💖
+
 # Minicord - A minimized discord theme for Discord **Visual Refresh**
 A Discord theme intended to **streamline the discord client** by minimizing, shrinking, or otherwise adjusting various elements to **improve the user experience.**
 
